@@ -1,0 +1,8 @@
+D:\Projetos\PortariaDigital\Portaria\Portaria.Core\bin\Debug\Portaria.Core.dll.config
+D:\Projetos\PortariaDigital\Portaria\Portaria.Core\bin\Debug\Portaria.Core.dll
+D:\Projetos\PortariaDigital\Portaria\Portaria.Core\bin\Debug\Portaria.Core.pdb
+D:\Projetos\PortariaDigital\Portaria\Portaria.Core\obj\Debug\Portaria.Core.Properties.Resources.resources
+D:\Projetos\PortariaDigital\Portaria\Portaria.Core\obj\Debug\Portaria.Core.csproj.GenerateResource.Cache
+D:\Projetos\PortariaDigital\Portaria\Portaria.Core\obj\Debug\Portaria.Core.dll
+D:\Projetos\PortariaDigital\Portaria\Portaria.Core\obj\Debug\Portaria.Core.pdb
+D:\Projetos\PortariaDigital\Portaria\Portaria.Core\obj\Debug\Portaria.Core.csprojResolveAssemblyReference.cache

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB8301C0-A5E8-4166-BE8F-084DFE2632C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Portaria.Data</RootNamespace>
+    <AssemblyName>Portaria.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201411020158516_InitialCreate.cs" />
+    <Compile Include="Migrations\201411020158516_InitialCreate.Designer.cs">
+      <DependentUpon>201411020158516_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411021809399_Locatario.cs" />
+    <Compile Include="Migrations\201411021809399_Locatario.Designer.cs">
+      <DependentUpon>201411021809399_Locatario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501150310396_CamposUnidadeString.cs" />
+    <Compile Include="Migrations\201501150310396_CamposUnidadeString.Designer.cs">
+      <DependentUpon>201501150310396_CamposUnidadeString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501150322397_Inadimplencia.cs" />
+    <Compile Include="Migrations\201501150322397_Inadimplencia.Designer.cs">
+      <DependentUpon>201501150322397_Inadimplencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501151152157_TransformandoBlocosEmEntidades.cs" />
+    <Compile Include="Migrations\201501151152157_TransformandoBlocosEmEntidades.Designer.cs">
+      <DependentUpon>201501151152157_TransformandoBlocosEmEntidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501151224559_TransformandoVeiculoEmEntidade.cs" />
+    <Compile Include="Migrations\201501151224559_TransformandoVeiculoEmEntidade.Designer.cs">
+      <DependentUpon>201501151224559_TransformandoVeiculoEmEntidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501162128473_CPFeRG.cs" />
+    <Compile Include="Migrations\201501162128473_CPFeRG.Designer.cs">
+      <DependentUpon>201501162128473_CPFeRG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501171423570_DocumentoNoFuncionario.cs" />
+    <Compile Include="Migrations\201501171423570_DocumentoNoFuncionario.Designer.cs">
+      <DependentUpon>201501171423570_DocumentoNoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501202316214_CorVeiculo.cs" />
+    <Compile Include="Migrations\201501202316214_CorVeiculo.Designer.cs">
+      <DependentUpon>201501202316214_CorVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501202331045_FotoVeiculo.cs" />
+    <Compile Include="Migrations\201501202331045_FotoVeiculo.Designer.cs">
+      <DependentUpon>201501202331045_FotoVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PortariaContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Migrations\201411020158516_InitialCreate.resx">
+      <DependentUpon>201411020158516_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411021809399_Locatario.resx">
+      <DependentUpon>201411021809399_Locatario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501150310396_CamposUnidadeString.resx">
+      <DependentUpon>201501150310396_CamposUnidadeString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501150322397_Inadimplencia.resx">
+      <DependentUpon>201501150322397_Inadimplencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501151152157_TransformandoBlocosEmEntidades.resx">
+      <DependentUpon>201501151152157_TransformandoBlocosEmEntidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501151224559_TransformandoVeiculoEmEntidade.resx">
+      <DependentUpon>201501151224559_TransformandoVeiculoEmEntidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501162128473_CPFeRG.resx">
+      <DependentUpon>201501162128473_CPFeRG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501171423570_DocumentoNoFuncionario.resx">
+      <DependentUpon>201501171423570_DocumentoNoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501202316214_CorVeiculo.resx">
+      <DependentUpon>201501202316214_CorVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501202331045_FotoVeiculo.resx">
+      <DependentUpon>201501202331045_FotoVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Portaria.Core\Portaria.Core.csproj">
+      <Project>{0af0ac83-3fba-4758-af09-bc75e6cfc7a2}</Project>
+      <Name>Portaria.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

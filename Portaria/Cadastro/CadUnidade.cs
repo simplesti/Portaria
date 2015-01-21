@@ -1,0 +1,423 @@
+﻿using Portaria.Business.Cadastro;
+using Portaria.Cadastro;
+using Portaria.Core.Model.CadastroMorador;
+using Portaria.Framework.CaixaMensagem;
+using Portaria.UnidadesBlocos;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Portaria
+{
+    public partial class CadUnidade : Portaria.Framework.Forms.FormBaseWindow
+    {
+        private Unidade unidade;
+
+        public Unidade Unidade
+        {
+            get
+            {
+                return unidade;
+            }
+
+            set
+            {
+                unidade = value;
+
+                lblValorNumero.Text = unidade.Numero.ToString();
+                
+                if (unidade.DataAtualizacao.HasValue)
+                {
+                    lblDtAtualizacao.Text = unidade.DataAtualizacao.Value.ToString("dd/MM/yyyy hh:mm");
+                }
+
+                if (unidade.Bloco != null)
+                {
+                    lblValorBloco.Tag = unidade.Bloco.Id;
+                    lblValorBloco.Text = unidade.Bloco.Nome;
+                }
+
+                if (unidade.Locatario != null)
+                {
+                    txtLocatario.Tag = unidade.Locatario.Id;
+                    txtLocatario.Text = unidade.Locatario.Nome;
+                }
+
+                if (unidade.Proprietario != null)
+                {
+                    txtProprietario.Tag = unidade.Proprietario.Id;
+                    txtProprietario.Text = unidade.Proprietario.Nome;
+                }
+
+                if (unidade.Conjuge != null)
+                {
+                    txtConjuge.Tag = unidade.Conjuge.Id;
+                    txtConjuge.Text = unidade.Conjuge.Nome;
+                }
+
+                dgvAutorizadas.DataSource = unidade.Autorizados.ToList();
+                dgvFuncionarios.DataSource = unidade.Funcionarios.ToList();
+                dgvVeiculos.DataSource = unidade.Veiculos.ToList();
+
+                txtAnimais.Text = unidade.Animais;
+                txtAssinaturas.Text = unidade.Assinaturas;
+                txtGas.Text = unidade.AparelhosGas;
+                txtObs.Text = unidade.Observacoes;
+            }
+        }
+
+        public CadUnidade()
+        {
+            InitializeComponent();
+            Unidade = new Unidade();
+        }
+
+        public CadUnidade(Unidade unidade)
+        {
+            InitializeComponent();
+
+            Unidade = unidade;
+        }
+
+        private void botaoSalvar_Click(object sender, EventArgs e)
+        {
+            Salvar();
+        }
+        private void botaoCancelar_Click(object sender, EventArgs e)
+        {
+            Cancelar();
+        }
+
+        private void Cancelar()
+        {
+            Close();
+        }
+
+        private void botaoEditarProprietario_Click(object sender, EventArgs e)
+        {
+            EditarProprietario();
+        }
+
+        private void botaoEditarConjuge_Click(object sender, EventArgs e)
+        {
+            EditarConjuge();
+        }
+
+        private void botaoEditarLocatario_Click(object sender, EventArgs e)
+        {
+            EditarLocatario();
+        }
+
+        private void Salvar()
+        {
+            unidade.Animais = txtAnimais.Text;
+            unidade.Assinaturas = txtAssinaturas.Text;
+            unidade.AparelhosGas = txtGas.Text;
+            unidade.Observacoes = txtObs.Text;
+
+            var unidadeBus = new UnidadeBus();
+            unidadeBus.InserirOuAtualizar(Unidade);
+
+            Close();
+        }
+
+        private void EditarProprietario()
+        {
+            var unidadeBus = new UnidadeBus();
+            var pessoaBus = new PessoaBus();
+
+            if (Unidade.Id == 0)
+            {
+
+                unidadeBus.InserirOuAtualizar(Unidade);
+            }
+
+            Pessoa p = null;
+
+            if (Unidade.Proprietario != null)
+                p = pessoaBus.BuscaPorId(Unidade.Proprietario.Id);
+
+            if (p == null)
+            {
+                p = new Pessoa();
+            }
+
+            using (var frm = new CadPessoa(p))
+            {
+                frm.ShowDialog();
+            }
+
+            var u = unidadeBus.BuscaPorId(Unidade.Id);
+            u.Proprietario = p;
+            unidadeBus.InserirOuAtualizar(u);
+
+            Unidade = unidadeBus.BuscaPorId(u.Id);
+        }
+
+        private void EditarConjuge()
+        {
+            var unidadeBus = new UnidadeBus();
+            var pessoaBus = new PessoaBus();
+
+            if (Unidade.Id == 0)
+            {
+                unidadeBus.InserirOuAtualizar(Unidade);
+            }
+
+            Pessoa p = null;
+
+            if (Unidade.Conjuge != null)
+                p = pessoaBus.BuscaPorId(Unidade.Conjuge.Id);
+
+            if (p == null)
+            {
+                p = new Pessoa();
+            }
+
+            using (var frm = new CadPessoa(p))
+            {
+                frm.ShowDialog();
+            }
+            var u = unidadeBus.BuscaPorId(Unidade.Id);
+            u.Conjuge = p;
+            unidadeBus.InserirOuAtualizar(u);
+
+            Unidade = unidadeBus.BuscaPorId(u.Id);
+        }
+
+        private void EditarLocatario()
+        {
+            var unidadeBus = new UnidadeBus();
+            var pessoaBus = new PessoaBus();
+
+            if (Unidade.Id == 0)
+            {
+                unidadeBus.InserirOuAtualizar(Unidade);
+            }
+
+            Pessoa p = null;
+
+            if (Unidade.Locatario != null)
+                p = pessoaBus.BuscaPorId(Unidade.Locatario.Id);
+
+            if (p == null)
+            {
+                p = new Pessoa();
+            }
+
+            using (var frm = new CadPessoa(p))
+            {
+                frm.ShowDialog();
+            }
+
+            var u = unidadeBus.BuscaPorId(Unidade.Id);
+            u.Locatario = p;
+            unidadeBus.InserirOuAtualizar(u);
+
+            Unidade = unidadeBus.BuscaPorId(u.Id);
+        }
+
+        private void btnAddAutorizada_Click(object sender, EventArgs e)
+        {
+            AdicionarPessoaAutorizada();
+        }
+
+        private void AdicionarPessoaAutorizada()
+        {
+            var unidadeBus = new UnidadeBus();
+            var p = new Pessoa();
+            var u = unidadeBus.BuscaPorId(Unidade.Id);
+
+            if (Unidade.Id == 0)
+            {
+                unidadeBus.InserirOuAtualizar(Unidade);
+            }
+
+            using (var frm = new CadPessoa(p))
+            {
+                frm.ShowDialog();
+            }
+            
+            if (u.Autorizados == null)
+            {
+                u.Autorizados = new List<Pessoa>();
+            }
+            u.Autorizados.Add(p);
+
+            unidadeBus.InserirOuAtualizar(u);
+
+            dgvAutorizadas.DataSource = u.Autorizados.ToList();
+        }
+
+        private void dgvAutorizadas_CellMouseDoubleClick(object sender, System.Windows.Forms.DataGridViewCellMouseEventArgs e)
+        {
+            if (dgvAutorizadas.SelectedRows.Count == 1)
+            {
+                EditarPessoaAutorizada();
+            }
+        }
+
+        private void EditarPessoaAutorizada()
+        {
+            var id = int.Parse(dgvAutorizadas.SelectedRows[0].Cells[0].Value.ToString());
+            var pessoaBus = new PessoaBus();
+            var p = pessoaBus.BuscaPorId(id);
+
+            using (var frm = new CadPessoa(p))
+            {
+                frm.ShowDialog();
+            }
+
+            dgvAutorizadas.Refresh();
+        }
+
+        private void btnRemAutorizada_Click(object sender, EventArgs e)
+        {
+            if (dgvAutorizadas.SelectedRows.Count == 1)
+            {
+                RemoverPessoaAutorizada();
+            }
+        }
+
+        private void RemoverPessoaAutorizada()
+        {
+            var id = int.Parse(dgvAutorizadas.SelectedRows[0].Cells[0].Value.ToString());
+            var pessoaBus = new PessoaBus();
+            var p = pessoaBus.BuscaPorId(id);
+
+            if (CaixaMensagem.Mostrar("Deseja remover " + p.Nome + " das pessoas autorizadas desta unidade?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
+            {
+                pessoaBus.Remover(p);
+
+                dgvAutorizadas.DataSource = unidade.Autorizados.ToList();
+            }
+        }
+
+        private void btnAddFuncionario_Click(object sender, EventArgs e)
+        {
+            AdicionarFuncionario();
+        }
+
+        private void AdicionarFuncionario()
+        {
+            var unidadeBus = new UnidadeBus();
+            var f = new Funcionario();
+            var u = unidadeBus.BuscaPorId(Unidade.Id);
+
+            if (Unidade.Id == 0)
+            {
+                unidadeBus.InserirOuAtualizar(Unidade);
+            }
+
+            using (var frm = new CadFuncionario(f))
+            {
+                frm.ShowDialog();
+            }
+
+            if (u.Funcionarios == null)
+            {
+                u.Funcionarios = new List<Funcionario>();
+            }
+            u.Funcionarios.Add(f);
+
+            unidadeBus.InserirOuAtualizar(u);
+
+            dgvFuncionarios.DataSource = u.Funcionarios.ToList();
+        }
+
+        private void btnRemFuncionario_Click(object sender, EventArgs e)
+        {
+            RemoverFuncionario();
+        }
+
+        private void RemoverFuncionario()
+        {
+            var id = int.Parse(dgvFuncionarios.SelectedRows[0].Cells[0].Value.ToString());
+            var funcionarioBus = new FuncionarioBus();
+            var f = funcionarioBus.BuscaPorId(id);
+
+            if (CaixaMensagem.Mostrar("Deseja remover " + f.Nome + " dos funcionários desta unidade?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
+            {
+                funcionarioBus.Remover(f);
+
+                dgvFuncionarios.DataSource = unidade.Funcionarios.ToList();
+            }
+        }
+
+        private void btnAddVeiculo_Click(object sender, EventArgs e)
+        {
+            AdicionarVeiculo();
+        }
+
+        private void btnRemVeiculo_Click(object sender, EventArgs e)
+        {
+            if (dgvVeiculos.SelectedRows.Count == 1)
+            {
+                RemoverVeiculo();
+            }
+        }
+
+        private void RemoverVeiculo()
+        {
+            var id = int.Parse(dgvVeiculos.SelectedRows[0].Cells[0].Value.ToString());
+            var veiculoBus = new VeiculoBus();
+            var v = veiculoBus.BuscaPorId(id);
+
+            if (CaixaMensagem.Mostrar("Deseja remover " + v.Nome + " dos veículos desta unidade?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
+            {
+                veiculoBus.Remover(v);
+
+                dgvVeiculos.DataSource = unidade.Veiculos.ToList();
+            }
+        }
+
+        private void AdicionarVeiculo()
+        {
+            var unidadeBus = new UnidadeBus();
+            var v = new Veiculo();
+            var u = unidadeBus.BuscaPorId(Unidade.Id);
+
+            if (Unidade.Id == 0)
+            {
+                unidadeBus.InserirOuAtualizar(Unidade);
+            }
+
+            using (var frm = new CadVeiculo(v))
+            {
+                frm.ShowDialog();
+            }
+
+            if (u.Veiculos == null)
+            {
+                u.Veiculos = new List<Veiculo>();
+            }
+            u.Veiculos.Add(v);
+
+            unidadeBus.InserirOuAtualizar(u);
+
+            dgvVeiculos.DataSource = u.Veiculos.ToList();
+        }
+
+        private void dgvVeiculos_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvVeiculos.SelectedRows.Count == 1)
+            {
+                EditarVeiculo();
+            }
+        }
+
+        private void EditarVeiculo()
+        {
+            var id = int.Parse(dgvVeiculos.SelectedRows[0].Cells[0].Value.ToString());
+            var veiculoBus = new VeiculoBus();
+            var v = veiculoBus.BuscaPorId(id);
+
+            using (var frm = new CadVeiculo(v))
+            {
+                frm.ShowDialog();
+            }
+
+            dgvVeiculos.Refresh();
+        }
+    }
+}

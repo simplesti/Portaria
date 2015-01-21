@@ -1,0 +1,16 @@
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\bin\Debug\Portaria.Framework.dll
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\bin\Debug\Portaria.Framework.pdb
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\bin\Debug\Portaria.Core.dll
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\bin\Debug\Portaria.Core.pdb
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.csprojResolveAssemblyReference.cache
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Blocos.BlocoItem.resources
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Botoes.BotaoEditar.resources
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.FormBase.resources
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Forms.FormBaseWindow.resources
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Forms.FormWindowTabbed.resources
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Properties.Resources.resources
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Unidades.UnidadeItem.resources
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.csproj.GenerateResource.Cache
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.dll
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.pdb
+D:\Projetos\PortariaDigital\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.CaixaMensagem.CaixaMensagem.resources

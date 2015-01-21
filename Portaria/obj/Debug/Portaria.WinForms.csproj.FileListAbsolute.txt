@@ -1,0 +1,16 @@
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\Portaria.exe.config
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\Portaria.exe
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\Portaria.pdb
+D:\Projetos\PortariaDigital\Portaria\Portaria\obj\Debug\Portaria.Properties.Resources.resources
+D:\Projetos\PortariaDigital\Portaria\Portaria\obj\Debug\Portaria.WinForms.csproj.GenerateResource.Cache
+D:\Projetos\PortariaDigital\Portaria\Portaria\obj\Debug\Portaria.exe
+D:\Projetos\PortariaDigital\Portaria\Portaria\obj\Debug\Portaria.pdb
+D:\Projetos\PortariaDigital\Portaria\Portaria\obj\Debug\Portaria.WinForms.csprojResolveAssemblyReference.cache
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\EntityFramework.dll
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\Portaria.Core.dll
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\Portaria.Data.dll
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\Portaria.Core.pdb
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\Portaria.Data.pdb
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\EntityFramework.xml
+D:\Projetos\PortariaDigital\Portaria\Portaria\bin\Debug\EntityFramework.SqlServer.xml
