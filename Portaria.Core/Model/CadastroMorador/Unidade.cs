@@ -5,6 +5,12 @@ namespace Portaria.Core.Model.CadastroMorador
 {
     public class Unidade : IModel
     {
+        public Unidade()
+        {
+            Autorizados = new List<Pessoa>();
+            Funcionarios = new List<Funcionario>();
+            Veiculos = new List<Veiculo>();
+        }
         public int Id { get; set; }
 
         public int Numero { get; set; }

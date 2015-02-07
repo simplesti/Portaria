@@ -13,5 +13,10 @@ namespace Portaria.Core.Model.CadastroMorador
         public string Nome { get; set; }
 
         public virtual ICollection<Unidade> Unidades { get; set; }
+
+        public override string ToString()
+        {
+            return Nome;
+        }
     }
 }

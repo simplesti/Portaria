@@ -94,6 +94,14 @@
     <Compile Include="Migrations\201501202331045_FotoVeiculo.Designer.cs">
       <DependentUpon>201501202331045_FotoVeiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501240243488_Usuario.cs" />
+    <Compile Include="Migrations\201501240243488_Usuario.Designer.cs">
+      <DependentUpon>201501240243488_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501251519523_Sessoes.cs" />
+    <Compile Include="Migrations\201501251519523_Sessoes.Designer.cs">
+      <DependentUpon>201501251519523_Sessoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PortariaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +134,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501202331045_FotoVeiculo.resx">
       <DependentUpon>201501202331045_FotoVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501240243488_Usuario.resx">
+      <DependentUpon>201501240243488_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501251519523_Sessoes.resx">
+      <DependentUpon>201501251519523_Sessoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

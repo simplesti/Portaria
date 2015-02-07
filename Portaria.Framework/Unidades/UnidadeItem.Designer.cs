@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnidadeItem));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNumero = new System.Windows.Forms.Label();
-            this.lblBloco = new System.Windows.Forms.Label();
             this.botaoEditar1 = new Portaria.Framework.Botoes.BotaoEditar();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +42,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.14286F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.lblNumero, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblBloco, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.botaoEditar1, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -61,23 +59,12 @@
             this.lblNumero.AutoSize = true;
             this.lblNumero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(34, 20);
+            this.lblNumero.Location = new System.Drawing.Point(3, 20);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(25, 29);
             this.lblNumero.TabIndex = 0;
             this.lblNumero.Text = "?";
             this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
-            // 
-            // lblBloco
-            // 
-            this.lblBloco.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblBloco.AutoSize = true;
-            this.lblBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBloco.Location = new System.Drawing.Point(3, 20);
-            this.lblBloco.Name = "lblBloco";
-            this.lblBloco.Size = new System.Drawing.Size(25, 29);
-            this.lblBloco.TabIndex = 1;
-            this.lblBloco.Text = "?";
             // 
             // botaoEditar1
             // 
@@ -115,7 +102,6 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.Label lblBloco;
         private Botoes.BotaoEditar botaoEditar1;
     }
 }

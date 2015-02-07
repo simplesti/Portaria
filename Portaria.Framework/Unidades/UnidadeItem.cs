@@ -20,11 +20,6 @@ namespace Portaria.Framework.Unidades
             set
             {
                 unidade = value;
-
-                if (unidade.Bloco != null)
-                {
-                    lblBloco.Text = unidade.Bloco.Nome;
-                }
                 
                 lblNumero.Text = unidade.Numero.ToString();
             }

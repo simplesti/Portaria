@@ -19,19 +19,7 @@ namespace Portaria.Business.Cadastro
 
         public IEnumerable<Unidade> Todos()
         {
-            var u = bd.Unidades;
-            foreach (var i in u)
-            {
-                var x = i.Proprietario;
-                var z = i.Conjuge;
-                var q = i.Animais;
-                var w = i.Assinaturas;
-                var t = i.Autorizados;
-                var y = i.Funcionarios;
-                var o = i.Veiculos;
-            }
-
-            return u;
+            return bd.Unidades;
         }
 
         public Unidade Buscar(int numero, string bloco)
@@ -55,10 +43,12 @@ namespace Portaria.Business.Cadastro
             try
             {
                 var u = bd.Unidades.Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var blocoBus = new BlocoBus();
 
                 if (u == null)
                 {
                     entidade.DataAtualizacao = DateTime.Now;
+                    entidade.Bloco = blocoBus.BuscaPorId(entidade.Bloco.Id);
                     bd.Unidades.Add(entidade);
                     bd.SaveChanges();
                     return;
@@ -66,7 +56,7 @@ namespace Portaria.Business.Cadastro
 
                 u.DataAtualizacao = DateTime.Now;
                 u.AparelhosGas = entidade.AparelhosGas;
-                u.Bloco = entidade.Bloco;
+                u.Bloco = blocoBus.BuscaPorId(entidade.Bloco.Id);
                 u.Numero = entidade.Numero;
 
                 var pessoaBus = new PessoaBus();

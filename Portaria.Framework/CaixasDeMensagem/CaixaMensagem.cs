@@ -41,11 +41,13 @@ namespace Portaria.Framework.CaixaMensagem
                         }
                     case TipoCaixaMensagem.SomenteCancelar:
                         {
+                            frm.btnCancelar.Location = new Point(250, 153);
                             frm.btnCancelar.Visible = true;
                             break;
                         }
                     case TipoCaixaMensagem.SomenteOK:
                         {
+                            frm.btnOK.Location = new Point(250, 153);
                             frm.btnOK.Visible = true;
                             break;
                         }

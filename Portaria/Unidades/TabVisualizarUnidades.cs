@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Portaria.Business.Cadastro;
 using Portaria.Framework.Unidades;
 using Portaria.Framework.Forms;
+using Portaria.Core;
 
 namespace Portaria
 {
@@ -57,6 +58,14 @@ namespace Portaria
             if (!DesignMode)
             {
                 CarregarTodasUnidades();
+            }
+        }
+
+        public ICollection<TipoUsuario> TiposUsuariosPermitidos
+        {
+            get
+            {
+                return new List<TipoUsuario> { TipoUsuario.Administrador, TipoUsuario.SomenteLeitura };
             }
         }
     }

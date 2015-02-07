@@ -24,17 +24,16 @@ namespace Portaria
             {
                 unidade = value;
 
-                lblValorNumero.Text = unidade.Numero.ToString();
+                txtNumero.Text = unidade.Numero.ToString();
                 
                 if (unidade.DataAtualizacao.HasValue)
                 {
-                    lblDtAtualizacao.Text = unidade.DataAtualizacao.Value.ToString("dd/MM/yyyy hh:mm");
+                    lblDtAtualizacao.Text = unidade.DataAtualizacao.Value.ToString("dd/MM/yyyy HH:mm");
                 }
 
                 if (unidade.Bloco != null)
                 {
-                    lblValorBloco.Tag = unidade.Bloco.Id;
-                    lblValorBloco.Text = unidade.Bloco.Nome;
+                    cboBloco.SelectedItem = unidade.Bloco;
                 }
 
                 if (unidade.Locatario != null)
@@ -66,15 +65,27 @@ namespace Portaria
             }
         }
 
+        private void PopulaCombos()
+        {
+            var blocoBus = new BlocoBus();
+            cboBloco.DataSource = blocoBus.Todos().ToList();
+        }
+
         public CadUnidade()
         {
             InitializeComponent();
+            PopulaCombos();
+
+            txtNumero.ReadOnly = false;
+            cboBloco.Enabled = true;
+
             Unidade = new Unidade();
         }
 
         public CadUnidade(Unidade unidade)
         {
             InitializeComponent();
+            PopulaCombos();
 
             Unidade = unidade;
         }
@@ -114,6 +125,8 @@ namespace Portaria
             unidade.Assinaturas = txtAssinaturas.Text;
             unidade.AparelhosGas = txtGas.Text;
             unidade.Observacoes = txtObs.Text;
+            unidade.Bloco = (Bloco)cboBloco.SelectedItem;
+            unidade.Numero = int.Parse(txtNumero.Text);
 
             var unidadeBus = new UnidadeBus();
             unidadeBus.InserirOuAtualizar(Unidade);
@@ -418,6 +431,28 @@ namespace Portaria
             }
 
             dgvVeiculos.Refresh();
+        }
+
+        private void dgvFuncionarios_CellMouseDoubleClick(object sender, System.Windows.Forms.DataGridViewCellMouseEventArgs e)
+        {
+            if (dgvFuncionarios.SelectedRows.Count == 1)
+            {
+                EditarFuncionario();
+            }
+        }
+
+        private void EditarFuncionario()
+        {
+            var id = int.Parse(dgvFuncionarios.SelectedRows[0].Cells[0].Value.ToString());
+            var funcionarioBus = new FuncionarioBus();
+            var f = funcionarioBus.BuscaPorId(id);
+
+            using (var frm = new CadFuncionario(f))
+            {
+                frm.ShowDialog();
+            }
+
+            dgvFuncionarios.Refresh();
         }
     }
 }

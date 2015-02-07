@@ -61,8 +61,6 @@
             this.veiculosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidadesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsPessoasAutorizadas = new System.Windows.Forms.BindingSource(this.components);
-            this.lblValorBloco = new System.Windows.Forms.Label();
-            this.lblValorNumero = new System.Windows.Forms.Label();
             this.lblFuncionarios = new System.Windows.Forms.Label();
             this.lblProprietario = new System.Windows.Forms.Label();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
@@ -103,6 +101,8 @@
             this.btnRemVeiculo = new Portaria.Framework.Botoes.BotaoRemover();
             this.btnAddFuncionario = new Portaria.Framework.Botoes.BotaoAdicionar();
             this.btnRemFuncionario = new Portaria.Framework.Botoes.BotaoRemover();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.cboBloco = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizadas)).BeginInit();
@@ -117,7 +117,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.tlpCampos);
-            this.panel2.Size = new System.Drawing.Size(955, 460);
+            this.panel2.Size = new System.Drawing.Size(955, 517);
             // 
             // tlpCampos
             // 
@@ -144,8 +144,6 @@
             this.tlpCampos.Controls.Add(this.txtLocatario, 2, 3);
             this.tlpCampos.Controls.Add(this.lblAssinaturas, 0, 14);
             this.tlpCampos.Controls.Add(this.dgvAutorizadas, 0, 7);
-            this.tlpCampos.Controls.Add(this.lblValorBloco, 0, 3);
-            this.tlpCampos.Controls.Add(this.lblValorNumero, 0, 1);
             this.tlpCampos.Controls.Add(this.lblFuncionarios, 4, 6);
             this.tlpCampos.Controls.Add(this.lblProprietario, 0, 4);
             this.tlpCampos.Controls.Add(this.dgvFuncionarios, 4, 7);
@@ -157,17 +155,28 @@
             this.tlpCampos.Controls.Add(this.txtObs, 4, 1);
             this.tlpCampos.Controls.Add(this.lblGas, 4, 14);
             this.tlpCampos.Controls.Add(this.txtGas, 4, 15);
-            this.tlpCampos.Controls.Add(this.tlpBotoes, 4, 18);
+            this.tlpCampos.Controls.Add(this.tlpBotoes, 4, 17);
             this.tlpCampos.Controls.Add(this.btnAddAutorizada, 3, 7);
             this.tlpCampos.Controls.Add(this.btnRemAutorizada, 3, 8);
             this.tlpCampos.Controls.Add(this.btnAddVeiculo, 3, 11);
             this.tlpCampos.Controls.Add(this.btnRemVeiculo, 3, 12);
             this.tlpCampos.Controls.Add(this.btnAddFuncionario, 5, 7);
             this.tlpCampos.Controls.Add(this.btnRemFuncionario, 5, 8);
+            this.tlpCampos.Controls.Add(this.txtNumero, 0, 1);
+            this.tlpCampos.Controls.Add(this.cboBloco, 0, 3);
             this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCampos.Location = new System.Drawing.Point(0, 0);
             this.tlpCampos.Name = "tlpCampos";
-            this.tlpCampos.RowCount = 19;
+            this.tlpCampos.RowCount = 18;
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -176,37 +185,26 @@
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.Size = new System.Drawing.Size(955, 460);
+            this.tlpCampos.Size = new System.Drawing.Size(955, 517);
             this.tlpCampos.TabIndex = 0;
             // 
             // txtAssinaturas
             // 
-            this.txtAssinaturas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtAssinaturas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpCampos.SetColumnSpan(this.txtAssinaturas, 3);
-            this.txtAssinaturas.Location = new System.Drawing.Point(3, 325);
+            this.txtAssinaturas.Location = new System.Drawing.Point(3, 360);
             this.txtAssinaturas.Multiline = true;
             this.txtAssinaturas.Name = "txtAssinaturas";
             this.txtAssinaturas.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtAssinaturas.Size = new System.Drawing.Size(432, 59);
+            this.txtAssinaturas.Size = new System.Drawing.Size(432, 100);
             this.txtAssinaturas.TabIndex = 14;
             // 
             // lblBloco
             // 
             this.lblBloco.AutoSize = true;
-            this.lblBloco.Location = new System.Drawing.Point(3, 26);
+            this.lblBloco.Location = new System.Drawing.Point(3, 39);
             this.lblBloco.Name = "lblBloco";
             this.lblBloco.Size = new System.Drawing.Size(34, 13);
             this.lblBloco.TabIndex = 1;
@@ -233,7 +231,7 @@
             // lblConjuge
             // 
             this.lblConjuge.AutoSize = true;
-            this.lblConjuge.Location = new System.Drawing.Point(237, 69);
+            this.lblConjuge.Location = new System.Drawing.Point(237, 87);
             this.lblConjuge.Name = "lblConjuge";
             this.lblConjuge.Size = new System.Drawing.Size(46, 13);
             this.lblConjuge.TabIndex = 14;
@@ -242,7 +240,7 @@
             // txtConjuge
             // 
             this.txtConjuge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtConjuge.Location = new System.Drawing.Point(237, 87);
+            this.txtConjuge.Location = new System.Drawing.Point(237, 105);
             this.txtConjuge.Name = "txtConjuge";
             this.txtConjuge.ReadOnly = true;
             this.txtConjuge.Size = new System.Drawing.Size(198, 20);
@@ -254,7 +252,7 @@
             this.botaoEditarProprietario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoEditarProprietario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoEditarProprietario.Image = ((System.Drawing.Image)(resources.GetObject("botaoEditarProprietario.Image")));
-            this.botaoEditarProprietario.Location = new System.Drawing.Point(207, 85);
+            this.botaoEditarProprietario.Location = new System.Drawing.Point(207, 103);
             this.botaoEditarProprietario.MaximumSize = new System.Drawing.Size(24, 24);
             this.botaoEditarProprietario.MinimumSize = new System.Drawing.Size(24, 24);
             this.botaoEditarProprietario.Name = "botaoEditarProprietario";
@@ -269,7 +267,7 @@
             this.botaoEditarConjuge.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoEditarConjuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoEditarConjuge.Image = ((System.Drawing.Image)(resources.GetObject("botaoEditarConjuge.Image")));
-            this.botaoEditarConjuge.Location = new System.Drawing.Point(441, 85);
+            this.botaoEditarConjuge.Location = new System.Drawing.Point(441, 103);
             this.botaoEditarConjuge.MaximumSize = new System.Drawing.Size(24, 24);
             this.botaoEditarConjuge.MinimumSize = new System.Drawing.Size(24, 24);
             this.botaoEditarConjuge.Name = "botaoEditarConjuge";
@@ -281,7 +279,7 @@
             // lblPessoasAutorizadas
             // 
             this.lblPessoasAutorizadas.AutoSize = true;
-            this.lblPessoasAutorizadas.Location = new System.Drawing.Point(3, 112);
+            this.lblPessoasAutorizadas.Location = new System.Drawing.Point(3, 130);
             this.lblPessoasAutorizadas.Name = "lblPessoasAutorizadas";
             this.lblPessoasAutorizadas.Size = new System.Drawing.Size(104, 13);
             this.lblPessoasAutorizadas.TabIndex = 21;
@@ -292,7 +290,7 @@
             this.lblDtAtualizacao.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDtAtualizacao.AutoSize = true;
             this.lblDtAtualizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDtAtualizacao.Location = new System.Drawing.Point(237, 13);
+            this.lblDtAtualizacao.Location = new System.Drawing.Point(237, 19);
             this.lblDtAtualizacao.Name = "lblDtAtualizacao";
             this.lblDtAtualizacao.Size = new System.Drawing.Size(75, 13);
             this.lblDtAtualizacao.TabIndex = 23;
@@ -301,7 +299,7 @@
             // txtProprietario
             // 
             this.txtProprietario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtProprietario.Location = new System.Drawing.Point(3, 87);
+            this.txtProprietario.Location = new System.Drawing.Point(3, 105);
             this.txtProprietario.Name = "txtProprietario";
             this.txtProprietario.ReadOnly = true;
             this.txtProprietario.Size = new System.Drawing.Size(198, 20);
@@ -310,7 +308,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(237, 26);
+            this.label2.Location = new System.Drawing.Point(237, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 24;
@@ -322,7 +320,7 @@
             this.botaoEditarLocatario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoEditarLocatario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoEditarLocatario.Image = ((System.Drawing.Image)(resources.GetObject("botaoEditarLocatario.Image")));
-            this.botaoEditarLocatario.Location = new System.Drawing.Point(441, 42);
+            this.botaoEditarLocatario.Location = new System.Drawing.Point(441, 55);
             this.botaoEditarLocatario.MaximumSize = new System.Drawing.Size(24, 24);
             this.botaoEditarLocatario.MinimumSize = new System.Drawing.Size(24, 24);
             this.botaoEditarLocatario.Name = "botaoEditarLocatario";
@@ -333,7 +331,7 @@
             // 
             // txtLocatario
             // 
-            this.txtLocatario.Location = new System.Drawing.Point(237, 42);
+            this.txtLocatario.Location = new System.Drawing.Point(237, 55);
             this.txtLocatario.Name = "txtLocatario";
             this.txtLocatario.ReadOnly = true;
             this.txtLocatario.Size = new System.Drawing.Size(198, 20);
@@ -342,7 +340,7 @@
             // lblAssinaturas
             // 
             this.lblAssinaturas.AutoSize = true;
-            this.lblAssinaturas.Location = new System.Drawing.Point(3, 309);
+            this.lblAssinaturas.Location = new System.Drawing.Point(3, 344);
             this.lblAssinaturas.Name = "lblAssinaturas";
             this.lblAssinaturas.Size = new System.Drawing.Size(145, 13);
             this.lblAssinaturas.TabIndex = 27;
@@ -373,12 +371,12 @@
             this.unidadesDataGridViewTextBoxColumn});
             this.tlpCampos.SetColumnSpan(this.dgvAutorizadas, 3);
             this.dgvAutorizadas.DataSource = this.bsPessoasAutorizadas;
-            this.dgvAutorizadas.Location = new System.Drawing.Point(3, 128);
+            this.dgvAutorizadas.Location = new System.Drawing.Point(3, 146);
             this.dgvAutorizadas.Name = "dgvAutorizadas";
             this.dgvAutorizadas.RowHeadersVisible = false;
             this.tlpCampos.SetRowSpan(this.dgvAutorizadas, 2);
             this.dgvAutorizadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAutorizadas.Size = new System.Drawing.Size(432, 79);
+            this.dgvAutorizadas.Size = new System.Drawing.Size(432, 96);
             this.dgvAutorizadas.TabIndex = 4;
             this.dgvAutorizadas.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAutorizadas_CellMouseDoubleClick);
             // 
@@ -480,30 +478,10 @@
             // 
             this.bsPessoasAutorizadas.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Pessoa);
             // 
-            // lblValorBloco
-            // 
-            this.lblValorBloco.AutoSize = true;
-            this.lblValorBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorBloco.Location = new System.Drawing.Point(3, 39);
-            this.lblValorBloco.Name = "lblValorBloco";
-            this.lblValorBloco.Size = new System.Drawing.Size(15, 13);
-            this.lblValorBloco.TabIndex = 32;
-            this.lblValorBloco.Text = "B";
-            // 
-            // lblValorNumero
-            // 
-            this.lblValorNumero.AutoSize = true;
-            this.lblValorNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorNumero.Location = new System.Drawing.Point(3, 13);
-            this.lblValorNumero.Name = "lblValorNumero";
-            this.lblValorNumero.Size = new System.Drawing.Size(28, 13);
-            this.lblValorNumero.TabIndex = 31;
-            this.lblValorNumero.Text = "100";
-            // 
             // lblFuncionarios
             // 
             this.lblFuncionarios.AutoSize = true;
-            this.lblFuncionarios.Location = new System.Drawing.Point(471, 112);
+            this.lblFuncionarios.Location = new System.Drawing.Point(471, 130);
             this.lblFuncionarios.Name = "lblFuncionarios";
             this.lblFuncionarios.Size = new System.Drawing.Size(67, 13);
             this.lblFuncionarios.TabIndex = 12;
@@ -512,7 +490,7 @@
             // lblProprietario
             // 
             this.lblProprietario.AutoSize = true;
-            this.lblProprietario.Location = new System.Drawing.Point(3, 69);
+            this.lblProprietario.Location = new System.Drawing.Point(3, 87);
             this.lblProprietario.Name = "lblProprietario";
             this.lblProprietario.Size = new System.Drawing.Size(60, 13);
             this.lblProprietario.TabIndex = 10;
@@ -540,19 +518,22 @@
             this.fotoDataGridViewImageColumn1,
             this.unidadeDataGridViewTextBoxColumn});
             this.dgvFuncionarios.DataSource = this.bsFuncionarios;
-            this.dgvFuncionarios.Location = new System.Drawing.Point(471, 128);
+            this.dgvFuncionarios.Location = new System.Drawing.Point(471, 146);
             this.dgvFuncionarios.Name = "dgvFuncionarios";
+            this.dgvFuncionarios.ReadOnly = true;
             this.dgvFuncionarios.RowHeadersVisible = false;
             this.tlpCampos.SetRowSpan(this.dgvFuncionarios, 2);
             this.dgvFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFuncionarios.Size = new System.Drawing.Size(452, 79);
+            this.dgvFuncionarios.Size = new System.Drawing.Size(452, 96);
             this.dgvFuncionarios.TabIndex = 7;
+            this.dgvFuncionarios.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFuncionarios_CellMouseDoubleClick);
             // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
             this.idDataGridViewTextBoxColumn1.Visible = false;
             // 
             // nomeDataGridViewTextBoxColumn1
@@ -561,12 +542,14 @@
             this.nomeDataGridViewTextBoxColumn1.DataPropertyName = "Nome";
             this.nomeDataGridViewTextBoxColumn1.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn1.Name = "nomeDataGridViewTextBoxColumn1";
+            this.nomeDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // foneDataGridViewTextBoxColumn
             // 
             this.foneDataGridViewTextBoxColumn.DataPropertyName = "Fone";
             this.foneDataGridViewTextBoxColumn.HeaderText = "Fone";
             this.foneDataGridViewTextBoxColumn.Name = "foneDataGridViewTextBoxColumn";
+            this.foneDataGridViewTextBoxColumn.ReadOnly = true;
             this.foneDataGridViewTextBoxColumn.Visible = false;
             // 
             // descricaoDataGridViewTextBoxColumn
@@ -574,24 +557,28 @@
             this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
             this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
             this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // documentoDataGridViewTextBoxColumn
             // 
             this.documentoDataGridViewTextBoxColumn.DataPropertyName = "Documento";
             this.documentoDataGridViewTextBoxColumn.HeaderText = "Documento";
             this.documentoDataGridViewTextBoxColumn.Name = "documentoDataGridViewTextBoxColumn";
+            this.documentoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // autorizadaSemPresencaDataGridViewCheckBoxColumn
             // 
             this.autorizadaSemPresencaDataGridViewCheckBoxColumn.DataPropertyName = "AutorizadaSemPresenca";
             this.autorizadaSemPresencaDataGridViewCheckBoxColumn.HeaderText = "Autorizado";
             this.autorizadaSemPresencaDataGridViewCheckBoxColumn.Name = "autorizadaSemPresencaDataGridViewCheckBoxColumn";
+            this.autorizadaSemPresencaDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // frequenciaDataGridViewTextBoxColumn
             // 
             this.frequenciaDataGridViewTextBoxColumn.DataPropertyName = "Frequencia";
             this.frequenciaDataGridViewTextBoxColumn.HeaderText = "Frequencia";
             this.frequenciaDataGridViewTextBoxColumn.Name = "frequenciaDataGridViewTextBoxColumn";
+            this.frequenciaDataGridViewTextBoxColumn.ReadOnly = true;
             this.frequenciaDataGridViewTextBoxColumn.Visible = false;
             // 
             // horarioEntradaDataGridViewTextBoxColumn
@@ -599,6 +586,7 @@
             this.horarioEntradaDataGridViewTextBoxColumn.DataPropertyName = "HorarioEntrada";
             this.horarioEntradaDataGridViewTextBoxColumn.HeaderText = "HorarioEntrada";
             this.horarioEntradaDataGridViewTextBoxColumn.Name = "horarioEntradaDataGridViewTextBoxColumn";
+            this.horarioEntradaDataGridViewTextBoxColumn.ReadOnly = true;
             this.horarioEntradaDataGridViewTextBoxColumn.Visible = false;
             // 
             // horarioSaidaDataGridViewTextBoxColumn
@@ -606,6 +594,7 @@
             this.horarioSaidaDataGridViewTextBoxColumn.DataPropertyName = "HorarioSaida";
             this.horarioSaidaDataGridViewTextBoxColumn.HeaderText = "HorarioSaida";
             this.horarioSaidaDataGridViewTextBoxColumn.Name = "horarioSaidaDataGridViewTextBoxColumn";
+            this.horarioSaidaDataGridViewTextBoxColumn.ReadOnly = true;
             this.horarioSaidaDataGridViewTextBoxColumn.Visible = false;
             // 
             // fotoDataGridViewImageColumn1
@@ -613,6 +602,7 @@
             this.fotoDataGridViewImageColumn1.DataPropertyName = "Foto";
             this.fotoDataGridViewImageColumn1.HeaderText = "Foto";
             this.fotoDataGridViewImageColumn1.Name = "fotoDataGridViewImageColumn1";
+            this.fotoDataGridViewImageColumn1.ReadOnly = true;
             this.fotoDataGridViewImageColumn1.Visible = false;
             // 
             // unidadeDataGridViewTextBoxColumn
@@ -620,6 +610,7 @@
             this.unidadeDataGridViewTextBoxColumn.DataPropertyName = "Unidade";
             this.unidadeDataGridViewTextBoxColumn.HeaderText = "Unidade";
             this.unidadeDataGridViewTextBoxColumn.Name = "unidadeDataGridViewTextBoxColumn";
+            this.unidadeDataGridViewTextBoxColumn.ReadOnly = true;
             this.unidadeDataGridViewTextBoxColumn.Visible = false;
             // 
             // bsFuncionarios
@@ -629,7 +620,7 @@
             // lblVeiculos
             // 
             this.lblVeiculos.AutoSize = true;
-            this.lblVeiculos.Location = new System.Drawing.Point(3, 210);
+            this.lblVeiculos.Location = new System.Drawing.Point(3, 245);
             this.lblVeiculos.Name = "lblVeiculos";
             this.lblVeiculos.Size = new System.Drawing.Size(49, 13);
             this.lblVeiculos.TabIndex = 33;
@@ -654,7 +645,7 @@
             this.proprietarioDataGridViewTextBoxColumn});
             this.tlpCampos.SetColumnSpan(this.dgvVeiculos, 3);
             this.dgvVeiculos.DataSource = this.bsVeiculo;
-            this.dgvVeiculos.Location = new System.Drawing.Point(3, 226);
+            this.dgvVeiculos.Location = new System.Drawing.Point(3, 261);
             this.dgvVeiculos.Name = "dgvVeiculos";
             this.dgvVeiculos.RowHeadersVisible = false;
             this.tlpCampos.SetRowSpan(this.dgvVeiculos, 2);
@@ -717,7 +708,7 @@
             // lblAnimaisDomesticos
             // 
             this.lblAnimaisDomesticos.AutoSize = true;
-            this.lblAnimaisDomesticos.Location = new System.Drawing.Point(471, 210);
+            this.lblAnimaisDomesticos.Location = new System.Drawing.Point(471, 245);
             this.lblAnimaisDomesticos.Name = "lblAnimaisDomesticos";
             this.lblAnimaisDomesticos.Size = new System.Drawing.Size(99, 13);
             this.lblAnimaisDomesticos.TabIndex = 13;
@@ -728,7 +719,7 @@
             this.txtAnimais.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAnimais.Location = new System.Drawing.Point(471, 226);
+            this.txtAnimais.Location = new System.Drawing.Point(471, 261);
             this.txtAnimais.Multiline = true;
             this.txtAnimais.Name = "txtAnimais";
             this.tlpCampos.SetRowSpan(this.txtAnimais, 2);
@@ -747,21 +738,20 @@
             // 
             // txtObs
             // 
-            this.txtObs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtObs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObs.Location = new System.Drawing.Point(471, 16);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.tlpCampos.SetRowSpan(this.txtObs, 4);
             this.txtObs.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtObs.Size = new System.Drawing.Size(452, 63);
+            this.txtObs.Size = new System.Drawing.Size(452, 59);
             this.txtObs.TabIndex = 3;
             // 
             // lblGas
             // 
             this.lblGas.AutoSize = true;
-            this.lblGas.Location = new System.Drawing.Point(471, 309);
+            this.lblGas.Location = new System.Drawing.Point(471, 344);
             this.lblGas.Name = "lblGas";
             this.lblGas.Size = new System.Drawing.Size(197, 13);
             this.lblGas.TabIndex = 5;
@@ -769,14 +759,13 @@
             // 
             // txtGas
             // 
-            this.txtGas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtGas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGas.Location = new System.Drawing.Point(471, 325);
+            this.txtGas.Location = new System.Drawing.Point(471, 360);
             this.txtGas.Multiline = true;
             this.txtGas.Name = "txtGas";
             this.txtGas.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtGas.Size = new System.Drawing.Size(452, 59);
+            this.txtGas.Size = new System.Drawing.Size(452, 100);
             this.txtGas.TabIndex = 15;
             // 
             // tlpBotoes
@@ -788,7 +777,7 @@
             this.tlpBotoes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpBotoes.Controls.Add(this.botaoCancelar, 1, 0);
             this.tlpBotoes.Controls.Add(this.botaoSalvar, 0, 0);
-            this.tlpBotoes.Location = new System.Drawing.Point(711, 414);
+            this.tlpBotoes.Location = new System.Drawing.Point(711, 471);
             this.tlpBotoes.Name = "tlpBotoes";
             this.tlpBotoes.RowCount = 1;
             this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -840,7 +829,7 @@
             this.btnAddAutorizada.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAutorizada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAutorizada.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAutorizada.Image")));
-            this.btnAddAutorizada.Location = new System.Drawing.Point(441, 128);
+            this.btnAddAutorizada.Location = new System.Drawing.Point(441, 146);
             this.btnAddAutorizada.MaximumSize = new System.Drawing.Size(24, 24);
             this.btnAddAutorizada.MinimumSize = new System.Drawing.Size(24, 24);
             this.btnAddAutorizada.Name = "btnAddAutorizada";
@@ -855,7 +844,7 @@
             this.btnRemAutorizada.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemAutorizada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemAutorizada.Image = ((System.Drawing.Image)(resources.GetObject("btnRemAutorizada.Image")));
-            this.btnRemAutorizada.Location = new System.Drawing.Point(441, 158);
+            this.btnRemAutorizada.Location = new System.Drawing.Point(441, 176);
             this.btnRemAutorizada.MaximumSize = new System.Drawing.Size(24, 24);
             this.btnRemAutorizada.MinimumSize = new System.Drawing.Size(24, 24);
             this.btnRemAutorizada.Name = "btnRemAutorizada";
@@ -870,7 +859,7 @@
             this.btnAddVeiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddVeiculo.Image = ((System.Drawing.Image)(resources.GetObject("btnAddVeiculo.Image")));
-            this.btnAddVeiculo.Location = new System.Drawing.Point(441, 226);
+            this.btnAddVeiculo.Location = new System.Drawing.Point(441, 261);
             this.btnAddVeiculo.MaximumSize = new System.Drawing.Size(24, 24);
             this.btnAddVeiculo.MinimumSize = new System.Drawing.Size(24, 24);
             this.btnAddVeiculo.Name = "btnAddVeiculo";
@@ -885,7 +874,7 @@
             this.btnRemVeiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemVeiculo.Image = ((System.Drawing.Image)(resources.GetObject("btnRemVeiculo.Image")));
-            this.btnRemVeiculo.Location = new System.Drawing.Point(441, 256);
+            this.btnRemVeiculo.Location = new System.Drawing.Point(441, 291);
             this.btnRemVeiculo.MaximumSize = new System.Drawing.Size(24, 24);
             this.btnRemVeiculo.MinimumSize = new System.Drawing.Size(24, 24);
             this.btnRemVeiculo.Name = "btnRemVeiculo";
@@ -900,7 +889,7 @@
             this.btnAddFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFuncionario.Image")));
-            this.btnAddFuncionario.Location = new System.Drawing.Point(929, 128);
+            this.btnAddFuncionario.Location = new System.Drawing.Point(929, 146);
             this.btnAddFuncionario.MaximumSize = new System.Drawing.Size(24, 24);
             this.btnAddFuncionario.MinimumSize = new System.Drawing.Size(24, 24);
             this.btnAddFuncionario.Name = "btnAddFuncionario";
@@ -915,7 +904,7 @@
             this.btnRemFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnRemFuncionario.Image")));
-            this.btnRemFuncionario.Location = new System.Drawing.Point(929, 158);
+            this.btnRemFuncionario.Location = new System.Drawing.Point(929, 176);
             this.btnRemFuncionario.MaximumSize = new System.Drawing.Size(24, 24);
             this.btnRemFuncionario.MinimumSize = new System.Drawing.Size(24, 24);
             this.btnRemFuncionario.Name = "btnRemFuncionario";
@@ -924,10 +913,27 @@
             this.btnRemFuncionario.UseVisualStyleBackColor = true;
             this.btnRemFuncionario.Click += new System.EventHandler(this.btnRemFuncionario_Click);
             // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(3, 16);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.ReadOnly = true;
+            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.TabIndex = 34;
+            // 
+            // cboBloco
+            // 
+            this.cboBloco.Enabled = false;
+            this.cboBloco.FormattingEnabled = true;
+            this.cboBloco.Location = new System.Drawing.Point(3, 55);
+            this.cboBloco.Name = "cboBloco";
+            this.cboBloco.Size = new System.Drawing.Size(121, 21);
+            this.cboBloco.TabIndex = 35;
+            // 
             // CadUnidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(961, 523);
+            this.ClientSize = new System.Drawing.Size(961, 580);
             this.Name = "CadUnidade";
             this.Text = "";
             this.Titulo = "Cadastro de Unidade";
@@ -976,8 +982,6 @@
         private System.Windows.Forms.Label lblAssinaturas;
         private System.Windows.Forms.TextBox txtAnimais;
         private System.Windows.Forms.TextBox txtAssinaturas;
-        private System.Windows.Forms.Label lblValorBloco;
-        private System.Windows.Forms.Label lblValorNumero;
         private System.Windows.Forms.Label lblVeiculos;
         private System.Windows.Forms.DataGridView dgvVeiculos;
         private Framework.Botoes.BotaoAdicionar btnAddAutorizada;
@@ -1020,6 +1024,8 @@
         private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidadeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn proprietarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.ComboBox cboBloco;
 
     }
 }

@@ -305,7 +305,7 @@
             // 
             // dtEntrada
             // 
-            this.dtEntrada.CustomFormat = "hh:mm";
+            this.dtEntrada.CustomFormat = "HH:mm";
             this.dtEntrada.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsFuncionario, "HorarioEntrada", true));
             this.dtEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEntrada.Location = new System.Drawing.Point(3, 289);
@@ -315,7 +315,7 @@
             // 
             // dtSaida
             // 
-            this.dtSaida.CustomFormat = "hh:mm";
+            this.dtSaida.CustomFormat = "HH:mm";
             this.dtSaida.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsFuncionario, "HorarioSaida", true));
             this.dtSaida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSaida.Location = new System.Drawing.Point(393, 289);
