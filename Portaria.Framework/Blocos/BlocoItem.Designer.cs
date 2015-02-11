@@ -52,6 +52,7 @@
             // 
             this.lblBloco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBloco.AutoSize = true;
+            this.lblBloco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBloco.Location = new System.Drawing.Point(3, 20);
             this.lblBloco.Name = "lblBloco";
@@ -59,6 +60,7 @@
             this.lblBloco.TabIndex = 1;
             this.lblBloco.Text = "?";
             this.lblBloco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBloco.Click += new System.EventHandler(this.lblBloco_Click);
             // 
             // BlocoItem
             // 

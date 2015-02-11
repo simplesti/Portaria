@@ -10,10 +10,11 @@ using System.Windows.Forms;
 using Portaria.Core;
 using Portaria.Business.Cadastro;
 using Portaria.Framework.CaixaMensagem;
+using Portaria.Framework.Forms;
 
 namespace Portaria.Unidades
 {
-    public partial class TabCadastrarUnidades : UserControl
+    public partial class TabCadastrarUnidades : PortariaTabBase
     {
         public TabCadastrarUnidades()
         {
@@ -31,7 +32,7 @@ namespace Portaria.Unidades
             bsUnidades.DataSource = unidadeBus.Todos().ToList();
         }
 
-        public ICollection<TipoUsuario> TiposUsuariosPermitidos
+        public override ICollection<TipoUsuario> TiposUsuariosPermitidos
         {
             get
             {

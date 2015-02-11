@@ -19,7 +19,7 @@ namespace Portaria.Business.Cadastro
 
         public IEnumerable<Unidade> Todos()
         {
-            return bd.Unidades;
+            return bd.Unidades.OrderBy( u => u.Numero);
         }
 
         public Unidade Buscar(int numero, string bloco)
@@ -30,12 +30,12 @@ namespace Portaria.Business.Cadastro
 
         public IEnumerable<Unidade> BuscarPorNumero(int numero)
         {
-            return bd.Unidades.Where(i => i.Numero == numero);
+            return bd.Unidades.Where(i => i.Numero == numero).OrderBy(u => u.Numero);
         }
 
         public IEnumerable<Unidade> BuscarPorBloco(string bloco)
         {
-            return bd.Unidades.Where(i => i.Bloco.Nome == bloco);
+            return bd.Unidades.Where(i => i.Bloco.Nome == bloco).OrderBy(u => u.Numero);
         }
 
         public void InserirOuAtualizar(Unidade entidade)

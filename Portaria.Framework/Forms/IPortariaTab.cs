@@ -1,4 +1,5 @@
 ﻿using Portaria.Core;
+using Portaria.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,7 @@ namespace Portaria.Framework.Forms
     public interface IPortariaTab
     {
         ICollection<TipoUsuario> TiposUsuariosPermitidos { get; }
+
+        PortariaTabBase TabVisualizar { get; set; }
     }
 }

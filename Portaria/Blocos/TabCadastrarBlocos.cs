@@ -1,5 +1,6 @@
 ﻿using Portaria.Business.Cadastro;
 using Portaria.Core;
+using Portaria.Core.Model.CadastroMorador;
 using Portaria.Framework.CaixaMensagem;
 using Portaria.Framework.Forms;
 using System;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Portaria.Blocos
 {
-    public partial class TabCadastrarBlocos : UserControl, IPortariaTab
+    public partial class TabCadastrarBlocos : PortariaTabBase
     {
         public TabCadastrarBlocos()
         {
@@ -28,7 +29,7 @@ namespace Portaria.Blocos
             bsBlocos.DataSource = blocoBus.Todos().ToList();
         }
 
-        public ICollection<TipoUsuario> TiposUsuariosPermitidos
+        public override ICollection<TipoUsuario> TiposUsuariosPermitidos
         {
             get
             {

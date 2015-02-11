@@ -58,3 +58,7 @@ C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Usuarios.CadU
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Blocos.CadBloco.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Blocos.TabCadastrarBlocos.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Unidades.TabCadastrarUnidades.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Locais.CadLocal.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Locais.TabCadastrarLocais.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Locais.TabReservarLocais.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.LivroNegro.TabVisualizarLivroNegro.resources

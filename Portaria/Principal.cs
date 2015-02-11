@@ -1,5 +1,6 @@
 ﻿using Portaria.Business;
 using Portaria.Business.Cadastro;
+using Portaria.Core.Model;
 using Portaria.Framework;
 using Portaria.Framework.CaixaMensagem;
 using Portaria.Framework.Forms;
@@ -70,5 +71,25 @@ namespace Portaria
             var sessaoBus = new SessaoBus();
             sessaoBus.FinalizarSessao();
         }
+
+        private void CarregarTab()
+        {
+            var portariaTab = tabControl.SelectedTab.Controls[0] as PortariaTabBase;
+            if (portariaTab != null)
+            {
+                portariaTab.Carregar();
+            }
+        }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarregarTab();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            CarregarTab();
+        }
+
     }
 }

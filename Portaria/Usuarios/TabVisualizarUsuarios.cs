@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
 using Portaria.Framework.CaixaMensagem;
+using Portaria.Core.Model;
 
 namespace Portaria.Usuarios
 {
-    public partial class TabVisualizarUsuarios : UserControl, IPortariaTab
+    public partial class TabVisualizarUsuarios : PortariaTabBase
     {
         public TabVisualizarUsuarios()
         {
@@ -23,7 +24,7 @@ namespace Portaria.Usuarios
             bsUsuario.DataSource = usuarioBus.Todos().ToList();
         }
 
-        public ICollection<TipoUsuario> TiposUsuariosPermitidos
+        public override ICollection<TipoUsuario> TiposUsuariosPermitidos
         {
             get 
             {
