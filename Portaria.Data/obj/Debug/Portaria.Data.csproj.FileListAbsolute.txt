@@ -48,3 +48,5 @@ C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Debug\Portaria.Data.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Debug\Portaria.Data.pdb
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Debug\Portaria.Data.Migrations.Usuario.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Debug\Portaria.Data.Migrations.Sessoes.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Debug\Portaria.Data.Migrations.Locais.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Debug\Portaria.Data.Migrations.Reservas.resources

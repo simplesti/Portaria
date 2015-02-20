@@ -51,7 +51,7 @@
             this.chkAutorizadoSemPresenca = new System.Windows.Forms.CheckBox();
             this.dtEntrada = new System.Windows.Forms.DateTimePicker();
             this.dtSaida = new System.Windows.Forms.DateTimePicker();
-            this.panel2.SuspendLayout();
+            this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             this.tlpBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsFuncionario)).BeginInit();
@@ -60,8 +60,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tlpCampos);
-            this.panel2.Size = new System.Drawing.Size(729, 372);
+            this.pnlConteudo.Controls.Add(this.tlpCampos);
+            this.pnlConteudo.Size = new System.Drawing.Size(729, 372);
             // 
             // tlpCampos
             // 
@@ -333,7 +333,7 @@
             this.Name = "CadFuncionario";
             this.Text = "CadFuncionario";
             this.Titulo = "Cadastro de Funcionário";
-            this.panel2.ResumeLayout(false);
+            this.pnlConteudo.ResumeLayout(false);
             this.tlpCampos.ResumeLayout(false);
             this.tlpCampos.PerformLayout();
             this.tlpBotoes.ResumeLayout(false);

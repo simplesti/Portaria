@@ -103,7 +103,7 @@
             this.btnRemFuncionario = new Portaria.Framework.Botoes.BotaoRemover();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.cboBloco = new System.Windows.Forms.ComboBox();
-            this.panel2.SuspendLayout();
+            this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsPessoasAutorizadas)).BeginInit();
@@ -116,8 +116,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tlpCampos);
-            this.panel2.Size = new System.Drawing.Size(955, 517);
+            this.pnlConteudo.Controls.Add(this.tlpCampos);
+            this.pnlConteudo.Size = new System.Drawing.Size(955, 517);
             // 
             // tlpCampos
             // 
@@ -937,7 +937,7 @@
             this.Name = "CadUnidade";
             this.Text = "";
             this.Titulo = "Cadastro de Unidade";
-            this.panel2.ResumeLayout(false);
+            this.pnlConteudo.ResumeLayout(false);
             this.tlpCampos.ResumeLayout(false);
             this.tlpCampos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizadas)).EndInit();

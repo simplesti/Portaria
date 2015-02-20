@@ -33,7 +33,6 @@
             this.botaoRemover = new Portaria.Framework.Botoes.BotaoRemover();
             this.botaoAdicionar = new Portaria.Framework.Botoes.BotaoAdicionar();
             this.dgvUnidades = new System.Windows.Forms.DataGridView();
-            this.bsUnidades = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,12 +47,14 @@
             this.animaisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.veiculosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.assinaturasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsUnidades = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUnidades)).BeginInit();
             this.SuspendLayout();
             // 
             // botaoRemover
             // 
+            this.botaoRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botaoRemover.AutoSize = true;
             this.botaoRemover.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -69,6 +70,7 @@
             // 
             // botaoAdicionar
             // 
+            this.botaoAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botaoAdicionar.AutoSize = true;
             this.botaoAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -85,6 +87,9 @@
             // dgvUnidades
             // 
             this.dgvUnidades.AllowUserToResizeRows = false;
+            this.dgvUnidades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUnidades.AutoGenerateColumns = false;
             this.dgvUnidades.BackgroundColor = System.Drawing.Color.White;
             this.dgvUnidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -112,10 +117,6 @@
             this.dgvUnidades.Size = new System.Drawing.Size(577, 337);
             this.dgvUnidades.TabIndex = 6;
             this.dgvUnidades.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUnidades_CellDoubleClick);
-            // 
-            // bsUnidades
-            // 
-            this.bsUnidades.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Unidade);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -226,6 +227,10 @@
             this.assinaturasDataGridViewTextBoxColumn.Name = "assinaturasDataGridViewTextBoxColumn";
             this.assinaturasDataGridViewTextBoxColumn.ReadOnly = true;
             this.assinaturasDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bsUnidades
+            // 
+            this.bsUnidades.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Unidade);
             // 
             // TabCadastrarUnidades
             // 

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.panel2.SuspendLayout();
+            this.pnlConteudo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tabControl);
+            this.pnlConteudo.Controls.Add(this.tabControl);
             // 
             // tabControl
             // 
@@ -53,7 +53,7 @@
             this.ClientSize = new System.Drawing.Size(640, 480);
             this.Name = "FormWindowTabbed";
             this.Text = "FormWindowTabbed";
-            this.panel2.ResumeLayout(false);
+            this.pnlConteudo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

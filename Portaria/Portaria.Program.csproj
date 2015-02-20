@@ -86,6 +86,18 @@
     <Compile Include="Locais\CadLocal.Designer.cs">
       <DependentUpon>CadLocal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Locais\CadReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Locais\CadReserva.Designer.cs">
+      <DependentUpon>CadReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locais\VisReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Locais\VisReservas.Designer.cs">
+      <DependentUpon>VisReservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Locais\TabCadastrarLocais.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +190,12 @@
     <EmbeddedResource Include="Locais\CadLocal.resx">
       <DependentUpon>CadLocal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Locais\CadReserva.resx">
+      <DependentUpon>CadReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locais\VisReservas.resx">
+      <DependentUpon>VisReservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Locais\TabCadastrarLocais.resx">
       <DependentUpon>TabCadastrarLocais.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,11 +239,13 @@
       <DependentUpon>TabVisualizarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Portaria.Core.Model.Cadastro.Local.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Bloco.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Funcionario.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Pessoa.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Unidade.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Veiculo.datasource" />
+    <None Include="Properties\DataSources\Portaria.Core.Model.Reserva.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

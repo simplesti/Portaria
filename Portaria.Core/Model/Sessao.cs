@@ -17,5 +17,7 @@ namespace Portaria.Core.Model
         public virtual Usuario UsuarioLogado { get; set; }
 
         public string NomeEstacao { get; set; }
+
+        public virtual ICollection<Reserva> Reservas { get; set; }
     }
 }

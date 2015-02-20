@@ -1,6 +1,10 @@
-﻿using Portaria.Core;
+﻿using Portaria.Business;
+using Portaria.Business.Cadastro;
+using Portaria.Core;
 using Portaria.Framework.Forms;
+using Portaria.Framework.Locais;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Portaria.Locais
 {
@@ -9,6 +13,67 @@ namespace Portaria.Locais
         public TabReservarLocais()
         {
             InitializeComponent();
+
+            CarregarLocais();
+        }
+
+        private void CarregarLocais()
+        {
+            if (!DesignMode)
+            {
+                var localBus = new LocalBus();
+                var todosLocais = localBus.Todos().ToList();
+
+                foreach (var local in todosLocais)
+                {
+                    var item = new LocalItem(local);
+                    item.VisualizarLocalClick += item_VisualizarLocalClick;
+                    flpLocais.Controls.Add(item);
+                }
+            }
+        }
+
+        void item_VisualizarLocalClick(object sender, LocalEventArgs e)
+        {
+            using (var frm = new VisReservas(e.Local))
+            {
+                frm.ShowDialog();
+            }
+
+            Carregar();
+        }
+
+        public override void Carregar(params Core.Model.IModel[] entidades)
+        {
+            if (entidades.Any())
+            {
+                CarregarReservas(entidades.Select(e => e.Id));
+            }
+            else
+            {
+                CarregarReservasProximas();
+            }
+        }
+
+        private void CarregarReservas(IEnumerable<int> ids)
+        {
+            var reservaBus = new ReservaBus();
+
+            var query = reservaBus.Todos().AsQueryable();
+            query = query.Where(e => ids.Contains(e.Id));
+
+            dgvReservas.DataSource = query.ToList();
+        }
+
+        private void CarregarReservasProximas()
+        {
+            var reservaBus = new ReservaBus();
+            var query = reservaBus.Todos();
+
+            query = query.OrderByDescending(r => r.DataHoraInicio)
+                .Take(10);
+
+            dgvReservas.DataSource = query.ToList();
         }
 
         public override ICollection<TipoUsuario> TiposUsuariosPermitidos

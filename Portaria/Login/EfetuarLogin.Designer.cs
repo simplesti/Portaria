@@ -38,15 +38,15 @@
             this.pnlBotoes = new System.Windows.Forms.Panel();
             this.botaoOK = new Portaria.Framework.Botoes.BotaoOK();
             this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
-            this.panel2.SuspendLayout();
+            this.pnlConteudo.SuspendLayout();
             this.tlpConteudo.SuspendLayout();
             this.pnlBotoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tlpConteudo);
-            this.panel2.Size = new System.Drawing.Size(530, 254);
+            this.pnlConteudo.Controls.Add(this.tlpConteudo);
+            this.pnlConteudo.Size = new System.Drawing.Size(530, 254);
             // 
             // tlpConteudo
             // 
@@ -172,7 +172,7 @@
             this.Name = "EfetuarLogin";
             this.Text = "EfetuarLogin";
             this.Titulo = "Efetuar Login";
-            this.panel2.ResumeLayout(false);
+            this.pnlConteudo.ResumeLayout(false);
             this.tlpConteudo.ResumeLayout(false);
             this.tlpConteudo.PerformLayout();
             this.pnlBotoes.ResumeLayout(false);

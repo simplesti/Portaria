@@ -102,6 +102,14 @@
     <Compile Include="Migrations\201501251519523_Sessoes.Designer.cs">
       <DependentUpon>201501251519523_Sessoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502170025517_Locais.cs" />
+    <Compile Include="Migrations\201502170025517_Locais.Designer.cs">
+      <DependentUpon>201502170025517_Locais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502172121308_Reservas.cs" />
+    <Compile Include="Migrations\201502172121308_Reservas.Designer.cs">
+      <DependentUpon>201502172121308_Reservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PortariaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -140,6 +148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501251519523_Sessoes.resx">
       <DependentUpon>201501251519523_Sessoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502170025517_Locais.resx">
+      <DependentUpon>201502170025517_Locais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502172121308_Reservas.resx">
+      <DependentUpon>201502172121308_Reservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

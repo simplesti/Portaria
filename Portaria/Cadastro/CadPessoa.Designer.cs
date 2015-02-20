@@ -52,7 +52,7 @@
             this.lblCPF = new System.Windows.Forms.Label();
             this.txtRG = new System.Windows.Forms.TextBox();
             this.txtCPF = new System.Windows.Forms.TextBox();
-            this.panel2.SuspendLayout();
+            this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             this.tlpBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsPessoa)).BeginInit();
@@ -61,8 +61,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tlpCampos);
-            this.panel2.Size = new System.Drawing.Size(634, 362);
+            this.pnlConteudo.Controls.Add(this.tlpCampos);
+            this.pnlConteudo.Size = new System.Drawing.Size(634, 362);
             // 
             // tlpCampos
             // 
@@ -329,7 +329,7 @@
             this.Name = "CadPessoa";
             this.Text = "CadPessoa";
             this.Titulo = "Cadastro de pessoa";
-            this.panel2.ResumeLayout(false);
+            this.pnlConteudo.ResumeLayout(false);
             this.tlpCampos.ResumeLayout(false);
             this.tlpCampos.PerformLayout();
             this.tlpBotoes.ResumeLayout(false);

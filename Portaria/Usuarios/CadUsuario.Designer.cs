@@ -43,7 +43,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.pnlConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).BeginInit();
             this.tlpCampos.SuspendLayout();
             this.tlpBotoes.SuspendLayout();
@@ -51,8 +51,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tlpCampos);
-            this.panel2.Size = new System.Drawing.Size(532, 161);
+            this.pnlConteudo.Controls.Add(this.tlpCampos);
+            this.pnlConteudo.Size = new System.Drawing.Size(532, 161);
             // 
             // lblSenha
             // 
@@ -231,7 +231,7 @@
             this.Name = "CadUsuario";
             this.Text = "CadUsuario";
             this.Titulo = "Cadastro de usuário";
-            this.panel2.ResumeLayout(false);
+            this.pnlConteudo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).EndInit();
             this.tlpCampos.ResumeLayout(false);
             this.tlpCampos.PerformLayout();

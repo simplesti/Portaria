@@ -62,3 +62,5 @@ C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Locais.CadLoc
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Locais.TabCadastrarLocais.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Locais.TabReservarLocais.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.LivroNegro.TabVisualizarLivroNegro.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Locais.CadReserva.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Locais.VisReservas.resources

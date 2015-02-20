@@ -73,6 +73,16 @@ namespace Portaria.Framework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_blue {
+            get {
+                object obj = ResourceManager.GetObject("close_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Delete {
             get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
@@ -86,6 +96,26 @@ namespace Portaria.Framework.Properties {
         internal static System.Drawing.Bitmap group_edit {
             get {
                 object obj = ResourceManager.GetObject("group_edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap max_blue {
+            get {
+                object obj = ResourceManager.GetObject("max_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap min_blue {
+            get {
+                object obj = ResourceManager.GetObject("min_blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

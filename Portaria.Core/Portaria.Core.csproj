@@ -47,12 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\CadastroMorador\Bloco.cs" />
-    <Compile Include="Model\CadastroMorador\Funcionario.cs" />
-    <Compile Include="Model\CadastroMorador\Pessoa.cs" />
-    <Compile Include="Model\CadastroMorador\Unidade.cs" />
-    <Compile Include="Model\CadastroMorador\Veiculo.cs" />
+    <Compile Include="Model\Cadastro\Bloco.cs" />
+    <Compile Include="Model\Cadastro\Funcionario.cs" />
+    <Compile Include="Model\Cadastro\Local.cs" />
+    <Compile Include="Model\Cadastro\Pessoa.cs" />
+    <Compile Include="Model\Cadastro\Unidade.cs" />
+    <Compile Include="Model\Cadastro\Veiculo.cs" />
     <Compile Include="Model\IModel.cs" />
+    <Compile Include="Model\Reserva.cs" />
     <Compile Include="Model\Sessao.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

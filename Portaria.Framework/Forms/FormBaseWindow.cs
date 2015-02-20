@@ -12,11 +12,11 @@ namespace Portaria.Framework.Forms
         {
             get
             {
-                return label1.Text;
+                return lblTitulo.Text;
             }
             set
             {
-                label1.Text = value;
+                lblTitulo.Text = value;
             }
         }
 
@@ -48,6 +48,18 @@ namespace Portaria.Framework.Forms
         private void tableLayoutPanel1_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
+        }
+
+        private void Maximizar_Click(object sender, System.EventArgs e)
+        {
+            if (WindowState == System.Windows.Forms.FormWindowState.Maximized)
+            {
+                WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+            else
+            {
+                WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            }
         }
     }
 }

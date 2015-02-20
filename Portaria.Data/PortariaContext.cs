@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Portaria.Core.Model;
 using Portaria.Core.Model.CadastroMorador;
+using Portaria.Core.Model.Cadastro;
 
 namespace Portaria.Data
 {
@@ -57,6 +58,10 @@ namespace Portaria.Data
 
         private static PortariaContext bd;
 
+        public IDbSet<Reserva> Reservas { get; set; }
+
+        public IDbSet<Local> Locais { get; set; }
+
         public IDbSet<Sessao> Sessoes { get; set; }
 
         public IDbSet<Usuario> Usuarios { get; set; }
@@ -79,7 +84,10 @@ namespace Portaria.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<Reserva>()
+                .ToTable("Reservas");
+            modelBuilder.Entity<Local>()
+                .ToTable("Locais");
             modelBuilder.Entity<Unidade>()
                 .ToTable("Unidades")
                 .HasMany<Pessoa>(p => p.Autorizados)

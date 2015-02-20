@@ -35,14 +35,16 @@
             this.dgvLocais = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidadesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsBlocos = new System.Windows.Forms.BindingSource(this.components);
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.bsLocais = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocais)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsBlocos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsLocais)).BeginInit();
             this.SuspendLayout();
             // 
             // botaoRemover
             // 
+            this.botaoRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botaoRemover.AutoSize = true;
             this.botaoRemover.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -54,9 +56,11 @@
             this.botaoRemover.Size = new System.Drawing.Size(24, 24);
             this.botaoRemover.TabIndex = 8;
             this.botaoRemover.UseVisualStyleBackColor = true;
+            this.botaoRemover.Click += new System.EventHandler(this.botaoRemover_Click);
             // 
             // botaoAdicionar
             // 
+            this.botaoAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botaoAdicionar.AutoSize = true;
             this.botaoAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -68,18 +72,23 @@
             this.botaoAdicionar.Size = new System.Drawing.Size(24, 24);
             this.botaoAdicionar.TabIndex = 7;
             this.botaoAdicionar.UseVisualStyleBackColor = true;
+            this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
             // 
             // dgvLocais
             // 
             this.dgvLocais.AllowUserToResizeRows = false;
+            this.dgvLocais.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLocais.AutoGenerateColumns = false;
             this.dgvLocais.BackgroundColor = System.Drawing.Color.White;
             this.dgvLocais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLocais.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
-            this.unidadesDataGridViewTextBoxColumn});
-            this.dgvLocais.DataSource = this.bsBlocos;
+            this.descricaoDataGridViewTextBoxColumn,
+            this.fotoDataGridViewImageColumn});
+            this.dgvLocais.DataSource = this.bsLocais;
             this.dgvLocais.Location = new System.Drawing.Point(22, 42);
             this.dgvLocais.Name = "dgvLocais";
             this.dgvLocais.ReadOnly = true;
@@ -87,6 +96,7 @@
             this.dgvLocais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLocais.Size = new System.Drawing.Size(577, 337);
             this.dgvLocais.TabIndex = 6;
+            this.dgvLocais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLocais_CellDoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -98,23 +108,30 @@
             // 
             // nomeDataGridViewTextBoxColumn
             // 
-            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // unidadesDataGridViewTextBoxColumn
+            // descricaoDataGridViewTextBoxColumn
             // 
-            this.unidadesDataGridViewTextBoxColumn.DataPropertyName = "Unidades";
-            this.unidadesDataGridViewTextBoxColumn.HeaderText = "Unidades";
-            this.unidadesDataGridViewTextBoxColumn.Name = "unidadesDataGridViewTextBoxColumn";
-            this.unidadesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.unidadesDataGridViewTextBoxColumn.Visible = false;
+            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // bsBlocos
+            // fotoDataGridViewImageColumn
             // 
-            this.bsBlocos.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Bloco);
+            this.fotoDataGridViewImageColumn.DataPropertyName = "Foto";
+            this.fotoDataGridViewImageColumn.HeaderText = "Foto";
+            this.fotoDataGridViewImageColumn.Name = "fotoDataGridViewImageColumn";
+            this.fotoDataGridViewImageColumn.ReadOnly = true;
+            this.fotoDataGridViewImageColumn.Visible = false;
+            // 
+            // bsLocais
+            // 
+            this.bsLocais.DataSource = typeof(Portaria.Core.Model.Cadastro.Local);
             // 
             // TabCadastrarLocais
             // 
@@ -127,7 +144,7 @@
             this.Name = "TabCadastrarLocais";
             this.Size = new System.Drawing.Size(641, 417);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocais)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsBlocos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsLocais)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,9 +155,10 @@
         private Framework.Botoes.BotaoRemover botaoRemover;
         private Framework.Botoes.BotaoAdicionar botaoAdicionar;
         private System.Windows.Forms.DataGridView dgvLocais;
+        private System.Windows.Forms.BindingSource bsLocais;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unidadesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource bsBlocos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn;
     }
 }

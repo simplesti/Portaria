@@ -49,11 +49,13 @@
   <ItemGroup>
     <Compile Include="Cadastro\BlocoBus.cs" />
     <Compile Include="Cadastro\FuncionarioBus.cs" />
+    <Compile Include="Cadastro\LocalBus.cs" />
     <Compile Include="Cadastro\PessoaBus.cs" />
     <Compile Include="Cadastro\UnidadeBus.cs" />
     <Compile Include="Cadastro\VeiculoBus.cs" />
     <Compile Include="IPortariaBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservaBus.cs" />
     <Compile Include="SessaoBus.cs" />
     <Compile Include="UsuarioBus.cs" />
   </ItemGroup>

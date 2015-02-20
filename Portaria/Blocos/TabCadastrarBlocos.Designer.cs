@@ -33,16 +33,17 @@
             this.botaoRemover = new Portaria.Framework.Botoes.BotaoRemover();
             this.botaoAdicionar = new Portaria.Framework.Botoes.BotaoAdicionar();
             this.dgvBlocos = new System.Windows.Forms.DataGridView();
-            this.bsBlocos = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidadesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsBlocos = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBlocos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsBlocos)).BeginInit();
             this.SuspendLayout();
             // 
             // botaoRemover
             // 
+            this.botaoRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botaoRemover.AutoSize = true;
             this.botaoRemover.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -58,6 +59,7 @@
             // 
             // botaoAdicionar
             // 
+            this.botaoAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botaoAdicionar.AutoSize = true;
             this.botaoAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -74,6 +76,9 @@
             // dgvBlocos
             // 
             this.dgvBlocos.AllowUserToResizeRows = false;
+            this.dgvBlocos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBlocos.AutoGenerateColumns = false;
             this.dgvBlocos.BackgroundColor = System.Drawing.Color.White;
             this.dgvBlocos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -90,10 +95,6 @@
             this.dgvBlocos.Size = new System.Drawing.Size(577, 337);
             this.dgvBlocos.TabIndex = 3;
             this.dgvBlocos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBlocos_CellDoubleClick);
-            // 
-            // bsBlocos
-            // 
-            this.bsBlocos.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Bloco);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -118,6 +119,10 @@
             this.unidadesDataGridViewTextBoxColumn.Name = "unidadesDataGridViewTextBoxColumn";
             this.unidadesDataGridViewTextBoxColumn.ReadOnly = true;
             this.unidadesDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bsBlocos
+            // 
+            this.bsBlocos.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Bloco);
             // 
             // TabCadastrarBlocos
             // 

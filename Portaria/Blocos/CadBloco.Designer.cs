@@ -37,7 +37,7 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.bsBloco = new System.Windows.Forms.BindingSource(this.components);
-            this.panel2.SuspendLayout();
+            this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             this.tlpBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsBloco)).BeginInit();
@@ -45,8 +45,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tlpCampos);
-            this.panel2.Size = new System.Drawing.Size(378, 102);
+            this.pnlConteudo.Controls.Add(this.tlpCampos);
+            this.pnlConteudo.Size = new System.Drawing.Size(378, 102);
             // 
             // tlpCampos
             // 
@@ -160,7 +160,7 @@
             this.Name = "CadBloco";
             this.Text = "CadBloco";
             this.Titulo = "Cadastro de bloco";
-            this.panel2.ResumeLayout(false);
+            this.pnlConteudo.ResumeLayout(false);
             this.tlpCampos.ResumeLayout(false);
             this.tlpCampos.PerformLayout();
             this.tlpBotoes.ResumeLayout(false);

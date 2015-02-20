@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabVisualizarUsuarios));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.bsUsuario = new System.Windows.Forms.BindingSource(this.components);
-            this.botaoAdicionar = new Portaria.Framework.Botoes.BotaoAdicionar();
-            this.botaoRemover = new Portaria.Framework.Botoes.BotaoRemover();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sessoesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsUsuario = new System.Windows.Forms.BindingSource(this.components);
+            this.botaoAdicionar = new Portaria.Framework.Botoes.BotaoAdicionar();
+            this.botaoRemover = new Portaria.Framework.Botoes.BotaoRemover();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +47,9 @@
             // dgvUsuarios
             // 
             this.dgvUsuarios.AllowUserToResizeRows = false;
+            this.dgvUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsuarios.AutoGenerateColumns = false;
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -66,40 +69,6 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(577, 337);
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellDoubleClick);
-            // 
-            // bsUsuario
-            // 
-            this.bsUsuario.DataSource = typeof(Portaria.Core.Model.Usuario);
-            // 
-            // botaoAdicionar
-            // 
-            this.botaoAdicionar.AutoSize = true;
-            this.botaoAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("botaoAdicionar.Image")));
-            this.botaoAdicionar.Location = new System.Drawing.Point(604, 25);
-            this.botaoAdicionar.MaximumSize = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.MinimumSize = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.Name = "botaoAdicionar";
-            this.botaoAdicionar.Size = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.TabIndex = 1;
-            this.botaoAdicionar.UseVisualStyleBackColor = true;
-            this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
-            // 
-            // botaoRemover
-            // 
-            this.botaoRemover.AutoSize = true;
-            this.botaoRemover.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoRemover.Image = ((System.Drawing.Image)(resources.GetObject("botaoRemover.Image")));
-            this.botaoRemover.Location = new System.Drawing.Point(604, 55);
-            this.botaoRemover.MaximumSize = new System.Drawing.Size(24, 24);
-            this.botaoRemover.MinimumSize = new System.Drawing.Size(24, 24);
-            this.botaoRemover.Name = "botaoRemover";
-            this.botaoRemover.Size = new System.Drawing.Size(24, 24);
-            this.botaoRemover.TabIndex = 2;
-            this.botaoRemover.UseVisualStyleBackColor = true;
-            this.botaoRemover.Click += new System.EventHandler(this.botaoRemover_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -146,6 +115,42 @@
             this.sessoesDataGridViewTextBoxColumn.Name = "sessoesDataGridViewTextBoxColumn";
             this.sessoesDataGridViewTextBoxColumn.ReadOnly = true;
             this.sessoesDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bsUsuario
+            // 
+            this.bsUsuario.DataSource = typeof(Portaria.Core.Model.Usuario);
+            // 
+            // botaoAdicionar
+            // 
+            this.botaoAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoAdicionar.AutoSize = true;
+            this.botaoAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("botaoAdicionar.Image")));
+            this.botaoAdicionar.Location = new System.Drawing.Point(604, 25);
+            this.botaoAdicionar.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoAdicionar.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoAdicionar.Name = "botaoAdicionar";
+            this.botaoAdicionar.Size = new System.Drawing.Size(24, 24);
+            this.botaoAdicionar.TabIndex = 1;
+            this.botaoAdicionar.UseVisualStyleBackColor = true;
+            this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
+            // 
+            // botaoRemover
+            // 
+            this.botaoRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoRemover.AutoSize = true;
+            this.botaoRemover.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoRemover.Image = ((System.Drawing.Image)(resources.GetObject("botaoRemover.Image")));
+            this.botaoRemover.Location = new System.Drawing.Point(604, 55);
+            this.botaoRemover.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoRemover.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoRemover.Name = "botaoRemover";
+            this.botaoRemover.Size = new System.Drawing.Size(24, 24);
+            this.botaoRemover.TabIndex = 2;
+            this.botaoRemover.UseVisualStyleBackColor = true;
+            this.botaoRemover.Click += new System.EventHandler(this.botaoRemover_Click);
             // 
             // TabVisualizarUsuarios
             // 

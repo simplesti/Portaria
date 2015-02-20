@@ -29,65 +29,106 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBaseWindow));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Fechar = new System.Windows.Forms.PictureBox();
+            this.tlpFundo = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpCabecalho = new System.Windows.Forms.TableLayoutPanel();
             this.Minimizar = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Fechar)).BeginInit();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.Icone = new System.Windows.Forms.PictureBox();
+            this.Fechar = new System.Windows.Forms.PictureBox();
+            this.Maximizar = new System.Windows.Forms.PictureBox();
+            this.pnlFundo = new System.Windows.Forms.Panel();
+            this.pnlConteudo = new System.Windows.Forms.Panel();
+            this.tlpFundo.SuspendLayout();
+            this.tlpCabecalho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Icone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
+            this.pnlFundo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpFundo
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(640, 480);
-            this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.tlpFundo.ColumnCount = 1;
+            this.tlpFundo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpFundo.Controls.Add(this.tlpCabecalho, 0, 0);
+            this.tlpFundo.Controls.Add(this.pnlFundo, 0, 1);
+            this.tlpFundo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpFundo.Location = new System.Drawing.Point(0, 0);
+            this.tlpFundo.Name = "tlpFundo";
+            this.tlpFundo.RowCount = 2;
+            this.tlpFundo.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFundo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpFundo.Size = new System.Drawing.Size(640, 480);
+            this.tlpFundo.TabIndex = 0;
+            this.tlpFundo.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // tableLayoutPanel2
+            // tlpCabecalho
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.AutoSize = true;
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.Fechar, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Minimizar, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(634, 51);
-            this.tableLayoutPanel2.TabIndex = 0;
-            this.tableLayoutPanel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseDown);
-            this.tableLayoutPanel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseMove);
-            this.tableLayoutPanel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseUp);
+            this.tlpCabecalho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpCabecalho.AutoSize = true;
+            this.tlpCabecalho.ColumnCount = 5;
+            this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpCabecalho.Controls.Add(this.Minimizar, 2, 0);
+            this.tlpCabecalho.Controls.Add(this.lblTitulo, 1, 0);
+            this.tlpCabecalho.Controls.Add(this.Icone, 0, 0);
+            this.tlpCabecalho.Controls.Add(this.Fechar, 4, 0);
+            this.tlpCabecalho.Controls.Add(this.Maximizar, 3, 0);
+            this.tlpCabecalho.Location = new System.Drawing.Point(3, 3);
+            this.tlpCabecalho.Name = "tlpCabecalho";
+            this.tlpCabecalho.RowCount = 1;
+            this.tlpCabecalho.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCabecalho.Size = new System.Drawing.Size(634, 51);
+            this.tlpCabecalho.TabIndex = 0;
+            this.tlpCabecalho.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseDown);
+            this.tlpCabecalho.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseMove);
+            this.tlpCabecalho.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseUp);
+            // 
+            // Minimizar
+            // 
+            this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Minimizar.Image = global::Portaria.Framework.Properties.Resources.min_blue;
+            this.Minimizar.Location = new System.Drawing.Point(484, 3);
+            this.Minimizar.Name = "Minimizar";
+            this.Minimizar.Size = new System.Drawing.Size(45, 45);
+            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Minimizar.TabIndex = 2;
+            this.Minimizar.TabStop = false;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(54, 10);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(65, 30);
+            this.lblTitulo.TabIndex = 3;
+            this.lblTitulo.Text = "Titulo";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseDown);
+            this.lblTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseMove);
+            this.lblTitulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseUp);
+            // 
+            // Icone
+            // 
+            this.Icone.Image = ((System.Drawing.Image)(resources.GetObject("Icone.Image")));
+            this.Icone.Location = new System.Drawing.Point(3, 3);
+            this.Icone.Name = "Icone";
+            this.Icone.Size = new System.Drawing.Size(45, 45);
+            this.Icone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Icone.TabIndex = 4;
+            this.Icone.TabStop = false;
             // 
             // Fechar
             // 
             this.Fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Fechar.Image = ((System.Drawing.Image)(resources.GetObject("Fechar.Image")));
+            this.Fechar.Image = global::Portaria.Framework.Properties.Resources.close_blue;
             this.Fechar.Location = new System.Drawing.Point(586, 3);
             this.Fechar.Name = "Fechar";
             this.Fechar.Size = new System.Drawing.Size(45, 45);
@@ -96,93 +137,70 @@
             this.Fechar.TabStop = false;
             this.Fechar.Click += new System.EventHandler(this.Fechar_Click);
             // 
-            // Minimizar
+            // Maximizar
             // 
-            this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Minimizar.Image")));
-            this.Minimizar.Location = new System.Drawing.Point(535, 3);
-            this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(45, 45);
-            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Minimizar.TabIndex = 2;
-            this.Minimizar.TabStop = false;
-            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
+            this.Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Maximizar.Image = global::Portaria.Framework.Properties.Resources.max_blue;
+            this.Maximizar.Location = new System.Drawing.Point(535, 3);
+            this.Maximizar.Name = "Maximizar";
+            this.Maximizar.Size = new System.Drawing.Size(45, 45);
+            this.Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Maximizar.TabIndex = 5;
+            this.Maximizar.TabStop = false;
+            this.Maximizar.Click += new System.EventHandler(this.Maximizar_Click);
             // 
-            // label1
+            // pnlFundo
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 30);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Titulo";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseDown);
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseMove);
-            this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseUp);
+            this.pnlFundo.Controls.Add(this.pnlConteudo);
+            this.pnlFundo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFundo.Location = new System.Drawing.Point(3, 60);
+            this.pnlFundo.Name = "pnlFundo";
+            this.pnlFundo.Size = new System.Drawing.Size(634, 417);
+            this.pnlFundo.TabIndex = 1;
+            this.pnlFundo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseDown);
+            this.pnlFundo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseMove);
+            this.pnlFundo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseUp);
             // 
-            // panel1
+            // pnlConteudo
             // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(634, 417);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanel2_MouseUp);
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(634, 417);
-            this.panel2.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlConteudo.Location = new System.Drawing.Point(0, 0);
+            this.pnlConteudo.Name = "pnlConteudo";
+            this.pnlConteudo.Size = new System.Drawing.Size(634, 417);
+            this.pnlConteudo.TabIndex = 0;
             // 
             // FormBaseWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 480);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpFundo);
             this.Name = "FormBaseWindow";
             this.Text = "p";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Fechar)).EndInit();
+            this.tlpFundo.ResumeLayout(false);
+            this.tlpFundo.PerformLayout();
+            this.tlpCabecalho.ResumeLayout(false);
+            this.tlpCabecalho.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Icone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).EndInit();
+            this.pnlFundo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        public System.Windows.Forms.TableLayoutPanel tlpCabecalho;
         public System.Windows.Forms.PictureBox Fechar;
         public System.Windows.Forms.PictureBox Minimizar;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        public System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label lblTitulo;
+        public System.Windows.Forms.Panel pnlFundo;
+        public System.Windows.Forms.TableLayoutPanel tlpFundo;
+        public System.Windows.Forms.Panel pnlConteudo;
+        private System.Windows.Forms.PictureBox Icone;
+        private System.Windows.Forms.PictureBox Maximizar;
 
     }
 }

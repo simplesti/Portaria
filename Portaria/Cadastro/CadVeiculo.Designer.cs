@@ -45,7 +45,7 @@
             this.lblProprietario = new System.Windows.Forms.Label();
             this.txtProprietario = new System.Windows.Forms.TextBox();
             this.btnEditarProprietario = new Portaria.Framework.Botoes.BotaoEditar();
-            this.panel2.SuspendLayout();
+            this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsVeiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -54,8 +54,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tlpCampos);
-            this.panel2.Size = new System.Drawing.Size(364, 374);
+            this.pnlConteudo.Controls.Add(this.tlpCampos);
+            this.pnlConteudo.Size = new System.Drawing.Size(364, 374);
             // 
             // tlpCampos
             // 
@@ -269,7 +269,7 @@
             this.Name = "CadVeiculo";
             this.Text = "CadVeiculo";
             this.Titulo = "Cadastro de Veículo";
-            this.panel2.ResumeLayout(false);
+            this.pnlConteudo.ResumeLayout(false);
             this.tlpCampos.ResumeLayout(false);
             this.tlpCampos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsVeiculo)).EndInit();

@@ -22,6 +22,7 @@ namespace Portaria.Framework.Unidades
                 unidade = value;
                 
                 lblNumero.Text = unidade.Numero.ToString();
+                lblBloco.Text = unidade.Bloco.Nome;
             }
 
             get

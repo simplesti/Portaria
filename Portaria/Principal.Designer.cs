@@ -45,7 +45,7 @@
             this.tabCadastrarLocais = new Portaria.Locais.TabCadastrarLocais();
             this.tabVisualizarLivroNegro = new Portaria.LivroNegro.TabVisualizarLivroNegro();
             this.tabControl.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlConteudo.SuspendLayout();
             this.tpUnidades.SuspendLayout();
             this.tpBlocos.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(659, 417);
+            this.pnlConteudo.Size = new System.Drawing.Size(659, 417);
             // 
             // tpUnidades
             // 
@@ -252,7 +252,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.tabControl.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlConteudo.ResumeLayout(false);
             this.tpUnidades.ResumeLayout(false);
             this.tpBlocos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
