@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portaria.Business
 {
-    public interface IPortariaBus<T> where T : IModel
+    public interface IPortariaBus<T> where T : IEntidade
     {
         IEnumerable<T> Todos();
 

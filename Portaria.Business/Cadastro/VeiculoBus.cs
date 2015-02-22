@@ -50,15 +50,19 @@ namespace Portaria.Business.Cadastro
 
         public Veiculo BuscaPorId(int id)
         {
-            return bd.Veiculos.Where(i => i.Id == id).FirstOrDefault();
+            return bd.Veiculos.FirstOrDefault(i => i.Id == id);
         }
 
         public void Remover(Veiculo entidade)
         {
             try
             {
-                bd.Veiculos.Remove(entidade);
-                bd.SaveChanges();
+                var v = bd.Veiculos.FirstOrDefault(i => i.Id == entidade.Id);
+                if (v != null)
+                {
+                    bd.Veiculos.Remove(v);
+                    bd.SaveChanges();
+                }
             }
             catch (Exception ex)
             {

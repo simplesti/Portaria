@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Portaria.Core.Model.CadastroMorador
 {
-    public class Funcionario : IModel
+    public class Funcionario : IEntidade
     {
         public int Id { get; set; }
 
@@ -26,5 +26,21 @@ namespace Portaria.Core.Model.CadastroMorador
         public byte[] Foto { get; set; }
 
         public virtual Unidade Unidade { get; set; }
+
+
+        public string TipoEntidade()
+        {
+            return GetType().Name;
+        }
+
+        public string DescricaoEntidade()
+        {
+            return Nome;
+        }
+
+        public override string ToString()
+        {
+            return DescricaoEntidade();
+        }
     }
 }

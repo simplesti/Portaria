@@ -24,7 +24,7 @@ namespace Portaria.Business.Cadastro
 
         public Pessoa BuscaPorId(int id)
         {
-            return bd.Pessoas.Where(i => i.Id == id).FirstOrDefault();
+            return bd.Pessoas.FirstOrDefault(i => i.Id == id);
         }
 
         public IEnumerable<Pessoa> BuscaPorNome(string nome)
@@ -66,8 +66,13 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                bd.Pessoas.Remove(entidade);
-                bd.SaveChanges();
+                var p = bd.Pessoas.FirstOrDefault(i => i.Id == entidade.Id);
+
+                if (p != null)
+                {
+                    bd.Pessoas.Remove(p);
+                    bd.SaveChanges();
+                }
             }
             catch (Exception ex)
             {

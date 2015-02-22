@@ -19,7 +19,7 @@ namespace Portaria.Framework.Forms
             InitializeComponent();
         }
 
-        public virtual void Carregar(params IModel[] entidades) { }
+        public virtual void Carregar(params IEntidade[] entidades) { }
 
         public virtual ICollection<Core.TipoUsuario> TiposUsuariosPermitidos
         {

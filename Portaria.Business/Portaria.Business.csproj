@@ -55,6 +55,8 @@
     <Compile Include="Cadastro\VeiculoBus.cs" />
     <Compile Include="IPortariaBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroLivroNegroBus.cs" />
+    <Compile Include="RegistroLivroNegroEntidadeBus.cs" />
     <Compile Include="ReservaBus.cs" />
     <Compile Include="SessaoBus.cs" />
     <Compile Include="UsuarioBus.cs" />
@@ -68,6 +70,10 @@
     <ProjectReference Include="..\Portaria.Data\Portaria.Data.csproj">
       <Project>{cb8301c0-a5e8-4166-be8f-084dfe2632c7}</Project>
       <Name>Portaria.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portaria.Framework\Portaria.Framework.csproj">
+      <Project>{caf5be63-755c-4c1c-ad33-2e4673329112}</Project>
+      <Name>Portaria.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

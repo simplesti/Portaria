@@ -77,7 +77,7 @@ namespace Portaria.Locais
 
         private void AdicionarReserva()
         {
-            using (var frm = new CadReserva())
+            using (var frm = new CadReserva(Local))
             {
                 frm.ShowDialog();
             }

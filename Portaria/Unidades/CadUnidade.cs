@@ -25,7 +25,7 @@ namespace Portaria
                 unidade = value;
 
                 txtNumero.Text = unidade.Numero.ToString();
-                
+
                 if (unidade.DataAtualizacao.HasValue)
                 {
                     lblDtAtualizacao.Text = unidade.DataAtualizacao.Value.ToString("dd/MM/yyyy HH:mm");
@@ -136,98 +136,32 @@ namespace Portaria
 
         private void EditarProprietario()
         {
+            Unidade.Proprietario = SelecionaPessoa.Selecionar(Unidade.Proprietario);
+
             var unidadeBus = new UnidadeBus();
-            var pessoaBus = new PessoaBus();
+            unidadeBus.InserirOuAtualizar(Unidade);
 
-            if (Unidade.Id == 0)
-            {
-
-                unidadeBus.InserirOuAtualizar(Unidade);
-            }
-
-            Pessoa p = null;
-
-            if (Unidade.Proprietario != null)
-                p = pessoaBus.BuscaPorId(Unidade.Proprietario.Id);
-
-            if (p == null)
-            {
-                p = new Pessoa();
-            }
-
-            using (var frm = new CadPessoa(p))
-            {
-                frm.ShowDialog();
-            }
-
-            var u = unidadeBus.BuscaPorId(Unidade.Id);
-            u.Proprietario = p;
-            unidadeBus.InserirOuAtualizar(u);
-
-            Unidade = unidadeBus.BuscaPorId(u.Id);
+            Unidade = unidadeBus.BuscaPorId(Unidade.Id);
         }
 
         private void EditarConjuge()
         {
+            Unidade.Conjuge = SelecionaPessoa.Selecionar(Unidade.Conjuge);
+
             var unidadeBus = new UnidadeBus();
-            var pessoaBus = new PessoaBus();
+            unidadeBus.InserirOuAtualizar(Unidade);
 
-            if (Unidade.Id == 0)
-            {
-                unidadeBus.InserirOuAtualizar(Unidade);
-            }
-
-            Pessoa p = null;
-
-            if (Unidade.Conjuge != null)
-                p = pessoaBus.BuscaPorId(Unidade.Conjuge.Id);
-
-            if (p == null)
-            {
-                p = new Pessoa();
-            }
-
-            using (var frm = new CadPessoa(p))
-            {
-                frm.ShowDialog();
-            }
-            var u = unidadeBus.BuscaPorId(Unidade.Id);
-            u.Conjuge = p;
-            unidadeBus.InserirOuAtualizar(u);
-
-            Unidade = unidadeBus.BuscaPorId(u.Id);
+            Unidade = unidadeBus.BuscaPorId(Unidade.Id);
         }
 
         private void EditarLocatario()
         {
+            Unidade.Locatario = SelecionaPessoa.Selecionar(Unidade.Locatario);
+
             var unidadeBus = new UnidadeBus();
-            var pessoaBus = new PessoaBus();
+            unidadeBus.InserirOuAtualizar(Unidade);
 
-            if (Unidade.Id == 0)
-            {
-                unidadeBus.InserirOuAtualizar(Unidade);
-            }
-
-            Pessoa p = null;
-
-            if (Unidade.Locatario != null)
-                p = pessoaBus.BuscaPorId(Unidade.Locatario.Id);
-
-            if (p == null)
-            {
-                p = new Pessoa();
-            }
-
-            using (var frm = new CadPessoa(p))
-            {
-                frm.ShowDialog();
-            }
-
-            var u = unidadeBus.BuscaPorId(Unidade.Id);
-            u.Locatario = p;
-            unidadeBus.InserirOuAtualizar(u);
-
-            Unidade = unidadeBus.BuscaPorId(u.Id);
+            Unidade = unidadeBus.BuscaPorId(Unidade.Id);
         }
 
         private void btnAddAutorizada_Click(object sender, EventArgs e)
@@ -238,7 +172,6 @@ namespace Portaria
         private void AdicionarPessoaAutorizada()
         {
             var unidadeBus = new UnidadeBus();
-            var p = new Pessoa();
             var u = unidadeBus.BuscaPorId(Unidade.Id);
 
             if (Unidade.Id == 0)
@@ -246,18 +179,9 @@ namespace Portaria
                 unidadeBus.InserirOuAtualizar(Unidade);
             }
 
-            using (var frm = new CadPessoa(p))
-            {
-                frm.ShowDialog();
-            }
-            
-            if (u.Autorizados == null)
-            {
-                u.Autorizados = new List<Pessoa>();
-            }
-            u.Autorizados.Add(p);
+            var p = SelecionaPessoa.Selecionar();
 
-            unidadeBus.InserirOuAtualizar(u);
+            unidadeBus.AdicionarAutorizado(p, Unidade);
 
             dgvAutorizadas.DataSource = u.Autorizados.ToList();
         }
@@ -300,7 +224,8 @@ namespace Portaria
 
             if (CaixaMensagem.Mostrar("Deseja remover " + p.Nome + " das pessoas autorizadas desta unidade?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
             {
-                pessoaBus.Remover(p);
+                var unidadeBus = new UnidadeBus();
+                unidadeBus.RemoverAutorizado(p, Unidade);
 
                 dgvAutorizadas.DataSource = unidade.Autorizados.ToList();
             }

@@ -31,7 +31,7 @@ namespace Portaria
             PopulaBlocos(blocos);
         }
 
-        public override void Carregar(params IModel[] entidades)
+        public override void Carregar(params IEntidade[] entidades)
         {
             CarregarTodosBlocos();
         }

@@ -114,7 +114,7 @@
             this.tlpBotoes.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnlConteudo
             // 
             this.pnlConteudo.Controls.Add(this.tlpCampos);
             this.pnlConteudo.Size = new System.Drawing.Size(955, 517);

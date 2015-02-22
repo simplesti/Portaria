@@ -61,7 +61,7 @@ namespace Portaria
             }
         }
 
-        public override void Carregar(params Core.Model.IModel[] entidades)
+        public override void Carregar(params Core.Model.IEntidade[] entidades)
         {
             if (entidades.Any())
             {

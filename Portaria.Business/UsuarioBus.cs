@@ -65,15 +65,20 @@ namespace Portaria.Business
 
         public Usuario BuscaPorId(int id)
         {
-            return bd.Usuarios.Where(u => u.Id == id).FirstOrDefault();
+            return bd.Usuarios.FirstOrDefault(u => u.Id == id);
         }
 
         public void Remover(Usuario entidade)
         {
             try
             {
-                bd.Usuarios.Remove(entidade);
-                bd.SaveChanges();
+                var u = bd.Usuarios.FirstOrDefault(i => i.Id == entidade.Id);
+
+                if (u != null)
+                {
+                    bd.Usuarios.Remove(u);
+                    bd.SaveChanges();
+                }
             }
             catch (Exception ex)
             {

@@ -25,9 +25,9 @@ C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Fra
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.FormBase.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Forms.FormBaseWindow.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Forms.FormWindowTabbed.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Locais.LocalItem.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Properties.Resources.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Unidades.UnidadeItem.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.csproj.GenerateResource.Cache
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.pdb
-C:\Users\Max\Documents\GitHub\Portaria\Portaria.Framework\obj\Debug\Portaria.Framework.Locais.LocalItem.resources

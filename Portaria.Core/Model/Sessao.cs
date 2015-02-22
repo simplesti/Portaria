@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portaria.Core.Model
 {
-    public class Sessao : IModel
+    public class Sessao : IEntidade
     {
         public int Id { get; set; }
 
@@ -19,5 +19,22 @@ namespace Portaria.Core.Model
         public string NomeEstacao { get; set; }
 
         public virtual ICollection<Reserva> Reservas { get; set; }
+
+
+        public string TipoEntidade()
+        {
+            return GetType().Name;
+        }
+
+        public string DescricaoEntidade()
+        {
+            return string.Format("{0} - {1} ({2})", DataHoraInicio.Value.ToString("dd/MM/yyyy HH:mm"),
+                DataHoraFim.Value.ToString("dd/MM/yyyy HH:mm"), UsuarioLogado.Nome);
+        }
+
+        public override string ToString()
+        {
+            return DescricaoEntidade();
+        }
     }
 }

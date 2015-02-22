@@ -45,15 +45,20 @@ namespace Portaria.Business.Cadastro
 
         public Bloco BuscaPorId(int id)
         {
-            return bd.Blocos.Where(i => i.Id == id).FirstOrDefault();
+            return bd.Blocos.FirstOrDefault(i => i.Id == id);
         }
 
         public void Remover(Bloco entidade)
         {
             try
             {
-                bd.Blocos.Remove(entidade);
-                bd.SaveChanges();
+                var b = bd.Blocos.FirstOrDefault(i => i.Id == entidade.Id);
+
+                if (b != null)
+                {
+                    bd.Blocos.Remove(b);
+                    bd.SaveChanges();
+                }
             }
             catch (Exception ex)
             {

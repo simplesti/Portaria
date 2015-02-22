@@ -117,7 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="bsReserva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="bsReserva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="botaoEditarSolicitante.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAK0SURBVDhPfZBbTBJQAIaph157ai2rLTWfXG2Vm5oP
+        RbBW1Kw50IwBMRXnzGFiI8g5M3U6dSIC3ualvJUBqTNlualr3rUFikDDxJRLbZmiAzOlP3SBGK2H7+n8
+        33/O+QkA/ksWNYA9UxliN7ccx3xj4FYDN6guOjzokOfcT/CFSzlBMjUFuiytx+BLdWqwyJPxk3ypYx0R
+        W5RhsKqS4BwrhVURBUvbSWgrg1c8GT/JFxn1cKlNrYJ9WIYt9TOsj8hg/tCDgafnTJ6Mn+RLDCWWo2vO
+        +LWmkcOlV8Kh7YBtUIxc5mWFJ7NP4BBD2FL2FbuYQYTsHmkrJe7MlJif+tOm4GGp8wnMnUkwtNyBsTMf
+        6rqr0EhDmV6ZFXWaJGWTXSI6Eb7Ul3FRUZ2Hl40M2Pr5WJ3uBtYtWJmWY6Tk2ldvQVnc+aGalNtQ5iRA
+        15qFFh4NYgYJVclkvBll4ttsNjaXutxfKIZzRonthSGo65O2vQWSuOBXxoE2v8FUxZFY1mbB5RyC89N9
+        LE+kQd+UgIlaBozS6L3//2swc18Gvs8I4NoYhWOOhY1FOtZ0QszWkpFeFgtr7c29goMXygUSQZp3MP1z
+        OmyT/D8yExuf78KufQydjAR2wUXrQ05OznxDPH1XPhD1IjGG93598AtQ0K6ASCqAtjfT/ex32DAl4Mci
+        A6vulxilJKehJOKU59IdCIGUKhqN2+3o0ruQpwOEzW2Y7RFC0yuCeZwGh4mOZfUjaERkp6E0IshX3i2Y
+        zgvbnpJXgPfaBpYKaC8iAWsLMNRQ0S8MwHDVdfTnEzEnobjz++UdCKbyS1Z5/gPEZ4+B8xbI5ZzF5qgE
+        m+PlGHeLrZwQFGXydwf7W96B8LEpObInN0YYTmvuCEufBPXSURSwQtFXeAP1hYmIuFW5VJGZuDuYfwEI
+        vwEffcf/iY2D0AAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="botaoCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAACRBJREFUWEel

@@ -19,7 +19,7 @@ namespace Portaria.Business.Cadastro
 
         public IEnumerable<Unidade> Todos()
         {
-            return bd.Unidades.OrderBy( u => u.Numero);
+            return bd.Unidades.OrderBy(u => u.Numero);
         }
 
         public Unidade Buscar(int numero, string bloco)
@@ -87,15 +87,62 @@ namespace Portaria.Business.Cadastro
 
         public Unidade BuscaPorId(int id)
         {
-            return bd.Unidades.Where(i => i.Id == id).FirstOrDefault();
+            return bd.Unidades.FirstOrDefault(i => i.Id == id);
         }
-
 
         public void Remover(Unidade entidade)
         {
             try
             {
-                bd.Unidades.Remove(entidade);
+                var u = bd.Unidades.FirstOrDefault(i => i.Id == entidade.Id);
+                if (u != null)
+                {
+                    bd.Unidades.Remove(u);
+                    bd.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void RemoverAutorizado(Pessoa pessoa, Unidade Unidade)
+        {
+            try
+            {
+                Unidade = bd.Unidades.FirstOrDefault(u => u.Id == Unidade.Id);
+                pessoa = bd.Pessoas.FirstOrDefault(p => p.Id == pessoa.Id);
+
+                if (!Unidade.Autorizados.Contains(pessoa))
+                {
+                    throw new Exception(string.Format("{0} não está na lista de autorizados da unidade {1}", pessoa.Nome, Unidade.Numero.ToString()));
+                }
+
+                Unidade.Autorizados.Remove(pessoa);
+
+                bd.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void AdicionarAutorizado(Pessoa pessoa, Unidade Unidade)
+        {
+            try
+            {
+                Unidade = bd.Unidades.FirstOrDefault(u => u.Id == Unidade.Id);
+                pessoa = bd.Pessoas.FirstOrDefault(p => p.Id == pessoa.Id);
+
+                if (Unidade.Autorizados == null)
+                {
+                    Unidade.Autorizados = new List<Pessoa>();
+                }
+
+                Unidade.Autorizados.Add(pessoa);
+
                 bd.SaveChanges();
             }
             catch (Exception ex)

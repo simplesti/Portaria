@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portaria.Core.Model.CadastroMorador
 {
-    public class Veiculo : IModel
+    public class Veiculo : IEntidade
     {
         public int Id { get; set; }
 
@@ -21,5 +21,21 @@ namespace Portaria.Core.Model.CadastroMorador
         public virtual Unidade Unidade { get; set; }
 
         public virtual Pessoa Proprietario { get; set; }
+
+
+        public string TipoEntidade()
+        {
+            return GetType().Name;
+        }
+
+        public string DescricaoEntidade()
+        {
+            return string.Format("{0} cor {1} placa {2}", Nome, Cor, Placa);
+        }
+
+        public override string ToString()
+        {
+            return DescricaoEntidade();
+        }
     }
 }

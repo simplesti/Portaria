@@ -19,8 +19,10 @@ C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\EntityFramewo
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\Portaria.Core.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\Portaria.Data.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\Portaria.Framework.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\Portaria.Core.pdb
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\Portaria.Data.pdb
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\Portaria.Framework.pdb
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\EntityFramework.xml
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\obj\Debug\Portaria.Business.csprojResolveAssemblyReference.cache

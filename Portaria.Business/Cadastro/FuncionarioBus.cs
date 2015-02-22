@@ -54,15 +54,20 @@ namespace Portaria.Business.Cadastro
 
         public Funcionario BuscaPorId(int id)
         {
-            return bd.Funcionarios.Where(i => i.Id == id).FirstOrDefault();
+            return bd.Funcionarios.FirstOrDefault(i => i.Id == id);
         }
 
         public void Remover(Funcionario entidade)
         {
             try
             {
-                bd.Funcionarios.Remove(entidade);
-                bd.SaveChanges();
+                var f = bd.Funcionarios.FirstOrDefault(i => i.Id == entidade.Id);
+
+                if (f != null)
+                {
+                    bd.Funcionarios.Remove(f);
+                    bd.SaveChanges();
+                }
             }
             catch (Exception ex)
             {

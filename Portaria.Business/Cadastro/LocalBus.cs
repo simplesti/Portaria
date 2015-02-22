@@ -48,15 +48,20 @@ namespace Portaria.Business.Cadastro
 
         public Local BuscaPorId(int id)
         {
-            return bd.Locais.Where(i => i.Id == id).FirstOrDefault();
+            return bd.Locais.FirstOrDefault(i => i.Id == id);
         }
 
         public void Remover(Local entidade)
         {
             try
             {
-                bd.Locais.Remove(entidade);
-                bd.SaveChanges();
+                var l = bd.Locais.FirstOrDefault(i => i.Id == entidade.Id);
+
+                if (l != null)
+                {
+                    bd.Locais.Remove(l);
+                    bd.SaveChanges();
+                }
             }
             catch (Exception ex)
             {

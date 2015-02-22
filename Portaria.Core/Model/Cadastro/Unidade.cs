@@ -3,7 +3,7 @@ using System;
 
 namespace Portaria.Core.Model.CadastroMorador
 {
-    public class Unidade : IModel
+    public class Unidade : IEntidade
     {
         public Unidade()
         {
@@ -38,5 +38,21 @@ namespace Portaria.Core.Model.CadastroMorador
         public string Assinaturas { get; set; }
 
         public virtual Bloco Bloco { get; set; }
+
+
+        public string TipoEntidade()
+        {
+            return GetType().Name;
+        }
+
+        public string DescricaoEntidade()
+        {
+            return Numero.ToString();
+        }
+
+        public override string ToString()
+        {
+            return DescricaoEntidade();
+        }
     }
 }

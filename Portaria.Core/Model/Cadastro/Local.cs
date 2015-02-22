@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portaria.Core.Model.Cadastro
 {
-    public class Local : IModel
+    public class Local : IEntidade
     {
         public int Id { get; set; }
 
@@ -17,5 +17,21 @@ namespace Portaria.Core.Model.Cadastro
         public byte[] Foto { get; set; }
 
         public virtual ICollection<Reserva> Reservas { get; set; }
+
+
+        public string TipoEntidade()
+        {
+            return GetType().Name;
+        }
+
+        public string DescricaoEntidade()
+        {
+            return Nome;
+        }
+
+        public override string ToString()
+        {
+            return DescricaoEntidade();
+        }
     }
 }

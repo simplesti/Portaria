@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portaria.Core.Model
 {
-    public class Usuario : IModel
+    public class Usuario : IEntidade
     {
         public int Id { get; set; }
 
@@ -19,5 +19,20 @@ namespace Portaria.Core.Model
         public TipoUsuario Tipo { get; set; }
 
         public virtual ICollection<Sessao> Sessoes { get; set; }
+
+        public string TipoEntidade()
+        {
+            return GetType().Name;
+        }
+
+        public string DescricaoEntidade()
+        {
+            return Nome;
+        }
+
+        public override string ToString()
+        {
+            return DescricaoEntidade();
+        }
     }
 }

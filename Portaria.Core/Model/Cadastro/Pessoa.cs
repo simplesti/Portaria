@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Portaria.Core.Model.CadastroMorador
 {
-    public class Pessoa : IModel
+    public class Pessoa : IEntidade
     {
         public int Id { get; set; }
 
@@ -32,9 +32,20 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public virtual ICollection<Reserva> Reservas { get; set; }
 
-        public override string ToString()
+
+        public string TipoEntidade()
+        {
+            return GetType().Name;
+        }
+
+        public string DescricaoEntidade()
         {
             return Nome;
         }
-  }
+
+        public override string ToString()
+        {
+            return DescricaoEntidade();
+        }
+    }
 }
