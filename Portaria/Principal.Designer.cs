@@ -107,7 +107,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(626, 391);
+            this.tabPage2.Size = new System.Drawing.Size(651, 391);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Livro Negro";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             this.tabVisualizarLivroNegro1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabVisualizarLivroNegro1.Location = new System.Drawing.Point(3, 3);
             this.tabVisualizarLivroNegro1.Name = "tabVisualizarLivroNegro1";
-            this.tabVisualizarLivroNegro1.Size = new System.Drawing.Size(620, 385);
+            this.tabVisualizarLivroNegro1.Size = new System.Drawing.Size(645, 385);
             this.tabVisualizarLivroNegro1.TabIndex = 0;
             this.tabVisualizarLivroNegro1.TabVisualizar = null;
             // 
@@ -128,7 +128,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(626, 391);
+            this.tabPage3.Size = new System.Drawing.Size(651, 391);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Cadastrar Locais";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@
             this.tabCadastrarLocais1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabCadastrarLocais1.Location = new System.Drawing.Point(3, 3);
             this.tabCadastrarLocais1.Name = "tabCadastrarLocais1";
-            this.tabCadastrarLocais1.Size = new System.Drawing.Size(620, 385);
+            this.tabCadastrarLocais1.Size = new System.Drawing.Size(645, 385);
             this.tabCadastrarLocais1.TabIndex = 0;
             this.tabCadastrarLocais1.TabVisualizar = null;
             // 
@@ -149,7 +149,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(626, 391);
+            this.tabPage4.Size = new System.Drawing.Size(651, 391);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Reservar Local";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -160,7 +160,7 @@
             this.tabReservarLocais1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabReservarLocais1.Location = new System.Drawing.Point(3, 3);
             this.tabReservarLocais1.Name = "tabReservarLocais1";
-            this.tabReservarLocais1.Size = new System.Drawing.Size(620, 385);
+            this.tabReservarLocais1.Size = new System.Drawing.Size(645, 385);
             this.tabReservarLocais1.TabIndex = 0;
             this.tabReservarLocais1.TabVisualizar = null;
             // 
@@ -170,7 +170,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(626, 391);
+            this.tabPage5.Size = new System.Drawing.Size(651, 391);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Blocos";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -178,9 +178,10 @@
             // tabVisualizarBlocos1
             // 
             this.tabVisualizarBlocos1.BackColor = System.Drawing.Color.White;
-            this.tabVisualizarBlocos1.Location = new System.Drawing.Point(-1, 6);
+            this.tabVisualizarBlocos1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabVisualizarBlocos1.Location = new System.Drawing.Point(3, 3);
             this.tabVisualizarBlocos1.Name = "tabVisualizarBlocos1";
-            this.tabVisualizarBlocos1.Size = new System.Drawing.Size(641, 417);
+            this.tabVisualizarBlocos1.Size = new System.Drawing.Size(645, 385);
             this.tabVisualizarBlocos1.TabIndex = 0;
             this.tabVisualizarBlocos1.TabVisualizar = null;
             // 
@@ -190,7 +191,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(626, 391);
+            this.tabPage6.Size = new System.Drawing.Size(651, 391);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Unidades";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -201,7 +202,7 @@
             this.tabVisualizarUnidades1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabVisualizarUnidades1.Location = new System.Drawing.Point(3, 3);
             this.tabVisualizarUnidades1.Name = "tabVisualizarUnidades1";
-            this.tabVisualizarUnidades1.Size = new System.Drawing.Size(620, 385);
+            this.tabVisualizarUnidades1.Size = new System.Drawing.Size(645, 385);
             this.tabVisualizarUnidades1.TabIndex = 0;
             this.tabVisualizarUnidades1.TabVisualizar = null;
             // 
