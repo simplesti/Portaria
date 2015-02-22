@@ -17,11 +17,15 @@ using System.Windows.Forms;
 
 namespace Portaria
 {
-    public partial class Principal : FormWindowTabbed
+    public partial class Principal : FormBaseWindow
     {
+        private List<TabPage> tabs = new List<TabPage>();
+
         public Principal()
         {
             InitializeComponent();
+
+            tabs.AddRange(new[] { tabPage1, tabPage2, tabPage3, tabPage4, tabPage5, tabPage6, tabPage7, tabPage8 });
 
             EfetuarLogin();
 
@@ -30,15 +34,11 @@ namespace Portaria
 
         private void ValidaPermissoes()
         {
-            foreach(Control tab in tabControl.Controls)
+            foreach (TabPage tabPage in tabs)
             {
-                var portariaTab = tab.Controls[0] as IPortariaTab;
-                if (portariaTab != null)
+                if (!((IPortariaTab)tabPage.Controls[0]).TiposUsuariosPermitidos.Contains(SessaoBus.Sessao().UsuarioLogado.Tipo))
                 {
-                    if (!portariaTab.TiposUsuariosPermitidos.Contains(SessaoBus.Sessao().UsuarioLogado.Tipo))
-                    {
-                        tabControl.Controls.Remove(tab);
-                    }
+                    tabControl.Controls.Remove(tabPage);
                 }
             }
         }
@@ -56,7 +56,7 @@ namespace Portaria
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (CaixaMensagem.Mostrar("Deseja efetuar logoff e sair do Portaria Digital?",TipoCaixaMensagem.OKCancelar) == DialogResult.OK)
+            if (CaixaMensagem.Mostrar("Deseja efetuar logoff e sair do Portaria Digital?", TipoCaixaMensagem.OKCancelar) == DialogResult.OK)
             {
                 EfetuarLogoff();
             }
@@ -89,11 +89,6 @@ namespace Portaria
         private void Principal_Load(object sender, EventArgs e)
         {
             CarregarTab();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var i = SelecionaEntidade.Selecionar();
         }
 
     }

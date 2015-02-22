@@ -136,6 +136,11 @@ namespace Portaria
 
         private void EditarProprietario()
         {
+            if (unidade.Id == 0)
+            {
+                Salvar();
+            }
+
             Unidade.Proprietario = SelecionaPessoa.Selecionar(Unidade.Proprietario);
 
             var unidadeBus = new UnidadeBus();
@@ -146,6 +151,11 @@ namespace Portaria
 
         private void EditarConjuge()
         {
+            if (unidade.Id == 0)
+            {
+                Salvar();
+            }
+
             Unidade.Conjuge = SelecionaPessoa.Selecionar(Unidade.Conjuge);
 
             var unidadeBus = new UnidadeBus();
@@ -156,6 +166,11 @@ namespace Portaria
 
         private void EditarLocatario()
         {
+            if (unidade.Id == 0)
+            {
+                Salvar();
+            }
+
             Unidade.Locatario = SelecionaPessoa.Selecionar(Unidade.Locatario);
 
             var unidadeBus = new UnidadeBus();

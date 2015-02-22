@@ -70,19 +70,22 @@
             // 
             // txtPesquisar
             // 
+            this.txtPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPesquisar.Location = new System.Drawing.Point(3, 17);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(264, 20);
+            this.txtPesquisar.Size = new System.Drawing.Size(637, 20);
             this.txtPesquisar.TabIndex = 0;
             this.txtPesquisar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
             // 
             // botaoPesquisar
             // 
+            this.botaoPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.botaoPesquisar.AutoSize = true;
             this.botaoPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("botaoPesquisar.Image")));
-            this.botaoPesquisar.Location = new System.Drawing.Point(273, 10);
+            this.botaoPesquisar.Location = new System.Drawing.Point(646, 10);
             this.botaoPesquisar.MaximumSize = new System.Drawing.Size(32, 32);
             this.botaoPesquisar.MinimumSize = new System.Drawing.Size(32, 32);
             this.botaoPesquisar.Name = "botaoPesquisar";
