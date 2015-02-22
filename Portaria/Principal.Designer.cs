@@ -44,7 +44,6 @@
             this.tabCadastrarLocais = new Portaria.Locais.TabCadastrarLocais();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabVisualizarLivroNegro = new Portaria.LivroNegro.TabVisualizarLivroNegro();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.pnlConteudo.SuspendLayout();
             this.tpUnidades.SuspendLayout();
@@ -76,7 +75,6 @@
             // 
             // tpUnidades
             // 
-            this.tpUnidades.Controls.Add(this.button1);
             this.tpUnidades.Controls.Add(this.tabVisualizarUnidades);
             this.tpUnidades.Location = new System.Drawing.Point(4, 22);
             this.tpUnidades.Name = "tpUnidades";
@@ -243,16 +241,6 @@
             this.tabVisualizarLivroNegro.TabIndex = 0;
             this.tabVisualizarLivroNegro.TabVisualizar = null;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(342, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,7 +283,6 @@
         private Locais.TabCadastrarLocais tabCadastrarLocais;
         private Locais.TabReservarLocais tabReservarLocais;
         private LivroNegro.TabVisualizarLivroNegro tabVisualizarLivroNegro;
-        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -20,19 +20,19 @@ namespace Portaria.Core.Model
 
         public virtual ICollection<Sessao> Sessoes { get; set; }
 
-        public string TipoEntidade()
+        public string TipoEntidade
         {
-            return GetType().Name;
+            get { return typeof(Usuario).Name; }
         }
 
-        public string DescricaoEntidade()
+        public string DescricaoEntidade
         {
-            return Nome;
+            get { return Nome; }
         }
 
         public override string ToString()
         {
-            return DescricaoEntidade();
+            return DescricaoEntidade;
         }
     }
 }

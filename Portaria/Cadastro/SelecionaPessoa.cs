@@ -61,6 +61,7 @@ namespace Portaria.Cadastro
         {
             if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Return)
             {
+                e.Handled = true;
                 Pesquisar();
             }
         }

@@ -21,20 +21,23 @@ namespace Portaria.Core.Model
         public virtual ICollection<Reserva> Reservas { get; set; }
 
 
-        public string TipoEntidade()
+        public string TipoEntidade
         {
-            return GetType().Name;
+            get { return typeof(Sessao).Name; }
         }
 
-        public string DescricaoEntidade()
+        public string DescricaoEntidade
         {
-            return string.Format("{0} - {1} ({2})", DataHoraInicio.Value.ToString("dd/MM/yyyy HH:mm"),
-                DataHoraFim.Value.ToString("dd/MM/yyyy HH:mm"), UsuarioLogado.Nome);
+            get
+            {
+                return string.Format("{0} - {1} ({2})", DataHoraInicio.Value.ToString("dd/MM/yyyy HH:mm"),
+                    DataHoraFim.Value.ToString("dd/MM/yyyy HH:mm"), UsuarioLogado.Nome);
+            }
         }
 
         public override string ToString()
         {
-            return DescricaoEntidade();
+            return DescricaoEntidade;
         }
     }
 }

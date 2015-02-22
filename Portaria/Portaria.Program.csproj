@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icone.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -79,6 +82,12 @@
     </Compile>
     <Compile Include="Cadastro\SelecionaPessoa.Designer.cs">
       <DependentUpon>SelecionaPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LivroNegro\CadRegistroLivroNegro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivroNegro\CadRegistroLivroNegro.Designer.cs">
+      <DependentUpon>CadRegistroLivroNegro.cs</DependentUpon>
     </Compile>
     <Compile Include="LivroNegro\TabVisualizarLivroNegro.cs">
       <SubType>UserControl</SubType>
@@ -134,10 +143,10 @@
     <Compile Include="Cadastro\CadPessoa.Designer.cs">
       <DependentUpon>CadPessoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelecionaEntidade.cs">
+    <Compile Include="LivroNegro\SelecionaEntidade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelecionaEntidade.Designer.cs">
+    <Compile Include="LivroNegro\SelecionaEntidade.Designer.cs">
       <DependentUpon>SelecionaEntidade.cs</DependentUpon>
     </Compile>
     <Compile Include="Unidades\CadUnidade.cs">
@@ -199,6 +208,9 @@
     <EmbeddedResource Include="Cadastro\SelecionaPessoa.resx">
       <DependentUpon>SelecionaPessoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LivroNegro\CadRegistroLivroNegro.resx">
+      <DependentUpon>CadRegistroLivroNegro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LivroNegro\TabVisualizarLivroNegro.resx">
       <DependentUpon>TabVisualizarLivroNegro.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,7 +229,7 @@
     <EmbeddedResource Include="Locais\TabReservarLocais.resx">
       <DependentUpon>TabReservarLocais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelecionaEntidade.resx">
+    <EmbeddedResource Include="LivroNegro\SelecionaEntidade.resx">
       <DependentUpon>SelecionaEntidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Unidades\CadUnidade.resx">
@@ -263,6 +275,9 @@
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Pessoa.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Unidade.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Veiculo.datasource" />
+    <None Include="Properties\DataSources\Portaria.Core.Model.IEntidade.datasource" />
+    <None Include="Properties\DataSources\Portaria.Core.Model.RegistroLivroNegro.datasource" />
+    <None Include="Properties\DataSources\Portaria.Core.Model.RegistroLivroNegroEntidade.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.Reserva.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
@@ -292,7 +307,9 @@
       <Name>Portaria.Framework</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="icone.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

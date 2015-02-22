@@ -13,20 +13,23 @@ namespace Portaria.Core.Model.CadastroMorador
         public string Nome { get; set; }
 
         public virtual ICollection<Unidade> Unidades { get; set; }
-        
-        public string TipoEntidade()
+
+        public string TipoEntidade
         {
-            return GetType().Name;
+            get { return typeof(Bloco).Name; }
         }
 
-        public string DescricaoEntidade()
+        public string DescricaoEntidade
         {
-            return Nome;
+            get
+            {
+                return Nome;
+            }
         }
 
         public override string ToString()
         {
-            return DescricaoEntidade();
+            return DescricaoEntidade;
         }
     }
 }

@@ -10,8 +10,8 @@ namespace Portaria.Core.Model
     {
         int Id { get; set; }
 
-        string TipoEntidade();
+        string TipoEntidade { get; }
 
-        string DescricaoEntidade();
+        string DescricaoEntidade { get; }
     }
 }

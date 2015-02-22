@@ -40,19 +40,22 @@ namespace Portaria.Core.Model.CadastroMorador
         public virtual Bloco Bloco { get; set; }
 
 
-        public string TipoEntidade()
+        public string TipoEntidade
         {
-            return GetType().Name;
+            get { return typeof(Unidade).Name; }
         }
 
-        public string DescricaoEntidade()
+        public string DescricaoEntidade
         {
-            return Numero.ToString();
+            get
+            {
+                return Numero.ToString();
+            }
         }
 
         public override string ToString()
         {
-            return DescricaoEntidade();
+            return DescricaoEntidade;
         }
     }
 }

@@ -17,20 +17,23 @@ namespace Portaria.Core.Model
         public virtual RegistroLivroNegro RegistroLivroNegro { get; set; }
 
 
-        public string TipoEntidade()
+        public string TipoEntidade
         {
-            return GetType().Name;
+            get { return typeof(RegistroLivroNegroEntidade).Name; }
         }
 
-        public string DescricaoEntidade()
+        public string DescricaoEntidade
         {
-            return string.Format("Entidade Id {0} do registro do livro negro Id {1}", Id.ToString(),
-                RegistroLivroNegro.Id.ToString());
+            get
+            {
+                return string.Format("Entidade Id {0} do registro do livro negro Id {1}", Id.ToString(),
+                    RegistroLivroNegro.Id.ToString());
+            }
         }
 
         public override string ToString()
         {
-            return DescricaoEntidade();
+            return DescricaoEntidade;
         }
     }
 }

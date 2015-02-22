@@ -19,19 +19,22 @@ namespace Portaria.Core.Model.Cadastro
         public virtual ICollection<Reserva> Reservas { get; set; }
 
 
-        public string TipoEntidade()
+        public string TipoEntidade
         {
-            return GetType().Name;
+            get { return typeof(Local).Name; }
         }
 
-        public string DescricaoEntidade()
+        public string DescricaoEntidade
         {
-            return Nome;
+            get
+            {
+                return Nome;
+            }
         }
 
         public override string ToString()
         {
-            return DescricaoEntidade();
+            return DescricaoEntidade;
         }
     }
 }

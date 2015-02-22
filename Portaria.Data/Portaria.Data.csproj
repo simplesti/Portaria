@@ -118,6 +118,14 @@
     <Compile Include="Migrations\201502212243467_IModelParaIEntidade.Designer.cs">
       <DependentUpon>201502212243467_IModelParaIEntidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502221259092_DataNoRegistro.cs" />
+    <Compile Include="Migrations\201502221259092_DataNoRegistro.Designer.cs">
+      <DependentUpon>201502221259092_DataNoRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502221337503_PessoaNoRegistro.cs" />
+    <Compile Include="Migrations\201502221337503_PessoaNoRegistro.Designer.cs">
+      <DependentUpon>201502221337503_PessoaNoRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PortariaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -168,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201502212243467_IModelParaIEntidade.resx">
       <DependentUpon>201502212243467_IModelParaIEntidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502221259092_DataNoRegistro.resx">
+      <DependentUpon>201502221259092_DataNoRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502221337503_PessoaNoRegistro.resx">
+      <DependentUpon>201502221337503_PessoaNoRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

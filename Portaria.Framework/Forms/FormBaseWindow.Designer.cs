@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBaseWindow));
             this.tlpFundo = new System.Windows.Forms.TableLayoutPanel();
             this.tlpCabecalho = new System.Windows.Forms.TableLayoutPanel();
             this.Minimizar = new System.Windows.Forms.PictureBox();
@@ -117,7 +116,7 @@
             // 
             // Icone
             // 
-            this.Icone.Image = ((System.Drawing.Image)(resources.GetObject("Icone.Image")));
+            this.Icone.Image = global::Portaria.Framework.Properties.Resources.revision_enterprise_3d;
             this.Icone.Location = new System.Drawing.Point(3, 3);
             this.Icone.Name = "Icone";
             this.Icone.Size = new System.Drawing.Size(45, 45);

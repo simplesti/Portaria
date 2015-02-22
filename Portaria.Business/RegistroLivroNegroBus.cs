@@ -26,18 +26,24 @@ namespace Portaria.Business
         {
             try
             {
+                ValidarRegistro(entidade);
+
                 var r = bd.RegistrosLivroNegro.FirstOrDefault(i => i.Id == entidade.Id);
                 var sessao = SessaoBus.Sessao();
 
                 if (r == null)
                 {
+                    entidade.Data = DateTime.Now;
                     entidade.Sessao = bd.Sessoes.FirstOrDefault(i => i.Id == sessao.Id);
+                    entidade.Pessoa = bd.Pessoas.FirstOrDefault(p => p.Id == entidade.Pessoa.Id);
                     bd.RegistrosLivroNegro.Add(entidade);
 
                     bd.SaveChanges();
                     return;
                 }
 
+                r.Data = DateTime.Now;
+                r.Pessoa = bd.Pessoas.FirstOrDefault(p => p.Id == entidade.Pessoa.Id);
                 r.Sessao = bd.Sessoes.FirstOrDefault(i => i.Id == sessao.Id);
                 r.Mensagem = entidade.Mensagem;
 
@@ -46,6 +52,14 @@ namespace Portaria.Business
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void ValidarRegistro(RegistroLivroNegro entidade)
+        {
+            if (entidade.Pessoa == null)
+            {
+                throw new Exception("Você precisa selecionar uma pessoa responsável.");
             }
         }
 

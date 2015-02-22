@@ -1,0 +1,136 @@
+﻿using Portaria.Business;
+using Portaria.Business.Cadastro;
+using Portaria.Core.Model;
+using Portaria.Core.Model.Cadastro;
+using Portaria.Core.Model.CadastroMorador;
+using Portaria.Framework.CaixaMensagem;
+using Portaria.Framework.Forms;
+using System;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace Portaria
+{
+    public partial class SelecionaEntidade : FormBaseWindow
+    {
+        private IEntidade entidadeSelecionada = null;
+        public SelecionaEntidade()
+        {
+            InitializeComponent();
+
+            CarregaTipos();
+        }
+
+        private void CarregaTipos()
+        {
+            cboTipo.DataSource = new[] { "Pessoa", "Veículo", "Unidade", "Bloco", "Funcionário", "Local", "Usuário" };
+        }
+
+        public static IEntidade Selecionar()
+        {
+            using (var frm = new SelecionaEntidade())
+            {
+                frm.ShowDialog();
+
+                return frm.entidadeSelecionada;
+            }
+        }
+
+        private void botaoCancelar_Click(object sender, EventArgs e)
+        {
+            Cancelar();
+        }
+
+        private void Cancelar()
+        {
+            if (CaixaMensagem.Mostrar("Você não selecionou nenhuma entidade. Deseja continuar?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
+            {
+                entidadeSelecionada = null;
+                Close();
+            }
+        }
+
+        private void botaoOK_Click(object sender, EventArgs e)
+        {
+            SelecionarEntidade();
+        }
+
+        private void SelecionarEntidade()
+        {
+            if (entidadeSelecionada != null)
+            {
+                Close();
+            }
+            else
+            {
+                CaixaMensagem.Mostrar("Selecione uma entidade.", TipoCaixaMensagem.SomenteOK);
+            }
+        }
+        
+        private void dgvEntidades_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvEntidades.SelectedRows.Count == 1)
+            {
+                entidadeSelecionada = (IEntidade)dgvEntidades.CurrentRow.DataBoundItem;
+            }
+        }
+
+        private void botaoPesquisar_Click(object sender, EventArgs e)
+        {
+            Pesquisar();
+        }
+
+        private void Pesquisar()
+        {
+            var entidadeHelper = new EntidadeHelper();
+
+            switch (cboTipo.Text)
+            {
+                case "Pessoa":
+                    {
+                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Pessoa).Name);
+                        break;
+                    }
+                case "Veículo":
+                    {
+                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Veiculo).Name);
+                        break;
+                    }
+                case "Unidade":
+                    {
+                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Unidade).Name);
+                        break;
+                    }
+                case "Bloco":
+                    {
+                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Bloco).Name);
+                        break;
+                    }
+                case "Funcionário":
+                    {
+                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Funcionario).Name);
+                        break;
+                    }
+                case "Local":
+                    {
+                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Local).Name);
+                        break;
+                    }
+                case "Usuário":
+                    {
+                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Usuario).Name);
+                        break;
+                    }
+            }
+        }
+
+        private void txtPesquisar_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Return)
+            {
+                e.Handled = true;
+                Pesquisar();
+            }
+        }
+    }
+}

@@ -32,20 +32,25 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public virtual ICollection<Reserva> Reservas { get; set; }
 
+        public virtual ICollection<RegistroLivroNegro> RegistrosLivroNegro { get; set; }
 
-        public string TipoEntidade()
+
+        public string TipoEntidade
         {
-            return GetType().Name;
+            get { return typeof(Pessoa).Name; }
         }
 
-        public string DescricaoEntidade()
+        public string DescricaoEntidade
         {
-            return Nome;
+            get
+            {
+                return Nome;
+            }
         }
 
         public override string ToString()
         {
-            return DescricaoEntidade();
+            return DescricaoEntidade;
         }
     }
 }

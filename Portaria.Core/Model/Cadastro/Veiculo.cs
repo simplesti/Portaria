@@ -23,19 +23,22 @@ namespace Portaria.Core.Model.CadastroMorador
         public virtual Pessoa Proprietario { get; set; }
 
 
-        public string TipoEntidade()
+        public string TipoEntidade
         {
-            return GetType().Name;
+            get { return typeof(Veiculo).Name; }
         }
 
-        public string DescricaoEntidade()
+        public string DescricaoEntidade
         {
-            return string.Format("{0} cor {1} placa {2}", Nome, Cor, Placa);
+            get
+            {
+                return string.Format("{0} cor {1} placa {2}", Nome, Cor, Placa);
+            }
         }
 
         public override string ToString()
         {
-            return DescricaoEntidade();
+            return DescricaoEntidade;
         }
     }
 }
