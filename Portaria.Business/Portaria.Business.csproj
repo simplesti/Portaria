@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusUtils.cs" />
     <Compile Include="Cadastro\BlocoBus.cs" />
     <Compile Include="Cadastro\FuncionarioBus.cs" />
     <Compile Include="Cadastro\LocalBus.cs" />
@@ -71,10 +72,6 @@
     <ProjectReference Include="..\Portaria.Data\Portaria.Data.csproj">
       <Project>{cb8301c0-a5e8-4166-be8f-084dfe2632c7}</Project>
       <Name>Portaria.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Portaria.Framework\Portaria.Framework.csproj">
-      <Project>{caf5be63-755c-4c1c-ad33-2e4673329112}</Project>
-      <Name>Portaria.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

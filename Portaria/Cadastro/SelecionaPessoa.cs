@@ -4,6 +4,7 @@ using Portaria.Framework.Forms;
 using System.Windows.Forms;
 using System.Linq;
 using Portaria.Framework.CaixaMensagem;
+using Portaria.Business;
 
 namespace Portaria.Cadastro
 {
@@ -13,6 +14,17 @@ namespace Portaria.Cadastro
         public SelecionaPessoa()
         {
             InitializeComponent();
+            AplicarPermissoes();
+        }
+
+        private void AplicarPermissoes()
+        {
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            {
+                botaoAdicionar.Visible = false;
+                botaoCancelar.Visible = false;
+                botaoOK.Visible = false;
+            }
         }
 
         public static Pessoa Selecionar(Pessoa pessoa = null)

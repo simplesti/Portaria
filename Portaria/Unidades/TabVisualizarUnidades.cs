@@ -63,6 +63,8 @@ namespace Portaria
 
         public override void Carregar(params Core.Model.IEntidade[] entidades)
         {
+            base.Carregar();
+
             if (entidades.Any())
             {
                 var tabPage = this.Parent as TabPage;

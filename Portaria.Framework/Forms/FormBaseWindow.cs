@@ -1,8 +1,18 @@
 ﻿
+using Portaria.Business;
+using Portaria.Config;
+using System;
+using System.Drawing;
 namespace Portaria.Framework.Forms
 {
     public partial class FormBaseWindow : FormBase
     {
+        public bool ConfiguracoesUsuarioVisivel
+        {
+            get { return ConfiguracoesUsuario.Visible; }
+            set { ConfiguracoesUsuario.Visible = value; }
+        }
+
         public FormBaseWindow()
         {
             InitializeComponent();
@@ -60,6 +70,25 @@ namespace Portaria.Framework.Forms
             {
                 WindowState = System.Windows.Forms.FormWindowState.Maximized;
             }
+        }
+
+        private void botaoConfig_Click(object sender, System.EventArgs e)
+        {
+            if (SessaoBus.Sessao() != null)
+            {
+                using (var frm = new ConfiguracoesUsuario())
+                {
+                    frm.ShowDialog();
+                }
+
+                this.OnLoad(e);
+                this.Refresh();
+            }
+        }
+
+        private void pnlConteudo_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
+        {
+
         }
     }
 }

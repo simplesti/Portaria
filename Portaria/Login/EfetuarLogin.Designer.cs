@@ -43,7 +43,7 @@
             this.pnlBotoes.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnlConteudo
             // 
             this.pnlConteudo.Controls.Add(this.tlpConteudo);
             this.pnlConteudo.Size = new System.Drawing.Size(530, 254);
@@ -72,6 +72,7 @@
             // 
             // lblBemVindo
             // 
+            this.lblBemVindo.BackColor = System.Drawing.Color.White;
             this.tlpConteudo.SetColumnSpan(this.lblBemVindo, 2);
             this.lblBemVindo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBemVindo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

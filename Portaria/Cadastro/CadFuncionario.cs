@@ -1,7 +1,9 @@
-﻿using Portaria.Business.Cadastro;
+﻿using Portaria.Business;
+using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Framework;
 using Portaria.Framework.Forms;
+using Portaria.Webcam;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,12 +41,35 @@ namespace Portaria.UnidadesBlocos
         {
             InitializeComponent();
             Funcionario = new Funcionario();
+
+            AplicarPermissoes();
+        }
+
+        private void AplicarPermissoes()
+        {
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            {
+                txtDescricao.ReadOnly = true;
+                txtDocumento.ReadOnly = true;
+                txtFone.ReadOnly = true;
+                txtFrequencia.ReadOnly = true;
+                txtNome.ReadOnly = true;
+
+                botaoSalvar.Visible = false;
+
+                chkAutorizadoSemPresenca.Enabled = false;
+
+                dtEntrada.Enabled = false;
+                dtSaida.Enabled = false;
+            }
         }
 
         public CadFuncionario(Funcionario funcionario)
         {
             InitializeComponent();
             Funcionario = funcionario;
+
+            AplicarPermissoes();
         }
 
         private void botaoCancelar_Click(object sender, EventArgs e)
@@ -67,12 +92,13 @@ namespace Portaria.UnidadesBlocos
 
         private void pbFoto_Click(object sender, EventArgs e)
         {
-            using (var ofd = new OpenFileDialog())
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
             {
-                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                var foto = PortariaWebCam.ObterImagem();
+                if (foto != null)
                 {
-                    pbFoto.Image = new Bitmap(ofd.FileName);
-                    funcionario.Foto = Util.imageToByteArray(pbFoto.Image);
+                    pbFoto.Image = foto;
+                    funcionario.Foto = Util.imageToByteArray(foto);
                 }
             }
         }

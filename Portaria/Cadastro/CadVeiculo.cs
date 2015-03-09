@@ -1,7 +1,9 @@
-﻿using Portaria.Business.Cadastro;
+﻿using Portaria.Business;
+using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Framework;
 using Portaria.Framework.Forms;
+using Portaria.Webcam;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -39,22 +41,40 @@ namespace Portaria.Cadastro
         {
             InitializeComponent();
             Veiculo = new Veiculo();
+
+            AplicarPermissoes();
+        }
+
+        private void AplicarPermissoes()
+        {
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            {
+                txtCor.ReadOnly = true;
+                txtNome.ReadOnly = true;
+                txtPlaca.ReadOnly = true;
+                txtProprietario.ReadOnly = true;
+
+                botaoSalvar.Visible = false;
+            }
         }
 
         public CadVeiculo(Veiculo veiculo)
         {
             InitializeComponent();
             Veiculo = veiculo;
+
+            AplicarPermissoes();
         }
 
         private void pbFoto_Click(object sender, EventArgs e)
         {
-            using (var ofd = new OpenFileDialog())
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
             {
-                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                var foto = PortariaWebCam.ObterImagem();
+                if (foto != null)
                 {
-                    pbFoto.Image = new Bitmap(ofd.FileName);
-                    veiculo.Foto = Util.imageToByteArray(pbFoto.Image);
+                    pbFoto.Image = foto;
+                    veiculo.Foto = Util.imageToByteArray(foto);
                 }
             }
         }
@@ -79,35 +99,18 @@ namespace Portaria.Cadastro
 
         private void EditarProprietario()
         {
-            var veiculoBus = new VeiculoBus();
-            var pessoaBus = new PessoaBus();
+            Veiculo.Proprietario = SelecionaPessoa.Selecionar(Veiculo.Proprietario);
 
-            if (Veiculo.Id == 0)
+            if (veiculo.Proprietario != null)
             {
-
-                veiculoBus.InserirOuAtualizar(Veiculo);
+                txtProprietario.Tag = veiculo.Proprietario.Id;
+                txtProprietario.Text = veiculo.Proprietario.Nome;
             }
-
-            Pessoa p = null;
-
-            if (Veiculo.Proprietario != null)
-                p = pessoaBus.BuscaPorId(Veiculo.Proprietario.Id);
-
-            if (p == null)
+            else
             {
-                p = new Pessoa();
+                txtProprietario.Tag = null;
+                txtProprietario.Text = string.Empty;
             }
-
-            using (var frm = new CadPessoa(p))
-            {
-                frm.ShowDialog();
-            }
-
-            var v = veiculoBus.BuscaPorId(Veiculo.Id);
-            v.Proprietario = p;
-            veiculoBus.InserirOuAtualizar(v);
-
-            Veiculo = veiculoBus.BuscaPorId(v.Id);
         }
 
         private void btnEditarProprietario_Click(object sender, EventArgs e)

@@ -205,9 +205,9 @@
             this.lblPessoa.AutoSize = true;
             this.lblPessoa.Location = new System.Drawing.Point(3, 43);
             this.lblPessoa.Name = "lblPessoa";
-            this.lblPessoa.Size = new System.Drawing.Size(42, 13);
+            this.lblPessoa.Size = new System.Drawing.Size(118, 13);
             this.lblPessoa.TabIndex = 27;
-            this.lblPessoa.Text = "Pessoa";
+            this.lblPessoa.Text = "Solicitante/Reclamante";
             // 
             // txtUsuario
             // 

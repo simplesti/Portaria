@@ -33,6 +33,7 @@ namespace Portaria
 
         public override void Carregar(params IEntidade[] entidades)
         {
+            base.Carregar();
             CarregarTodosBlocos();
         }
 

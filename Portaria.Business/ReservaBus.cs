@@ -1,6 +1,5 @@
 ﻿using Portaria.Core.Model;
 using Portaria.Data;
-using Portaria.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Portaria.Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,16 @@ namespace Portaria.Framework
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            if (SessaoBus.Sessao() != null && SessaoBus.Sessao().UsuarioLogado.CorTema != 0)
+            {
+                this.BackColor = Color.FromArgb(SessaoBus.Sessao().UsuarioLogado.CorTema);
+            }
         }
 
         protected override void OnPaint(PaintEventArgs e)

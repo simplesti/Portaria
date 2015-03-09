@@ -23,10 +23,5 @@ namespace Portaria.Framework
             Image returnImage = Image.FromStream(ms);
             return returnImage;
         }
-
-        public static bool Between(this DateTime data, DateTime inicio, DateTime fim)
-        {
-            return (data > inicio && data < fim);
-        }
     }
 }

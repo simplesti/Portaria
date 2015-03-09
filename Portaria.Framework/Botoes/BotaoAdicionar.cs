@@ -18,6 +18,7 @@ namespace Portaria.Framework.Botoes
             MaximumSize = s;
             MinimumSize = s;
 
+            BackColor = Color.White;
             Image = Properties.Resources.adicionar;
             ImageAlign = ContentAlignment.MiddleCenter;
             FlatStyle = System.Windows.Forms.FlatStyle.Flat;

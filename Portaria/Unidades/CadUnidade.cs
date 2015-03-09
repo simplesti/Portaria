@@ -1,4 +1,5 @@
-﻿using Portaria.Business.Cadastro;
+﻿using Portaria.Business;
+using Portaria.Business.Cadastro;
 using Portaria.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Framework.CaixaMensagem;
@@ -80,6 +81,25 @@ namespace Portaria
             cboBloco.Enabled = true;
 
             Unidade = new Unidade();
+
+            AplicarPermissoes();
+        }
+
+        private void AplicarPermissoes()
+        {
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            {
+                botaoSalvar.Visible = false;
+                
+                btnAddAutorizada.Visible = false;
+                btnRemAutorizada.Visible = false;
+
+                btnAddFuncionario.Visible = false;
+                btnRemFuncionario.Visible = false;
+
+                btnAddVeiculo.Visible = false;
+                btnRemVeiculo.Visible = false;
+            }
         }
 
         public CadUnidade(Unidade unidade)
@@ -88,6 +108,8 @@ namespace Portaria
             PopulaCombos();
 
             Unidade = unidade;
+
+            AplicarPermissoes();
         }
 
         private void botaoSalvar_Click(object sender, EventArgs e)

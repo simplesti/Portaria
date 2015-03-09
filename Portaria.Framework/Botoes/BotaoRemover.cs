@@ -20,6 +20,7 @@ namespace Portaria.Framework.Botoes
 
             Image = Properties.Resources.remover;
             ImageAlign = ContentAlignment.MiddleCenter;
+            BackColor = Color.White;
             FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             AutoSize = true;
             Cursor = Cursors.Hand;

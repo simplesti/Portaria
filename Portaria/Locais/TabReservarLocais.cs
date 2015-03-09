@@ -45,6 +45,8 @@ namespace Portaria.Locais
 
         public override void Carregar(params Core.Model.IEntidade[] entidades)
         {
+            base.Carregar();
+
             if (entidades.Any())
             {
                 CarregarReservas(entidades.Select(e => e.Id));

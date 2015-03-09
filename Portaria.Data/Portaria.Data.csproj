@@ -54,134 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201411020158516_InitialCreate.cs" />
-    <Compile Include="Migrations\201411020158516_InitialCreate.Designer.cs">
-      <DependentUpon>201411020158516_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201503071449416_CorUsuario.cs" />
+    <Compile Include="Migrations\201503071449416_CorUsuario.Designer.cs">
+      <DependentUpon>201503071449416_CorUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201411021809399_Locatario.cs" />
-    <Compile Include="Migrations\201411021809399_Locatario.Designer.cs">
-      <DependentUpon>201411021809399_Locatario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501150310396_CamposUnidadeString.cs" />
-    <Compile Include="Migrations\201501150310396_CamposUnidadeString.Designer.cs">
-      <DependentUpon>201501150310396_CamposUnidadeString.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501150322397_Inadimplencia.cs" />
-    <Compile Include="Migrations\201501150322397_Inadimplencia.Designer.cs">
-      <DependentUpon>201501150322397_Inadimplencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501151152157_TransformandoBlocosEmEntidades.cs" />
-    <Compile Include="Migrations\201501151152157_TransformandoBlocosEmEntidades.Designer.cs">
-      <DependentUpon>201501151152157_TransformandoBlocosEmEntidades.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501151224559_TransformandoVeiculoEmEntidade.cs" />
-    <Compile Include="Migrations\201501151224559_TransformandoVeiculoEmEntidade.Designer.cs">
-      <DependentUpon>201501151224559_TransformandoVeiculoEmEntidade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501162128473_CPFeRG.cs" />
-    <Compile Include="Migrations\201501162128473_CPFeRG.Designer.cs">
-      <DependentUpon>201501162128473_CPFeRG.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501171423570_DocumentoNoFuncionario.cs" />
-    <Compile Include="Migrations\201501171423570_DocumentoNoFuncionario.Designer.cs">
-      <DependentUpon>201501171423570_DocumentoNoFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501202316214_CorVeiculo.cs" />
-    <Compile Include="Migrations\201501202316214_CorVeiculo.Designer.cs">
-      <DependentUpon>201501202316214_CorVeiculo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501202331045_FotoVeiculo.cs" />
-    <Compile Include="Migrations\201501202331045_FotoVeiculo.Designer.cs">
-      <DependentUpon>201501202331045_FotoVeiculo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501240243488_Usuario.cs" />
-    <Compile Include="Migrations\201501240243488_Usuario.Designer.cs">
-      <DependentUpon>201501240243488_Usuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201501251519523_Sessoes.cs" />
-    <Compile Include="Migrations\201501251519523_Sessoes.Designer.cs">
-      <DependentUpon>201501251519523_Sessoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201502170025517_Locais.cs" />
-    <Compile Include="Migrations\201502170025517_Locais.Designer.cs">
-      <DependentUpon>201502170025517_Locais.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201502172121308_Reservas.cs" />
-    <Compile Include="Migrations\201502172121308_Reservas.Designer.cs">
-      <DependentUpon>201502172121308_Reservas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201502212232365_LivroNegro.cs" />
-    <Compile Include="Migrations\201502212232365_LivroNegro.Designer.cs">
-      <DependentUpon>201502212232365_LivroNegro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201502212243467_IModelParaIEntidade.cs" />
-    <Compile Include="Migrations\201502212243467_IModelParaIEntidade.Designer.cs">
-      <DependentUpon>201502212243467_IModelParaIEntidade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201502221259092_DataNoRegistro.cs" />
-    <Compile Include="Migrations\201502221259092_DataNoRegistro.Designer.cs">
-      <DependentUpon>201502221259092_DataNoRegistro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201502221337503_PessoaNoRegistro.cs" />
-    <Compile Include="Migrations\201502221337503_PessoaNoRegistro.Designer.cs">
-      <DependentUpon>201502221337503_PessoaNoRegistro.cs</DependentUpon>
+    <Compile Include="Migrations\201503072154113_posicaoAbas.cs" />
+    <Compile Include="Migrations\201503072154113_posicaoAbas.Designer.cs">
+      <DependentUpon>201503072154113_posicaoAbas.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PortariaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\201411020158516_InitialCreate.resx">
-      <DependentUpon>201411020158516_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503071449416_CorUsuario.resx">
+      <DependentUpon>201503071449416_CorUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201411021809399_Locatario.resx">
-      <DependentUpon>201411021809399_Locatario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501150310396_CamposUnidadeString.resx">
-      <DependentUpon>201501150310396_CamposUnidadeString.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501150322397_Inadimplencia.resx">
-      <DependentUpon>201501150322397_Inadimplencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501151152157_TransformandoBlocosEmEntidades.resx">
-      <DependentUpon>201501151152157_TransformandoBlocosEmEntidades.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501151224559_TransformandoVeiculoEmEntidade.resx">
-      <DependentUpon>201501151224559_TransformandoVeiculoEmEntidade.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501162128473_CPFeRG.resx">
-      <DependentUpon>201501162128473_CPFeRG.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501171423570_DocumentoNoFuncionario.resx">
-      <DependentUpon>201501171423570_DocumentoNoFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501202316214_CorVeiculo.resx">
-      <DependentUpon>201501202316214_CorVeiculo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501202331045_FotoVeiculo.resx">
-      <DependentUpon>201501202331045_FotoVeiculo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501240243488_Usuario.resx">
-      <DependentUpon>201501240243488_Usuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501251519523_Sessoes.resx">
-      <DependentUpon>201501251519523_Sessoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201502170025517_Locais.resx">
-      <DependentUpon>201502170025517_Locais.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201502172121308_Reservas.resx">
-      <DependentUpon>201502172121308_Reservas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201502212232365_LivroNegro.resx">
-      <DependentUpon>201502212232365_LivroNegro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201502212243467_IModelParaIEntidade.resx">
-      <DependentUpon>201502212243467_IModelParaIEntidade.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201502221259092_DataNoRegistro.resx">
-      <DependentUpon>201502221259092_DataNoRegistro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201502221337503_PessoaNoRegistro.resx">
-      <DependentUpon>201502221337503_PessoaNoRegistro.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503072154113_posicaoAbas.resx">
+      <DependentUpon>201503072154113_posicaoAbas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

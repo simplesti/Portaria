@@ -1,7 +1,9 @@
-﻿using Portaria.Business.Cadastro;
+﻿using Portaria.Business;
+using Portaria.Business.Cadastro;
 using Portaria.Core.Model.Cadastro;
 using Portaria.Framework;
 using Portaria.Framework.Forms;
+using Portaria.Webcam;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -59,12 +61,13 @@ namespace Portaria.Locais
 
         private void pbFoto_Click(object sender, System.EventArgs e)
         {
-            using (var ofd = new OpenFileDialog())
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo ==Core.TipoUsuario.Administrador)
             {
-                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                var foto = PortariaWebCam.ObterImagem();
+                if (foto != null)
                 {
-                    pbFoto.Image = new Bitmap(ofd.FileName);
-                    local.Foto = Util.imageToByteArray(pbFoto.Image);
+                    pbFoto.Image = foto;
+                    local.Foto = Util.imageToByteArray(foto);
                 }
             }
         }

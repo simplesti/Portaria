@@ -44,6 +44,20 @@ namespace Portaria.Locais
             InitializeComponent();
 
             Reserva = reserva;
+
+            AplicarPermissoes();
+        }
+
+        private void AplicarPermissoes()
+        {
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            {
+                botaoEditarSolicitante.Visible = false;
+                dtFim.Enabled = false;
+                dtInicio.Enabled = false;
+
+                botaoSalvar.Visible = false;
+            }
         }
 
         private void botaoEditarSolicitante_Click(object sender, System.EventArgs e)

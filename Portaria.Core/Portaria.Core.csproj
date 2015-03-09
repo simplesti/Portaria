@@ -54,6 +54,7 @@
     <Compile Include="Model\Cadastro\Unidade.cs" />
     <Compile Include="Model\Cadastro\Veiculo.cs" />
     <Compile Include="Model\IEntidade.cs" />
+    <Compile Include="Model\Log\Alteracao.cs" />
     <Compile Include="Model\RegistroLivroNegro.cs" />
     <Compile Include="Model\RegistroLivroNegroEntidade.cs" />
     <Compile Include="Model\Reserva.cs" />

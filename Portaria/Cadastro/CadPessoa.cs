@@ -1,7 +1,9 @@
-﻿using Portaria.Business.Cadastro;
+﻿using Portaria.Business;
+using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Framework;
 using Portaria.Framework.Forms;
+using Portaria.Webcam;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -34,22 +36,44 @@ namespace Portaria
         {
             InitializeComponent();
             Pessoa = new Pessoa();
+
+            AplicarPermissoes();
+        }
+
+        private void AplicarPermissoes()
+        {
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            {
+                txtCPF.ReadOnly = true;
+                txtEmail.ReadOnly = true;
+                txtFoneCel.ReadOnly = true;
+                txtFoneComercial.ReadOnly = true;
+                txtFoneResidencial.ReadOnly = true;
+                txtGrauParentesco.ReadOnly = true;
+                txtNome.ReadOnly = true;
+                txtRG.ReadOnly = true;
+
+                botaoSalvar.Visible = false;
+            }
         }
 
         public CadPessoa(Pessoa pessoa)
         {
             InitializeComponent();
             Pessoa = pessoa;
+
+            AplicarPermissoes();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            using (var ofd = new OpenFileDialog())
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
             {
-                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                var foto = PortariaWebCam.ObterImagem();
+                if (foto != null)
                 {
-                    pbFoto.Image = new Bitmap(ofd.FileName);
-                    pessoa.Foto = Util.imageToByteArray(pbFoto.Image);
+                    pbFoto.Image = foto;
+                    pessoa.Foto = Util.imageToByteArray(foto);
                 }
             }
         }

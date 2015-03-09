@@ -34,12 +34,20 @@ namespace Portaria.Locais
         public VisReservas()
         {
             InitializeComponent();
+            AplicarPermissoes();
+        }
+
+        private void AplicarPermissoes()
+        {
+            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            {
+                botaoRemover.Visible = false;
+            }
         }
 
         public VisReservas(Local local)
+            : this()
         {
-            InitializeComponent();
-
             Local = local;
 
             CarregarUltimasReservas();

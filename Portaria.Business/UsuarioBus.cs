@@ -40,11 +40,15 @@ namespace Portaria.Business
         {
             try
             {
-                entidade.Senha = getMD5Hash(entidade.Senha);
+                PortariaContext.Refrescar();
+
+                bd = PortariaContext.BD;
+
                 var u = bd.Usuarios.Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (u == null)
                 {
+                    entidade.Senha = getMD5Hash(entidade.Senha);
                     bd.Usuarios.Add(entidade);
                     bd.SaveChanges();
                     return;
@@ -52,8 +56,13 @@ namespace Portaria.Business
 
                 u.Login = entidade.Login;
                 u.Nome = entidade.Nome;
-                u.Senha = entidade.Senha;
+                if (u.Senha != entidade.Senha)
+                {
+                    u.Senha = getMD5Hash(entidade.Senha);
+                }
                 u.Tipo = entidade.Tipo;
+                u.CorTema = entidade.CorTema;
+                u.PosicaoAbas = entidade.PosicaoAbas;
 
                 bd.SaveChanges();
             }

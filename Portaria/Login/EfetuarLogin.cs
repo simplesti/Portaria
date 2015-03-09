@@ -19,6 +19,7 @@ namespace Portaria.Login
         {
             InitializeComponent();
             Aquecer();
+            ConfiguracoesUsuarioVisivel = false;
         }
 
         private void botaoCancelar_Click(object sender, EventArgs e)

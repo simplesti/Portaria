@@ -18,6 +18,10 @@ namespace Portaria.Core.Model
 
         public TipoUsuario Tipo { get; set; }
 
+        public int CorTema { get; set; }
+
+        public string PosicaoAbas { get; set; }
+
         public virtual ICollection<Sessao> Sessoes { get; set; }
 
         public string TipoEntidade

@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -96,6 +100,12 @@
     <Compile Include="CaixasDeMensagem\CaixaMensagem.Designer.cs">
       <DependentUpon>CaixaMensagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Config\ConfiguracoesUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\ConfiguracoesUsuario.Designer.cs">
+      <DependentUpon>ConfiguracoesUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,18 +118,21 @@
     <Compile Include="Forms\FormBaseWindow.Designer.cs">
       <DependentUpon>FormBaseWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormWindowTabbed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormWindowTabbed.Designer.cs">
-      <DependentUpon>FormWindowTabbed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\IPortariaTab.cs" />
-    <Compile Include="Forms\PortariaTabBase.cs">
+    <Compile Include="PortariaTabControls\IPortariaTab.cs" />
+    <Compile Include="PortariaTabControls\PortariaTabBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\PortariaTabBase.Designer.cs">
+    <Compile Include="PortariaTabControls\PortariaTabBase.Designer.cs">
       <DependentUpon>PortariaTabBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortariaTabControls\PortariaTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PortariaTabControls\PortariaTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PortariaTabControls\PortariaTabPage.Designer.cs">
+      <DependentUpon>PortariaTabPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Locais\LocalEventArgs.cs" />
     <Compile Include="Locais\LocalItem.cs">
@@ -153,14 +166,14 @@
     <EmbeddedResource Include="CaixasDeMensagem\CaixaMensagem.resx">
       <DependentUpon>CaixaMensagem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Config\ConfiguracoesUsuario.resx">
+      <DependentUpon>ConfiguracoesUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormBaseWindow.resx">
       <DependentUpon>FormBaseWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormWindowTabbed.resx">
-      <DependentUpon>FormWindowTabbed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Locais\LocalItem.resx">
       <DependentUpon>LocalItem.cs</DependentUpon>
@@ -175,6 +188,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\Save.png" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +207,10 @@
     <None Include="Resources\group_edit.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Portaria.Business\Portaria.Business.csproj">
+      <Project>{b89c241b-70ac-46ab-b309-61fa0c88e035}</Project>
+      <Name>Portaria.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Portaria.Core\Portaria.Core.csproj">
       <Project>{0af0ac83-3fba-4758-af09-bc75e6cfc7a2}</Project>
       <Name>Portaria.Core</Name>
@@ -221,6 +239,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\revision-enterprise_3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_config.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
