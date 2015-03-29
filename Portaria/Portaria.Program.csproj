@@ -309,6 +309,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Portaria.Biometria\Portaria.Biometria.csproj">
+      <Project>{fea4ecb9-fedd-4a9d-8867-7f9915017f2a}</Project>
+      <Name>Portaria.Biometria</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Portaria.Business\Portaria.Business.csproj">
       <Project>{b89c241b-70ac-46ab-b309-61fa0c88e035}</Project>
       <Name>Portaria.Business</Name>

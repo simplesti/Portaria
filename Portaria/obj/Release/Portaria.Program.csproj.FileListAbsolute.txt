@@ -45,3 +45,5 @@ C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Release\Portaria.Usuarios.Ta
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Release\Portaria.Program.csproj.GenerateResource.Cache
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Release\Portaria.exe
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\obj\Release\Portaria.pdb
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\Portaria.Biometria.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\Portaria.Biometria.pdb

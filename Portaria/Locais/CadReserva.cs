@@ -1,4 +1,5 @@
-﻿using Portaria.Business;
+﻿using Portaria.Biometria;
+using Portaria.Business;
 using Portaria.Cadastro;
 using Portaria.Core.Model;
 using Portaria.Core.Model.Cadastro;
@@ -91,10 +92,13 @@ namespace Portaria.Locais
 
         private void Salvar()
         {
-            var reservaBus = new ReservaBus();
-            reservaBus.InserirOuAtualizar(Reserva);
+            if (PortariaBiometria.Verificar(Reserva.Pessoa))
+            {
+                var reservaBus = new ReservaBus();
+                reservaBus.InserirOuAtualizar(Reserva);
 
-            Close();
+                Close();
+            }
         }
     }
 }

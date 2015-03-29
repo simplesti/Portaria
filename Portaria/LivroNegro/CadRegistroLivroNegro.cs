@@ -13,6 +13,8 @@ using Portaria.Locais;
 using Portaria.UnidadesBlocos;
 using Portaria.Blocos;
 using Portaria.Usuarios;
+using Portaria.Biometria;
+using Portaria.Framework.CaixaMensagem;
 
 namespace Portaria.LivroNegro
 {
@@ -78,12 +80,16 @@ namespace Portaria.LivroNegro
 
         private void Salvar()
         {
-            Registro.Mensagem = rtbMensagem.Text;
+            if (PortariaBiometria.Verificar(Registro.Pessoa))
+            {
 
-            var registroLivroNegroBus = new RegistroLivroNegroBus();
-            registroLivroNegroBus.InserirOuAtualizar(Registro);
+                Registro.Mensagem = rtbMensagem.Text;
 
-            Close();
+                var registroLivroNegroBus = new RegistroLivroNegroBus();
+                registroLivroNegroBus.InserirOuAtualizar(Registro);
+
+                Close();
+            }
         }
 
         private void botaoEditarPessoa_Click(object sender, System.EventArgs e)
