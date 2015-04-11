@@ -20,14 +20,20 @@ namespace Portaria.Webcam
 
         private void InicializaWebCam()
         {
-            // Considerar a primeira câmera que for encontrada no sistema
             const int VIDEODEVICE = 0;
-            // Resolucao de 640x480, 24 bits por pixel. A sua câmera tem que suportar essa resolução, senão, altere para uma resolução suportada.
+
             const int VIDEOWIDTH = 320;
             const int VIDEOHEIGHT = 240;
             const int VIDEOBITSPERPIXEL = 24;
- 
-            _camera = new DirectShowLib.Capture(VIDEODEVICE, VIDEOWIDTH, VIDEOHEIGHT, VIDEOBITSPERPIXEL, pbWebcam);
+
+            try
+            {
+                _camera = new DirectShowLib.Capture(VIDEODEVICE, VIDEOWIDTH, VIDEOHEIGHT, VIDEOBITSPERPIXEL, pbWebcam);
+            }
+            catch
+            {
+                botaoOK.Visible = false;
+            }
 
         }
 
@@ -86,7 +92,10 @@ namespace Portaria.Webcam
 
         private void PortariaWebCam_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _camera.Dispose();
+            if (_camera != null)
+            {
+                _camera.Dispose();
+            }
         }
     }
 }

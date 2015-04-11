@@ -80,7 +80,7 @@ namespace Portaria.LivroNegro
 
         private void Salvar()
         {
-            if (PortariaBiometria.Verificar(Registro.Pessoa))
+            if (PortariaBiometriaVerificar.Verificar(Registro.Pessoa))
             {
 
                 Registro.Mensagem = rtbMensagem.Text;

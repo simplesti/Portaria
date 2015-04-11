@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using Portaria.Log;
 
 namespace Portaria.Business.Cadastro
 {
@@ -26,19 +28,24 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                var l = bd.Locais.Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var l = bd.Locais.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (l == null)
                 {
                     bd.Locais.Add(entidade);
                     bd.SaveChanges();
+                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
                 }
+
+                var entidadeOriginal = PortariaLog.SerializarEntidade(l);
 
                 l.Nome = entidade.Nome;
                 l.Descricao = entidade.Descricao;
 
                 bd.SaveChanges();
+
+                PortariaLog.Logar(l.Id, entidadeOriginal, PortariaLog.SerializarEntidade(l), l.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Alterar);
             }
             catch (Exception ex)
             {
@@ -61,6 +68,8 @@ namespace Portaria.Business.Cadastro
                 {
                     bd.Locais.Remove(l);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(l.Id, string.Empty, PortariaLog.SerializarEntidade(l), l.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

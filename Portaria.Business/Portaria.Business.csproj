@@ -73,6 +73,10 @@
       <Project>{cb8301c0-a5e8-4166-be8f-084dfe2632c7}</Project>
       <Name>Portaria.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Portaria.Log\Portaria.Log.csproj">
+      <Project>{b8b29310-26d5-4faa-aa53-6cecaf4f541d}</Project>
+      <Name>Portaria.Log</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

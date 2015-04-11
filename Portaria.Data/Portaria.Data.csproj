@@ -62,6 +62,18 @@
     <Compile Include="Migrations\201503072154113_posicaoAbas.Designer.cs">
       <DependentUpon>201503072154113_posicaoAbas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504111636442_Biometria.cs" />
+    <Compile Include="Migrations\201504111636442_Biometria.Designer.cs">
+      <DependentUpon>201504111636442_Biometria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504111936355_BiometriaFuncionario.cs" />
+    <Compile Include="Migrations\201504111936355_BiometriaFuncionario.Designer.cs">
+      <DependentUpon>201504111936355_BiometriaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504111938163_BiometriaUsuario.cs" />
+    <Compile Include="Migrations\201504111938163_BiometriaUsuario.Designer.cs">
+      <DependentUpon>201504111938163_BiometriaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PortariaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +82,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503072154113_posicaoAbas.resx">
       <DependentUpon>201503072154113_posicaoAbas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504111636442_Biometria.resx">
+      <DependentUpon>201504111636442_Biometria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504111936355_BiometriaFuncionario.resx">
+      <DependentUpon>201504111936355_BiometriaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504111938163_BiometriaUsuario.resx">
+      <DependentUpon>201504111938163_BiometriaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,9 +111,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Portaria.Core\Portaria.Core.csproj">

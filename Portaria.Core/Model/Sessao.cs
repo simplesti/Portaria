@@ -14,10 +14,12 @@ namespace Portaria.Core.Model
 
         public DateTime? DataHoraFim { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Usuario UsuarioLogado { get; set; }
 
         public string NomeEstacao { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Reserva> Reservas { get; set; }
 
 
@@ -31,7 +33,7 @@ namespace Portaria.Core.Model
             get
             {
                 return string.Format("{0} - {1} ({2})", DataHoraInicio.Value.ToString("dd/MM/yyyy HH:mm"),
-                    DataHoraFim.Value.ToString("dd/MM/yyyy HH:mm"), UsuarioLogado.Nome);
+                    DataHoraFim.HasValue ? DataHoraFim.Value.ToString("dd/MM/yyyy HH:mm") : "", UsuarioLogado.Nome);
             }
         }
 

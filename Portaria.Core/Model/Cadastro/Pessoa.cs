@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Portaria.Core.Model.CadastroMorador
 {
-    public class Pessoa : IEntidade
+    public class Pessoa : IEntidade, IBiometria
     {
         public int Id { get; set; }
 
@@ -24,14 +24,20 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public bool Inadimplente { get; set; }
 
+        public byte[] Biometria { get; set; }
+
         public byte[] Foto { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Veiculo> Veiculos { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Unidade> Unidades { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Reserva> Reservas { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<RegistroLivroNegro> RegistrosLivroNegro { get; set; }
 
 

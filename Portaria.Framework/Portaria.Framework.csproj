@@ -58,6 +58,18 @@
     <Compile Include="Botoes\BotaoAdicionar.Designer.cs">
       <DependentUpon>BotaoAdicionar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Botoes\BotaoCapturarBiometria.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoCapturarBiometria.Designer.cs">
+      <DependentUpon>BotaoCapturarBiometria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoVerificarBiometria.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoVerificarBiometria.Designer.cs">
+      <DependentUpon>BotaoVerificarBiometria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Botoes\BotaoCancelar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -245,6 +257,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\blue_config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fingerprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verifiedfingerprint.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

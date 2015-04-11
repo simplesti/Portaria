@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Portaria.Business
 {
@@ -28,7 +29,7 @@ namespace Portaria.Business
             {
                 ValidarRegistro(entidade);
 
-                var r = bd.RegistrosLivroNegro.FirstOrDefault(i => i.Id == entidade.Id);
+                var r = bd.RegistrosLivroNegro.AsNoTracking().FirstOrDefault(i => i.Id == entidade.Id);
                 var sessao = SessaoBus.Sessao();
 
                 if (r == null)

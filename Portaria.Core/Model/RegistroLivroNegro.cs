@@ -11,14 +11,17 @@ namespace Portaria.Core.Model
     {
         public int Id { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Pessoa Pessoa { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Sessao Sessao { get; set; }
 
         public DateTime Data { get; set; }
 
         public string Mensagem { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<RegistroLivroNegroEntidade> Entidades { get; set; }
 
         public string TipoEntidade

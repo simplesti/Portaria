@@ -1,8 +1,10 @@
 ﻿using Portaria.Core.Model.CadastroMorador;
 using Portaria.Data;
+using Portaria.Log;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 
 namespace Portaria.Business.Cadastro
 {
@@ -24,18 +26,24 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                var b = bd.Blocos.Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var b = bd.Blocos.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (b == null)
                 {
                     bd.Blocos.Add(entidade);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
                 }
 
+                var entidadeOriginal = PortariaLog.SerializarEntidade(b);
+                
                 b.Nome = entidade.Nome;
 
                 bd.SaveChanges();
+
+                PortariaLog.Logar(b.Id, entidadeOriginal, PortariaLog.SerializarEntidade(b), b.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Alterar);
             }
             catch (Exception ex)
             {
@@ -58,6 +66,8 @@ namespace Portaria.Business.Cadastro
                 {
                     bd.Blocos.Remove(b);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(b.Id, string.Empty, PortariaLog.SerializarEntidade(b), b.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

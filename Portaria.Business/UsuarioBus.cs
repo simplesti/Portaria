@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using Portaria.Log;
 
 namespace Portaria.Business
 {
@@ -40,21 +42,24 @@ namespace Portaria.Business
         {
             try
             {
-                PortariaContext.Refrescar();
-
-                bd = PortariaContext.BD;
-
-                var u = bd.Usuarios.Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var u = bd.Usuarios.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (u == null)
                 {
                     entidade.Senha = getMD5Hash(entidade.Senha);
                     bd.Usuarios.Add(entidade);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
                 }
 
+                var entidadeOriginal = PortariaLog.SerializarEntidade(u);
+
                 u.Login = entidade.Login;
+                u.Biometria = entidade.Biometria;
+                u.CPF = entidade.CPF;
+                u.RG = entidade.RG;
                 u.Nome = entidade.Nome;
                 if (u.Senha != entidade.Senha)
                 {
@@ -65,6 +70,8 @@ namespace Portaria.Business
                 u.PosicaoAbas = entidade.PosicaoAbas;
 
                 bd.SaveChanges();
+
+                PortariaLog.Logar(u.Id, entidadeOriginal, PortariaLog.SerializarEntidade(u), u.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Alterar);
             }
             catch (Exception ex)
             {
@@ -87,6 +94,8 @@ namespace Portaria.Business
                 {
                     bd.Usuarios.Remove(u);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(u.Id, string.Empty, PortariaLog.SerializarEntidade(u), u.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)
@@ -99,7 +108,7 @@ namespace Portaria.Business
         {
             try
             {
-                var u = bd.Usuarios.Where( i => i.Login == usuario).FirstOrDefault();
+                var u = bd.Usuarios.Where(i => i.Login == usuario).FirstOrDefault();
 
                 if (u == null)
                 {

@@ -1,4 +1,5 @@
-﻿using Portaria.Business;
+﻿using Portaria.Biometria;
+using Portaria.Business;
 using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Framework;
@@ -33,6 +34,19 @@ namespace Portaria.UnidadesBlocos
                 if (funcionario.Foto != null)
                 {
                     pbFoto.Image = Util.byteArrayToImage(funcionario.Foto);
+                }
+
+                if (funcionario.Biometria != null)
+                {
+                    lblStatusBiometria.Text = "BIOMETRIA CAPTURADA";
+                    lblStatusBiometria.ForeColor = Color.DarkGreen;
+                    botaoVerificarBiometria.Enabled = true;
+                }
+                else
+                {
+                    lblStatusBiometria.Text = "BIOMETRIA NÃO CAPTURADA";
+                    lblStatusBiometria.ForeColor = Color.DarkRed;
+                    botaoVerificarBiometria.Enabled = false;
                 }
             }
         }
@@ -101,6 +115,34 @@ namespace Portaria.UnidadesBlocos
                     funcionario.Foto = Util.imageToByteArray(foto);
                 }
             }
+        }
+        private void CapturarBiometria()
+        {
+            var biometria = PortariaBiometriaCapturar.Capturar();
+            if (biometria != null)
+            {
+                Funcionario.Biometria = biometria;
+
+                lblStatusBiometria.Text = "BIOMETRIA CAPTURADA";
+                lblStatusBiometria.ForeColor = Color.DarkGreen;
+
+                botaoVerificarBiometria.Enabled = true;
+            }
+        }
+
+        private void botaoCapturarBiometria_Click(object sender, EventArgs e)
+        {
+            CapturarBiometria();
+        }
+
+        private void botaoVerificarBiometria_Click(object sender, EventArgs e)
+        {
+            VerificarBiometria();
+        }
+
+        private void VerificarBiometria()
+        {
+            PortariaBiometriaVerificar.Verificar(Funcionario);
         }
     }
 }

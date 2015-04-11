@@ -18,8 +18,10 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public byte[] Foto { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Unidade Unidade { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Pessoa Proprietario { get; set; }
 
 

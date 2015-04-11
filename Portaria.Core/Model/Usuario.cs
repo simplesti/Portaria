@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Portaria.Core.Model
 {
-    public class Usuario : IEntidade
+    public class Usuario : IEntidade, IBiometria
     {
         public int Id { get; set; }
 
         public string Nome { get; set; }
+
+        public string CPF { get; set; }
+
+        public string RG { get; set; }
 
         public string Login { get; set; }
 
@@ -18,10 +22,13 @@ namespace Portaria.Core.Model
 
         public TipoUsuario Tipo { get; set; }
 
+        public byte[] Biometria { get; set; }
+
         public int CorTema { get; set; }
 
         public string PosicaoAbas { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Sessao> Sessoes { get; set; }
 
         public string TipoEntidade

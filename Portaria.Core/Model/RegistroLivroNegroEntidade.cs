@@ -14,6 +14,7 @@ namespace Portaria.Core.Model
 
         public string Tipo { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual RegistroLivroNegro RegistroLivroNegro { get; set; }
 
 

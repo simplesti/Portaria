@@ -14,10 +14,13 @@ namespace Portaria.Core.Model
 
         public DateTime DataHoraFim { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Local Local { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Pessoa Pessoa { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Sessao Sessao { get; set; }
 
 

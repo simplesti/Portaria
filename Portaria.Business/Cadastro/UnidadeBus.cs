@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using Portaria.Log;
 
 namespace Portaria.Business.Cadastro
 {
@@ -42,7 +44,7 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                var u = bd.Unidades.Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var u = bd.Unidades.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
                 var blocoBus = new BlocoBus();
 
                 if (u == null)
@@ -51,8 +53,12 @@ namespace Portaria.Business.Cadastro
                     entidade.Bloco = blocoBus.BuscaPorId(entidade.Bloco.Id);
                     bd.Unidades.Add(entidade);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
                 }
+
+                var entidadeOriginal = PortariaLog.SerializarEntidade(u);
 
                 u.DataAtualizacao = DateTime.Now;
                 u.AparelhosGas = entidade.AparelhosGas;
@@ -77,6 +83,8 @@ namespace Portaria.Business.Cadastro
                 u.Observacoes = entidade.Observacoes;
 
                 bd.SaveChanges();
+
+                PortariaLog.Logar(u.Id, entidadeOriginal, PortariaLog.SerializarEntidade(u), u.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Alterar);
             }
             catch (Exception ex)
             {
@@ -99,6 +107,8 @@ namespace Portaria.Business.Cadastro
                 {
                     bd.Unidades.Remove(u);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(u.Id, string.Empty, PortariaLog.SerializarEntidade(u), u.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

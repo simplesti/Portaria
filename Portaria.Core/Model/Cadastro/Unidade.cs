@@ -21,22 +21,29 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public DateTime? DataAtualizacao { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Pessoa Proprietario { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Pessoa Conjuge { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Pessoa Locatario { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Pessoa> Autorizados { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Funcionario> Funcionarios { get; set; }
 
         public string Animais { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Veiculo> Veiculos { get; set; }
 
         public string Assinaturas { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Bloco Bloco { get; set; }
 
 

@@ -92,7 +92,7 @@ namespace Portaria.Locais
 
         private void Salvar()
         {
-            if (PortariaBiometria.Verificar(Reserva.Pessoa))
+            if (PortariaBiometriaVerificar.Verificar(Reserva.Pessoa))
             {
                 var reservaBus = new ReservaBus();
                 reservaBus.InserirOuAtualizar(Reserva);

@@ -18,7 +18,7 @@ namespace Portaria.Login
         public EfetuarLogin()
         {
             InitializeComponent();
-            Aquecer();
+            BusUtils.Aquecer();
             ConfiguracoesUsuarioVisivel = false;
         }
 
@@ -30,14 +30,6 @@ namespace Portaria.Login
         private void botaoOK_Click(object sender, EventArgs e)
         {
             ProcessarLogin();
-        }
-
-        private void Aquecer()
-        {
-            var unidadeBus = new UnidadeBus();
-
-            var dumy = unidadeBus.Todos().FirstOrDefault();
-
         }
 
         private void ProcessarLogin()

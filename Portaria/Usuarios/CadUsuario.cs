@@ -1,8 +1,11 @@
-﻿using Portaria.Business;
+﻿using Portaria.Biometria;
+using Portaria.Business;
 using Portaria.Core;
 using Portaria.Core.Model;
 using Portaria.Framework.Forms;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace Portaria.Usuarios
 {
@@ -21,6 +24,19 @@ namespace Portaria.Usuarios
             {
                 usuario = value;
                 bsUsuario.DataSource = usuario;
+                
+                if (usuario.Biometria != null)
+                {
+                    lblStatusBiometria.Text = "BIOMETRIA CAPTURADA";
+                    lblStatusBiometria.ForeColor = Color.DarkGreen;
+                    botaoVerificarBiometria.Enabled = true;
+                }
+                else
+                {
+                    lblStatusBiometria.Text = "BIOMETRIA NÃO CAPTURADA";
+                    lblStatusBiometria.ForeColor = Color.DarkRed;
+                    botaoVerificarBiometria.Enabled = false;
+                }
             }
         }
 
@@ -59,6 +75,35 @@ namespace Portaria.Usuarios
             usuarioBus.InserirOuAtualizar(Usuario);
 
             Close();
+        }
+
+        private void CapturarBiometria()
+        {
+            var biometria = PortariaBiometriaCapturar.Capturar();
+            if (biometria != null)
+            {
+                Usuario.Biometria = biometria;
+
+                lblStatusBiometria.Text = "BIOMETRIA CAPTURADA";
+                lblStatusBiometria.ForeColor = Color.DarkGreen;
+
+                botaoVerificarBiometria.Enabled = true;
+            }
+        }
+
+        private void botaoCapturarBiometria_Click(object sender, EventArgs e)
+        {
+            CapturarBiometria();
+        }
+
+        private void botaoVerificarBiometria_Click(object sender, EventArgs e)
+        {
+            VerificarBiometria();
+        }
+
+        private void VerificarBiometria()
+        {
+            PortariaBiometriaVerificar.Verificar(Usuario);
         }
     }
 }

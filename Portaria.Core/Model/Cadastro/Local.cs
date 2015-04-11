@@ -16,6 +16,7 @@ namespace Portaria.Core.Model.Cadastro
 
         public byte[] Foto { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Reserva> Reservas { get; set; }
 
 

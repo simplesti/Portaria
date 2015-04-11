@@ -14,6 +14,8 @@ namespace Portaria.Core.Model.Log
 
         public string NomeTipoEntidade { get; set; }
 
+        public TipoAlteracao TipoAlteracao { get; set; }
+
         public int IdEntidade { get; set; }
 
         public string EntidadeOriginal { get; set; }
@@ -32,7 +34,7 @@ namespace Portaria.Core.Model.Log
 
         public string DescricaoEntidade
         {
-            get { return "Alteracao"; }
+            get { return Descricao; }
         }
     }
 }

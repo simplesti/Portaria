@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Portaria.Business
 {
@@ -24,7 +25,7 @@ namespace Portaria.Business
         {
             try
             {
-                var r = bd.RegistroLivroNegroEntidades.FirstOrDefault(i => i.Id == entidade.Id);
+                var r = bd.RegistroLivroNegroEntidades.AsNoTracking().FirstOrDefault(i => i.Id == entidade.Id);
 
                 if (r == null)
                 {

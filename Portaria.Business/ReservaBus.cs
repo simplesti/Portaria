@@ -3,6 +3,8 @@ using Portaria.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
+using Portaria.Log;
 
 namespace Portaria.Business
 {
@@ -26,7 +28,7 @@ namespace Portaria.Business
             {
                 ValidarReserva(entidade);
 
-                var r = bd.Reservas.Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var r = bd.Reservas.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
                 var sessao = SessaoBus.Sessao();
 
                 if (r == null)
@@ -38,8 +40,12 @@ namespace Portaria.Business
 
                     bd.Reservas.Add(entidade);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
                 }
+
+                var entidadeOriginal = PortariaLog.SerializarEntidade(r);
 
                 r.DataHora = DateTime.Now;
                 r.DataHoraFim = entidade.DataHoraFim;
@@ -49,6 +55,8 @@ namespace Portaria.Business
                 r.Sessao = bd.Sessoes.Where(s => s.Id == sessao.Id).FirstOrDefault();
 
                 bd.SaveChanges();
+
+                PortariaLog.Logar(r.Id, entidadeOriginal, PortariaLog.SerializarEntidade(r), r.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Alterar);
             }
             catch (Exception ex)
             {
@@ -106,6 +114,8 @@ namespace Portaria.Business
                 {
                     bd.Reservas.Remove(r);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(r.Id, string.Empty, PortariaLog.SerializarEntidade(r), r.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

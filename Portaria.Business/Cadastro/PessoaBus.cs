@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using Portaria.Log;
 
 namespace Portaria.Business.Cadastro
 {
@@ -37,14 +39,18 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                var p = bd.Pessoas.Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var p = bd.Pessoas.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (p == null)
                 {
                     bd.Pessoas.Add(entidade);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
                 }
+
+                var entidadeOriginal = PortariaLog.SerializarEntidade(p);
 
                 p.Email = entidade.Email;
                 p.FoneCelular = entidade.FoneCelular;
@@ -53,8 +59,11 @@ namespace Portaria.Business.Cadastro
                 p.Foto = entidade.Foto;
                 p.GrauParentesco = entidade.GrauParentesco;
                 p.Nome = entidade.Nome;
+                p.Biometria = entidade.Biometria;
 
                 bd.SaveChanges();
+
+                PortariaLog.Logar(p.Id, entidadeOriginal, PortariaLog.SerializarEntidade(p), p.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Alterar);
             }
             catch (Exception ex)
             {
@@ -72,6 +81,8 @@ namespace Portaria.Business.Cadastro
                 {
                     bd.Pessoas.Remove(p);
                     bd.SaveChanges();
+
+                    PortariaLog.Logar(p.Id, string.Empty, PortariaLog.SerializarEntidade(p), p.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

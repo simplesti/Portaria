@@ -12,6 +12,7 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public string Nome { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Unidade> Unidades { get; set; }
 
         public string TipoEntidade

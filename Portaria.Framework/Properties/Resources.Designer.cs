@@ -103,6 +103,16 @@ namespace Portaria.Framework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fingerprint {
+            get {
+                object obj = ResourceManager.GetObject("fingerprint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap group_edit {
             get {
                 object obj = ResourceManager.GetObject("group_edit", resourceCulture);
@@ -176,6 +186,16 @@ namespace Portaria.Framework.Properties {
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verifiedfingerprint {
+            get {
+                object obj = ResourceManager.GetObject("verifiedfingerprint", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Portaria.Core.Model.CadastroMorador
 {
-    public class Funcionario : IEntidade
+    public class Funcionario : IEntidade, IBiometria
     {
         public int Id { get; set; }
 
@@ -23,8 +23,11 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public DateTime? HorarioSaida { get; set; }
 
+        public byte[] Biometria { get; set; }
+
         public byte[] Foto { get; set; }
 
+        [Newtonsoft.Json.JsonIgnore]
         public virtual Unidade Unidade { get; set; }
 
 

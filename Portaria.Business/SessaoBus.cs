@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Portaria.Business
 {
@@ -33,7 +34,7 @@ namespace Portaria.Business
         {
             try
             {
-                var s = bd.Sessoes.Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var s = bd.Sessoes.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (s == null)
                 {
