@@ -1,0 +1,10 @@
+logs OK
+
+bug que obriga ter webcam, não permitindo escolher imagem no computador OK
+
+usuário tem que ser administrador OK
+
+biometria cadastro e verificação de pessoas, funcionarios e usuarios OK
+
+biometria validação de biometria para pessoas ao reservar local OK
+
