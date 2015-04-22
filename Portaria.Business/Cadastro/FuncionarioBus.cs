@@ -73,10 +73,12 @@ namespace Portaria.Business.Cadastro
 
                 if (f != null)
                 {
+                    var ent = PortariaLog.SerializarEntidade(f);
+
                     bd.Funcionarios.Remove(f);
                     bd.SaveChanges();
 
-                    PortariaLog.Logar(f.Id, string.Empty, PortariaLog.SerializarEntidade(f), f.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
+                    PortariaLog.Logar(f.Id, string.Empty, ent, f.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

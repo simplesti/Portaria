@@ -76,7 +76,7 @@ namespace Portaria.Business
                 throw new Exception("Esta pessoa não está autorizada a efetuar reservas.");
             }
 
-            if (reserva.DataHoraFim == null || reserva.DataHoraInicio == null)
+            if (reserva.DataHoraFim == null || reserva.DataHoraInicio == null || reserva.DataHoraFim == DateTime.MinValue || reserva.DataHoraInicio == DateTime.MinValue)
             {
                 throw new Exception("Você precisa informar a data início e fim da reserva.");
             }
@@ -112,10 +112,12 @@ namespace Portaria.Business
 
                 if (r != null)
                 {
+                    var ent = PortariaLog.SerializarEntidade(r);
+
                     bd.Reservas.Remove(r);
                     bd.SaveChanges();
 
-                    PortariaLog.Logar(r.Id, string.Empty, PortariaLog.SerializarEntidade(r), r.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
+                    PortariaLog.Logar(r.Id, string.Empty, ent, r.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

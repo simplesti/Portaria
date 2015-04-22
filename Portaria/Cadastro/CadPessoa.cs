@@ -66,6 +66,7 @@ namespace Portaria
                 txtGrauParentesco.ReadOnly = true;
                 txtNome.ReadOnly = true;
                 txtRG.ReadOnly = true;
+                chkInadimplente.Enabled = false;
 
                 botaoSalvar.Visible = false;
             }

@@ -5,18 +5,19 @@ using Portaria.Core.Model;
 using Portaria.Core.Model.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Framework.Forms;
+using System;
 
 namespace Portaria.Locais
 {
     public partial class CadReserva : FormBaseWindow
     {
         private Reserva reserva;
-        
+
         public Reserva Reserva
         {
             get
             {
-                return reserva; 
+                return reserva;
             }
 
             set
@@ -37,7 +38,7 @@ namespace Portaria.Locais
         {
             InitializeComponent();
 
-            Reserva = new Reserva() { Local = local };
+            Reserva = new Reserva() { Local = local, DataHoraInicio = DateTime.Now, DataHoraFim = DateTime.Now };
         }
 
         public CadReserva(Reserva reserva)

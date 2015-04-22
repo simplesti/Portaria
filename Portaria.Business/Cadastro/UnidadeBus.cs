@@ -49,6 +49,11 @@ namespace Portaria.Business.Cadastro
 
                 if (u == null)
                 {
+                    if (bd.Unidades.Any(q => q.Numero == entidade.Numero && q.Bloco.Id == entidade.Bloco.Id))
+                    {
+                        throw new Exception("Unidade já cadastrada com este número neste bloco.");
+                    }
+
                     entidade.DataAtualizacao = DateTime.Now;
                     entidade.Bloco = blocoBus.BuscaPorId(entidade.Bloco.Id);
                     bd.Unidades.Add(entidade);
@@ -56,6 +61,11 @@ namespace Portaria.Business.Cadastro
 
                     PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
+                }
+
+                if (bd.Unidades.Any(q => q.Id != entidade.Id && (q.Numero == entidade.Numero && q.Bloco.Id == entidade.Bloco.Id)))
+                {
+                    throw new Exception("Unidade já cadastrada com este número neste bloco.");
                 }
 
                 var entidadeOriginal = PortariaLog.SerializarEntidade(u);
@@ -105,10 +115,12 @@ namespace Portaria.Business.Cadastro
                 var u = bd.Unidades.FirstOrDefault(i => i.Id == entidade.Id);
                 if (u != null)
                 {
+                    var ent = PortariaLog.SerializarEntidade(u);
+
                     bd.Unidades.Remove(u);
                     bd.SaveChanges();
 
-                    PortariaLog.Logar(u.Id, string.Empty, PortariaLog.SerializarEntidade(u), u.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
+                    PortariaLog.Logar(u.Id, string.Empty, ent, u.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

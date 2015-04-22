@@ -46,12 +46,22 @@ namespace Portaria.Business
 
                 if (u == null)
                 {
+                    if (bd.Usuarios.Any( q => q.Nome.ToUpper() == entidade.Nome.ToUpper() || q.Login.ToUpper() == entidade.Login.ToUpper()))
+                    {
+                        throw new Exception("Usuário já cadastrado com este nome ou login.");
+                    }
+
                     entidade.Senha = getMD5Hash(entidade.Senha);
                     bd.Usuarios.Add(entidade);
                     bd.SaveChanges();
 
                     PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
+                }
+
+                if (bd.Usuarios.Any(q => q.Id != entidade.Id &&( q.Nome.ToUpper() == entidade.Nome.ToUpper() || q.Login.ToUpper() == entidade.Login.ToUpper())))
+                {
+                    throw new Exception("Usuário já cadastrado com este nome ou login.");
                 }
 
                 var entidadeOriginal = PortariaLog.SerializarEntidade(u);
@@ -92,10 +102,12 @@ namespace Portaria.Business
 
                 if (u != null)
                 {
+                    var ent = PortariaLog.SerializarEntidade(u);
+
                     bd.Usuarios.Remove(u);
                     bd.SaveChanges();
 
-                    PortariaLog.Logar(u.Id, string.Empty, PortariaLog.SerializarEntidade(u), u.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
+                    PortariaLog.Logar(u.Id, string.Empty, ent, u.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

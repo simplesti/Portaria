@@ -68,10 +68,12 @@ namespace Portaria.Business.Cadastro
                 var v = bd.Veiculos.FirstOrDefault(i => i.Id == entidade.Id);
                 if (v != null)
                 {
+                    var ent = PortariaLog.SerializarEntidade(v);
+
                     bd.Veiculos.Remove(v);
                     bd.SaveChanges();
 
-                    PortariaLog.Logar(v.Id, string.Empty, PortariaLog.SerializarEntidade(v), v.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
+                    PortariaLog.Logar(v.Id, string.Empty, ent, v.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

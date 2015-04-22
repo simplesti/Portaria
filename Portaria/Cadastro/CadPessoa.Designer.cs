@@ -50,12 +50,13 @@
             this.txtRG = new System.Windows.Forms.TextBox();
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.pnlBotoes = new System.Windows.Forms.Panel();
-            this.lblStatusBiometria = new System.Windows.Forms.Label();
             this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
             this.botaoSalvar = new Portaria.Framework.Botoes.BotaoSalvar();
             this.pnlBiometria = new System.Windows.Forms.Panel();
+            this.lblStatusBiometria = new System.Windows.Forms.Label();
             this.botaoVerificarBiometria = new Portaria.Framework.Botoes.BotaoVerificarBiometria();
             this.botaoCapturarBiometria = new Portaria.Framework.Botoes.BotaoCapturarBiometria();
+            this.chkInadimplente = new System.Windows.Forms.CheckBox();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsPessoa)).BeginInit();
@@ -67,7 +68,7 @@
             // pnlConteudo
             // 
             this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(634, 385);
+            this.pnlConteudo.Size = new System.Drawing.Size(634, 407);
             // 
             // tlpCampos
             // 
@@ -91,12 +92,14 @@
             this.tlpCampos.Controls.Add(this.lblCPF, 0, 3);
             this.tlpCampos.Controls.Add(this.txtRG, 1, 4);
             this.tlpCampos.Controls.Add(this.txtCPF, 0, 4);
-            this.tlpCampos.Controls.Add(this.pnlBotoes, 1, 9);
-            this.tlpCampos.Controls.Add(this.pnlBiometria, 0, 9);
+            this.tlpCampos.Controls.Add(this.pnlBotoes, 1, 10);
+            this.tlpCampos.Controls.Add(this.pnlBiometria, 0, 10);
+            this.tlpCampos.Controls.Add(this.chkInadimplente, 1, 9);
             this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCampos.Location = new System.Drawing.Point(0, 0);
             this.tlpCampos.Name = "tlpCampos";
-            this.tlpCampos.RowCount = 10;
+            this.tlpCampos.RowCount = 11;
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -107,7 +110,7 @@
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCampos.Size = new System.Drawing.Size(634, 385);
+            this.tlpCampos.Size = new System.Drawing.Size(634, 407);
             this.tlpCampos.TabIndex = 0;
             // 
             // lblNome
@@ -273,21 +276,10 @@
             // 
             this.pnlBotoes.Controls.Add(this.botaoCancelar);
             this.pnlBotoes.Controls.Add(this.botaoSalvar);
-            this.pnlBotoes.Location = new System.Drawing.Point(343, 315);
+            this.pnlBotoes.Location = new System.Drawing.Point(343, 338);
             this.pnlBotoes.Name = "pnlBotoes";
-            this.pnlBotoes.Size = new System.Drawing.Size(288, 67);
+            this.pnlBotoes.Size = new System.Drawing.Size(288, 66);
             this.pnlBotoes.TabIndex = 24;
-            // 
-            // lblStatusBiometria
-            // 
-            this.lblStatusBiometria.AutoSize = true;
-            this.lblStatusBiometria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusBiometria.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblStatusBiometria.Location = new System.Drawing.Point(0, 5);
-            this.lblStatusBiometria.Name = "lblStatusBiometria";
-            this.lblStatusBiometria.Size = new System.Drawing.Size(241, 18);
-            this.lblStatusBiometria.TabIndex = 1;
-            this.lblStatusBiometria.Text = "BIOMETRIA NÃO CAPTURADA";
             // 
             // botaoCancelar
             // 
@@ -332,10 +324,21 @@
             this.pnlBiometria.Controls.Add(this.lblStatusBiometria);
             this.pnlBiometria.Controls.Add(this.botaoVerificarBiometria);
             this.pnlBiometria.Controls.Add(this.botaoCapturarBiometria);
-            this.pnlBiometria.Location = new System.Drawing.Point(3, 315);
+            this.pnlBiometria.Location = new System.Drawing.Point(3, 338);
             this.pnlBiometria.Name = "pnlBiometria";
-            this.pnlBiometria.Size = new System.Drawing.Size(334, 67);
+            this.pnlBiometria.Size = new System.Drawing.Size(334, 66);
             this.pnlBiometria.TabIndex = 25;
+            // 
+            // lblStatusBiometria
+            // 
+            this.lblStatusBiometria.AutoSize = true;
+            this.lblStatusBiometria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusBiometria.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblStatusBiometria.Location = new System.Drawing.Point(0, 5);
+            this.lblStatusBiometria.Name = "lblStatusBiometria";
+            this.lblStatusBiometria.Size = new System.Drawing.Size(241, 18);
+            this.lblStatusBiometria.TabIndex = 1;
+            this.lblStatusBiometria.Text = "BIOMETRIA NÃO CAPTURADA";
             // 
             // botaoVerificarBiometria
             // 
@@ -369,14 +372,25 @@
             this.botaoCapturarBiometria.UseVisualStyleBackColor = false;
             this.botaoCapturarBiometria.Click += new System.EventHandler(this.botaoCapturarBiometria_Click);
             // 
+            // chkInadimplente
+            // 
+            this.chkInadimplente.AutoSize = true;
+            this.chkInadimplente.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bsPessoa, "Inadimplente", true));
+            this.chkInadimplente.Location = new System.Drawing.Point(343, 315);
+            this.chkInadimplente.Name = "chkInadimplente";
+            this.chkInadimplente.Size = new System.Drawing.Size(86, 17);
+            this.chkInadimplente.TabIndex = 26;
+            this.chkInadimplente.Text = "Inadimplente";
+            this.chkInadimplente.UseVisualStyleBackColor = true;
+            // 
             // CadPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 448);
+            this.ClientSize = new System.Drawing.Size(640, 470);
             this.ConfiguracoesUsuarioVisivel = true;
-            this.MaximumSize = new System.Drawing.Size(640, 448);
-            this.MinimumSize = new System.Drawing.Size(640, 448);
+            this.MaximumSize = new System.Drawing.Size(640, 470);
+            this.MinimumSize = new System.Drawing.Size(640, 470);
             this.Name = "CadPessoa";
             this.Text = "CadPessoa";
             this.Titulo = "Cadastro de pessoa";
@@ -420,5 +434,6 @@
         private System.Windows.Forms.Label lblStatusBiometria;
         private Framework.Botoes.BotaoVerificarBiometria botaoVerificarBiometria;
         private Framework.Botoes.BotaoCapturarBiometria botaoCapturarBiometria;
+        private System.Windows.Forms.CheckBox chkInadimplente;
     }
 }

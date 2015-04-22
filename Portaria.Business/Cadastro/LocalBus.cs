@@ -32,10 +32,20 @@ namespace Portaria.Business.Cadastro
 
                 if (l == null)
                 {
+                    if (bd.Locais.Any(q => q.Nome.ToUpper() == entidade.Nome.ToUpper()))
+                    {
+                        throw new Exception("Local já cadastrado com este nome.");
+                    }
+
                     bd.Locais.Add(entidade);
                     bd.SaveChanges();
                     PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
+                }
+
+                if (bd.Locais.Any(q => q.Id != entidade.Id && q.Nome.ToUpper() == entidade.Nome.ToUpper()))
+                {
+                    throw new Exception("Local já cadastrado com este nome.");
                 }
 
                 var entidadeOriginal = PortariaLog.SerializarEntidade(l);
@@ -66,10 +76,12 @@ namespace Portaria.Business.Cadastro
 
                 if (l != null)
                 {
+                    var ent = PortariaLog.SerializarEntidade(l);
+
                     bd.Locais.Remove(l);
                     bd.SaveChanges();
 
-                    PortariaLog.Logar(l.Id, string.Empty, PortariaLog.SerializarEntidade(l), l.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
+                    PortariaLog.Logar(l.Id, string.Empty, ent, l.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)

@@ -65,6 +65,7 @@
             // 
             // tabControl
             // 
+            this.tabControl.AllowDrop = true;
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
@@ -183,7 +184,7 @@
             this.tabVisualizarBlocos1.Name = "tabVisualizarBlocos1";
             this.tabVisualizarBlocos1.Size = new System.Drawing.Size(645, 385);
             this.tabVisualizarBlocos1.TabIndex = 0;
-            this.tabVisualizarBlocos1.TabVisualizar = null;
+            this.tabVisualizarBlocos1.TabVisualizar = this.tabVisualizarUnidades1;
             // 
             // tabPage6
             // 
@@ -253,6 +254,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 480);
+            this.ConfiguracoesUsuarioVisivel = true;
             this.Name = "Principal";
             this.Text = "Portaria Digital";
             this.Titulo = "Portaria Digital";
