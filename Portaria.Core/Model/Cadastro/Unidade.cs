@@ -17,6 +17,8 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public string AparelhosGas { get; set; }
 
+        public bool Inadimplente { get; set; }
+
         public string Observacoes { get; set; }
 
         public DateTime? DataAtualizacao { get; set; }
@@ -35,6 +37,9 @@ namespace Portaria.Core.Model.CadastroMorador
 
         [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Funcionario> Funcionarios { get; set; }
+
+        [Newtonsoft.Json.JsonIgnore]
+        public virtual ICollection<Reserva> Reservas { get; set; }
 
         public string Animais { get; set; }
 
@@ -56,7 +61,7 @@ namespace Portaria.Core.Model.CadastroMorador
         {
             get
             {
-                return Numero.ToString();
+                return Bloco != null ? Bloco.Nome + " - " + Numero.ToString() : Numero.ToString();
             }
         }
 

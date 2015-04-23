@@ -21,6 +21,13 @@ namespace Portaria
             CarregaTipos();
         }
 
+        public SelecionaEntidade(string tipo)
+            : this()
+        {
+            cboTipo.Text = tipo;
+            cboTipo.Enabled = false;
+        }
+
         private void CarregaTipos()
         {
             cboTipo.DataSource = new[] { "Pessoa", "Veículo", "Unidade", "Bloco", "Funcionário", "Local", "Usuário" };
@@ -33,6 +40,16 @@ namespace Portaria
                 frm.ShowDialog();
 
                 return frm.entidadeSelecionada;
+            }
+        }
+
+        public static Unidade SelecionarUnidade()
+        {
+            using (var frm = new SelecionaEntidade("Unidade"))
+            {
+                frm.ShowDialog();
+
+                return (Unidade)frm.entidadeSelecionada;
             }
         }
 
@@ -66,7 +83,7 @@ namespace Portaria
                 CaixaMensagem.Mostrar("Selecione uma entidade.", TipoCaixaMensagem.SomenteOK);
             }
         }
-        
+
         private void dgvEntidades_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvEntidades.SelectedRows.Count == 1)

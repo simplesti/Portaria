@@ -1,0 +1,6 @@
+não deixar cadastrar blocos com o mesmo nome. OK
+auto organizar blocos cadastrados e também as unidades OK
+check box de inadimplente não marca OK (tem que entrar na tela de cadastro da pessoa para setar)
+quando clicar no bloco na aba "blocos" mostrar pular para a aba unidades já filtrando as unidades cadastradas neste bloco OK
+usuario admin deve deletar agendamentos OK
+

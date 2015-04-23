@@ -74,6 +74,7 @@ namespace Portaria.Business.Cadastro
                 u.AparelhosGas = entidade.AparelhosGas;
                 u.Bloco = blocoBus.BuscaPorId(entidade.Bloco.Id);
                 u.Numero = entidade.Numero;
+                u.Inadimplente = entidade.Inadimplente;
 
                 var pessoaBus = new PessoaBus();
 

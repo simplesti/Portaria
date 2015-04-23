@@ -101,5 +101,18 @@ namespace Portaria.Locais
                 Close();
             }
         }
+
+        private void botaoPesquisarUnidade_Click(object sender, EventArgs e)
+        {
+            Reserva.Unidade = SelecionaEntidade.SelecionarUnidade();
+            if (Reserva.Unidade != null)
+            {
+                txtUnidade.Text = Reserva.Unidade.Bloco + " - " + Reserva.Unidade.Numero.ToString();
+            }
+            else
+            {
+                txtUnidade.Text = string.Empty;
+            }
+        }
     }
 }

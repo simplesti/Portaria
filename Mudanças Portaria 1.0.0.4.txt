@@ -1,0 +1,3 @@
+Alterações:
+
+ - Inadimplência por Unidade. Agora ao fazer uma reserva tem que escolher também a Unidade.

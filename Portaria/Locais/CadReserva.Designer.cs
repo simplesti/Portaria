@@ -37,13 +37,16 @@
             this.lblInicio = new System.Windows.Forms.Label();
             this.lblFim = new System.Windows.Forms.Label();
             this.dtInicio = new System.Windows.Forms.DateTimePicker();
+            this.bsReserva = new System.Windows.Forms.BindingSource(this.components);
             this.dtFim = new System.Windows.Forms.DateTimePicker();
             this.lblLocal = new System.Windows.Forms.Label();
             this.txtLocal = new System.Windows.Forms.TextBox();
             this.lblSolicitante = new System.Windows.Forms.Label();
             this.txtSolicitante = new System.Windows.Forms.TextBox();
             this.botaoEditarSolicitante = new Portaria.Framework.Botoes.BotaoEditar();
-            this.bsReserva = new System.Windows.Forms.BindingSource(this.components);
+            this.lblUnidade = new System.Windows.Forms.Label();
+            this.txtUnidade = new System.Windows.Forms.TextBox();
+            this.botaoPesquisarUnidade = new Portaria.Framework.Botoes.BotaoPesquisar();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             this.tlpBotoes.SuspendLayout();
@@ -61,7 +64,7 @@
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpCampos.Controls.Add(this.tlpBotoes, 0, 13);
+            this.tlpCampos.Controls.Add(this.tlpBotoes, 0, 15);
             this.tlpCampos.Controls.Add(this.lblInicio, 0, 3);
             this.tlpCampos.Controls.Add(this.lblFim, 2, 3);
             this.tlpCampos.Controls.Add(this.dtInicio, 0, 4);
@@ -71,10 +74,15 @@
             this.tlpCampos.Controls.Add(this.lblSolicitante, 0, 11);
             this.tlpCampos.Controls.Add(this.txtSolicitante, 0, 12);
             this.tlpCampos.Controls.Add(this.botaoEditarSolicitante, 1, 12);
+            this.tlpCampos.Controls.Add(this.lblUnidade, 0, 13);
+            this.tlpCampos.Controls.Add(this.txtUnidade, 0, 14);
+            this.tlpCampos.Controls.Add(this.botaoPesquisarUnidade, 1, 14);
             this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCampos.Location = new System.Drawing.Point(0, 0);
             this.tlpCampos.Name = "tlpCampos";
-            this.tlpCampos.RowCount = 14;
+            this.tlpCampos.RowCount = 16;
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -161,7 +169,7 @@
             // lblFim
             // 
             this.lblFim.AutoSize = true;
-            this.lblFim.Location = new System.Drawing.Point(250, 39);
+            this.lblFim.Location = new System.Drawing.Point(254, 39);
             this.lblFim.Name = "lblFim";
             this.lblFim.Size = new System.Drawing.Size(23, 13);
             this.lblFim.TabIndex = 1;
@@ -177,8 +185,12 @@
             this.dtInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtInicio.Location = new System.Drawing.Point(3, 55);
             this.dtInicio.Name = "dtInicio";
-            this.dtInicio.Size = new System.Drawing.Size(211, 20);
+            this.dtInicio.Size = new System.Drawing.Size(207, 20);
             this.dtInicio.TabIndex = 22;
+            // 
+            // bsReserva
+            // 
+            this.bsReserva.DataSource = typeof(Portaria.Core.Model.Reserva);
             // 
             // dtFim
             // 
@@ -187,9 +199,9 @@
             this.dtFim.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtFim.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsReserva, "DataHoraFim", true));
             this.dtFim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFim.Location = new System.Drawing.Point(250, 55);
+            this.dtFim.Location = new System.Drawing.Point(254, 55);
             this.dtFim.Name = "dtFim";
-            this.dtFim.Size = new System.Drawing.Size(212, 20);
+            this.dtFim.Size = new System.Drawing.Size(208, 20);
             this.dtFim.TabIndex = 23;
             // 
             // lblLocal
@@ -208,7 +220,7 @@
             this.txtLocal.Location = new System.Drawing.Point(3, 16);
             this.txtLocal.Name = "txtLocal";
             this.txtLocal.ReadOnly = true;
-            this.txtLocal.Size = new System.Drawing.Size(211, 20);
+            this.txtLocal.Size = new System.Drawing.Size(207, 20);
             this.txtLocal.TabIndex = 25;
             // 
             // lblSolicitante
@@ -227,16 +239,17 @@
             this.txtSolicitante.Location = new System.Drawing.Point(3, 94);
             this.txtSolicitante.Name = "txtSolicitante";
             this.txtSolicitante.ReadOnly = true;
-            this.txtSolicitante.Size = new System.Drawing.Size(211, 20);
+            this.txtSolicitante.Size = new System.Drawing.Size(207, 20);
             this.txtSolicitante.TabIndex = 27;
             // 
             // botaoEditarSolicitante
             // 
             this.botaoEditarSolicitante.AutoSize = true;
+            this.botaoEditarSolicitante.BackColor = System.Drawing.Color.White;
             this.botaoEditarSolicitante.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoEditarSolicitante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoEditarSolicitante.Image = ((System.Drawing.Image)(resources.GetObject("botaoEditarSolicitante.Image")));
-            this.botaoEditarSolicitante.Location = new System.Drawing.Point(220, 94);
+            this.botaoEditarSolicitante.Location = new System.Drawing.Point(216, 94);
             this.botaoEditarSolicitante.MaximumSize = new System.Drawing.Size(24, 24);
             this.botaoEditarSolicitante.MinimumSize = new System.Drawing.Size(24, 24);
             this.botaoEditarSolicitante.Name = "botaoEditarSolicitante";
@@ -245,15 +258,46 @@
             this.botaoEditarSolicitante.UseVisualStyleBackColor = true;
             this.botaoEditarSolicitante.Click += new System.EventHandler(this.botaoEditarSolicitante_Click);
             // 
-            // bsReserva
+            // lblUnidade
             // 
-            this.bsReserva.DataSource = typeof(Portaria.Core.Model.Reserva);
+            this.lblUnidade.AutoSize = true;
+            this.lblUnidade.Location = new System.Drawing.Point(3, 121);
+            this.lblUnidade.Name = "lblUnidade";
+            this.lblUnidade.Size = new System.Drawing.Size(47, 13);
+            this.lblUnidade.TabIndex = 29;
+            this.lblUnidade.Text = "Unidade";
+            // 
+            // txtUnidade
+            // 
+            this.txtUnidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUnidade.Location = new System.Drawing.Point(3, 143);
+            this.txtUnidade.Name = "txtUnidade";
+            this.txtUnidade.ReadOnly = true;
+            this.txtUnidade.Size = new System.Drawing.Size(207, 20);
+            this.txtUnidade.TabIndex = 30;
+            // 
+            // botaoPesquisarUnidade
+            // 
+            this.botaoPesquisarUnidade.AutoSize = true;
+            this.botaoPesquisarUnidade.BackColor = System.Drawing.Color.White;
+            this.botaoPesquisarUnidade.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoPesquisarUnidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoPesquisarUnidade.Image = ((System.Drawing.Image)(resources.GetObject("botaoPesquisarUnidade.Image")));
+            this.botaoPesquisarUnidade.Location = new System.Drawing.Point(216, 137);
+            this.botaoPesquisarUnidade.MaximumSize = new System.Drawing.Size(32, 32);
+            this.botaoPesquisarUnidade.MinimumSize = new System.Drawing.Size(32, 32);
+            this.botaoPesquisarUnidade.Name = "botaoPesquisarUnidade";
+            this.botaoPesquisarUnidade.Size = new System.Drawing.Size(32, 32);
+            this.botaoPesquisarUnidade.TabIndex = 31;
+            this.botaoPesquisarUnidade.UseVisualStyleBackColor = false;
+            this.botaoPesquisarUnidade.Click += new System.EventHandler(this.botaoPesquisarUnidade_Click);
             // 
             // CadReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 291);
+            this.ConfiguracoesUsuarioVisivel = true;
             this.MaximumSize = new System.Drawing.Size(471, 291);
             this.MinimumSize = new System.Drawing.Size(471, 291);
             this.Name = "CadReserva";
@@ -284,5 +328,8 @@
         private System.Windows.Forms.TextBox txtSolicitante;
         private Framework.Botoes.BotaoEditar botaoEditarSolicitante;
         private System.Windows.Forms.BindingSource bsReserva;
+        private System.Windows.Forms.Label lblUnidade;
+        private System.Windows.Forms.TextBox txtUnidade;
+        private Framework.Botoes.BotaoPesquisar botaoPesquisarUnidade;
     }
 }

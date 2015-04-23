@@ -27,6 +27,8 @@ namespace Portaria
 
                 txtNumero.Text = unidade.Numero.ToString();
 
+                chkInadimplente.Checked = unidade.Inadimplente;
+
                 if (unidade.DataAtualizacao.HasValue)
                 {
                     lblDtAtualizacao.Text = unidade.DataAtualizacao.Value.ToString("dd/MM/yyyy HH:mm");
@@ -99,6 +101,8 @@ namespace Portaria
 
                 btnAddVeiculo.Visible = false;
                 btnRemVeiculo.Visible = false;
+
+                chkInadimplente.Enabled = false;
             }
         }
 
@@ -149,6 +153,7 @@ namespace Portaria
             unidade.Observacoes = txtObs.Text;
             unidade.Bloco = (Bloco)cboBloco.SelectedItem;
             unidade.Numero = int.Parse(txtNumero.Text);
+            unidade.Inadimplente = chkInadimplente.Checked;
 
             var unidadeBus = new UnidadeBus();
             unidadeBus.InserirOuAtualizar(Unidade);

@@ -67,7 +67,6 @@ namespace Portaria.Business.Cadastro
                 p.FoneComercial = entidade.FoneComercial;
                 p.FoneResidencial = entidade.FoneResidencial;
                 p.Foto = entidade.Foto;
-                p.Inadimplente = entidade.Inadimplente;
                 p.GrauParentesco = entidade.GrauParentesco;
                 p.Nome = entidade.Nome;
                 p.Biometria = entidade.Biometria;

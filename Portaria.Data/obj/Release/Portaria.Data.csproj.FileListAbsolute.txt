@@ -51,6 +51,7 @@ C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Release\Portaria.Data.M
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.Biometria.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.BiometriaFuncionario.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.BiometriaUsuario.resources
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.InadimplenciaParaUnidade.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Release\Portaria.Data.Properties.Resources.resources
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Release\Portaria.Data.csproj.GenerateResource.Cache
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Data\obj\Release\Portaria.Data.dll

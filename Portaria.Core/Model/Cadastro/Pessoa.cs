@@ -22,8 +22,6 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public string GrauParentesco { get; set; }
 
-        public bool Inadimplente { get; set; }
-
         public byte[] Biometria { get; set; }
 
         public byte[] Foto { get; set; }

@@ -103,6 +103,7 @@
             this.btnRemFuncionario = new Portaria.Framework.Botoes.BotaoRemover();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.cboBloco = new System.Windows.Forms.ComboBox();
+            this.chkInadimplente = new System.Windows.Forms.CheckBox();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutorizadas)).BeginInit();
@@ -127,7 +128,7 @@
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 458F));
-            this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tlpCampos.Controls.Add(this.txtAssinaturas, 0, 15);
             this.tlpCampos.Controls.Add(this.lblBloco, 0, 2);
             this.tlpCampos.Controls.Add(this.lblNumero, 0, 0);
@@ -164,6 +165,7 @@
             this.tlpCampos.Controls.Add(this.btnRemFuncionario, 5, 8);
             this.tlpCampos.Controls.Add(this.txtNumero, 0, 1);
             this.tlpCampos.Controls.Add(this.cboBloco, 0, 3);
+            this.tlpCampos.Controls.Add(this.chkInadimplente, 2, 17);
             this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCampos.Location = new System.Drawing.Point(0, 0);
             this.tlpCampos.Name = "tlpCampos";
@@ -249,6 +251,7 @@
             // botaoEditarProprietario
             // 
             this.botaoEditarProprietario.AutoSize = true;
+            this.botaoEditarProprietario.BackColor = System.Drawing.Color.White;
             this.botaoEditarProprietario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoEditarProprietario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoEditarProprietario.Image = ((System.Drawing.Image)(resources.GetObject("botaoEditarProprietario.Image")));
@@ -264,6 +267,7 @@
             // botaoEditarConjuge
             // 
             this.botaoEditarConjuge.AutoSize = true;
+            this.botaoEditarConjuge.BackColor = System.Drawing.Color.White;
             this.botaoEditarConjuge.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoEditarConjuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoEditarConjuge.Image = ((System.Drawing.Image)(resources.GetObject("botaoEditarConjuge.Image")));
@@ -317,6 +321,7 @@
             // botaoEditarLocatario
             // 
             this.botaoEditarLocatario.AutoSize = true;
+            this.botaoEditarLocatario.BackColor = System.Drawing.Color.White;
             this.botaoEditarLocatario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.botaoEditarLocatario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoEditarLocatario.Image = ((System.Drawing.Image)(resources.GetObject("botaoEditarLocatario.Image")));
@@ -826,6 +831,7 @@
             // btnAddAutorizada
             // 
             this.btnAddAutorizada.AutoSize = true;
+            this.btnAddAutorizada.BackColor = System.Drawing.Color.White;
             this.btnAddAutorizada.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAutorizada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAutorizada.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAutorizada.Image")));
@@ -841,6 +847,7 @@
             // btnRemAutorizada
             // 
             this.btnRemAutorizada.AutoSize = true;
+            this.btnRemAutorizada.BackColor = System.Drawing.Color.White;
             this.btnRemAutorizada.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemAutorizada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemAutorizada.Image = ((System.Drawing.Image)(resources.GetObject("btnRemAutorizada.Image")));
@@ -856,6 +863,7 @@
             // btnAddVeiculo
             // 
             this.btnAddVeiculo.AutoSize = true;
+            this.btnAddVeiculo.BackColor = System.Drawing.Color.White;
             this.btnAddVeiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddVeiculo.Image = ((System.Drawing.Image)(resources.GetObject("btnAddVeiculo.Image")));
@@ -871,6 +879,7 @@
             // btnRemVeiculo
             // 
             this.btnRemVeiculo.AutoSize = true;
+            this.btnRemVeiculo.BackColor = System.Drawing.Color.White;
             this.btnRemVeiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemVeiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemVeiculo.Image = ((System.Drawing.Image)(resources.GetObject("btnRemVeiculo.Image")));
@@ -886,6 +895,7 @@
             // btnAddFuncionario
             // 
             this.btnAddFuncionario.AutoSize = true;
+            this.btnAddFuncionario.BackColor = System.Drawing.Color.White;
             this.btnAddFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFuncionario.Image")));
@@ -901,6 +911,7 @@
             // btnRemFuncionario
             // 
             this.btnRemFuncionario.AutoSize = true;
+            this.btnRemFuncionario.BackColor = System.Drawing.Color.White;
             this.btnRemFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnRemFuncionario.Image")));
@@ -930,10 +941,21 @@
             this.cboBloco.Size = new System.Drawing.Size(121, 21);
             this.cboBloco.TabIndex = 35;
             // 
+            // chkInadimplente
+            // 
+            this.chkInadimplente.AutoSize = true;
+            this.chkInadimplente.Location = new System.Drawing.Point(237, 466);
+            this.chkInadimplente.Name = "chkInadimplente";
+            this.chkInadimplente.Size = new System.Drawing.Size(86, 17);
+            this.chkInadimplente.TabIndex = 36;
+            this.chkInadimplente.Text = "Inadimplente";
+            this.chkInadimplente.UseVisualStyleBackColor = true;
+            // 
             // CadUnidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(961, 580);
+            this.ConfiguracoesUsuarioVisivel = true;
             this.Name = "CadUnidade";
             this.Text = "";
             this.Titulo = "Cadastro de Unidade";
@@ -1026,6 +1048,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn proprietarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.ComboBox cboBloco;
+        private System.Windows.Forms.CheckBox chkInadimplente;
 
     }
 }

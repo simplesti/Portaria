@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
 using Portaria.Log;
+using Portaria.Core.Model.CadastroMorador;
+using Portaria.Business.Cadastro;
 
 namespace Portaria.Business
 {
@@ -37,6 +39,7 @@ namespace Portaria.Business
                     entidade.Sessao = bd.Sessoes.Where(s => s.Id == sessao.Id).FirstOrDefault();
                     entidade.Local = bd.Locais.Where(l => l.Id == entidade.Local.Id).FirstOrDefault();
                     entidade.Pessoa = bd.Pessoas.Where(p => p.Id == entidade.Pessoa.Id).FirstOrDefault();
+                    entidade.Unidade = bd.Unidades.Where(q => q.Id == entidade.Unidade.Id).FirstOrDefault();
 
                     bd.Reservas.Add(entidade);
                     bd.SaveChanges();
@@ -53,6 +56,7 @@ namespace Portaria.Business
                 r.Local = bd.Locais.Where(l => l.Id == entidade.Local.Id).FirstOrDefault();
                 r.Pessoa = bd.Pessoas.Where(p => p.Id == entidade.Pessoa.Id).FirstOrDefault();
                 r.Sessao = bd.Sessoes.Where(s => s.Id == sessao.Id).FirstOrDefault();
+                r.Unidade = bd.Unidades.Where(q => q.Id == entidade.Unidade.Id).FirstOrDefault();
 
                 bd.SaveChanges();
 
@@ -71,11 +75,16 @@ namespace Portaria.Business
                 throw new Exception("Você precisa selecionar uma pessoa para efetuar a reserva.");
             }
 
-            if (reserva.Pessoa.Inadimplente)
+            if (reserva.Unidade == null)
             {
-                throw new Exception("Esta pessoa não está autorizada a efetuar reservas.");
+                throw new Exception("Você precisa selecionar uma unidade para efetuar a reserva.");
             }
 
+            if (reserva.Unidade.Inadimplente)
+            {
+                throw new Exception("Esta unidade não está autorizada a efetuar reservas.");
+            }
+            
             if (reserva.DataHoraFim == null || reserva.DataHoraInicio == null || reserva.DataHoraFim == DateTime.MinValue || reserva.DataHoraInicio == DateTime.MinValue)
             {
                 throw new Exception("Você precisa informar a data início e fim da reserva.");
@@ -98,7 +107,7 @@ namespace Portaria.Business
                 }
             }
         }
-
+        
         public Reserva BuscaPorId(int id)
         {
             return bd.Reservas.FirstOrDefault(r => r.Id == id);

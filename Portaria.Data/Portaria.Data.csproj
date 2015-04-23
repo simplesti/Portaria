@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201504111938163_BiometriaUsuario.Designer.cs">
       <DependentUpon>201504111938163_BiometriaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504230258488_InadimplenciaParaUnidade.cs" />
+    <Compile Include="Migrations\201504230258488_InadimplenciaParaUnidade.Designer.cs">
+      <DependentUpon>201504230258488_InadimplenciaParaUnidade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PortariaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504111938163_BiometriaUsuario.resx">
       <DependentUpon>201504111938163_BiometriaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504230258488_InadimplenciaParaUnidade.resx">
+      <DependentUpon>201504230258488_InadimplenciaParaUnidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
