@@ -45,6 +45,12 @@ C:\Users\Max\Documents\GitHub\CSharp\Portaria\Portaria.Biometria\obj\Release\Por
 C:\Users\Max\Documents\GitHub\CSharp\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.pdb
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\Portaria.Biometria.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\Portaria.Biometria.pdb
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\DPFPCtlXWrapperNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\DPFPDevNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\DPFPEngNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\DPFPGuiNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\DPFPShrNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\DPFPVerNET.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\Portaria.Core.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\Portaria.Framework.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Biometria\bin\Release\Newtonsoft.Json.dll

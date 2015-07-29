@@ -1,0 +1,20 @@
+﻿@model Portaria.Core.Model.CadastroMorador.Unidade
+
+@{
+    ViewBag.Title = "Excluír Unidade";
+}
+
+<h2>Excluír Unidade</h2>
+
+<h3>Você tem certeza que deseja excluír a unidade @Html.DisplayFor(model => model.Numero) ?</h3>
+<div>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluír" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para a lista", "Index")
+        </div>
+    }
+</div>

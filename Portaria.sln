@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portaria.Program", "Portaria\Portaria.Program.csproj", "{76082DA7-86FE-4CA4-8EB8-9B2B91571D80}"
 EndProject
@@ -23,6 +23,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portaria.Log", "Portaria.Log\Portaria.Log.csproj", "{B8B29310-26D5-4FAA-AA53-6CECAF4F541D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portaria.Biometria", "Portaria.Biometria\Portaria.Biometria.csproj", "{FEA4ECB9-FEDD-4A9D-8867-7F9915017F2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portaria.Web", "Portaria.Web\Portaria.Web.csproj", "{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{E009D09F-74F2-4551-9685-7C668FF63972}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,8 +127,24 @@ Global
 		{FEA4ECB9-FEDD-4A9D-8867-7F9915017F2A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FEA4ECB9-FEDD-4A9D-8867-7F9915017F2A}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{FEA4ECB9-FEDD-4A9D-8867-7F9915017F2A}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A2A938-9417-4B87-BE42-2E1FFEA3328F}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76082DA7-86FE-4CA4-8EB8-9B2B91571D80} = {E009D09F-74F2-4551-9685-7C668FF63972}
+		{CAF5BE63-755C-4C1C-AD33-2E4673329112} = {E009D09F-74F2-4551-9685-7C668FF63972}
+		{7FC527AF-25D7-4CFC-829E-1627AEA70510} = {E009D09F-74F2-4551-9685-7C668FF63972}
+		{FEA4ECB9-FEDD-4A9D-8867-7F9915017F2A} = {E009D09F-74F2-4551-9685-7C668FF63972}
 	EndGlobalSection
 EndGlobal

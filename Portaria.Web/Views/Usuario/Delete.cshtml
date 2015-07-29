@@ -1,0 +1,19 @@
+﻿@model Portaria.Core.Model.Usuario
+
+@{
+    ViewBag.Title = "Excluír Usuário";
+}
+
+<h2>Excluír Usuário</h2>
+
+<h3>Você tem certeza que deseja excluír o usuário @Html.DisplayFor(model => model.Nome) ?</h3>
+<div>
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluír" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para a lista", "Index")
+        </div>
+    }
+</div>

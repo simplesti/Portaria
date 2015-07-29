@@ -103,6 +103,12 @@ C:\Users\Max\Documents\GitHub\CSharp\Portaria\Portaria\obj\Release\Portaria.pdb
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\Portaria.exe.config
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\Portaria.exe
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\Portaria.pdb
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\DPFPCtlXWrapperNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\DPFPDevNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\DPFPEngNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\DPFPGuiNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\DPFPShrNET.dll
+C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\DPFPVerNET.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\EntityFramework.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria\bin\Release\Portaria.Biometria.dll

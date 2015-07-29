@@ -34,6 +34,7 @@ C:\Users\Max\Documents\GitHub\CSharp\Portaria\Portaria.Business\bin\Release\Newt
 C:\Users\Max\Documents\GitHub\CSharp\Portaria\Portaria.Business\obj\Release\Portaria.Business.csprojResolveAssemblyReference.cache
 C:\Users\Max\Documents\GitHub\CSharp\Portaria\Portaria.Business\obj\Release\Portaria.Business.dll
 C:\Users\Max\Documents\GitHub\CSharp\Portaria\Portaria.Business\obj\Release\Portaria.Business.pdb
+C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\EntityFramework.xml
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\Portaria.Business.dll.config
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\Portaria.Business.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\Portaria.Business.pdb
@@ -46,7 +47,6 @@ C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\Newtonsoft.
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\Portaria.Core.pdb
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\Portaria.Data.pdb
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\Portaria.Log.pdb
-C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\EntityFramework.xml
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\bin\Release\Newtonsoft.Json.xml
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Business\obj\Release\Portaria.Business.csprojResolveAssemblyReference.cache

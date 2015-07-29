@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Portaria.Core.Model.CadastroMorador.Unidade>
+
+@{
+    ViewBag.Title = "Cadastrar Unidades";
+}
+
+<h2>Cadastrar Unidades</h2>
+
+<p>
+    @Html.ActionLink("Nova Unidade", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AparelhosGas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inadimplente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Animais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Assinaturas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AparelhosGas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Inadimplente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observacoes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Animais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assinaturas)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Excluír", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
