@@ -43,14 +43,14 @@
             this.lblRG = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Framework.Botoes.BotaoSalvar();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
+            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
             this.txtRG = new System.Windows.Forms.TextBox();
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.pnlBiometria = new System.Windows.Forms.Panel();
             this.lblStatusBiometria = new System.Windows.Forms.Label();
-            this.botaoVerificarBiometria = new Portaria.Framework.Botoes.BotaoVerificarBiometria();
-            this.botaoCapturarBiometria = new Portaria.Framework.Botoes.BotaoCapturarBiometria();
+            this.botaoVerificarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria();
+            this.botaoCapturarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria();
             this.pnlConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).BeginInit();
             this.tlpCampos.SuspendLayout();
@@ -357,14 +357,14 @@
         private System.Windows.Forms.Label lblRG;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Panel panel1;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Framework.Botoes.BotaoSalvar botaoSalvar;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
         private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Panel pnlBiometria;
         private System.Windows.Forms.Label lblStatusBiometria;
-        private Framework.Botoes.BotaoVerificarBiometria botaoVerificarBiometria;
-        private Framework.Botoes.BotaoCapturarBiometria botaoCapturarBiometria;
+        private Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria botaoVerificarBiometria;
+        private Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria botaoCapturarBiometria;
 
     }
 }

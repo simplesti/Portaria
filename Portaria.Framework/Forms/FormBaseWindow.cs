@@ -3,7 +3,7 @@ using Portaria.Business;
 using Portaria.Config;
 using System;
 using System.Drawing;
-namespace Portaria.Framework.Forms
+namespace Portaria.Desktop.Framework.Forms
 {
     public partial class FormBaseWindow : FormBase
     {
@@ -74,7 +74,7 @@ namespace Portaria.Framework.Forms
 
         private void botaoConfig_Click(object sender, System.EventArgs e)
         {
-            if (SessaoBus.Sessao() != null)
+            if (SessaoAtual.Sessao != null)
             {
                 using (var frm = new ConfiguracoesUsuario())
                 {

@@ -4,7 +4,7 @@ using Portaria.Cadastro;
 using Portaria.Core.Model;
 using Portaria.Core.Model.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.Forms;
 using System;
 
 namespace Portaria.Locais
@@ -52,7 +52,7 @@ namespace Portaria.Locais
 
         private void AplicarPermissoes()
         {
-            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
             {
                 botaoEditarSolicitante.Visible = false;
                 dtFim.Enabled = false;
@@ -95,7 +95,7 @@ namespace Portaria.Locais
         {
             if (PortariaBiometriaVerificar.Verificar(Reserva.Pessoa))
             {
-                var reservaBus = new ReservaBus();
+                var reservaBus = new ReservaBus(SessaoAtual.Sessao);
                 reservaBus.InserirOuAtualizar(Reserva);
 
                 Close();

@@ -49,12 +49,12 @@
             this.dtEntrada = new System.Windows.Forms.DateTimePicker();
             this.dtSaida = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Framework.Botoes.BotaoSalvar();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
+            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
             this.pnlBiometria = new System.Windows.Forms.Panel();
             this.lblStatusBiometria = new System.Windows.Forms.Label();
-            this.botaoVerificarBiometria = new Portaria.Framework.Botoes.BotaoVerificarBiometria();
-            this.botaoCapturarBiometria = new Portaria.Framework.Botoes.BotaoCapturarBiometria();
+            this.botaoVerificarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria();
+            this.botaoCapturarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsFuncionario)).BeginInit();
@@ -416,12 +416,12 @@
         private System.Windows.Forms.DateTimePicker dtEntrada;
         private System.Windows.Forms.DateTimePicker dtSaida;
         private System.Windows.Forms.Panel panel1;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Framework.Botoes.BotaoSalvar botaoSalvar;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
         private System.Windows.Forms.Panel pnlBiometria;
         private System.Windows.Forms.Label lblStatusBiometria;
-        private Framework.Botoes.BotaoVerificarBiometria botaoVerificarBiometria;
-        private Framework.Botoes.BotaoCapturarBiometria botaoCapturarBiometria;
+        private Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria botaoVerificarBiometria;
+        private Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria botaoCapturarBiometria;
 
     }
 }

@@ -2,7 +2,7 @@
 using Portaria.Business;
 using Portaria.Core;
 using Portaria.Core.Model;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.Forms;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -71,7 +71,7 @@ namespace Portaria.Usuarios
 
         private void Salvar()
         {
-            var usuarioBus = new UsuarioBus();
+            var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
             usuarioBus.InserirOuAtualizar(Usuario);
 
             Close();

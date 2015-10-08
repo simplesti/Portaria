@@ -1,4 +1,4 @@
-﻿namespace Portaria.Framework.Blocos
+﻿namespace Portaria.Desktop.Framework.Blocos
 {
     partial class BlocoItem
     {

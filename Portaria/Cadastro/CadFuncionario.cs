@@ -2,8 +2,8 @@
 using Portaria.Business;
 using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Framework;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.Forms;
 using Portaria.Webcam;
 using System;
 using System.Collections.Generic;
@@ -61,7 +61,7 @@ namespace Portaria.UnidadesBlocos
 
         private void AplicarPermissoes()
         {
-            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
             {
                 txtDescricao.ReadOnly = true;
                 txtDocumento.ReadOnly = true;
@@ -98,7 +98,7 @@ namespace Portaria.UnidadesBlocos
 
         private void Salvar()
         {
-            var funcionarioBus = new FuncionarioBus();
+            var funcionarioBus = new FuncionarioBus(SessaoAtual.Sessao);
             funcionarioBus.InserirOuAtualizar(Funcionario);
 
             Close();
@@ -106,7 +106,7 @@ namespace Portaria.UnidadesBlocos
 
         private void pbFoto_Click(object sender, EventArgs e)
         {
-            if (SessaoBus.Sessao().UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
+            if (SessaoAtual.Sessao.UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
             {
                 var foto = PortariaWebCam.ObterImagem();
                 if (foto != null)

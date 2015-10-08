@@ -7,16 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using Portaria.Log;
+using Portaria.Core.Model;
 
 namespace Portaria.Business.Cadastro
 {
     public class LocalBus : IPortariaBus<Local>
     {
         private PortariaContext bd;
-
-        public LocalBus()
+        private Sessao sessao;
+        public LocalBus(Sessao sessao)
         {
             bd = PortariaContext.BD;
+            this.sessao = sessao;
         }
 
         public IEnumerable<Local> Todos()
@@ -39,7 +41,7 @@ namespace Portaria.Business.Cadastro
 
                     bd.Locais.Add(entidade);
                     bd.SaveChanges();
-                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
+                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, sessao.Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
                 }
 
@@ -55,7 +57,7 @@ namespace Portaria.Business.Cadastro
 
                 bd.SaveChanges();
 
-                PortariaLog.Logar(l.Id, entidadeOriginal, PortariaLog.SerializarEntidade(l), l.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Alterar);
+                PortariaLog.Logar(l.Id, entidadeOriginal, PortariaLog.SerializarEntidade(l), l.TipoEntidade, sessao.Id, Core.Model.Log.TipoAlteracao.Alterar);
             }
             catch (Exception ex)
             {
@@ -81,13 +83,18 @@ namespace Portaria.Business.Cadastro
                     bd.Locais.Remove(l);
                     bd.SaveChanges();
 
-                    PortariaLog.Logar(l.Id, string.Empty, ent, l.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
+                    PortariaLog.Logar(l.Id, string.Empty, ent, l.TipoEntidade, sessao.Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public void Dispose()
+        {
+            bd.Dispose();
         }
     }
 }

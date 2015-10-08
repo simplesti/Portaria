@@ -1,4 +1,4 @@
-﻿using Portaria.Framework.Forms;
+﻿using Portaria.Desktop.Framework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Portaria.Framework.CaixaMensagem
+namespace Portaria.Desktop.Framework.CaixaMensagem
 {
     public enum TipoCaixaMensagem
     {

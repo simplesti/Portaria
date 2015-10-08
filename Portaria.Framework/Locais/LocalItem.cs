@@ -3,7 +3,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Portaria.Framework.Locais
+namespace Portaria.Desktop.Framework.Locais
 {
     public partial class LocalItem : UserControl
     {

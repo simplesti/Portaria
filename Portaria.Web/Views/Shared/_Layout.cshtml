@@ -1,43 +1,21 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portaria Digital</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Portaria Digital", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Cadastrar Blocos", "Index", "Bloco")</li>
-                    <li>@Html.ActionLink("Cadastrar Locais", "Index", "Local")</li>
-                    <li>@Html.ActionLink("Cadastrar Usuários", "Index", "Usuario")</li>
-                    <li>@Html.ActionLink("Cadastrar Unidades", "Index", "Unidade")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Simples IT</p>
-        </footer>
-    </div>
+    @if(Request.IsAuthenticated)
+    {
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        @RenderPage("~/Views/Shared/_Header.cshtml")
+    }
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/js")
 </body>
 </html>

@@ -1,6 +1,7 @@
 ﻿using Portaria.Business;
-using Portaria.Framework.CaixaMensagem;
-using Portaria.Framework.Forms;
+using Portaria.Core.Model;
+using Portaria.Desktop.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework.Forms;
 using Portaria.Login;
 using System;
 using System.Windows.Forms;
@@ -33,7 +34,8 @@ namespace Portaria
         private void EfetuarLogoff()
         {
             var sessaoBus = new SessaoBus();
-            sessaoBus.FinalizarSessao();
+            sessaoBus.FinalizarSessao(SessaoAtual.Sessao);
+            SessaoAtual.Sessao = null;
         }
 
         private void EfetuarLogin()
@@ -41,7 +43,7 @@ namespace Portaria
             var efetuarLogin = new EfetuarLogin();
             efetuarLogin.ShowDialog();
 
-            if (SessaoBus.Sessao() == null)
+            if (SessaoAtual.Sessao == null)
             {
                 Environment.Exit(0);
             }

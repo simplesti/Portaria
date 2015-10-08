@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Portaria.Core.Model.CadastroMorador;
 
-namespace Portaria.Framework.Blocos
+namespace Portaria.Desktop.Framework.Blocos
 {
     public partial class BlocoItem : UserControl
     {

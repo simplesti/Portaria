@@ -42,8 +42,8 @@
             this.bsRegistros = new System.Windows.Forms.BindingSource(this.components);
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.lblPesquisar = new System.Windows.Forms.Label();
-            this.botaoPesquisar = new Portaria.Framework.Botoes.BotaoPesquisar();
-            this.botaoAdicionar = new Portaria.Framework.Botoes.BotaoAdicionar();
+            this.botaoPesquisar = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
+            this.botaoAdicionar = new Portaria.Desktop.Framework.Botoes.BotaoAdicionar();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRegistros)).BeginInit();
             this.SuspendLayout();
@@ -223,7 +223,7 @@
         private System.Windows.Forms.DataGridView dgvRegistros;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label lblPesquisar;
-        private Framework.Botoes.BotaoPesquisar botaoPesquisar;
+        private Portaria.Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisar;
         private System.Windows.Forms.BindingSource bsRegistros;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sessaoDataGridViewTextBoxColumn;
@@ -232,6 +232,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn entidadesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoEntidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoEntidadeDataGridViewTextBoxColumn;
-        private Framework.Botoes.BotaoAdicionar botaoAdicionar;
+        private Portaria.Desktop.Framework.Botoes.BotaoAdicionar botaoAdicionar;
     }
 }

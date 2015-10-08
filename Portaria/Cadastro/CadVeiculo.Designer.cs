@@ -40,11 +40,11 @@
             this.lblPlaca = new System.Windows.Forms.Label();
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.tlpBotoes = new System.Windows.Forms.TableLayoutPanel();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Framework.Botoes.BotaoSalvar();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
+            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
             this.lblProprietario = new System.Windows.Forms.Label();
             this.txtProprietario = new System.Windows.Forms.TextBox();
-            this.btnEditarProprietario = new Portaria.Framework.Botoes.BotaoEditar();
+            this.btnEditarProprietario = new Portaria.Desktop.Framework.Botoes.BotaoEditar();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsVeiculo)).BeginInit();
@@ -283,8 +283,8 @@
 
         private System.Windows.Forms.TableLayoutPanel tlpCampos;
         private System.Windows.Forms.TableLayoutPanel tlpBotoes;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Framework.Botoes.BotaoSalvar botaoSalvar;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblPlaca;
         private System.Windows.Forms.TextBox txtNome;
@@ -295,6 +295,6 @@
         private System.Windows.Forms.BindingSource bsVeiculo;
         private System.Windows.Forms.Label lblProprietario;
         private System.Windows.Forms.TextBox txtProprietario;
-        private Framework.Botoes.BotaoEditar btnEditarProprietario;
+        private Portaria.Desktop.Framework.Botoes.BotaoEditar btnEditarProprietario;
     }
 }

@@ -2,8 +2,8 @@
 using Portaria.Business;
 using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Framework;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.Forms;
 using Portaria.Webcam;
 using System;
 using System.Drawing;
@@ -56,7 +56,7 @@ namespace Portaria
 
         private void AplicarPermissoes()
         {
-            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
             {
                 txtCPF.ReadOnly = true;
                 txtEmail.ReadOnly = true;
@@ -81,7 +81,7 @@ namespace Portaria
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (SessaoBus.Sessao().UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
+            if (SessaoAtual.Sessao.UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
             {
                 var foto = PortariaWebCam.ObterImagem();
                 if (foto != null)
@@ -104,7 +104,7 @@ namespace Portaria
 
         private void Salvar()
         {
-            var pessoaBus = new PessoaBus();
+            var pessoaBus = new PessoaBus(SessaoAtual.Sessao);
             pessoaBus.InserirOuAtualizar(Pessoa);
 
             Close();

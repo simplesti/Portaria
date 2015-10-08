@@ -32,6 +32,8 @@ namespace Portaria.Data
                 Login = "admin",
                 Nome = "Administrador",
                 Senha = getMD5Hash("741852ma4q"),
+                RG = "123",
+                CPF = "123",
                 Tipo = Core.TipoUsuario.Administrador
             });
 
@@ -43,11 +45,18 @@ namespace Portaria.Data
 
     public class PortariaContext : DbContext
     {
+        private bool isDisposed;
+        protected override void Dispose(bool disposing)
+        {
+            isDisposed = true;
+            base.Dispose(disposing);
+        }
+
         public static PortariaContext BD
         {
             get
             {
-                if (bd == null)
+                if (bd == null ||bd.isDisposed)
                 {
                     bd = new PortariaContext();
                 }

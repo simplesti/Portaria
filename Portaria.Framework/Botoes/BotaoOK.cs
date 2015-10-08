@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Portaria.Framework.Botoes
+namespace Portaria.Desktop.Framework.Botoes
 {
     public partial class BotaoOK : Button
     {

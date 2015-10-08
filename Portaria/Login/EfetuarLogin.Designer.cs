@@ -36,8 +36,8 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.pnlBotoes = new System.Windows.Forms.Panel();
-            this.botaoOK = new Portaria.Framework.Botoes.BotaoOK();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
+            this.botaoOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
             this.pnlConteudo.SuspendLayout();
             this.tlpConteudo.SuspendLayout();
             this.pnlBotoes.SuspendLayout();
@@ -190,7 +190,7 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Panel pnlBotoes;
-        private Framework.Botoes.BotaoOK botaoOK;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoOK botaoOK;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
     }
 }

@@ -7,16 +7,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using Portaria.Log;
+using Portaria.Core.Model;
 
 namespace Portaria.Business.Cadastro
 {
     public class FuncionarioBus : IPortariaBus<Funcionario>
     {
         private PortariaContext bd;
+        private Sessao sessao;
 
-        public FuncionarioBus()
+        public FuncionarioBus(Sessao sessao)
         {
             bd = PortariaContext.BD;
+            this.sessao = sessao;
         }
         public IEnumerable<Funcionario> Todos()
         {
@@ -33,7 +36,7 @@ namespace Portaria.Business.Cadastro
                 {
                     bd.Funcionarios.Add(entidade);
                     bd.SaveChanges();
-                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Inserir);
+                    PortariaLog.Logar(entidade.Id, string.Empty, PortariaLog.SerializarEntidade(entidade), entidade.TipoEntidade, sessao.Id, Core.Model.Log.TipoAlteracao.Inserir);
                     return;
                 }
 
@@ -52,7 +55,7 @@ namespace Portaria.Business.Cadastro
 
                 bd.SaveChanges();
 
-                PortariaLog.Logar(f.Id, entidadeOriginal, PortariaLog.SerializarEntidade(f), f.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Alterar);
+                PortariaLog.Logar(f.Id, entidadeOriginal, PortariaLog.SerializarEntidade(f), f.TipoEntidade, sessao.Id, Core.Model.Log.TipoAlteracao.Alterar);
             }
             catch (Exception ex)
             {
@@ -78,13 +81,18 @@ namespace Portaria.Business.Cadastro
                     bd.Funcionarios.Remove(f);
                     bd.SaveChanges();
 
-                    PortariaLog.Logar(f.Id, string.Empty, ent, f.TipoEntidade, SessaoBus.Sessao().Id, Core.Model.Log.TipoAlteracao.Excluir);
+                    PortariaLog.Logar(f.Id, string.Empty, ent, f.TipoEntidade, sessao.Id, Core.Model.Log.TipoAlteracao.Excluir);
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public void Dispose()
+        {
+            bd.Dispose();
         }
     }
 }

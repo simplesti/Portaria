@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelecionaEntidade));
-            this.botaoPesquisar = new Portaria.Framework.Botoes.BotaoPesquisar();
+            this.botaoPesquisar = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
             this.lblPesquisar = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.cboTipo = new System.Windows.Forms.ComboBox();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
-            this.botaoOK = new Portaria.Framework.Botoes.BotaoOK();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
+            this.botaoOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
             this.chkSomente30 = new System.Windows.Forms.CheckBox();
             this.dgvEntidades = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -221,11 +221,11 @@
 
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label lblPesquisar;
-        private Framework.Botoes.BotaoPesquisar botaoPesquisar;
+        private Portaria.Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisar;
         private System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.Label lblTipo;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Framework.Botoes.BotaoOK botaoOK;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoOK botaoOK;
         private System.Windows.Forms.CheckBox chkSomente30;
         private System.Windows.Forms.DataGridView dgvEntidades;
         private System.Windows.Forms.BindingSource bsEntidades;

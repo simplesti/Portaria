@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadBloco));
             this.tlpCampos = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBotoes = new System.Windows.Forms.TableLayoutPanel();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Framework.Botoes.BotaoSalvar();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
+            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.bsBloco = new System.Windows.Forms.BindingSource(this.components);
@@ -173,8 +173,8 @@
 
         private System.Windows.Forms.TableLayoutPanel tlpCampos;
         private System.Windows.Forms.TableLayoutPanel tlpBotoes;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Framework.Botoes.BotaoSalvar botaoSalvar;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.BindingSource bsBloco;

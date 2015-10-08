@@ -1,128 +1,119 @@
-﻿using System;
+﻿using Portaria.Core.Model;
+using Portaria.Data;
+using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Portaria.Core.Model;
-using Portaria.Data;
+using System.Web.Security;
 
-namespace Portaria.Web
+namespace Portaria.Web.Controllers
 {
     public class UsuarioController : Controller
     {
-        private PortariaContext db = new PortariaContext();
-
         // GET: Usuario
         public ActionResult Index()
-        {
-            return View(db.Usuarios.ToList());
-        }
-
-        // GET: Usuario/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Usuario usuario = db.Usuarios.Find(id);
-            if (usuario == null)
-            {
-                return HttpNotFound();
-            }
-            return View(usuario);
-        }
-
-        // GET: Usuario/Create
-        public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuario/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpGet]
+        public ActionResult LogIn()
+        {
+            return View();
+        }
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nome,CPF,RG,Login,Senha,Tipo,Biometria,CorTema,PosicaoAbas")] Usuario usuario)
+        public ActionResult LogIn(Usuario usuario)
+        {
+            if (!string.IsNullOrEmpty(usuario.Login) && !string.IsNullOrEmpty(usuario.Senha))
+            {
+                if (Validar(usuario.Login, usuario.Senha))
+                {
+                    FormsAuthentication.SetAuthCookie(usuario.Login, false);
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Dados de login incorretos.");
+                }
+            }
+
+            return View(usuario);
+        }
+        
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "Usuario");
+        }
+
+        [HttpGet]
+        public ActionResult Registrar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Registrar(Usuario usuario)
         {
             if (ModelState.IsValid)
             {
-                db.Usuarios.Add(usuario);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                using (var bd = new PortariaContext())
+                {
+                    var u = bd.Usuarios.Create();
+                    u.CPF = usuario.CPF;
+                    u.Login = usuario.Login;
+                    u.Nome = usuario.Nome;
+                    u.RG = usuario.RG;
+                    u.Senha = getMD5Hash(usuario.Senha);
+                    u.Tipo = usuario.Tipo;
+
+                    bd.Usuarios.Add(u);
+                    bd.SaveChanges();
+
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", "Dados do usuário inválidos.");
             }
 
             return View(usuario);
         }
 
-        // GET: Usuario/Edit/5
-        public ActionResult Edit(int? id)
+        public static string getMD5Hash(string input)
         {
-            if (id == null)
+            System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hash = md5.ComputeHash(inputBytes);
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                sb.Append(hash[i].ToString("X2"));
             }
-            Usuario usuario = db.Usuarios.Find(id);
-            if (usuario == null)
-            {
-                return HttpNotFound();
-            }
-            return View(usuario);
+            return sb.ToString();
         }
 
-        // POST: Usuario/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nome,CPF,RG,Login,Senha,Tipo,Biometria,CorTema,PosicaoAbas")] Usuario usuario)
+        private bool Validar(string login, string senha)
         {
-            if (ModelState.IsValid)
-            {
-                db.Entry(usuario).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(usuario);
-        }
+            bool result = false;
 
-        // GET: Usuario/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
+            using (var bd = new PortariaContext())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Usuario usuario = db.Usuarios.Find(id);
-            if (usuario == null)
-            {
-                return HttpNotFound();
-            }
-            return View(usuario);
-        }
+                var usuario = bd.Usuarios.FirstOrDefault(u => u.Login == login);
 
-        // POST: Usuario/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Usuario usuario = db.Usuarios.Find(id);
-            db.Usuarios.Remove(usuario);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
+                if (usuario != null)
+                {
+                    if (usuario.Senha == getMD5Hash(senha))
+                    {
+                        result = true;
+                    }
+                }
             }
-            base.Dispose(disposing);
+
+            return result;
         }
     }
 }

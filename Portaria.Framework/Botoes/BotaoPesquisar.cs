@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Portaria.Framework.Botoes
+namespace Portaria.Desktop.Framework.Botoes
 {
     public partial class BotaoPesquisar : Button
     {

@@ -1,4 +1,4 @@
-﻿namespace Portaria.Framework.Forms
+﻿namespace Portaria.Desktop.Framework.Forms
 {
     partial class PortariaTabBase
     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Portaria.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,21 +11,23 @@ namespace Portaria.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            if (Request.IsAuthenticated)
+            {
+                using (var bd = new PortariaContext())
+                {
+                    var usuario = bd.Usuarios.FirstOrDefault(u => u.Login == User.Identity.Name);
+                    if (usuario != null)
+                    {
+                        ViewBag.NomeUsuario = usuario.Nome;
+                        ViewBag.TipoUsuario = usuario.Tipo;
+                    }
+                }
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
     }
 }

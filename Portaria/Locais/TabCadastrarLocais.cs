@@ -1,7 +1,7 @@
 ﻿using Portaria.Business.Cadastro;
 using Portaria.Core;
-using Portaria.Framework.CaixaMensagem;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework.Forms;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,7 +21,7 @@ namespace Portaria.Locais
 
         private void CarregarLocais()
         {
-            var localBus = new LocalBus();
+            var localBus = new LocalBus(SessaoAtual.Sessao);
 
             bsLocais.DataSource = localBus.Todos().ToList();
         }
@@ -50,7 +50,7 @@ namespace Portaria.Locais
         private void EditarLocal()
         {
             var id = int.Parse(dgvLocais.SelectedRows[0].Cells[0].Value.ToString());
-            var localBus = new LocalBus();
+            var localBus = new LocalBus(SessaoAtual.Sessao);
             var l = localBus.BuscaPorId(id);
 
             using (var frm = new CadLocal(l))
@@ -68,14 +68,14 @@ namespace Portaria.Locais
                 frm.ShowDialog();
             }
 
-            var localBus = new LocalBus();
+            var localBus = new LocalBus(SessaoAtual.Sessao);
             dgvLocais.DataSource = localBus.Todos().ToList();
         }
 
         private void RemoverLocal()
         {
             var id = int.Parse(dgvLocais.SelectedRows[0].Cells[0].Value.ToString());
-            var localBus = new LocalBus();
+            var localBus = new LocalBus(SessaoAtual.Sessao);
             var l = localBus.BuscaPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover o local " + l.Nome + " ?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)

@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Portaria.Framework\Portaria.Framework.csproj">
+    <ProjectReference Include="..\Portaria.Framework\Portaria.Desktop.Framework.csproj">
       <Project>{caf5be63-755c-4c1c-ad33-2e4673329112}</Project>
-      <Name>Portaria.Framework</Name>
+      <Name>Portaria.Desktop.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

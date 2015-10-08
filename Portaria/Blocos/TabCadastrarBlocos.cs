@@ -1,8 +1,8 @@
 ﻿using Portaria.Business.Cadastro;
 using Portaria.Core;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Framework.CaixaMensagem;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +24,7 @@ namespace Portaria.Blocos
 
         private void CarregarBlocos()
         {
-            var blocoBus = new BlocoBus();
+            var blocoBus = new BlocoBus(SessaoAtual.Sessao);
 
             bsBlocos.DataSource = blocoBus.Todos().ToList();
         }
@@ -48,7 +48,7 @@ namespace Portaria.Blocos
         private void RemoverBloco()
         {
             var id = int.Parse(dgvBlocos.SelectedRows[0].Cells[0].Value.ToString());
-            var blocoBus = new BlocoBus();
+            var blocoBus = new BlocoBus(SessaoAtual.Sessao);
             var b = blocoBus.BuscaPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover o bloco " + b.Nome + " ?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
@@ -67,7 +67,7 @@ namespace Portaria.Blocos
         private void EditarBloco()
         {
             var id = int.Parse(dgvBlocos.SelectedRows[0].Cells[0].Value.ToString());
-            var blocoBus = new BlocoBus();
+            var blocoBus = new BlocoBus(SessaoAtual.Sessao);
             var b = blocoBus.BuscaPorId(id);
 
             using (var frm = new CadBloco(b))
@@ -85,7 +85,7 @@ namespace Portaria.Blocos
                 frm.ShowDialog();
             }
 
-            var blocoBus = new BlocoBus();
+            var blocoBus = new BlocoBus(SessaoAtual.Sessao);
             dgvBlocos.DataSource = blocoBus.Todos().ToList();
         }
 

@@ -1,6 +1,6 @@
 ﻿using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.Forms;
 using System;
 
 namespace Portaria.Blocos
@@ -46,7 +46,7 @@ namespace Portaria.Blocos
 
         private void Salvar()
         {
-            var blocoBus = new BlocoBus();
+            var blocoBus = new BlocoBus(SessaoAtual.Sessao);
             blocoBus.InserirOuAtualizar(Bloco);
 
             Close();

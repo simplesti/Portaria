@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguracoesUsuario));
-            this.botaoSalvar = new Portaria.Framework.Botoes.BotaoSalvar();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
+            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
             this.lblCor = new System.Windows.Forms.Label();
             this.cboCor = new System.Windows.Forms.ComboBox();
             this.lblAjustesUsuario = new System.Windows.Forms.Label();
@@ -118,8 +118,8 @@
 
         #endregion
 
-        private Framework.Botoes.BotaoSalvar botaoSalvar;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
+        private Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
         private System.Windows.Forms.Label lblCor;
         private System.Windows.Forms.ComboBox cboCor;
         private System.Windows.Forms.Label lblAjustesUsuario;

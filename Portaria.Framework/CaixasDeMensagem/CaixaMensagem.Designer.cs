@@ -1,4 +1,4 @@
-﻿namespace Portaria.Framework.CaixaMensagem
+﻿namespace Portaria.Desktop.Framework.CaixaMensagem
 {
     partial class CaixaMensagem
     {
@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaixaMensagem));
             this.lblMensagem = new System.Windows.Forms.Label();
-            this.btnOK = new Portaria.Framework.Botoes.BotaoOK();
-            this.btnCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
+            this.btnOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
+            this.btnCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
             this.SuspendLayout();
             // 
             // lblMensagem

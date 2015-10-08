@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadReserva));
             this.tlpCampos = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBotoes = new System.Windows.Forms.TableLayoutPanel();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Framework.Botoes.BotaoSalvar();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
+            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
             this.lblInicio = new System.Windows.Forms.Label();
             this.lblFim = new System.Windows.Forms.Label();
             this.dtInicio = new System.Windows.Forms.DateTimePicker();
@@ -43,10 +43,10 @@
             this.txtLocal = new System.Windows.Forms.TextBox();
             this.lblSolicitante = new System.Windows.Forms.Label();
             this.txtSolicitante = new System.Windows.Forms.TextBox();
-            this.botaoEditarSolicitante = new Portaria.Framework.Botoes.BotaoEditar();
+            this.botaoEditarSolicitante = new Portaria.Desktop.Framework.Botoes.BotaoEditar();
             this.lblUnidade = new System.Windows.Forms.Label();
             this.txtUnidade = new System.Windows.Forms.TextBox();
-            this.botaoPesquisarUnidade = new Portaria.Framework.Botoes.BotaoPesquisar();
+            this.botaoPesquisarUnidade = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             this.tlpBotoes.SuspendLayout();
@@ -316,8 +316,8 @@
 
         private System.Windows.Forms.TableLayoutPanel tlpCampos;
         private System.Windows.Forms.TableLayoutPanel tlpBotoes;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Framework.Botoes.BotaoSalvar botaoSalvar;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
         private System.Windows.Forms.Label lblInicio;
         private System.Windows.Forms.Label lblFim;
         private System.Windows.Forms.DateTimePicker dtInicio;
@@ -326,10 +326,10 @@
         private System.Windows.Forms.TextBox txtLocal;
         private System.Windows.Forms.Label lblSolicitante;
         private System.Windows.Forms.TextBox txtSolicitante;
-        private Framework.Botoes.BotaoEditar botaoEditarSolicitante;
+        private Portaria.Desktop.Framework.Botoes.BotaoEditar botaoEditarSolicitante;
         private System.Windows.Forms.BindingSource bsReserva;
         private System.Windows.Forms.Label lblUnidade;
         private System.Windows.Forms.TextBox txtUnidade;
-        private Framework.Botoes.BotaoPesquisar botaoPesquisarUnidade;
+        private Portaria.Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisarUnidade;
     }
 }

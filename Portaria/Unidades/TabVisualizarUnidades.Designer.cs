@@ -33,7 +33,7 @@
             this.chkSomente30 = new System.Windows.Forms.CheckBox();
             this.lblPesquisar = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.botaoPesquisar = new Portaria.Framework.Botoes.BotaoPesquisar();
+            this.botaoPesquisar = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
             this.SuspendLayout();
             // 
             // flpUnidades
@@ -117,6 +117,6 @@
         private System.Windows.Forms.CheckBox chkSomente30;
         private System.Windows.Forms.Label lblPesquisar;
         private System.Windows.Forms.TextBox txtPesquisar;
-        private Framework.Botoes.BotaoPesquisar botaoPesquisar;
+        private Portaria.Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisar;
     }
 }

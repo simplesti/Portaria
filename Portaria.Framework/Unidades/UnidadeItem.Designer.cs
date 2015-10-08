@@ -1,4 +1,4 @@
-﻿namespace Portaria.Framework.Unidades
+﻿namespace Portaria.Desktop.Framework.Unidades
 {
     partial class UnidadeItem
     {
@@ -32,7 +32,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblBloco = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
-            this.botaoEditar1 = new Portaria.Framework.Botoes.BotaoEditar();
+            this.botaoEditar1 = new Portaria.Desktop.Framework.Botoes.BotaoEditar();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 

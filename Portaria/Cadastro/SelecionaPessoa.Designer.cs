@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelecionaPessoa));
-            this.botaoPesquisar = new Portaria.Framework.Botoes.BotaoPesquisar();
+            this.botaoPesquisar = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
             this.lblPesquisar = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.dgvPessoas = new System.Windows.Forms.DataGridView();
@@ -50,9 +50,9 @@
             this.reservasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsPessoas = new System.Windows.Forms.BindingSource(this.components);
             this.chkSomente30 = new System.Windows.Forms.CheckBox();
-            this.botaoAdicionar = new Portaria.Framework.Botoes.BotaoAdicionar();
-            this.botaoOK = new Portaria.Framework.Botoes.BotaoOK();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
+            this.botaoAdicionar = new Portaria.Desktop.Framework.Botoes.BotaoAdicionar();
+            this.botaoOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
             this.pnlConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsPessoas)).BeginInit();
@@ -325,15 +325,15 @@
 
         #endregion
 
-        private Framework.Botoes.BotaoPesquisar botaoPesquisar;
+        private Portaria.Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisar;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label lblPesquisar;
         private System.Windows.Forms.DataGridView dgvPessoas;
         private System.Windows.Forms.CheckBox chkSomente30;
-        private Framework.Botoes.BotaoAdicionar botaoAdicionar;
+        private Portaria.Desktop.Framework.Botoes.BotaoAdicionar botaoAdicionar;
         private System.Windows.Forms.BindingSource bsPessoas;
-        private Framework.Botoes.BotaoOK botaoOK;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoOK botaoOK;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPFDataGridViewTextBoxColumn;

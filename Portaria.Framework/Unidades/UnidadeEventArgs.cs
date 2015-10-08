@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Portaria.Framework.Unidades
+namespace Portaria.Desktop.Framework.Unidades
 {
     public class UnidadeEventArgs : EventArgs
     {

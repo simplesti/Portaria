@@ -1,7 +1,7 @@
 ﻿using Portaria.Core;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Framework;
-using Portaria.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.CaixaMensagem;
 using System;
 using System.Drawing;
 using System.IO;

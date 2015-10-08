@@ -1,8 +1,8 @@
 ﻿using Portaria.Business;
 using Portaria.Business.Cadastro;
 using Portaria.Core;
-using Portaria.Framework.Forms;
-using Portaria.Framework.Locais;
+using Portaria.Desktop.Framework.Forms;
+using Portaria.Desktop.Framework.Locais;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,7 +21,7 @@ namespace Portaria.Locais
         {
             if (!DesignMode)
             {
-                var localBus = new LocalBus();
+                var localBus = new LocalBus(SessaoAtual.Sessao);
                 var todosLocais = localBus.Todos().ToList();
 
                 foreach (var local in todosLocais)
@@ -59,7 +59,7 @@ namespace Portaria.Locais
 
         private void CarregarReservas(IEnumerable<int> ids)
         {
-            var reservaBus = new ReservaBus();
+            var reservaBus = new ReservaBus(SessaoAtual.Sessao);
 
             var query = reservaBus.Todos().AsQueryable();
             query = query.Where(e => ids.Contains(e.Id));
@@ -69,7 +69,7 @@ namespace Portaria.Locais
 
         private void CarregarReservasProximas()
         {
-            var reservaBus = new ReservaBus();
+            var reservaBus = new ReservaBus(SessaoAtual.Sessao);
             var query = reservaBus.Todos();
 
             query = query.OrderByDescending(r => r.DataHoraInicio)

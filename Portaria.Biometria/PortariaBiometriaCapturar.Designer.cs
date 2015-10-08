@@ -34,8 +34,8 @@
             this.StatusText = new System.Windows.Forms.TextBox();
             this.Prompt = new System.Windows.Forms.TextBox();
             this.Picture = new System.Windows.Forms.PictureBox();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
-            this.botaoOK = new Portaria.Framework.Botoes.BotaoOK();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
+            this.botaoOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
             StatusLabel = new System.Windows.Forms.Label();
             PromptLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
@@ -159,8 +159,8 @@
         private System.Windows.Forms.TextBox StatusText;
         private System.Windows.Forms.TextBox Prompt;
         private System.Windows.Forms.PictureBox Picture;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Framework.Botoes.BotaoOK botaoOK;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoOK botaoOK;
 
     }
 }

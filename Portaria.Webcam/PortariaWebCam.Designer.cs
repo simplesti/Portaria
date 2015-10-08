@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortariaWebCam));
-            this.botaoOK = new Portaria.Framework.Botoes.BotaoOK();
-            this.botaoCancelar = new Portaria.Framework.Botoes.BotaoCancelar();
+            this.botaoOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
             this.pbWebcam = new System.Windows.Forms.PictureBox();
-            this.botaoPesquisar = new Portaria.Framework.Botoes.BotaoPesquisar();
+            this.botaoPesquisar = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
             ((System.ComponentModel.ISupportInitialize)(this.pbWebcam)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,9 +116,9 @@
 
         #endregion
 
-        private Framework.Botoes.BotaoOK botaoOK;
-        private Framework.Botoes.BotaoCancelar botaoCancelar;
+        private Portaria.Desktop.Framework.Botoes.BotaoOK botaoOK;
+        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
         private System.Windows.Forms.PictureBox pbWebcam;
-        private Framework.Botoes.BotaoPesquisar botaoPesquisar;
+        private Portaria.Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisar;
     }
 }

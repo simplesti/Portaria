@@ -72,5 +72,10 @@ namespace Portaria.Business
                 throw ex;
             }
         }
+
+        public void Dispose()
+        {
+            bd.Dispose();
+        }
     }
 }

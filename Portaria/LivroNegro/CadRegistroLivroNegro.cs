@@ -1,7 +1,7 @@
 ﻿using Portaria.Business;
 using Portaria.Cadastro;
 using Portaria.Core.Model;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.Forms;
 using System.Linq;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using Portaria.UnidadesBlocos;
 using Portaria.Blocos;
 using Portaria.Usuarios;
 using Portaria.Biometria;
-using Portaria.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework.CaixaMensagem;
 
 namespace Portaria.LivroNegro
 {
@@ -47,7 +47,7 @@ namespace Portaria.LivroNegro
             Registro = new RegistroLivroNegro() { Data = DateTime.Now };
 
             txtData.Text = Registro.Data.ToString("dd/MM/yyyy HH:mm:ss");
-            txtUsuario.Text = SessaoBus.Sessao().UsuarioLogado.Nome;
+            txtUsuario.Text = SessaoAtual.Sessao.UsuarioLogado.Nome;
         }
 
         public CadRegistroLivroNegro(RegistroLivroNegro registro)
@@ -85,7 +85,7 @@ namespace Portaria.LivroNegro
 
                 Registro.Mensagem = rtbMensagem.Text;
 
-                var registroLivroNegroBus = new RegistroLivroNegroBus();
+                var registroLivroNegroBus = new RegistroLivroNegroBus(SessaoAtual.Sessao);
                 registroLivroNegroBus.InserirOuAtualizar(Registro);
 
                 Close();

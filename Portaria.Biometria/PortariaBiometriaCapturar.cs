@@ -1,5 +1,5 @@
-﻿using Portaria.Framework;
-using Portaria.Framework.CaixaMensagem;
+﻿using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.CaixaMensagem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -1,8 +1,8 @@
 ﻿using Portaria.Business;
 using Portaria.Business.Cadastro;
 using Portaria.Core.Model.Cadastro;
-using Portaria.Framework;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.Forms;
 using Portaria.Webcam;
 using System.Drawing;
 using System.Windows.Forms;
@@ -53,7 +53,7 @@ namespace Portaria.Locais
 
         private void Salvar()
         {
-            var localBus = new LocalBus();
+            var localBus = new LocalBus(SessaoAtual.Sessao);
             localBus.InserirOuAtualizar(Local);
 
             Close();
@@ -61,7 +61,7 @@ namespace Portaria.Locais
 
         private void pbFoto_Click(object sender, System.EventArgs e)
         {
-            if (SessaoBus.Sessao().UsuarioLogado.Tipo ==Core.TipoUsuario.Administrador)
+            if (SessaoAtual.Sessao.UsuarioLogado.Tipo ==Core.TipoUsuario.Administrador)
             {
                 var foto = PortariaWebCam.ObterImagem();
                 if (foto != null)

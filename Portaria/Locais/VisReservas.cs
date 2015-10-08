@@ -1,8 +1,8 @@
 ﻿using Portaria.Business;
 using Portaria.Core.Model.Cadastro;
-using Portaria.Framework;
-using Portaria.Framework.CaixaMensagem;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework.Forms;
 using System;
 using System.Linq;
 
@@ -39,7 +39,7 @@ namespace Portaria.Locais
 
         private void AplicarPermissoes()
         {
-            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
             {
                 botaoRemover.Visible = false;
             }
@@ -55,7 +55,7 @@ namespace Portaria.Locais
 
         private void CarregarUltimasReservas()
         {
-            var reservaBus = new ReservaBus();
+            var reservaBus = new ReservaBus(SessaoAtual.Sessao);
             var query = reservaBus.Todos().AsQueryable();
             query = query.Where(r => r.Local.Id == Local.Id)
                 .Take(30);
@@ -104,7 +104,7 @@ namespace Portaria.Locais
         private void RemoverReserva()
         {
             var id = int.Parse(dgvReservas.SelectedRows[0].Cells[0].Value.ToString());
-            var reservaBus = new ReservaBus();
+            var reservaBus = new ReservaBus(SessaoAtual.Sessao);
             var r = reservaBus.BuscaPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover a reserva da data  " + r.DataHoraInicio.ToString("dd/MM/yyyy HH:mm:ss") + " ?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
@@ -126,7 +126,7 @@ namespace Portaria.Locais
         private void EditarReserva()
         {
             var id = int.Parse(dgvReservas.SelectedRows[0].Cells[0].Value.ToString());
-            var reservaBus = new ReservaBus();
+            var reservaBus = new ReservaBus(SessaoAtual.Sessao);
             var r = reservaBus.BuscaPorId(id);
 
             using (var frm = new CadReserva(r))

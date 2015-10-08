@@ -4,10 +4,10 @@ using System.IO;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Portaria.Business;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.Forms;
 using System.Collections.Generic;
 
-namespace Portaria.Framework
+namespace Portaria.Desktop.Framework
 {
     public class PortariaTabControl : TabControl
     {
@@ -45,10 +45,10 @@ namespace Portaria.Framework
 
         private void RestauraPosicoes()
         {
-            if (SessaoBus.Sessao() != null)
+            if (SessaoAtual.Sessao != null)
             {
-                var usuarioBus = new UsuarioBus();
-                var u = usuarioBus.BuscaPorId(SessaoBus.Sessao().UsuarioLogado.Id);
+                var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
+                var u = usuarioBus.BuscaPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
 
                 if (!string.IsNullOrEmpty(u.PosicaoAbas))
                 {
@@ -83,7 +83,7 @@ namespace Portaria.Framework
         {
             foreach (PortariaTabPage tabPage in tabs)
             {
-                if (!((IPortariaTab)tabPage.Controls[0]).TiposUsuariosPermitidos.Contains(SessaoBus.Sessao().UsuarioLogado.Tipo))
+                if (!((IPortariaTab)tabPage.Controls[0]).TiposUsuariosPermitidos.Contains(SessaoAtual.Sessao.UsuarioLogado.Tipo))
                 {
                     this.Controls.Remove(tabPage);
                 }
@@ -166,8 +166,8 @@ namespace Portaria.Framework
 
             var txt = JsonConvert.SerializeObject(posicoes);
 
-            var usuarioBus = new UsuarioBus();
-            var u = usuarioBus.BuscaPorId(SessaoBus.Sessao().UsuarioLogado.Id);
+            var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
+            var u = usuarioBus.BuscaPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
             u.PosicaoAbas = txt;
 
             usuarioBus.InserirOuAtualizar(u);

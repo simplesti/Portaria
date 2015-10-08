@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabCadastrarLocais));
-            this.botaoRemover = new Portaria.Framework.Botoes.BotaoRemover();
-            this.botaoAdicionar = new Portaria.Framework.Botoes.BotaoAdicionar();
+            this.botaoRemover = new Portaria.Desktop.Framework.Botoes.BotaoRemover();
+            this.botaoAdicionar = new Portaria.Desktop.Framework.Botoes.BotaoAdicionar();
             this.dgvLocais = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -152,8 +152,8 @@
 
         #endregion
 
-        private Framework.Botoes.BotaoRemover botaoRemover;
-        private Framework.Botoes.BotaoAdicionar botaoAdicionar;
+        private Portaria.Desktop.Framework.Botoes.BotaoRemover botaoRemover;
+        private Portaria.Desktop.Framework.Botoes.BotaoAdicionar botaoAdicionar;
         private System.Windows.Forms.DataGridView dgvLocais;
         private System.Windows.Forms.BindingSource bsLocais;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;

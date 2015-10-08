@@ -1,4 +1,4 @@
-﻿namespace Portaria.Framework.Botoes
+﻿namespace Portaria.Desktop.Framework.Botoes
 {
     partial class BotaoEditar
     {

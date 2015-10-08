@@ -1,7 +1,7 @@
 ﻿using Portaria.Core.Model.Cadastro;
 using System;
 
-namespace Portaria.Framework.Locais
+namespace Portaria.Desktop.Framework.Locais
 {
     public class LocalEventArgs : EventArgs
     {

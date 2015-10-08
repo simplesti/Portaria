@@ -1,10 +1,10 @@
 ﻿using Portaria.Business;
 using Portaria.Core;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.Forms;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
-using Portaria.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Core.Model;
 
 namespace Portaria.Usuarios
@@ -20,7 +20,7 @@ namespace Portaria.Usuarios
 
         private void CarregarUsuarios()
         {
-            var usuarioBus = new UsuarioBus();
+            var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
             bsUsuario.DataSource = usuarioBus.Todos().ToList();
         }
 
@@ -43,7 +43,7 @@ namespace Portaria.Usuarios
         private void EditarUsuario()
         {
             var id = int.Parse(dgvUsuarios.SelectedRows[0].Cells[0].Value.ToString());
-            var usuarioBus = new UsuarioBus();
+            var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
             var u = usuarioBus.BuscaPorId(id);
 
             using (var frm = new CadUsuario(u))
@@ -66,7 +66,7 @@ namespace Portaria.Usuarios
                 frm.ShowDialog();
             }
 
-            var usuarioBus = new UsuarioBus();
+            var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
             dgvUsuarios.DataSource = usuarioBus.Todos().ToList();
         }
 
@@ -81,7 +81,7 @@ namespace Portaria.Usuarios
         private void RemoverUsuario()
         {
             var id = int.Parse(dgvUsuarios.SelectedRows[0].Cells[0].Value.ToString());
-            var usuarioBus = new UsuarioBus();
+            var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
             var u = usuarioBus.BuscaPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover o usuário " + u.Nome + " ?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)

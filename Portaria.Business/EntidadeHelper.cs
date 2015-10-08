@@ -29,38 +29,31 @@ namespace Portaria.Business
             {
                 if (registroEntidade.Tipo == typeof(Pessoa).Name)
                 {
-                    var pessoaBus = new PessoaBus();
-                    retorno.Add(pessoaBus.BuscaPorId(registroEntidade.IdEntidade));
+                    retorno.Add(bd.Pessoas.FirstOrDefault(q => q.Id == registroEntidade.IdEntidade));
                 }
                 else if (registroEntidade.Tipo == typeof(Veiculo).Name)
                 {
-                    var veiculoBus = new VeiculoBus();
-                    retorno.Add(veiculoBus.BuscaPorId(registroEntidade.IdEntidade));
+                    retorno.Add(bd.Veiculos.FirstOrDefault(q => q.Id == registroEntidade.IdEntidade));
                 }
                 else if (registroEntidade.Tipo == typeof(Unidade).Name)
                 {
-                    var unidadeBus = new UnidadeBus();
-                    retorno.Add(unidadeBus.BuscaPorId(registroEntidade.IdEntidade));
+                    retorno.Add(bd.Unidades.FirstOrDefault(q => q.Id == registroEntidade.IdEntidade));
                 }
                 else if (registroEntidade.Tipo == typeof(Local).Name)
                 {
-                    var localBus = new LocalBus();
-                    retorno.Add(localBus.BuscaPorId(registroEntidade.IdEntidade));
+                    retorno.Add(bd.Locais.FirstOrDefault(q => q.Id == registroEntidade.IdEntidade));
                 }
                 else if (registroEntidade.Tipo == typeof(Funcionario).Name)
                 {
-                    var funcionarioBus = new FuncionarioBus();
-                    retorno.Add(funcionarioBus.BuscaPorId(registroEntidade.IdEntidade));
+                    retorno.Add(bd.Funcionarios.FirstOrDefault(q => q.Id == registroEntidade.IdEntidade));
                 }
                 else if (registroEntidade.Tipo == typeof(Bloco).Name)
                 {
-                    var blocoBus = new BlocoBus();
-                    retorno.Add(blocoBus.BuscaPorId(registroEntidade.IdEntidade));
+                    retorno.Add(bd.Blocos.FirstOrDefault(q => q.Id == registroEntidade.IdEntidade));
                 }
                 else if (registroEntidade.Tipo == typeof(Usuario).Name)
                 {
-                    var usuarioBus = new UsuarioBus();
-                    retorno.Add(usuarioBus.BuscaPorId(registroEntidade.IdEntidade));
+                    retorno.Add(bd.Usuarios.FirstOrDefault(q => q.Id == registroEntidade.IdEntidade));
                 }
             }
 
@@ -116,57 +109,42 @@ namespace Portaria.Business
             var id = int.Parse(variavel.Substring(5, variavel.IndexOf(';') - 5));
             var tipo = variavel.Remove(0, variavel.IndexOf(';') + 6).TrimEnd('#').TrimEnd('!');
 
+            IEntidade entidade = null;
             if (tipo == typeof(Pessoa).Name)
             {
-                var pessoaBus = new PessoaBus();
-                var pessoa = pessoaBus.BuscaPorId(id);
-
-                return pessoa.DescricaoEntidade;
+                entidade = bd.Pessoas.FirstOrDefault(q => q.Id == id);
             }
             else if (tipo == typeof(Veiculo).Name)
             {
-                var veiculoBus = new VeiculoBus();
-                var veiculo = veiculoBus.BuscaPorId(id);
-
-                return veiculo.DescricaoEntidade;
+                entidade = bd.Veiculos.FirstOrDefault(q => q.Id == id);
             }
             else if (tipo == typeof(Unidade).Name)
             {
-                var unidadeBus = new UnidadeBus();
-                var unidade = unidadeBus.BuscaPorId(id);
-
-                return unidade.DescricaoEntidade;
+                entidade = bd.Unidades.FirstOrDefault(q => q.Id == id);
             }
             else if (tipo == typeof(Local).Name)
             {
-                var localBus = new LocalBus();
-                var local = localBus.BuscaPorId(id);
-
-                return local.DescricaoEntidade;
+                entidade = bd.Locais.FirstOrDefault(q => q.Id == id);
             }
             else if (tipo == typeof(Funcionario).Name)
             {
-                var funcionarioBus = new FuncionarioBus();
-                var funcionario = funcionarioBus.BuscaPorId(id);
-
-                return funcionario.DescricaoEntidade;
+                entidade = bd.Funcionarios.FirstOrDefault(q => q.Id == id);
             }
             else if (tipo == typeof(Bloco).Name)
             {
-                var blocoBus = new BlocoBus();
-                var bloco = blocoBus.BuscaPorId(id);
-
-                return bloco.DescricaoEntidade;
+                entidade = bd.Blocos.FirstOrDefault(q => q.Id == id);
             }
             else if (tipo == typeof(Usuario).Name)
             {
-                var usuarioBus = new UsuarioBus();
-                var usuario = usuarioBus.BuscaPorId(id);
-
-                return usuario.DescricaoEntidade;
+                entidade = bd.Usuarios.FirstOrDefault(q => q.Id == id);
             }
 
-            return "";
+            if (entidade != null)
+            {
+                return entidade.DescricaoEntidade;
+            }
+
+            return string.Empty;
         }
 
         public List<Tuple<string, int, int>> BuscaVariaveis(string texto)

@@ -38,8 +38,8 @@
             this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sessoesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsUsuario = new System.Windows.Forms.BindingSource(this.components);
-            this.botaoAdicionar = new Portaria.Framework.Botoes.BotaoAdicionar();
-            this.botaoRemover = new Portaria.Framework.Botoes.BotaoRemover();
+            this.botaoAdicionar = new Portaria.Desktop.Framework.Botoes.BotaoAdicionar();
+            this.botaoRemover = new Portaria.Desktop.Framework.Botoes.BotaoRemover();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).BeginInit();
             this.SuspendLayout();
@@ -172,8 +172,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvUsuarios;
-        private Framework.Botoes.BotaoAdicionar botaoAdicionar;
-        private Framework.Botoes.BotaoRemover botaoRemover;
+        private Portaria.Desktop.Framework.Botoes.BotaoAdicionar botaoAdicionar;
+        private Portaria.Desktop.Framework.Botoes.BotaoRemover botaoRemover;
         private System.Windows.Forms.BindingSource bsUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;

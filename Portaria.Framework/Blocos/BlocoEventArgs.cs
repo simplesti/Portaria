@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portaria.Framework.Blocos
+namespace Portaria.Desktop.Framework.Blocos
 {
     public class BlocoEventArgs : EventArgs
     {

@@ -1,9 +1,9 @@
 ﻿using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.Forms;
 using System.Windows.Forms;
 using System.Linq;
-using Portaria.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Business;
 
 namespace Portaria.Cadastro
@@ -19,7 +19,7 @@ namespace Portaria.Cadastro
 
         private void AplicarPermissoes()
         {
-            if (SessaoBus.Sessao().UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
+            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
             {
                 botaoAdicionar.Visible = false;
                 botaoCancelar.Visible = false;
@@ -58,7 +58,7 @@ namespace Portaria.Cadastro
 
         private void Pesquisar()
         {
-            var pessoaBus = new PessoaBus();
+            var pessoaBus = new PessoaBus(SessaoAtual.Sessao);
             var query = pessoaBus.BuscaPorNome(txtPesquisar.Text).AsQueryable();
 
             if (chkSomente30.Checked)

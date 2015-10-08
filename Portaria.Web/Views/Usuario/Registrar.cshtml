@@ -1,0 +1,57 @@
+﻿@model Portaria.Core.Model.Usuario
+
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registrar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Erro ao criar usuário");
+
+    <div>
+        <fieldset>
+            <legend>Criar Usuário</legend>
+
+            <div>@Html.LabelFor(u => u.Nome)</div>
+            <div>
+                @Html.TextBoxFor(u => u.Nome)
+                @Html.ValidationMessageFor(u => u.Nome)
+            </div>
+
+            <div>@Html.LabelFor(u => u.RG)</div>
+            <div>
+                @Html.TextBoxFor(u => u.RG)
+                @Html.ValidationMessageFor(u => u.RG)
+            </div>
+
+            <div>@Html.LabelFor(u => u.CPF)</div>
+            <div>
+                @Html.TextBoxFor(u => u.CPF)
+                @Html.ValidationMessageFor(u => u.CPF)
+            </div>
+
+            <div>@Html.LabelFor(u => u.Tipo)</div>
+            <div>
+                @Html.ListBoxFor(u => u.Tipo, EnumHelper.GetSelectList(typeof(Portaria.Core.TipoUsuario)))
+                @Html.ValidationMessageFor(u => u.Tipo)
+            </div>
+
+            <div>@Html.LabelFor(u => u.Login)</div>
+            <div>
+                @Html.TextBoxFor(u => u.Login)
+            @Html.ValidationMessageFor(u => u.Login)
+        </div>
+
+        <div>@Html.LabelFor(u => u.Senha)</div>
+        <div>
+            @Html.PasswordFor(u => u.Senha)
+            @Html.ValidationMessageFor(u => u.Senha)
+        </div>
+
+        <input type="submit" value="Criar" />
+    </fieldset>
+</div>
+}

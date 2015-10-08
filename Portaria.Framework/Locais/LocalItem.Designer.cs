@@ -1,4 +1,4 @@
-﻿namespace Portaria.Framework.Locais
+﻿namespace Portaria.Desktop.Framework.Locais
 {
     partial class LocalItem
     {

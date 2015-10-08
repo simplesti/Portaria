@@ -1,8 +1,8 @@
 ﻿using Portaria.Business.Cadastro;
 using Portaria.Core;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Framework.Forms;
-using Portaria.Framework.Unidades;
+using Portaria.Desktop.Framework.Forms;
+using Portaria.Desktop.Framework.Unidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +19,7 @@ namespace Portaria
 
         private void CarregarTodasUnidades()
         {
-            var unidadeBus = new UnidadeBus();
+            var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
             var query = unidadeBus.Todos();
 
             if (chkSomente30.Checked)
@@ -87,7 +87,7 @@ namespace Portaria
 
         private void CarregarUnidades(IEnumerable<int> ids)
         {
-            var unidadeBus = new UnidadeBus();
+            var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
 
             var query = unidadeBus.Todos().AsQueryable();
             query = query.Where(e => ids.Contains(e.Id));
@@ -126,7 +126,7 @@ namespace Portaria
 
             if (numero != 0)
             {
-                var unidadeBus = new UnidadeBus();
+                var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
                 var query = unidadeBus.BuscarPorNumero(numero).AsQueryable();
 
                 if (chkSomente30.Checked)

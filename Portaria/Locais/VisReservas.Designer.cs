@@ -44,8 +44,8 @@
             this.pessoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sessaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsReservas = new System.Windows.Forms.BindingSource(this.components);
-            this.botaoAdicionar = new Portaria.Framework.Botoes.BotaoAdicionar();
-            this.botaoRemover = new Portaria.Framework.Botoes.BotaoRemover();
+            this.botaoAdicionar = new Portaria.Desktop.Framework.Botoes.BotaoAdicionar();
+            this.botaoRemover = new Portaria.Desktop.Framework.Botoes.BotaoRemover();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -273,8 +273,8 @@
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Label lblReservas;
         private System.Windows.Forms.DataGridView dgvReservas;
-        private Framework.Botoes.BotaoAdicionar botaoAdicionar;
-        private Framework.Botoes.BotaoRemover botaoRemover;
+        private Portaria.Desktop.Framework.Botoes.BotaoAdicionar botaoAdicionar;
+        private Portaria.Desktop.Framework.Botoes.BotaoRemover botaoRemover;
         private System.Windows.Forms.BindingSource bsReservas;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataHoraDataGridViewTextBoxColumn;

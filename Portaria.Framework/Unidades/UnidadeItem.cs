@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Portaria.Core.Model.CadastroMorador;
 
-namespace Portaria.Framework.Unidades
+namespace Portaria.Desktop.Framework.Unidades
 {
     public partial class UnidadeItem : UserControl
     {

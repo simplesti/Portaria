@@ -12,10 +12,12 @@ namespace Portaria.Business
     public class RegistroLivroNegroBus : IPortariaBus<RegistroLivroNegro>
     {
         private PortariaContext bd;
+        private Sessao sessao;
 
-        public RegistroLivroNegroBus()
+        public RegistroLivroNegroBus(Sessao sessao)
         {
             bd = PortariaContext.BD;
+            this.sessao = sessao;
         }
 
         public IEnumerable<RegistroLivroNegro> Todos()
@@ -30,7 +32,6 @@ namespace Portaria.Business
                 ValidarRegistro(entidade);
 
                 var r = bd.RegistrosLivroNegro.AsNoTracking().FirstOrDefault(i => i.Id == entidade.Id);
-                var sessao = SessaoBus.Sessao();
 
                 if (r == null)
                 {
@@ -85,6 +86,11 @@ namespace Portaria.Business
             {
                 throw ex;
             }
+        }
+
+        public void Dispose()
+        {
+            bd.Dispose();
         }
     }
 }

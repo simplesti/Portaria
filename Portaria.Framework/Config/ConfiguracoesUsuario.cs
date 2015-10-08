@@ -1,5 +1,5 @@
 ﻿using Portaria.Business;
-using Portaria.Framework;
+using Portaria.Desktop.Framework;
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace Portaria.Config
             esquemas.Add("Bege Claro", -31);
             esquemas.Add("Branco", -1);
 
-            if (SessaoBus.Sessao().UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
+            if (SessaoAtual.Sessao.UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
             {
                 esquemas.Add("Administrador", -983056);
             }
@@ -48,14 +48,14 @@ namespace Portaria.Config
 
         private void Salvar()
         {
-            var usuarioBus = new UsuarioBus();
-            var u = usuarioBus.BuscaPorId(SessaoBus.Sessao().UsuarioLogado.Id);
+            var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
+            var u = usuarioBus.BuscaPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
 
             u.CorTema = (Int32)cboCor.SelectedValue;
 
             usuarioBus.InserirOuAtualizar(u);
 
-            SessaoBus.Sessao().UsuarioLogado = u;
+            SessaoAtual.Sessao.UsuarioLogado = u;
         }
     }
 }

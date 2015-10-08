@@ -13,13 +13,6 @@ namespace Portaria.Business
     {
         private PortariaContext bd;
 
-        private static Sessao sessaoAtual = null;
-
-        public static Sessao Sessao()
-        {
-            return sessaoAtual;
-        }
-
         public SessaoBus()
         {
             bd = PortariaContext.BD;
@@ -80,7 +73,7 @@ namespace Portaria.Business
             }
         }
 
-        public void InicializarSessao(Usuario usuario)
+        public Sessao InicializarSessao(Usuario usuario)
         {
             try
             {
@@ -91,7 +84,7 @@ namespace Portaria.Business
 
                 InserirOuAtualizar(sessao);
 
-                sessaoAtual = sessao;
+                return sessao;
             }
             catch(Exception ex)
             {
@@ -99,25 +92,28 @@ namespace Portaria.Business
             }
         }
 
-        public void FinalizarSessao()
+        public void FinalizarSessao(Sessao sessao)
         {
             try
             {
-                if (sessaoAtual == null)
+                if (sessao == null)
                 {
                     throw new Exception("Não existe sessão aberta.");
                 }
 
-                var sessao = BuscaPorId(sessaoAtual.Id);
-                sessao.DataHoraFim = DateTime.Now;
+                var s = BuscaPorId(sessao.Id);
+                s.DataHoraFim = DateTime.Now;
                 bd.SaveChanges();
-
-                sessaoAtual = null;
             }
             catch(Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public void Dispose()
+        {
+            bd.Dispose();
         }
     }
 }

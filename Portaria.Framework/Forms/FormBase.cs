@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Portaria.Framework
+namespace Portaria.Desktop.Framework
 {
     public partial class FormBase : Form
     {
@@ -27,9 +27,9 @@ namespace Portaria.Framework
         {
             base.OnLoad(e);
 
-            if (SessaoBus.Sessao() != null && SessaoBus.Sessao().UsuarioLogado.CorTema != 0)
+            if (SessaoAtual.Sessao != null && SessaoAtual.Sessao.UsuarioLogado.CorTema != 0)
             {
-                this.BackColor = Color.FromArgb(SessaoBus.Sessao().UsuarioLogado.CorTema);
+                this.BackColor = Color.FromArgb(SessaoAtual.Sessao.UsuarioLogado.CorTema);
             }
         }
 

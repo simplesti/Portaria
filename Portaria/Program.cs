@@ -1,4 +1,5 @@
-﻿using Portaria.Framework.CaixaMensagem;
+﻿using Portaria.Core.Model;
+using Portaria.Desktop.Framework.CaixaMensagem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,12 +26,12 @@ namespace Portaria
         }
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            CaixaMensagem.Mostrar(e.Exception.Message, Framework.CaixaMensagem.TipoCaixaMensagem.SomenteOK);
+            CaixaMensagem.Mostrar(e.Exception.Message, Portaria.Desktop.Framework.CaixaMensagem.TipoCaixaMensagem.SomenteOK);
         }
 
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            CaixaMensagem.Mostrar((e.ExceptionObject as Exception).Message, Framework.CaixaMensagem.TipoCaixaMensagem.SomenteOK);
+            CaixaMensagem.Mostrar((e.ExceptionObject as Exception).Message, Portaria.Desktop.Framework.CaixaMensagem.TipoCaixaMensagem.SomenteOK);
         }
     }
 }

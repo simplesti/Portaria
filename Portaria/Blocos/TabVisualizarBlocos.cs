@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.Forms;
 using Portaria.Core;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Framework.Blocos;
+using Portaria.Desktop.Framework.Blocos;
 using Portaria.Business.Cadastro;
 using Portaria.Core.Model;
 
@@ -25,7 +25,7 @@ namespace Portaria
 
         private void CarregarTodosBlocos()
         {
-            var blocoBus = new BlocoBus();
+            var blocoBus = new BlocoBus(SessaoAtual.Sessao);
             var blocos = blocoBus.Todos();
 
             PopulaBlocos(blocos);
@@ -57,7 +57,7 @@ namespace Portaria
         {
             if (TabVisualizar != null)
             {
-                var unidadeBus = new UnidadeBus();
+                var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
 
                 var unidades = unidadeBus.Todos().Where(e => e.Bloco.Id == bloco.Id);
 

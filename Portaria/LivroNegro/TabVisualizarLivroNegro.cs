@@ -1,6 +1,6 @@
 ﻿using Portaria.Business;
 using Portaria.Core;
-using Portaria.Framework.Forms;
+using Portaria.Desktop.Framework.Forms;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
@@ -30,7 +30,7 @@ namespace Portaria.LivroNegro
 
         private void Pesquisar()
         {
-            var registroLivroNegroBus = new RegistroLivroNegroBus();
+            var registroLivroNegroBus = new RegistroLivroNegroBus(SessaoAtual.Sessao);
 
             var query = registroLivroNegroBus.Todos().Where(r => r.Mensagem.ToUpper()
                 .Contains(txtPesquisar.Text.ToUpper())).AsQueryable();

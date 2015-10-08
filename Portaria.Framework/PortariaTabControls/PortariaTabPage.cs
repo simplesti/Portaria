@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Portaria.Framework.Forms
+namespace Portaria.Desktop.Framework.Forms
 {
     public partial class PortariaTabPage : TabPage
     {

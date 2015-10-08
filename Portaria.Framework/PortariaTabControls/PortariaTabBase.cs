@@ -11,7 +11,7 @@ using Portaria.Core;
 using Portaria.Core.Model;
 using Portaria.Business;
 
-namespace Portaria.Framework.Forms
+namespace Portaria.Desktop.Framework.Forms
 {
     public partial class PortariaTabBase : UserControl, IPortariaTab
     {
@@ -22,9 +22,9 @@ namespace Portaria.Framework.Forms
 
         public virtual void Carregar(params IEntidade[] entidades) 
         {
-            if (SessaoBus.Sessao() != null && SessaoBus.Sessao().UsuarioLogado.CorTema != 0)
+            if (SessaoAtual.Sessao != null && SessaoAtual.Sessao.UsuarioLogado.CorTema != 0)
             {
-                this.BackColor = Color.FromArgb(SessaoBus.Sessao().UsuarioLogado.CorTema);
+                this.BackColor = Color.FromArgb(SessaoAtual.Sessao.UsuarioLogado.CorTema);
             }
         }
 

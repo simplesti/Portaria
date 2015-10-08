@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl = new Portaria.Framework.PortariaTabControl();
-            this.tabPage1 = new Portaria.Framework.Forms.PortariaTabPage();
+            this.tabControl = new Portaria.Desktop.Framework.PortariaTabControl();
+            this.tabPage1 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
             this.tabCadastrarBlocos1 = new Portaria.Blocos.TabCadastrarBlocos();
-            this.tabPage2 = new Portaria.Framework.Forms.PortariaTabPage();
+            this.tabPage2 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
             this.tabVisualizarLivroNegro1 = new Portaria.LivroNegro.TabVisualizarLivroNegro();
-            this.tabPage3 = new Portaria.Framework.Forms.PortariaTabPage();
+            this.tabPage3 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
             this.tabCadastrarLocais1 = new Portaria.Locais.TabCadastrarLocais();
-            this.tabPage4 = new Portaria.Framework.Forms.PortariaTabPage();
+            this.tabPage4 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
             this.tabReservarLocais1 = new Portaria.Locais.TabReservarLocais();
-            this.tabPage5 = new Portaria.Framework.Forms.PortariaTabPage();
+            this.tabPage5 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
             this.tabVisualizarBlocos1 = new Portaria.TabVisualizarBlocos();
-            this.tabPage6 = new Portaria.Framework.Forms.PortariaTabPage();
+            this.tabPage6 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
             this.tabVisualizarUnidades1 = new Portaria.TabVisualizarUnidades();
-            this.tabPage7 = new Portaria.Framework.Forms.PortariaTabPage();
+            this.tabPage7 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
             this.tabCadastrarUnidades1 = new Portaria.Unidades.TabCadastrarUnidades();
-            this.tabPage8 = new Portaria.Framework.Forms.PortariaTabPage();
+            this.tabPage8 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
             this.tabVisualizarUsuarios1 = new Portaria.Usuarios.TabVisualizarUsuarios();
             this.pnlConteudo.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -276,22 +276,22 @@
 
         #endregion
 
-        private Portaria.Framework.PortariaTabControl tabControl;
-        private Portaria.Framework.Forms.PortariaTabPage tabPage1;
+        private Portaria.Desktop.Framework.PortariaTabControl tabControl;
+        private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage1;
         private Blocos.TabCadastrarBlocos tabCadastrarBlocos1;
-        private Portaria.Framework.Forms.PortariaTabPage tabPage2;
+        private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage2;
         private LivroNegro.TabVisualizarLivroNegro tabVisualizarLivroNegro1;
-        private Portaria.Framework.Forms.PortariaTabPage tabPage3;
+        private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage3;
         private Locais.TabCadastrarLocais tabCadastrarLocais1;
-        private Portaria.Framework.Forms.PortariaTabPage tabPage4;
-        private Portaria.Framework.Forms.PortariaTabPage tabPage5;
+        private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage4;
+        private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage5;
         private Locais.TabReservarLocais tabReservarLocais1;
         private TabVisualizarBlocos tabVisualizarBlocos1;
-        private Portaria.Framework.Forms.PortariaTabPage tabPage6;
+        private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage6;
         private TabVisualizarUnidades tabVisualizarUnidades1;
-        private Portaria.Framework.Forms.PortariaTabPage tabPage7;
+        private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage7;
         private Unidades.TabCadastrarUnidades tabCadastrarUnidades1;
-        private Portaria.Framework.Forms.PortariaTabPage tabPage8;
+        private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage8;
         private Usuarios.TabVisualizarUsuarios tabVisualizarUsuarios1;
 
     }

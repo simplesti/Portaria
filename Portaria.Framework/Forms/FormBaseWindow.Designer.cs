@@ -1,4 +1,4 @@
-﻿namespace Portaria.Framework.Forms
+﻿namespace Portaria.Desktop.Framework.Forms
 {
     partial class FormBaseWindow
     {
@@ -94,7 +94,7 @@
             // Minimizar
             // 
             this.Minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Minimizar.Image = global::Portaria.Framework.Properties.Resources.min_blue;
+            this.Minimizar.Image = global::Portaria.Desktop.Framework.Properties.Resources.min_blue;
             this.Minimizar.Location = new System.Drawing.Point(613, 3);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(45, 45);
@@ -105,7 +105,7 @@
             // 
             // Icone
             // 
-            this.Icone.Image = global::Portaria.Framework.Properties.Resources.revision_enterprise_3d;
+            this.Icone.Image = global::Portaria.Desktop.Framework.Properties.Resources.revision_enterprise_3d;
             this.Icone.Location = new System.Drawing.Point(3, 3);
             this.Icone.Name = "Icone";
             this.Icone.Size = new System.Drawing.Size(45, 45);
@@ -116,7 +116,7 @@
             // Fechar
             // 
             this.Fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Fechar.Image = global::Portaria.Framework.Properties.Resources.close_blue;
+            this.Fechar.Image = global::Portaria.Desktop.Framework.Properties.Resources.close_blue;
             this.Fechar.Location = new System.Drawing.Point(715, 3);
             this.Fechar.Name = "Fechar";
             this.Fechar.Size = new System.Drawing.Size(45, 45);
@@ -128,7 +128,7 @@
             // Maximizar
             // 
             this.Maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Maximizar.Image = global::Portaria.Framework.Properties.Resources.max_blue;
+            this.Maximizar.Image = global::Portaria.Desktop.Framework.Properties.Resources.max_blue;
             this.Maximizar.Location = new System.Drawing.Point(664, 3);
             this.Maximizar.Name = "Maximizar";
             this.Maximizar.Size = new System.Drawing.Size(45, 45);
@@ -156,7 +156,7 @@
             // 
             this.ConfiguracoesUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ConfiguracoesUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ConfiguracoesUsuario.Image = global::Portaria.Framework.Properties.Resources.blue_config;
+            this.ConfiguracoesUsuario.Image = global::Portaria.Desktop.Framework.Properties.Resources.blue_config;
             this.ConfiguracoesUsuario.Location = new System.Drawing.Point(591, 27);
             this.ConfiguracoesUsuario.Margin = new System.Windows.Forms.Padding(3, 3, 3, 8);
             this.ConfiguracoesUsuario.Name = "ConfiguracoesUsuario";
