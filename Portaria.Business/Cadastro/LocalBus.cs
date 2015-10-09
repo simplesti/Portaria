@@ -17,7 +17,13 @@ namespace Portaria.Business.Cadastro
         private Sessao sessao;
         public LocalBus(Sessao sessao)
         {
-            bd = PortariaContext.BD;
+            bd = new PortariaContext();
+            this.sessao = sessao;
+        }
+
+        public LocalBus(Sessao sessao, PortariaContext bd)
+        {
+            this.bd = bd;
             this.sessao = sessao;
         }
 

@@ -18,7 +18,7 @@ namespace Portaria.Business
 
         public EntidadeHelper()
         {
-            bd = PortariaContext.BD;
+            bd = new PortariaContext();
         }
 
         public IEnumerable<IEntidade> BuscaEntidades(ICollection<RegistroLivroNegroEntidade> registroLivroNegroEntidades)

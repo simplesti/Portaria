@@ -17,7 +17,10 @@ namespace Portaria.Business
 
         public static void Aquecer()
         {
-            var dummy = PortariaContext.BD.Usuarios.FirstOrDefault();
+            using (var bd = new PortariaContext())
+            {
+                var dummy = bd.Usuarios.FirstOrDefault();
+            }
 
             PortariaLog.Aquecer();
         }

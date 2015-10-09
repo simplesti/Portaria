@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CAF5BE63-755C-4C1C-AD33-2E4673329112}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Portaria.Desktop.Framework</RootNamespace>
+    <AssemblyName>Portaria.Desktop.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blocos\BlocoEventArgs.cs" />
+    <Compile Include="Blocos\BlocoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Blocos\BlocoItem.Designer.cs">
+      <DependentUpon>BlocoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoAdicionar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoAdicionar.Designer.cs">
+      <DependentUpon>BotaoAdicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoCapturarBiometria.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoCapturarBiometria.Designer.cs">
+      <DependentUpon>BotaoCapturarBiometria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoVerificarBiometria.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoVerificarBiometria.Designer.cs">
+      <DependentUpon>BotaoVerificarBiometria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoCancelar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoCancelar.Designer.cs">
+      <DependentUpon>BotaoCancelar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoEditar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoEditar.Designer.cs">
+      <DependentUpon>BotaoEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoOK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoOK.Designer.cs">
+      <DependentUpon>BotaoOK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoPesquisar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoPesquisar.Designer.cs">
+      <DependentUpon>BotaoPesquisar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoRemover.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoRemover.Designer.cs">
+      <DependentUpon>BotaoRemover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoSalvar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoSalvar.Designer.cs">
+      <DependentUpon>BotaoSalvar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaixasDeMensagem\CaixaMensagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaixasDeMensagem\CaixaMensagem.Designer.cs">
+      <DependentUpon>CaixaMensagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\ConfiguracoesUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\ConfiguracoesUsuario.Designer.cs">
+      <DependentUpon>ConfiguracoesUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBaseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBaseWindow.Designer.cs">
+      <DependentUpon>FormBaseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortariaTabControls\IPortariaTab.cs" />
+    <Compile Include="PortariaTabControls\PortariaTabBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PortariaTabControls\PortariaTabBase.Designer.cs">
+      <DependentUpon>PortariaTabBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortariaTabControls\PortariaTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PortariaTabControls\PortariaTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PortariaTabControls\PortariaTabPage.Designer.cs">
+      <DependentUpon>PortariaTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locais\LocalEventArgs.cs" />
+    <Compile Include="Locais\LocalItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Locais\LocalItem.Designer.cs">
+      <DependentUpon>LocalItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SessaoAtual.cs" />
+    <Compile Include="Unidades\UnidadeEventArgs.cs" />
+    <Compile Include="Unidades\UnidadeItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Unidades\UnidadeItem.Designer.cs">
+      <DependentUpon>UnidadeItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Blocos\BlocoItem.resx">
+      <DependentUpon>BlocoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botoes\BotaoEditar.resx">
+      <DependentUpon>BotaoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaixasDeMensagem\CaixaMensagem.resx">
+      <DependentUpon>CaixaMensagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\ConfiguracoesUsuario.resx">
+      <DependentUpon>ConfiguracoesUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBaseWindow.resx">
+      <DependentUpon>FormBaseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locais\LocalItem.resx">
+      <DependentUpon>LocalItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unidades\UnidadeItem.resx">
+      <DependentUpon>UnidadeItem.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Portaria.Business\Portaria.Business.csproj">
+      <Project>{b89c241b-70ac-46ab-b309-61fa0c88e035}</Project>
+      <Name>Portaria.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portaria.Core\Portaria.Core.csproj">
+      <Project>{0af0ac83-3fba-4758-af09-bc75e6cfc7a2}</Project>
+      <Name>Portaria.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revision-enterprise_3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fingerprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verifiedfingerprint.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

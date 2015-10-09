@@ -16,7 +16,13 @@ namespace Portaria.Business.Cadastro
 
         public BlocoBus(Sessao sessao)
         {
-            bd = PortariaContext.BD;
+            bd = new PortariaContext();
+            this.sessao = sessao;
+        }
+
+        public BlocoBus(Sessao sessao, PortariaContext bd)
+        {
+            this.bd = bd;
             this.sessao = sessao;
         }
 

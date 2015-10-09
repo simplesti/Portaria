@@ -18,9 +18,16 @@ namespace Portaria.Business.Cadastro
 
         public FuncionarioBus(Sessao sessao)
         {
-            bd = PortariaContext.BD;
+            bd = new PortariaContext();
             this.sessao = sessao;
         }
+
+        public FuncionarioBus(Sessao sessao, PortariaContext bd)
+        {
+            this.bd = bd;
+            this.sessao = sessao;
+        }
+
         public IEnumerable<Funcionario> Todos()
         {
             return bd.Funcionarios;

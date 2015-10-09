@@ -1,17 +1,13 @@
-﻿using Portaria.Core.Model;
-using Portaria.Data;
+﻿using Portaria.Business;
+using Portaria.Core.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
 namespace Portaria.Web.Controllers
 {
-    public class UsuarioController : Controller
+    public class UsuarioController : ControllerBase
     {
-        // GET: Usuario
         public ActionResult Index()
         {
             return View();
@@ -28,23 +24,40 @@ namespace Portaria.Web.Controllers
         {
             if (!string.IsNullOrEmpty(usuario.Login) && !string.IsNullOrEmpty(usuario.Senha))
             {
-                if (Validar(usuario.Login, usuario.Senha))
+                using (var bd = new UsuarioBus(null))
                 {
-                    FormsAuthentication.SetAuthCookie(usuario.Login, false);
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Dados de login incorretos.");
+                    try
+                    {
+                        var sessao = bd.EfetuarLogin(usuario.Login, usuario.Senha);
+                        if (sessao != null)
+                        {
+                            FormsAuthentication.SetAuthCookie(sessao.Id.ToString(), false);
+                            return RedirectToAction("Index", "Home");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        ViewBag.Error = ex.Message;
+                        return View(usuario);
+                    }
                 }
             }
 
             return View(usuario);
         }
-        
+
         public ActionResult LogOut()
         {
-            FormsAuthentication.SignOut();
+            using (var bd = new SessaoBus())
+            {
+                var sessao = SessaoAtual();
+                if (sessao != null)
+                {
+                    bd.FinalizarSessao(sessao);
+                    FormsAuthentication.SignOut();
+                }
+            }
+
             return RedirectToAction("Login", "Usuario");
         }
 
@@ -57,20 +70,21 @@ namespace Portaria.Web.Controllers
         [HttpPost]
         public ActionResult Registrar(Usuario usuario)
         {
-            if (ModelState.IsValid)
-            {
-                using (var bd = new PortariaContext())
-                {
-                    var u = bd.Usuarios.Create();
-                    u.CPF = usuario.CPF;
-                    u.Login = usuario.Login;
-                    u.Nome = usuario.Nome;
-                    u.RG = usuario.RG;
-                    u.Senha = getMD5Hash(usuario.Senha);
-                    u.Tipo = usuario.Tipo;
+            var sessao = SessaoAtual();
 
-                    bd.Usuarios.Add(u);
-                    bd.SaveChanges();
+            if (ModelState.IsValid && sessao != null)
+            {
+                using (var bd = new UsuarioBus(sessao))
+                {
+                    try
+                    {
+                        bd.InserirOuAtualizar(usuario);
+                    }
+                    catch (Exception ex)
+                    {
+                        ViewBag.Error = ex.Message;
+                        return View(usuario);
+                    }
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -81,39 +95,6 @@ namespace Portaria.Web.Controllers
             }
 
             return View(usuario);
-        }
-
-        public static string getMD5Hash(string input)
-        {
-            System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create();
-            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
-            byte[] hash = md5.ComputeHash(inputBytes);
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            for (int i = 0; i < hash.Length; i++)
-            {
-                sb.Append(hash[i].ToString("X2"));
-            }
-            return sb.ToString();
-        }
-
-        private bool Validar(string login, string senha)
-        {
-            bool result = false;
-
-            using (var bd = new PortariaContext())
-            {
-                var usuario = bd.Usuarios.FirstOrDefault(u => u.Login == login);
-
-                if (usuario != null)
-                {
-                    if (usuario.Senha == getMD5Hash(senha))
-                    {
-                        result = true;
-                    }
-                }
-            }
-
-            return result;
         }
     }
 }

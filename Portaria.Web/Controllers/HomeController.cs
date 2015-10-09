@@ -1,4 +1,4 @@
-﻿using Portaria.Data;
+﻿using Portaria.Business;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,20 +7,17 @@ using System.Web.Mvc;
 
 namespace Portaria.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ControllerBase
     {
         public ActionResult Index()
         {
             if (Request.IsAuthenticated)
             {
-                using (var bd = new PortariaContext())
+                var sessao = SessaoAtual();
+                if (sessao != null)
                 {
-                    var usuario = bd.Usuarios.FirstOrDefault(u => u.Login == User.Identity.Name);
-                    if (usuario != null)
-                    {
-                        ViewBag.NomeUsuario = usuario.Nome;
-                        ViewBag.TipoUsuario = usuario.Tipo;
-                    }
+                    ViewBag.NomeUsuario = sessao.UsuarioLogado.Nome;
+                    ViewBag.TipoUsuario = sessao.UsuarioLogado.Tipo;
                 }
                 return View();
             }

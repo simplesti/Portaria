@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -4325,13 +4326,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Portaria.Business\Portaria.Business.csproj">
+      <Project>{b89c241b-70ac-46ab-b309-61fa0c88e035}</Project>
+      <Name>Portaria.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Portaria.Core\Portaria.Core.csproj">
       <Project>{0af0ac83-3fba-4758-af09-bc75e6cfc7a2}</Project>
       <Name>Portaria.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Portaria.Data\Portaria.Data.csproj">
-      <Project>{cb8301c0-a5e8-4166-be8f-084dfe2632c7}</Project>
-      <Name>Portaria.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

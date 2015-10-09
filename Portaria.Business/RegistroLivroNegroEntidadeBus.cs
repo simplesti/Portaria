@@ -14,8 +14,14 @@ namespace Portaria.Business
         private PortariaContext bd;
         public RegistroLivroNegroEntidadeBus()
         {
-            bd = PortariaContext.BD;
+            bd = new PortariaContext();
         }
+
+        public RegistroLivroNegroEntidadeBus(PortariaContext bd)
+        {
+            this.bd = bd;
+        }
+        
         public IEnumerable<RegistroLivroNegroEntidade> Todos()
         {
             return bd.RegistroLivroNegroEntidades;

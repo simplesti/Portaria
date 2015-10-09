@@ -15,7 +15,12 @@ namespace Portaria.Business
 
         public SessaoBus()
         {
-            bd = PortariaContext.BD;
+            bd = new PortariaContext();
+        }
+
+        public SessaoBus(PortariaContext bd)
+        {
+            this.bd = bd;
         }
 
         public IEnumerable<Sessao> Todos()
@@ -52,7 +57,7 @@ namespace Portaria.Business
 
         public Sessao BuscaPorId(int id)
         {
-            return bd.Sessoes.FirstOrDefault(i => i.Id == id);
+            return bd.Sessoes.Include(q => q.UsuarioLogado).FirstOrDefault(i => i.Id == id);
         }
 
         public void Remover(Sessao entidade)
@@ -61,13 +66,13 @@ namespace Portaria.Business
             {
                 var s = bd.Sessoes.FirstOrDefault(i => i.Id == entidade.Id);
 
-                if(s != null)
+                if (s != null)
                 {
                     bd.Sessoes.Remove(s);
                     bd.SaveChanges();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -86,7 +91,7 @@ namespace Portaria.Business
 
                 return sessao;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -105,7 +110,7 @@ namespace Portaria.Business
                 s.DataHoraFim = DateTime.Now;
                 bd.SaveChanges();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }

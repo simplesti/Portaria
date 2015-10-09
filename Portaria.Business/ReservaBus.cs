@@ -17,7 +17,13 @@ namespace Portaria.Business
 
         public ReservaBus(Sessao sessao)
         {
-            bd = PortariaContext.BD;
+            bd = new PortariaContext();
+            this.sessao = sessao;
+        }
+
+        public ReservaBus(Sessao sessao, PortariaContext bd)
+        {
+            this.bd = bd;
             this.sessao = sessao;
         }
 

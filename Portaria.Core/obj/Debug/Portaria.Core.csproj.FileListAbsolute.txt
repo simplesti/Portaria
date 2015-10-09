@@ -11,6 +11,7 @@ C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\bin\Debug\Portaria.Core.
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\bin\Debug\Portaria.Core.pdb
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\obj\Debug\Portaria.Core.csprojResolveAssemblyReference.cache
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\obj\Debug\Portaria.Core.Properties.Resources.resources
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\obj\Debug\Portaria.Core.csproj.GenerateResource.Cache
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\obj\Debug\Portaria.Core.dll

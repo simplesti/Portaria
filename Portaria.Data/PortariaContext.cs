@@ -45,28 +45,6 @@ namespace Portaria.Data
 
     public class PortariaContext : DbContext
     {
-        private bool isDisposed;
-        protected override void Dispose(bool disposing)
-        {
-            isDisposed = true;
-            base.Dispose(disposing);
-        }
-
-        public static PortariaContext BD
-        {
-            get
-            {
-                if (bd == null ||bd.isDisposed)
-                {
-                    bd = new PortariaContext();
-                }
-
-                return bd;
-            }
-        }
-
-        private static PortariaContext bd;
-
         public IDbSet<RegistroLivroNegroEntidade> RegistroLivroNegroEntidades { get; set; }
 
         public IDbSet<RegistroLivroNegro> RegistrosLivroNegro { get; set; }
@@ -123,11 +101,6 @@ namespace Portaria.Data
                 .ToTable("Sessoes");
 
             base.OnModelCreating(modelBuilder);
-        }
-
-        public static void Refrescar()
-        {
-            bd = new PortariaContext();
         }
     }
 }

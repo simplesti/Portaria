@@ -18,7 +18,13 @@ namespace Portaria.Business.Cadastro
 
         public UnidadeBus(Sessao sessao)
         {
-            bd = PortariaContext.BD;
+            bd = new PortariaContext();
+            this.sessao = sessao;
+        }
+
+        public UnidadeBus(Sessao sessao, PortariaContext bd)
+        {
+            this.bd = bd;
             this.sessao = sessao;
         }
 
@@ -48,7 +54,7 @@ namespace Portaria.Business.Cadastro
             try
             {
                 var u = bd.Unidades.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
-                var blocoBus = new BlocoBus(this.sessao);
+                var blocoBus = new BlocoBus(this.sessao, this.bd);
 
                 if (u == null)
                 {
@@ -79,7 +85,7 @@ namespace Portaria.Business.Cadastro
                 u.Numero = entidade.Numero;
                 u.Inadimplente = entidade.Inadimplente;
 
-                var pessoaBus = new PessoaBus(this.sessao);
+                var pessoaBus = new PessoaBus(this.sessao, this.bd);
 
                 if (entidade.Proprietario != null)
                 {

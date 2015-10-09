@@ -31,7 +31,13 @@ namespace Portaria.Business
 
         public UsuarioBus(Sessao sessao)
         {
-            bd = PortariaContext.BD;
+            bd = new PortariaContext();
+            this.sessao = sessao;
+        }
+
+        public UsuarioBus(Sessao sessao, PortariaContext bd)
+        {
+            this.bd = bd;
             this.sessao = sessao;
         }
 
@@ -134,7 +140,7 @@ namespace Portaria.Business
                     throw new Exception("Senha incorreta.");
                 }
 
-                var sessaoBus = new SessaoBus();
+                var sessaoBus = new SessaoBus(this.bd);
                 return sessaoBus.InicializarSessao(u);
             }
             catch (Exception ex)
