@@ -1,6 +1,8 @@
 ﻿using Portaria.Business;
 using Portaria.Core.Model;
 using System;
+using System.Linq;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -8,9 +10,21 @@ namespace Portaria.Web.Controllers
 {
     public class UsuarioController : ControllerBase
     {
+        [Authorize]
         public ActionResult Index()
         {
-            return View();
+            var sessao = SessaoAtual();
+            if (sessao != null)
+            {
+                List<Usuario> usuarios;
+                using (var bd = new UsuarioBus(sessao))
+                {
+                    usuarios = bd.Todos().ToList();
+                }
+                return View(usuarios);
+            }
+
+            return RedirectToAction("Login", "Usuario");
         }
 
         [HttpGet]
@@ -58,15 +72,62 @@ namespace Portaria.Web.Controllers
                 }
             }
 
-            return RedirectToAction("Login", "Usuario");
+            return RedirectToAction("LogIn", "Usuario");
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult Registrar()
         {
             return View();
         }
 
+        [Authorize]
+        [HttpGet]
+        public ActionResult Editar(int? id)
+        {
+            var sessao = SessaoAtual();
+            if (sessao != null && id.HasValue)
+            {
+                using (var bd = new UsuarioBus(sessao))
+                {
+                    var usuario = bd.BuscarPorId(id.Value);
+                    if (usuario != null)
+                    {
+                        return View(usuario);
+                    }
+                }
+            }
+            return RedirectToAction("Index", "Usuario");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult Editar(Usuario usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                var sessao = SessaoAtual();
+                if (sessao != null && usuario != null)
+                {
+                    using (var bd = new UsuarioBus(sessao))
+                    {
+                        bd.InserirOuAtualizar(usuario);
+                    }
+                    return RedirectToAction("Index", "Usuario");
+                }
+            }
+            return View(usuario);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult AlterarSenha(string senhaAtual, string senhaNova)
+        {
+            return RedirectToAction("Index", "Usuario");    
+        }
+
+        [Authorize]
         [HttpPost]
         public ActionResult Registrar(Usuario usuario)
         {

@@ -49,6 +49,8 @@ namespace Portaria.Data
 
         public IDbSet<RegistroLivroNegro> RegistrosLivroNegro { get; set; }
 
+        public IDbSet<Configuracao> Configuracoes { get; set; }
+
         public IDbSet<Reserva> Reservas { get; set; }
 
         public IDbSet<Local> Locais { get; set; }
@@ -67,6 +69,8 @@ namespace Portaria.Data
 
         public IDbSet<Funcionario> Funcionarios { get; set; }
 
+        public IDbSet<CategoriaLivroNegro> CategoriasLivroNegro { get; set; }
+
         public PortariaContext()
             : base("PortariaContext")
         {
@@ -75,6 +79,10 @@ namespace Portaria.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Configuracao>()
+                .ToTable("Configuracoes");
+            modelBuilder.Entity<CategoriaLivroNegro>()
+                .ToTable("CategoriasLivroNegro");
             modelBuilder.Entity<RegistroLivroNegroEntidade>()
                 .ToTable("RegistroLivroNegroEntidades");
             modelBuilder.Entity<RegistroLivroNegro>()

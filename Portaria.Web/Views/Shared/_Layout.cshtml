@@ -8,10 +8,10 @@
     @Styles.Render("~/Content/css")
 </head>
 <body>
-    @if(Request.IsAuthenticated)
+    @if (Request.IsAuthenticated)
     {
-
         @RenderPage("~/Views/Shared/_Header.cshtml")
+        @RenderPage("~/Views/Shared/_SideMenu.cshtml")
     }
 
     @RenderBody()

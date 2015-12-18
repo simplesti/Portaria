@@ -112,6 +112,12 @@
     <Compile Include="CaixasDeMensagem\CaixaMensagem.Designer.cs">
       <DependentUpon>CaixaMensagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Config\Configuracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\Configuracoes.Designer.cs">
+      <DependentUpon>Configuracoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Config\ConfiguracoesUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CaixasDeMensagem\CaixaMensagem.resx">
       <DependentUpon>CaixaMensagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\Configuracoes.resx">
+      <DependentUpon>Configuracoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Config\ConfiguracoesUsuario.resx">
       <DependentUpon>ConfiguracoesUsuario.cs</DependentUpon>
@@ -264,6 +273,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\verifiedfingerprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ServidoresSMTP.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -45,6 +45,8 @@
             this.tabCadastrarUnidades1 = new Portaria.Unidades.TabCadastrarUnidades();
             this.tabPage8 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
             this.tabVisualizarUsuarios1 = new Portaria.Usuarios.TabVisualizarUsuarios();
+            this.tabPage9 = new Portaria.Desktop.Framework.Forms.PortariaTabPage();
+            this.tabVisualizarCategorias1 = new Portaria.LivroNegro.TabVisualizarCategorias();
             this.pnlConteudo.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -55,6 +57,7 @@
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlConteudo
@@ -74,6 +77,7 @@
             this.tabControl.Controls.Add(this.tabPage6);
             this.tabControl.Controls.Add(this.tabPage7);
             this.tabControl.Controls.Add(this.tabPage8);
+            this.tabControl.Controls.Add(this.tabPage9);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
@@ -249,6 +253,27 @@
             this.tabVisualizarUsuarios1.TabIndex = 0;
             this.tabVisualizarUsuarios1.TabVisualizar = null;
             // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage9.Controls.Add(this.tabVisualizarCategorias1);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(755, 391);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "Categorias";
+            // 
+            // tabVisualizarCategorias1
+            // 
+            this.tabVisualizarCategorias1.BackColor = System.Drawing.Color.White;
+            this.tabVisualizarCategorias1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabVisualizarCategorias1.Location = new System.Drawing.Point(3, 3);
+            this.tabVisualizarCategorias1.Name = "tabVisualizarCategorias1";
+            this.tabVisualizarCategorias1.Size = new System.Drawing.Size(749, 385);
+            this.tabVisualizarCategorias1.TabIndex = 0;
+            this.tabVisualizarCategorias1.TabVisualizar = null;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,6 +295,7 @@
             this.tabPage6.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
+            this.tabPage9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -293,7 +319,8 @@
         private Unidades.TabCadastrarUnidades tabCadastrarUnidades1;
         private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage8;
         private Usuarios.TabVisualizarUsuarios tabVisualizarUsuarios1;
-
+        private Portaria.Desktop.Framework.Forms.PortariaTabPage tabPage9;
+        private LivroNegro.TabVisualizarCategorias tabVisualizarCategorias1;
     }
 }
 

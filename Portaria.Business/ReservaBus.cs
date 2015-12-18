@@ -38,8 +38,8 @@ namespace Portaria.Business
             {
                 ValidarReserva(entidade);
 
-                var r = bd.Reservas.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
-                
+                var r = bd.Reservas.Where(i => i.Id == entidade.Id).FirstOrDefault();
+
                 if (r == null)
                 {
                     entidade.DataHora = DateTime.Now;
@@ -55,7 +55,8 @@ namespace Portaria.Business
                     return;
                 }
 
-                var entidadeOriginal = PortariaLog.SerializarEntidade(r);
+                var ro = bd.Reservas.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var entidadeOriginal = PortariaLog.SerializarEntidade(ro);
 
                 r.DataHora = DateTime.Now;
                 r.DataHoraFim = entidade.DataHoraFim;
@@ -77,6 +78,24 @@ namespace Portaria.Business
 
         private void ValidarReserva(Reserva reserva)
         {
+            var configuracaoBus = new ConfiguracaoBus(sessao, bd);
+
+            bool semRestricaoAntecedencia = false;
+            int diasAntecedencia = 0;
+            bool.TryParse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.SemRestricaoAntecedencia), out semRestricaoAntecedencia);
+            int.TryParse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.PrazoAntecedenciaReservaDias), out diasAntecedencia);
+
+            if (!semRestricaoAntecedencia)
+            {
+                var dataLimite = DateTime.Now.AddDays(diasAntecedencia);
+                if (reserva.DataHoraInicio > dataLimite)
+                {
+                    var dataDisponivel = reserva.DataHoraInicio.AddDays(-diasAntecedencia);
+                    throw new Exception(string.Format("O prazo máximo de antecedência para reserva é de {0} dias. Você poderá efetuar para a data {1} somente a partir de {2}.",
+                        diasAntecedencia, reserva.DataHoraInicio.ToString("dd/MM/yyyy HH:mm"), dataDisponivel.ToString("dd/MM/yyyy HH:mm")));
+                }
+            }
+
             if (reserva.Pessoa == null)
             {
                 throw new Exception("Você precisa selecionar uma pessoa para efetuar a reserva.");
@@ -91,7 +110,7 @@ namespace Portaria.Business
             {
                 throw new Exception("Esta unidade não está autorizada a efetuar reservas.");
             }
-            
+
             if (reserva.DataHoraFim == null || reserva.DataHoraInicio == null || reserva.DataHoraFim == DateTime.MinValue || reserva.DataHoraInicio == DateTime.MinValue)
             {
                 throw new Exception("Você precisa informar a data início e fim da reserva.");
@@ -114,8 +133,8 @@ namespace Portaria.Business
                 }
             }
         }
-        
-        public Reserva BuscaPorId(int id)
+
+        public Reserva BuscarPorId(int id)
         {
             return bd.Reservas.FirstOrDefault(r => r.Id == id);
         }

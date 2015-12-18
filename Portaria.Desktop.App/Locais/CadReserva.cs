@@ -4,6 +4,7 @@ using Portaria.Cadastro;
 using Portaria.Core.Model;
 using Portaria.Core.Model.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
+using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.Forms;
 using System;
 
@@ -11,12 +12,17 @@ namespace Portaria.Locais
 {
     public partial class CadReserva : FormBaseWindow
     {
+        private bool permitirEscolherFimReserva = false;
+        private int diasFimReserva = 0;
+        private TimeSpan horaFimReserva = TimeSpan.Zero;
+                
         private Reserva reserva;
 
         public Reserva Reserva
         {
             get
             {
+                reserva.DataHoraFim = dtFim.Value;
                 return reserva;
             }
 
@@ -38,12 +44,31 @@ namespace Portaria.Locais
         {
             InitializeComponent();
 
-            Reserva = new Reserva() { Local = local, DataHoraInicio = DateTime.Now, DataHoraFim = DateTime.Now };
+            CarregarConfigs();
+
+            Reserva = new Reserva() { Local = local };
+            dtInicio.Value = DateTime.Now;
+        }
+
+        private void CarregarConfigs()
+        {
+            if (!Util.IsInDesignMode())
+            {
+                var configuracaoBus = new ConfiguracaoBus(SessaoAtual.Sessao);
+
+                bool.TryParse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.PermitirEscolherFimReserva), out permitirEscolherFimReserva);
+                int.TryParse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.DuracaoReservaDias), out diasFimReserva);
+                TimeSpan.TryParse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.DuracaoReservaHora), out horaFimReserva);
+
+                dtFim.Enabled = permitirEscolherFimReserva;
+            }
         }
 
         public CadReserva(Reserva reserva)
         {
             InitializeComponent();
+
+            CarregarConfigs();
 
             Reserva = reserva;
 
@@ -112,6 +137,14 @@ namespace Portaria.Locais
             else
             {
                 txtUnidade.Text = string.Empty;
+            }
+        }
+
+        private void dtInicio_ValueChanged(object sender, EventArgs e)
+        {
+            if (!permitirEscolherFimReserva)
+            {
+                dtFim.Value = dtInicio.Value.Date.AddDays(diasFimReserva).AddHours(horaFimReserva.Hours).AddMinutes(horaFimReserva.Minutes);
             }
         }
     }

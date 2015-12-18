@@ -36,7 +36,7 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                var l = bd.Locais.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var l = bd.Locais.Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (l == null)
                 {
@@ -56,7 +56,8 @@ namespace Portaria.Business.Cadastro
                     throw new Exception("Local já cadastrado com este nome.");
                 }
 
-                var entidadeOriginal = PortariaLog.SerializarEntidade(l);
+                var lo = bd.Locais.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var entidadeOriginal = PortariaLog.SerializarEntidade(lo);
 
                 l.Nome = entidade.Nome;
                 l.Descricao = entidade.Descricao;
@@ -71,7 +72,7 @@ namespace Portaria.Business.Cadastro
             }
         }
 
-        public Local BuscaPorId(int id)
+        public Local BuscarPorId(int id)
         {
             return bd.Locais.FirstOrDefault(i => i.Id == id);
         }

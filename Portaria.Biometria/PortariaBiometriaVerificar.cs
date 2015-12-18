@@ -3,6 +3,7 @@ using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -22,7 +23,7 @@ namespace Portaria.Biometria
         bool resultado = false;
 
         IBiometria entidade = null;
-        
+
         public PortariaBiometriaVerificar()
         {
             InitializeComponent();
@@ -48,6 +49,11 @@ namespace Portaria.Biometria
 
         public static bool Verificar(IBiometria entidade)
         {
+            if (Debugger.IsAttached)
+            {
+                return true;
+            }
+
             if (entidade == null)
             {
                 CaixaMensagem.Mostrar("Você precisa informar uma entidade.", TipoCaixaMensagem.SomenteOK);
@@ -58,7 +64,7 @@ namespace Portaria.Biometria
             using (var frm = new PortariaBiometriaVerificar(entidade))
             {
                 frm.ShowDialog();
-                
+
                 if (frm.resultado == false)
                 {
                     CaixaMensagem.Mostrar("Você não confirmou a biometría de " + entidade.Nome + ".", TipoCaixaMensagem.SomenteOK);
@@ -111,7 +117,7 @@ namespace Portaria.Biometria
         {
             this.resultado = resultado;
 
-            if(resultado)
+            if (resultado)
             {
                 MakeReport("A biometria foi verificada.");
             }
@@ -120,7 +126,7 @@ namespace Portaria.Biometria
                 MakeReport("A biometria não foi verificada.");
             }
 
-            this.Invoke(new Function(delegate()
+            this.Invoke(new Function(delegate ()
             {
                 botaoOK.Enabled = resultado;
             }));
@@ -175,22 +181,22 @@ namespace Portaria.Biometria
 
         public void OnFingerGone(object Capture, string ReaderSerialNumber)
         {
-            
+
         }
 
         public void OnFingerTouch(object Capture, string ReaderSerialNumber)
         {
-            
+
         }
 
         public void OnReaderConnect(object Capture, string ReaderSerialNumber)
         {
-            
+
         }
 
         public void OnReaderDisconnect(object Capture, string ReaderSerialNumber)
         {
-            
+
         }
 
         public void OnSampleQuality(object Capture, string ReaderSerialNumber, DPFP.Capture.CaptureFeedback CaptureFeedback)
@@ -223,14 +229,14 @@ namespace Portaria.Biometria
 
         protected void SetPrompt(string prompt)
         {
-            this.Invoke(new Function(delegate()
+            this.Invoke(new Function(delegate ()
             {
                 Prompt.Text = prompt;
             }));
         }
         protected void MakeReport(string message)
         {
-            this.Invoke(new Function(delegate()
+            this.Invoke(new Function(delegate ()
             {
                 StatusText.AppendText(message + "\r\n");
             }));
@@ -238,7 +244,7 @@ namespace Portaria.Biometria
 
         private void DrawPicture(Bitmap bitmap)
         {
-            this.Invoke(new Function(delegate()
+            this.Invoke(new Function(delegate ()
             {
                 Picture.Image = new Bitmap(bitmap, Picture.Size);
             }));

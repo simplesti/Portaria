@@ -13,7 +13,7 @@ namespace Portaria.Business
 
         void InserirOuAtualizar(T entidade);
 
-        T BuscaPorId(int id);
+        T BuscarPorId(int id);
 
         void Remover(T entidade);
     }

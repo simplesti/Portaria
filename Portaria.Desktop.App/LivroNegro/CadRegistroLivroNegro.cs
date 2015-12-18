@@ -1,20 +1,19 @@
-﻿using Portaria.Business;
+﻿using Portaria.Biometria;
+using Portaria.Blocos;
+using Portaria.Business;
 using Portaria.Cadastro;
 using Portaria.Core.Model;
-using Portaria.Desktop.Framework.Forms;
-using System.Linq;
-using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using Portaria.Core.Model.CadastroMorador;
 using Portaria.Core.Model.Cadastro;
+using Portaria.Core.Model.CadastroMorador;
+using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.Forms;
 using Portaria.Locais;
 using Portaria.UnidadesBlocos;
-using Portaria.Blocos;
 using Portaria.Usuarios;
-using Portaria.Biometria;
-using Portaria.Desktop.Framework.CaixaMensagem;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Portaria.LivroNegro
 {
@@ -33,6 +32,7 @@ namespace Portaria.LivroNegro
             {
                 registro = value;
                 rtbMensagem.Text = registro.Mensagem;
+                cboCategoria.SelectedItem = registro.Categoria;
                 if (registro.Pessoa != null)
                 {
                     txtNomePessoa.Text = registro.Pessoa.Nome;
@@ -43,6 +43,7 @@ namespace Portaria.LivroNegro
         public CadRegistroLivroNegro()
         {
             InitializeComponent();
+            CarregarCategorias();
 
             Registro = new RegistroLivroNegro() { Data = DateTime.Now };
 
@@ -53,6 +54,7 @@ namespace Portaria.LivroNegro
         public CadRegistroLivroNegro(RegistroLivroNegro registro)
         {
             InitializeComponent();
+            CarregarCategorias();
 
             Registro = registro;
 
@@ -82,7 +84,7 @@ namespace Portaria.LivroNegro
         {
             if (PortariaBiometriaVerificar.Verificar(Registro.Pessoa))
             {
-
+                Registro.Categoria = cboCategoria.SelectedItem as CategoriaLivroNegro;
                 Registro.Mensagem = rtbMensagem.Text;
 
                 var registroLivroNegroBus = new RegistroLivroNegroBus(SessaoAtual.Sessao);
@@ -130,7 +132,7 @@ namespace Portaria.LivroNegro
         private void PopulaEntidades()
         {
             var entidadeHelper = new EntidadeHelper();
-            bsEntidades.DataSource = entidadeHelper.BuscaEntidades(Registro.Entidades).ToList();
+            bsEntidades.DataSource = entidadeHelper.BuscarEntidades(Registro.Entidades).ToList();
             dgvEntidades.Columns[0].Visible = false;
         }
 
@@ -214,6 +216,16 @@ namespace Portaria.LivroNegro
                 var entidadeSelecionada = (IEntidade)dgvEntidades.CurrentRow.DataBoundItem;
 
                 MostraEntidade(entidadeSelecionada);
+            }
+        }
+
+        private void CarregarCategorias()
+        {
+            if (!Util.IsInDesignMode())
+            {
+                var categoriaBus = new CategoriaLivroNegroBus(SessaoAtual.Sessao);
+                var categorias = categoriaBus.Todos().ToList();
+                cboCategoria.DataSource = categorias;
             }
         }
     }

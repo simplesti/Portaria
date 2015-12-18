@@ -50,7 +50,7 @@ namespace Portaria.Business
         {
             try
             {
-                var u = bd.Usuarios.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var u = bd.Usuarios.Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (u == null)
                 {
@@ -72,21 +72,22 @@ namespace Portaria.Business
                     throw new Exception("Usuário já cadastrado com este nome ou login.");
                 }
 
-                var entidadeOriginal = PortariaLog.SerializarEntidade(u);
+                var uo = bd.Usuarios.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var entidadeOriginal = PortariaLog.SerializarEntidade(uo);
 
                 u.Login = entidade.Login;
                 u.Biometria = entidade.Biometria;
                 u.CPF = entidade.CPF;
                 u.RG = entidade.RG;
                 u.Nome = entidade.Nome;
-                if (u.Senha != entidade.Senha)
+                if (entidade.Senha != string.Empty && u.Senha != entidade.Senha)
                 {
                     u.Senha = getMD5Hash(entidade.Senha);
                 }
                 u.Tipo = entidade.Tipo;
                 u.CorTema = entidade.CorTema;
                 u.PosicaoAbas = entidade.PosicaoAbas;
-
+                
                 bd.SaveChanges();
 
                 PortariaLog.Logar(u.Id, entidadeOriginal, PortariaLog.SerializarEntidade(u), u.TipoEntidade, sessao.Id, Core.Model.Log.TipoAlteracao.Alterar);
@@ -97,7 +98,7 @@ namespace Portaria.Business
             }
         }
 
-        public Usuario BuscaPorId(int id)
+        public Usuario BuscarPorId(int id)
         {
             return bd.Usuarios.FirstOrDefault(u => u.Id == id);
         }

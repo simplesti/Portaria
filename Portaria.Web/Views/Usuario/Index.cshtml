@@ -1,7 +1,49 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@model System.Collections.Generic.IEnumerable<Portaria.Core.Model.Usuario>
+
+@{
+    ViewBag.Title = "Usuários";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<html>
+<body>
+    <section id="content">
+        <div class="container">
+            <div class="block-header">
+                <h2>Cadastro de Usuários</h2>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2>
+                        Usuários Cadastrados
+                    </h2>
+                </div>
 
+                <div class="card-body table-responsive" style="overflow: hidden;" tabindex="0">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Login</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Portaria.Core.Model.Usuario u in Model)
+                            {
+                                <tr>
+                                    <td>@u.Nome</td>
+                                    <td>@u.Login</td>
+                                    <td>@u.Tipo.ToString()</td>
+                                    <td><button onclick="location.href = '@Url.Action("Editar", "Usuario", new { u.Id })'" class="btn bgm-lightgreen btn-icon waves-effect waves-circle waves-float"><i class="zmdi zmdi-edit"></i></button></td>
+                                    <td><button onclick="location.href = '@Url.Action("Excluir", "Usuario", new { u.Id })'" class="btn bgm-red btn-icon waves-effect waves-circle waves-float"><i class="zmdi zmdi-delete zmi-hc-fw"></i></button></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+    </section>
+</body>
+</html>

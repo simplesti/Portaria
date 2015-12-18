@@ -105,7 +105,7 @@ namespace Portaria.Locais
         {
             var id = int.Parse(dgvReservas.SelectedRows[0].Cells[0].Value.ToString());
             var reservaBus = new ReservaBus(SessaoAtual.Sessao);
-            var r = reservaBus.BuscaPorId(id);
+            var r = reservaBus.BuscarPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover a reserva da data  " + r.DataHoraInicio.ToString("dd/MM/yyyy HH:mm:ss") + " ?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
             {
@@ -127,14 +127,14 @@ namespace Portaria.Locais
         {
             var id = int.Parse(dgvReservas.SelectedRows[0].Cells[0].Value.ToString());
             var reservaBus = new ReservaBus(SessaoAtual.Sessao);
-            var r = reservaBus.BuscaPorId(id);
+            var r = reservaBus.BuscarPorId(id);
 
             using (var frm = new CadReserva(r))
             {
                 frm.ShowDialog();
             }
 
-            dgvReservas.Refresh();
+            CarregarUltimasReservas();
         }
     }
 }

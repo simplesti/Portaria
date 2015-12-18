@@ -9,22 +9,10 @@ namespace Portaria.Web.Controllers
 {
     public class HomeController : ControllerBase
     {
+        [Authorize]
         public ActionResult Index()
         {
-            if (Request.IsAuthenticated)
-            {
-                var sessao = SessaoAtual();
-                if (sessao != null)
-                {
-                    ViewBag.NomeUsuario = sessao.UsuarioLogado.Nome;
-                    ViewBag.TipoUsuario = sessao.UsuarioLogado.Tipo;
-                }
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("Login", "Usuario");
-            }
+            return View();
         }
     }
 }

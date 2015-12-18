@@ -132,11 +132,23 @@
     <Compile Include="Cadastro\SelecionaPessoa.Designer.cs">
       <DependentUpon>SelecionaPessoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="LivroNegro\CadCategoriaLivroNegro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivroNegro\CadCategoriaLivroNegro.Designer.cs">
+      <DependentUpon>CadCategoriaLivroNegro.cs</DependentUpon>
+    </Compile>
     <Compile Include="LivroNegro\CadRegistroLivroNegro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LivroNegro\CadRegistroLivroNegro.Designer.cs">
       <DependentUpon>CadRegistroLivroNegro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LivroNegro\TabVisualizarCategorias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LivroNegro\TabVisualizarCategorias.Designer.cs">
+      <DependentUpon>TabVisualizarCategorias.cs</DependentUpon>
     </Compile>
     <Compile Include="LivroNegro\TabVisualizarLivroNegro.cs">
       <SubType>UserControl</SubType>
@@ -257,8 +269,14 @@
     <EmbeddedResource Include="Cadastro\SelecionaPessoa.resx">
       <DependentUpon>SelecionaPessoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LivroNegro\CadCategoriaLivroNegro.resx">
+      <DependentUpon>CadCategoriaLivroNegro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LivroNegro\CadRegistroLivroNegro.resx">
       <DependentUpon>CadRegistroLivroNegro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LivroNegro\TabVisualizarCategorias.resx">
+      <DependentUpon>TabVisualizarCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LivroNegro\TabVisualizarLivroNegro.resx">
       <DependentUpon>TabVisualizarLivroNegro.cs</DependentUpon>
@@ -324,6 +342,7 @@
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Pessoa.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Unidade.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.CadastroMorador.Veiculo.datasource" />
+    <None Include="Properties\DataSources\Portaria.Core.Model.CategoriaLivroNegro.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.IEntidade.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.RegistroLivroNegro.datasource" />
     <None Include="Properties\DataSources\Portaria.Core.Model.RegistroLivroNegroEntidade.datasource" />

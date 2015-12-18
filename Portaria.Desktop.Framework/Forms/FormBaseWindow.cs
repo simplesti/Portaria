@@ -3,6 +3,8 @@ using Portaria.Business;
 using Portaria.Config;
 using System;
 using System.Drawing;
+using System.Windows.Forms;
+
 namespace Portaria.Desktop.Framework.Forms
 {
     public partial class FormBaseWindow : FormBase
@@ -86,9 +88,15 @@ namespace Portaria.Desktop.Framework.Forms
             }
         }
 
-        private void pnlConteudo_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
+        private void Icone_Click(object sender, EventArgs e)
         {
-
+            if (SessaoAtual.Sessao != null && SessaoAtual.Sessao.UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
+            {
+                using (var frm = new Configuracoes())
+                {
+                    frm.ShowDialog();
+                }
+            }
         }
     }
 }

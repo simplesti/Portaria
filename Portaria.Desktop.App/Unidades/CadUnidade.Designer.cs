@@ -56,8 +56,6 @@
             this.foneCelularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grauParentescoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inadimplenteDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.veiculosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidadesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsPessoasAutorizadas = new System.Windows.Forms.BindingSource(this.components);
@@ -353,6 +351,8 @@
             // 
             // dgvAutorizadas
             // 
+            this.dgvAutorizadas.AllowUserToAddRows = false;
+            this.dgvAutorizadas.AllowUserToDeleteRows = false;
             this.dgvAutorizadas.AllowUserToResizeRows = false;
             this.dgvAutorizadas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -370,14 +370,13 @@
             this.foneCelularDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.grauParentescoDataGridViewTextBoxColumn,
-            this.inadimplenteDataGridViewCheckBoxColumn,
-            this.fotoDataGridViewImageColumn,
             this.veiculosDataGridViewTextBoxColumn,
             this.unidadesDataGridViewTextBoxColumn});
             this.tlpCampos.SetColumnSpan(this.dgvAutorizadas, 3);
             this.dgvAutorizadas.DataSource = this.bsPessoasAutorizadas;
             this.dgvAutorizadas.Location = new System.Drawing.Point(3, 146);
             this.dgvAutorizadas.Name = "dgvAutorizadas";
+            this.dgvAutorizadas.ReadOnly = true;
             this.dgvAutorizadas.RowHeadersVisible = false;
             this.tlpCampos.SetRowSpan(this.dgvAutorizadas, 2);
             this.dgvAutorizadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -391,6 +390,7 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 2;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             this.idDataGridViewTextBoxColumn.Width = 2;
             // 
@@ -421,6 +421,7 @@
             this.foneResidencialDataGridViewTextBoxColumn.DataPropertyName = "FoneResidencial";
             this.foneResidencialDataGridViewTextBoxColumn.HeaderText = "FoneResidencial";
             this.foneResidencialDataGridViewTextBoxColumn.Name = "foneResidencialDataGridViewTextBoxColumn";
+            this.foneResidencialDataGridViewTextBoxColumn.ReadOnly = true;
             this.foneResidencialDataGridViewTextBoxColumn.Visible = false;
             // 
             // foneComercialDataGridViewTextBoxColumn
@@ -428,6 +429,7 @@
             this.foneComercialDataGridViewTextBoxColumn.DataPropertyName = "FoneComercial";
             this.foneComercialDataGridViewTextBoxColumn.HeaderText = "FoneComercial";
             this.foneComercialDataGridViewTextBoxColumn.Name = "foneComercialDataGridViewTextBoxColumn";
+            this.foneComercialDataGridViewTextBoxColumn.ReadOnly = true;
             this.foneComercialDataGridViewTextBoxColumn.Visible = false;
             // 
             // foneCelularDataGridViewTextBoxColumn
@@ -435,6 +437,7 @@
             this.foneCelularDataGridViewTextBoxColumn.DataPropertyName = "FoneCelular";
             this.foneCelularDataGridViewTextBoxColumn.HeaderText = "FoneCelular";
             this.foneCelularDataGridViewTextBoxColumn.Name = "foneCelularDataGridViewTextBoxColumn";
+            this.foneCelularDataGridViewTextBoxColumn.ReadOnly = true;
             this.foneCelularDataGridViewTextBoxColumn.Visible = false;
             // 
             // emailDataGridViewTextBoxColumn
@@ -442,6 +445,7 @@
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             this.emailDataGridViewTextBoxColumn.Visible = false;
             // 
             // grauParentescoDataGridViewTextBoxColumn
@@ -449,27 +453,15 @@
             this.grauParentescoDataGridViewTextBoxColumn.DataPropertyName = "GrauParentesco";
             this.grauParentescoDataGridViewTextBoxColumn.HeaderText = "GrauParentesco";
             this.grauParentescoDataGridViewTextBoxColumn.Name = "grauParentescoDataGridViewTextBoxColumn";
+            this.grauParentescoDataGridViewTextBoxColumn.ReadOnly = true;
             this.grauParentescoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // inadimplenteDataGridViewCheckBoxColumn
-            // 
-            this.inadimplenteDataGridViewCheckBoxColumn.DataPropertyName = "Inadimplente";
-            this.inadimplenteDataGridViewCheckBoxColumn.HeaderText = "Inadimplente";
-            this.inadimplenteDataGridViewCheckBoxColumn.Name = "inadimplenteDataGridViewCheckBoxColumn";
-            this.inadimplenteDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fotoDataGridViewImageColumn
-            // 
-            this.fotoDataGridViewImageColumn.DataPropertyName = "Foto";
-            this.fotoDataGridViewImageColumn.HeaderText = "Foto";
-            this.fotoDataGridViewImageColumn.Name = "fotoDataGridViewImageColumn";
-            this.fotoDataGridViewImageColumn.Visible = false;
             // 
             // veiculosDataGridViewTextBoxColumn
             // 
             this.veiculosDataGridViewTextBoxColumn.DataPropertyName = "Veiculos";
             this.veiculosDataGridViewTextBoxColumn.HeaderText = "Veiculos";
             this.veiculosDataGridViewTextBoxColumn.Name = "veiculosDataGridViewTextBoxColumn";
+            this.veiculosDataGridViewTextBoxColumn.ReadOnly = true;
             this.veiculosDataGridViewTextBoxColumn.Visible = false;
             // 
             // unidadesDataGridViewTextBoxColumn
@@ -477,6 +469,7 @@
             this.unidadesDataGridViewTextBoxColumn.DataPropertyName = "Unidades";
             this.unidadesDataGridViewTextBoxColumn.HeaderText = "Unidades";
             this.unidadesDataGridViewTextBoxColumn.Name = "unidadesDataGridViewTextBoxColumn";
+            this.unidadesDataGridViewTextBoxColumn.ReadOnly = true;
             this.unidadesDataGridViewTextBoxColumn.Visible = false;
             // 
             // bsPessoasAutorizadas
@@ -503,6 +496,8 @@
             // 
             // dgvFuncionarios
             // 
+            this.dgvFuncionarios.AllowUserToAddRows = false;
+            this.dgvFuncionarios.AllowUserToDeleteRows = false;
             this.dgvFuncionarios.AllowUserToResizeRows = false;
             this.dgvFuncionarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -633,6 +628,8 @@
             // 
             // dgvVeiculos
             // 
+            this.dgvVeiculos.AllowUserToAddRows = false;
+            this.dgvVeiculos.AllowUserToDeleteRows = false;
             this.dgvVeiculos.AllowUserToResizeRows = false;
             this.dgvVeiculos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -652,6 +649,7 @@
             this.dgvVeiculos.DataSource = this.bsVeiculo;
             this.dgvVeiculos.Location = new System.Drawing.Point(3, 261);
             this.dgvVeiculos.Name = "dgvVeiculos";
+            this.dgvVeiculos.ReadOnly = true;
             this.dgvVeiculos.RowHeadersVisible = false;
             this.tlpCampos.SetRowSpan(this.dgvVeiculos, 2);
             this.dgvVeiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -664,6 +662,7 @@
             this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
             this.idDataGridViewTextBoxColumn2.Visible = false;
             // 
             // nomeDataGridViewTextBoxColumn2
@@ -671,6 +670,7 @@
             this.nomeDataGridViewTextBoxColumn2.DataPropertyName = "Nome";
             this.nomeDataGridViewTextBoxColumn2.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn2.Name = "nomeDataGridViewTextBoxColumn2";
+            this.nomeDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // placaDataGridViewTextBoxColumn
             // 
@@ -678,18 +678,21 @@
             this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
             this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
             this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
+            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // corDataGridViewTextBoxColumn
             // 
             this.corDataGridViewTextBoxColumn.DataPropertyName = "Cor";
             this.corDataGridViewTextBoxColumn.HeaderText = "Cor";
             this.corDataGridViewTextBoxColumn.Name = "corDataGridViewTextBoxColumn";
+            this.corDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // fotoDataGridViewImageColumn2
             // 
             this.fotoDataGridViewImageColumn2.DataPropertyName = "Foto";
             this.fotoDataGridViewImageColumn2.HeaderText = "Foto";
             this.fotoDataGridViewImageColumn2.Name = "fotoDataGridViewImageColumn2";
+            this.fotoDataGridViewImageColumn2.ReadOnly = true;
             this.fotoDataGridViewImageColumn2.Visible = false;
             // 
             // unidadeDataGridViewTextBoxColumn1
@@ -697,6 +700,7 @@
             this.unidadeDataGridViewTextBoxColumn1.DataPropertyName = "Unidade";
             this.unidadeDataGridViewTextBoxColumn1.HeaderText = "Unidade";
             this.unidadeDataGridViewTextBoxColumn1.Name = "unidadeDataGridViewTextBoxColumn1";
+            this.unidadeDataGridViewTextBoxColumn1.ReadOnly = true;
             this.unidadeDataGridViewTextBoxColumn1.Visible = false;
             // 
             // proprietarioDataGridViewTextBoxColumn
@@ -704,6 +708,7 @@
             this.proprietarioDataGridViewTextBoxColumn.DataPropertyName = "Proprietario";
             this.proprietarioDataGridViewTextBoxColumn.HeaderText = "Proprietario";
             this.proprietarioDataGridViewTextBoxColumn.Name = "proprietarioDataGridViewTextBoxColumn";
+            this.proprietarioDataGridViewTextBoxColumn.ReadOnly = true;
             this.proprietarioDataGridViewTextBoxColumn.Visible = false;
             // 
             // bsVeiculo
@@ -950,6 +955,7 @@
             this.chkInadimplente.TabIndex = 36;
             this.chkInadimplente.Text = "Inadimplente";
             this.chkInadimplente.UseVisualStyleBackColor = true;
+            this.chkInadimplente.Visible = false;
             // 
             // CadUnidade
             // 
@@ -1022,8 +1028,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn foneCelularDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn grauParentescoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn inadimplenteDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn veiculosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidadesDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bsFuncionarios;

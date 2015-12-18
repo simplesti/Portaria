@@ -105,6 +105,7 @@
             // 
             // Icone
             // 
+            this.Icone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icone.Image = global::Portaria.Desktop.Framework.Properties.Resources.revision_enterprise_3d;
             this.Icone.Location = new System.Drawing.Point(3, 3);
             this.Icone.Name = "Icone";
@@ -112,6 +113,7 @@
             this.Icone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Icone.TabIndex = 4;
             this.Icone.TabStop = false;
+            this.Icone.Click += new System.EventHandler(this.Icone_Click);
             // 
             // Fechar
             // 
@@ -184,7 +186,6 @@
             this.pnlConteudo.Name = "pnlConteudo";
             this.pnlConteudo.Size = new System.Drawing.Size(763, 417);
             this.pnlConteudo.TabIndex = 0;
-            this.pnlConteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlConteudo_Paint);
             // 
             // FormBaseWindow
             // 

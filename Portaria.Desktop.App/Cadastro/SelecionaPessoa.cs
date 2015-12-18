@@ -59,7 +59,7 @@ namespace Portaria.Cadastro
         private void Pesquisar()
         {
             var pessoaBus = new PessoaBus(SessaoAtual.Sessao);
-            var query = pessoaBus.BuscaPorNome(txtPesquisar.Text).AsQueryable();
+            var query = pessoaBus.BuscarPorNome(txtPesquisar.Text).AsQueryable();
 
             if (chkSomente30.Checked)
             {
@@ -118,7 +118,16 @@ namespace Portaria.Cadastro
         {
             using (var frm = new CadPessoa())
             {
+                frm.Pessoa.Nome = txtPesquisar.Text;
+
                 frm.ShowDialog();
+
+                if (frm.Pessoa != null)
+                {
+                    this.pessoaSelecionada = frm.Pessoa;
+                    this.Close();
+                }
+
             }
 
             Pesquisar();

@@ -49,7 +49,7 @@ namespace Portaria.Config
         private void Salvar()
         {
             var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
-            var u = usuarioBus.BuscaPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
+            var u = usuarioBus.BuscarPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
 
             u.CorTema = (Int32)cboCor.SelectedValue;
 

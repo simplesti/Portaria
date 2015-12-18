@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Linq;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Core.Model;
+using Portaria.Desktop.Framework;
 
 namespace Portaria.Usuarios
 {
@@ -15,7 +16,10 @@ namespace Portaria.Usuarios
         {
             InitializeComponent();
 
-            CarregarUsuarios();
+            if (!Util.IsInDesignMode())
+            {
+                CarregarUsuarios();
+            }
         }
 
         private void CarregarUsuarios()
@@ -44,14 +48,14 @@ namespace Portaria.Usuarios
         {
             var id = int.Parse(dgvUsuarios.SelectedRows[0].Cells[0].Value.ToString());
             var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
-            var u = usuarioBus.BuscaPorId(id);
+            var u = usuarioBus.BuscarPorId(id);
 
             using (var frm = new CadUsuario(u))
             {
                 frm.ShowDialog();
             }
 
-            dgvUsuarios.Refresh();
+            dgvUsuarios.DataSource = usuarioBus.Todos().ToList();
         }
 
         private void botaoAdicionar_Click(object sender, System.EventArgs e)
@@ -82,7 +86,7 @@ namespace Portaria.Usuarios
         {
             var id = int.Parse(dgvUsuarios.SelectedRows[0].Cells[0].Value.ToString());
             var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
-            var u = usuarioBus.BuscaPorId(id);
+            var u = usuarioBus.BuscarPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover o usuário " + u.Nome + " ?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
             {

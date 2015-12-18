@@ -33,12 +33,12 @@ namespace Portaria.Business.Cadastro
             return bd.Pessoas;
         }
 
-        public Pessoa BuscaPorId(int id)
+        public Pessoa BuscarPorId(int id)
         {
             return bd.Pessoas.FirstOrDefault(i => i.Id == id);
         }
 
-        public IEnumerable<Pessoa> BuscaPorNome(string nome)
+        public IEnumerable<Pessoa> BuscarPorNome(string nome)
         {
             return bd.Pessoas.Where(i => i.Nome.ToUpper().Contains(nome.ToUpper()));
         }
@@ -48,7 +48,7 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                var p = bd.Pessoas.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var p = bd.Pessoas.Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (p == null)
                 {
@@ -69,7 +69,8 @@ namespace Portaria.Business.Cadastro
                     throw new Exception("Pessoa já cadastrada com este nome.");
                 }
 
-                var entidadeOriginal = PortariaLog.SerializarEntidade(p);
+                var po = bd.Pessoas.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var entidadeOriginal = PortariaLog.SerializarEntidade(po);
 
                 p.Email = entidade.Email;
                 p.FoneCelular = entidade.FoneCelular;

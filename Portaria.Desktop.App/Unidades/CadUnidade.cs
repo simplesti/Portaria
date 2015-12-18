@@ -92,7 +92,7 @@ namespace Portaria
             if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
             {
                 botaoSalvar.Visible = false;
-                
+
                 btnAddAutorizada.Visible = false;
                 btnRemAutorizada.Visible = false;
 
@@ -173,7 +173,7 @@ namespace Portaria
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
             unidadeBus.InserirOuAtualizar(Unidade);
 
-            Unidade = unidadeBus.BuscaPorId(Unidade.Id);
+            Unidade = unidadeBus.BuscarPorId(Unidade.Id);
         }
 
         private void EditarConjuge()
@@ -188,7 +188,7 @@ namespace Portaria
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
             unidadeBus.InserirOuAtualizar(Unidade);
 
-            Unidade = unidadeBus.BuscaPorId(Unidade.Id);
+            Unidade = unidadeBus.BuscarPorId(Unidade.Id);
         }
 
         private void EditarLocatario()
@@ -203,7 +203,7 @@ namespace Portaria
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
             unidadeBus.InserirOuAtualizar(Unidade);
 
-            Unidade = unidadeBus.BuscaPorId(Unidade.Id);
+            Unidade = unidadeBus.BuscarPorId(Unidade.Id);
         }
 
         private void btnAddAutorizada_Click(object sender, EventArgs e)
@@ -214,7 +214,7 @@ namespace Portaria
         private void AdicionarPessoaAutorizada()
         {
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
-            var u = unidadeBus.BuscaPorId(Unidade.Id);
+            var u = unidadeBus.BuscarPorId(Unidade.Id);
 
             if (Unidade.Id == 0)
             {
@@ -225,7 +225,7 @@ namespace Portaria
 
             unidadeBus.AdicionarAutorizado(p, Unidade);
 
-            dgvAutorizadas.DataSource = u.Autorizados.ToList();
+            CarregarAutorizados();
         }
 
         private void dgvAutorizadas_CellMouseDoubleClick(object sender, System.Windows.Forms.DataGridViewCellMouseEventArgs e)
@@ -240,14 +240,14 @@ namespace Portaria
         {
             var id = int.Parse(dgvAutorizadas.SelectedRows[0].Cells[0].Value.ToString());
             var pessoaBus = new PessoaBus(SessaoAtual.Sessao);
-            var p = pessoaBus.BuscaPorId(id);
+            var p = pessoaBus.BuscarPorId(id);
 
             using (var frm = new CadPessoa(p))
             {
                 frm.ShowDialog();
             }
 
-            dgvAutorizadas.Refresh();
+            CarregarAutorizados();
         }
 
         private void btnRemAutorizada_Click(object sender, EventArgs e)
@@ -262,14 +262,14 @@ namespace Portaria
         {
             var id = int.Parse(dgvAutorizadas.SelectedRows[0].Cells[0].Value.ToString());
             var pessoaBus = new PessoaBus(SessaoAtual.Sessao);
-            var p = pessoaBus.BuscaPorId(id);
+            var p = pessoaBus.BuscarPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover " + p.Nome + " das pessoas autorizadas desta unidade?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
             {
                 var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
                 unidadeBus.RemoverAutorizado(p, Unidade);
 
-                dgvAutorizadas.DataSource = unidade.Autorizados.ToList();
+                CarregarAutorizados();
             }
         }
 
@@ -282,7 +282,7 @@ namespace Portaria
         {
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
             var f = new Funcionario();
-            var u = unidadeBus.BuscaPorId(Unidade.Id);
+            var u = unidadeBus.BuscarPorId(Unidade.Id);
 
             if (Unidade.Id == 0)
             {
@@ -302,7 +302,7 @@ namespace Portaria
 
             unidadeBus.InserirOuAtualizar(u);
 
-            dgvFuncionarios.DataSource = u.Funcionarios.ToList();
+            CarregarFuncionarios();
         }
 
         private void btnRemFuncionario_Click(object sender, EventArgs e)
@@ -314,13 +314,13 @@ namespace Portaria
         {
             var id = int.Parse(dgvFuncionarios.SelectedRows[0].Cells[0].Value.ToString());
             var funcionarioBus = new FuncionarioBus(SessaoAtual.Sessao);
-            var f = funcionarioBus.BuscaPorId(id);
+            var f = funcionarioBus.BuscarPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover " + f.Nome + " dos funcionários desta unidade?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
             {
                 funcionarioBus.Remover(f);
 
-                dgvFuncionarios.DataSource = unidade.Funcionarios.ToList();
+                CarregarFuncionarios();
             }
         }
 
@@ -341,13 +341,13 @@ namespace Portaria
         {
             var id = int.Parse(dgvVeiculos.SelectedRows[0].Cells[0].Value.ToString());
             var veiculoBus = new VeiculoBus(SessaoAtual.Sessao);
-            var v = veiculoBus.BuscaPorId(id);
+            var v = veiculoBus.BuscarPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover " + v.Nome + " dos veículos desta unidade?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
             {
                 veiculoBus.Remover(v);
 
-                dgvVeiculos.DataSource = unidade.Veiculos.ToList();
+                CarregarVeiculos();
             }
         }
 
@@ -355,7 +355,7 @@ namespace Portaria
         {
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
             var v = new Veiculo();
-            var u = unidadeBus.BuscaPorId(Unidade.Id);
+            var u = unidadeBus.BuscarPorId(Unidade.Id);
 
             if (Unidade.Id == 0)
             {
@@ -375,7 +375,7 @@ namespace Portaria
 
             unidadeBus.InserirOuAtualizar(u);
 
-            dgvVeiculos.DataSource = u.Veiculos.ToList();
+            CarregarVeiculos();
         }
 
         private void dgvVeiculos_DoubleClick(object sender, EventArgs e)
@@ -390,14 +390,14 @@ namespace Portaria
         {
             var id = int.Parse(dgvVeiculos.SelectedRows[0].Cells[0].Value.ToString());
             var veiculoBus = new VeiculoBus(SessaoAtual.Sessao);
-            var v = veiculoBus.BuscaPorId(id);
+            var v = veiculoBus.BuscarPorId(id);
 
             using (var frm = new CadVeiculo(v))
             {
                 frm.ShowDialog();
             }
 
-            dgvVeiculos.Refresh();
+            CarregarVeiculos();
         }
 
         private void dgvFuncionarios_CellMouseDoubleClick(object sender, System.Windows.Forms.DataGridViewCellMouseEventArgs e)
@@ -412,14 +412,35 @@ namespace Portaria
         {
             var id = int.Parse(dgvFuncionarios.SelectedRows[0].Cells[0].Value.ToString());
             var funcionarioBus = new FuncionarioBus(SessaoAtual.Sessao);
-            var f = funcionarioBus.BuscaPorId(id);
+            var f = funcionarioBus.BuscarPorId(id);
 
             using (var frm = new CadFuncionario(f))
             {
                 frm.ShowDialog();
             }
 
-            dgvFuncionarios.Refresh();
+            CarregarFuncionarios();
+        }
+
+        private void CarregarVeiculos()
+        {
+            var veiculoBus = new VeiculoBus(SessaoAtual.Sessao);
+            var veiculos = veiculoBus.BuscarPorUnidade(unidade.Id).ToList();
+            dgvVeiculos.DataSource = veiculos;
+        }
+
+        private void CarregarFuncionarios()
+        {
+            var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
+            var funcionarios = unidadeBus.BuscarFuncionarios(unidade.Id).ToList();
+            dgvFuncionarios.DataSource = funcionarios;
+        }
+        
+        private void CarregarAutorizados()
+        {
+            var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
+            var autorizados = unidadeBus.BuscarAutorizados(unidade.Id).ToList();
+            dgvAutorizadas.DataSource = autorizados;
         }
     }
 }

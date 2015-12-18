@@ -59,6 +59,8 @@
     <Compile Include="Model\Cadastro\Pessoa.cs" />
     <Compile Include="Model\Cadastro\Unidade.cs" />
     <Compile Include="Model\Cadastro\Veiculo.cs" />
+    <Compile Include="Model\CategoriaLivroNegro.cs" />
+    <Compile Include="Model\Configuracao.cs" />
     <Compile Include="Model\IEntidade.cs" />
     <Compile Include="Model\Log\Alteracao.cs" />
     <Compile Include="Model\Log\TipoAlteracao.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Model\Sessao.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoConfiguracao.cs" />
     <Compile Include="TipoUsuario.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

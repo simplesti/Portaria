@@ -37,7 +37,7 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                var v = bd.Veiculos.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var v = bd.Veiculos.Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (v == null)
                 {
@@ -48,7 +48,8 @@ namespace Portaria.Business.Cadastro
                     return;
                 }
 
-                var entidadeOriginal = PortariaLog.SerializarEntidade(v);
+                var vo = bd.Veiculos.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var entidadeOriginal = PortariaLog.SerializarEntidade(vo);
 
                 v.Cor = entidade.Cor;
                 v.Foto = entidade.Foto;
@@ -65,7 +66,7 @@ namespace Portaria.Business.Cadastro
             }
         }
 
-        public Veiculo BuscaPorId(int id)
+        public Veiculo BuscarPorId(int id)
         {
             return bd.Veiculos.FirstOrDefault(i => i.Id == id);
         }
@@ -95,6 +96,11 @@ namespace Portaria.Business.Cadastro
         {
 
             bd.Dispose();
+        }
+
+        public IEnumerable<Veiculo> BuscarPorUnidade(int id)
+        {
+            return bd.Veiculos.Include(x => x.Unidade).Where(q => q.Unidade.Id == id);
         }
     }
 }

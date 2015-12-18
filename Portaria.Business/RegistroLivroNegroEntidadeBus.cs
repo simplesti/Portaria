@@ -31,7 +31,7 @@ namespace Portaria.Business
         {
             try
             {
-                var r = bd.RegistroLivroNegroEntidades.AsNoTracking().FirstOrDefault(i => i.Id == entidade.Id);
+                var r = bd.RegistroLivroNegroEntidades.FirstOrDefault(i => i.Id == entidade.Id);
 
                 if (r == null)
                 {
@@ -55,7 +55,7 @@ namespace Portaria.Business
             }
         }
 
-        public RegistroLivroNegroEntidade BuscaPorId(int id)
+        public RegistroLivroNegroEntidade BuscarPorId(int id)
         {
             return bd.RegistroLivroNegroEntidades.FirstOrDefault(i => i.Id == id);
         }

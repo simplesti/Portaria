@@ -1,5 +1,6 @@
 ﻿using Portaria.Business;
 using Portaria.Core.Model;
+using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Desktop.Framework.Forms;
 using Portaria.Login;
@@ -16,7 +17,10 @@ namespace Portaria
 
             EfetuarLogin();
 
-            tabControl.Restaurar();
+            if (!Util.IsInDesignMode())
+            {
+                tabControl.Restaurar();
+            }
         }
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)

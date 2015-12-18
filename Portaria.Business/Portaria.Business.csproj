@@ -54,6 +54,8 @@
     <Compile Include="Cadastro\PessoaBus.cs" />
     <Compile Include="Cadastro\UnidadeBus.cs" />
     <Compile Include="Cadastro\VeiculoBus.cs" />
+    <Compile Include="CategoriaLivroNegroBus.cs" />
+    <Compile Include="ConfiguracaoBus.cs" />
     <Compile Include="EntidadeHelper.cs" />
     <Compile Include="IPortariaBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

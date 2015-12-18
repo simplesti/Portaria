@@ -67,6 +67,7 @@ namespace Portaria
                 txtNome.ReadOnly = true;
                 txtRG.ReadOnly = true;
 
+                botaoCapturarBiometria.Visible = false;
                 botaoSalvar.Visible = false;
             }
         }

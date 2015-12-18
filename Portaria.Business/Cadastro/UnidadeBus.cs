@@ -28,20 +28,38 @@ namespace Portaria.Business.Cadastro
             this.sessao = sessao;
         }
 
+        public IEnumerable<Unidade> Todos(bool somente30)
+        {
+            var query = bd.Unidades.AsQueryable();
+
+            if (somente30)
+            {
+                query = query.Take(30);
+            }
+
+            return query.OrderBy(u => u.Numero);
+        }
+
         public IEnumerable<Unidade> Todos()
         {
             return bd.Unidades.OrderBy(u => u.Numero);
         }
 
-        public Unidade Buscar(int numero, string bloco)
+        public Unidade BuscarPorNumeroBloco(int numero, string bloco)
         {
             return bd.Unidades.Where(i => i.Numero == numero && i.Bloco.Nome == bloco)
                 .FirstOrDefault();
         }
 
-        public IEnumerable<Unidade> BuscarPorNumero(int numero)
+        public IEnumerable<Unidade> BuscarPorNumero(int numero, bool somente30)
         {
-            return bd.Unidades.Where(i => i.Numero == numero).OrderBy(u => u.Numero);
+            var query = bd.Unidades.Where(i => i.Numero == numero).AsQueryable();
+            if (somente30)
+            {
+                query = query.Take(30);
+            }
+
+            return query.OrderBy(u => u.Numero);
         }
 
         public IEnumerable<Unidade> BuscarPorBloco(string bloco)
@@ -53,7 +71,7 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                var u = bd.Unidades.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var u = bd.Unidades.Where(i => i.Id == entidade.Id).FirstOrDefault();
                 var blocoBus = new BlocoBus(this.sessao, this.bd);
 
                 if (u == null)
@@ -64,7 +82,7 @@ namespace Portaria.Business.Cadastro
                     }
 
                     entidade.DataAtualizacao = DateTime.Now;
-                    entidade.Bloco = blocoBus.BuscaPorId(entidade.Bloco.Id);
+                    entidade.Bloco = blocoBus.BuscarPorId(entidade.Bloco.Id);
                     bd.Unidades.Add(entidade);
                     bd.SaveChanges();
 
@@ -77,11 +95,12 @@ namespace Portaria.Business.Cadastro
                     throw new Exception("Unidade já cadastrada com este número neste bloco.");
                 }
 
-                var entidadeOriginal = PortariaLog.SerializarEntidade(u);
+                var uo = bd.Unidades.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var entidadeOriginal = PortariaLog.SerializarEntidade(uo);
 
                 u.DataAtualizacao = DateTime.Now;
                 u.AparelhosGas = entidade.AparelhosGas;
-                u.Bloco = blocoBus.BuscaPorId(entidade.Bloco.Id);
+                u.Bloco = blocoBus.BuscarPorId(entidade.Bloco.Id);
                 u.Numero = entidade.Numero;
                 u.Inadimplente = entidade.Inadimplente;
 
@@ -89,15 +108,15 @@ namespace Portaria.Business.Cadastro
 
                 if (entidade.Proprietario != null)
                 {
-                    u.Proprietario = pessoaBus.BuscaPorId(entidade.Proprietario.Id);
+                    u.Proprietario = pessoaBus.BuscarPorId(entidade.Proprietario.Id);
                 }
                 if (entidade.Locatario != null)
                 {
-                    u.Locatario = pessoaBus.BuscaPorId(entidade.Locatario.Id);
+                    u.Locatario = pessoaBus.BuscarPorId(entidade.Locatario.Id);
                 }
                 if (entidade.Conjuge != null)
                 {
-                    u.Conjuge = pessoaBus.BuscaPorId(entidade.Conjuge.Id);
+                    u.Conjuge = pessoaBus.BuscarPorId(entidade.Conjuge.Id);
                 }
 
                 u.Observacoes = entidade.Observacoes;
@@ -113,9 +132,35 @@ namespace Portaria.Business.Cadastro
         }
 
 
-        public Unidade BuscaPorId(int id)
+        public Unidade BuscarPorId(int id)
         {
             return bd.Unidades.FirstOrDefault(i => i.Id == id);
+        }
+
+        public IEnumerable<Unidade> BuscarPorIds(IEnumerable<int> ids, bool somente30)
+        {
+            var query = bd.Unidades.Where(e => ids.Contains(e.Id)).AsQueryable();
+            if (somente30)
+            {
+                query = query.Take(30);
+            }
+            return query;
+        }
+
+        public IEnumerable<Unidade> BuscarPorPessoa(string nome, bool somente30)
+        {
+            var n = nome.ToUpper();
+            var query = bd.Unidades.Where(q => q.Autorizados.Any(x => x.Nome.ToUpper().Contains(n)) ||
+                                          q.Conjuge.Nome.ToUpper().Contains(n) ||
+                                          q.Funcionarios.Any(x => x.Nome.ToUpper().Contains(n)) ||
+                                          q.Locatario.Nome.ToUpper().Contains(n) ||
+                                          q.Proprietario.Nome.ToUpper().Contains(n)).AsQueryable();
+            if (somente30)
+            {
+                query = query.Take(30);
+            }
+
+            return query;
         }
 
         public void Remover(Unidade entidade)
@@ -161,6 +206,11 @@ namespace Portaria.Business.Cadastro
             }
         }
 
+        public IEnumerable<Pessoa> BuscarAutorizados(int id)
+        {
+            return bd.Unidades.FirstOrDefault(q => q.Id == id).Autorizados;
+        }
+
         public void AdicionarAutorizado(Pessoa pessoa, Unidade Unidade)
         {
             try
@@ -186,6 +236,11 @@ namespace Portaria.Business.Cadastro
         public void Dispose()
         {
             bd.Dispose();
+        }
+
+        public IEnumerable<Funcionario> BuscarFuncionarios(int id)
+        {
+            return bd.Unidades.FirstOrDefault(q => q.Id == id).Funcionarios;
         }
     }
 }

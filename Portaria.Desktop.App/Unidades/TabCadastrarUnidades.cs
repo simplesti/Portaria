@@ -11,6 +11,7 @@ using Portaria.Core;
 using Portaria.Business.Cadastro;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Desktop.Framework.Forms;
+using Portaria.Desktop.Framework;
 
 namespace Portaria.Unidades
 {
@@ -20,7 +21,7 @@ namespace Portaria.Unidades
         {
             InitializeComponent();
 
-            if (!DesignMode)
+            if (!Util.IsInDesignMode())
             {
                 CarregarUnidades();
             }
@@ -52,7 +53,7 @@ namespace Portaria.Unidades
         {
             var id = int.Parse(dgvUnidades.SelectedRows[0].Cells[0].Value.ToString());
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
-            var u = unidadeBus.BuscaPorId(id);
+            var u = unidadeBus.BuscarPorId(id);
 
             if (CaixaMensagem.Mostrar("Deseja remover a unidade" + u.Numero.ToString() + " ?", TipoCaixaMensagem.OKCancelar) == System.Windows.Forms.DialogResult.OK)
             {
@@ -71,14 +72,14 @@ namespace Portaria.Unidades
         {
             var id = int.Parse(dgvUnidades.SelectedRows[0].Cells[0].Value.ToString());
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
-            var u = unidadeBus.BuscaPorId(id);
+            var u = unidadeBus.BuscarPorId(id);
 
             using (var frm = new CadUnidade(u))
             {
                 frm.ShowDialog();
             }
 
-            dgvUnidades.Refresh();
+            dgvUnidades.DataSource = unidadeBus.Todos().ToList();
         }
 
         private void AdicionarUnidade()

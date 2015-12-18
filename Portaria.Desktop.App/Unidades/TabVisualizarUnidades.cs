@@ -20,12 +20,7 @@ namespace Portaria
         private void CarregarTodasUnidades()
         {
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
-            var query = unidadeBus.Todos();
-
-            if (chkSomente30.Checked)
-            {
-                query = query.Take(30);
-            }
+            var query = unidadeBus.Todos(chkSomente30.Checked);
 
             PopulaUnidades(query.ToList());
         }
@@ -88,14 +83,7 @@ namespace Portaria
         private void CarregarUnidades(IEnumerable<int> ids)
         {
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
-
-            var query = unidadeBus.Todos().AsQueryable();
-            query = query.Where(e => ids.Contains(e.Id));
-
-            if (chkSomente30.Checked)
-            {
-                query = query.Take(30);
-            }
+            var query = unidadeBus.BuscarPorIds(ids, chkSomente30.Checked);
 
             PopulaUnidades(query.ToList());
         }
@@ -124,15 +112,16 @@ namespace Portaria
             int numero;
             int.TryParse(criterios, out numero);
 
+            var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
             if (numero != 0)
             {
-                var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
-                var query = unidadeBus.BuscarPorNumero(numero).AsQueryable();
+                var query = unidadeBus.BuscarPorNumero(numero, chkSomente30.Checked).AsQueryable();
 
-                if (chkSomente30.Checked)
-                {
-                    query = query.Take(30);
-                }
+                PopulaUnidades(query.ToList());
+            }
+            else
+            {
+                var query = unidadeBus.BuscarPorPessoa(criterios, chkSomente30.Checked).AsQueryable();
 
                 PopulaUnidades(query.ToList());
             }

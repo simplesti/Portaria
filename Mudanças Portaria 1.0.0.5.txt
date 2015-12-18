@@ -1,0 +1,7 @@
+Alterações:
+
+- Pesquisa com "like" por nome de morador
+- Vincular cadastro de morador direto no campo de onde a pesquisa foi chamada e onde deve ser preenchido
+- Não permitir capturar biometria para usuário somente leitura
+- Configurações de reserva de local : Agora você pode escolher a duração padrão das reservas e o prazo máximo de antecedência. Clicar no icone no topo esquerdo do Portaria para acessar as configurações - Somente como administrador)
+- Campos de categoria para reclamações do livro negro, ao criar a categoria você pode escolher enviar notificação por email para o responsável ( sindico ). Clicar no icone no topo esquerdo do Portaria para acessar as configurações do servidor de email - Somente como administrador)

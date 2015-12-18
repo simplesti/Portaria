@@ -105,37 +105,37 @@ namespace Portaria
             {
                 case "Pessoa":
                     {
-                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Pessoa).Name);
+                        bsEntidades.DataSource = entidadeHelper.BuscarPorDescricao(txtPesquisar.Text, typeof(Pessoa).Name);
                         break;
                     }
                 case "Veículo":
                     {
-                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Veiculo).Name);
+                        bsEntidades.DataSource = entidadeHelper.BuscarPorDescricao(txtPesquisar.Text, typeof(Veiculo).Name);
                         break;
                     }
                 case "Unidade":
                     {
-                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Unidade).Name);
+                        bsEntidades.DataSource = entidadeHelper.BuscarPorDescricao(txtPesquisar.Text, typeof(Unidade).Name);
                         break;
                     }
                 case "Bloco":
                     {
-                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Bloco).Name);
+                        bsEntidades.DataSource = entidadeHelper.BuscarPorDescricao(txtPesquisar.Text, typeof(Bloco).Name);
                         break;
                     }
                 case "Funcionário":
                     {
-                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Funcionario).Name);
+                        bsEntidades.DataSource = entidadeHelper.BuscarPorDescricao(txtPesquisar.Text, typeof(Funcionario).Name);
                         break;
                     }
                 case "Local":
                     {
-                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Local).Name);
+                        bsEntidades.DataSource = entidadeHelper.BuscarPorDescricao(txtPesquisar.Text, typeof(Local).Name);
                         break;
                     }
                 case "Usuário":
                     {
-                        bsEntidades.DataSource = entidadeHelper.BuscaPorDescricao(txtPesquisar.Text, typeof(Usuario).Name);
+                        bsEntidades.DataSource = entidadeHelper.BuscarPorDescricao(txtPesquisar.Text, typeof(Usuario).Name);
                         break;
                     }
             }

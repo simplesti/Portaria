@@ -21,7 +21,7 @@ namespace Portaria.Business
             bd = new PortariaContext();
         }
 
-        public IEnumerable<IEntidade> BuscaEntidades(ICollection<RegistroLivroNegroEntidade> registroLivroNegroEntidades)
+        public IEnumerable<IEntidade> BuscarEntidades(ICollection<RegistroLivroNegroEntidade> registroLivroNegroEntidades)
         {
             List<IEntidade> retorno = new List<IEntidade>();
 
@@ -60,7 +60,7 @@ namespace Portaria.Business
             return retorno;
         }
 
-        public IEnumerable<IEntidade> BuscaPorDescricao(string descricaoEntidade, string tipoEntidade)
+        public IEnumerable<IEntidade> BuscarPorDescricao(string descricaoEntidade, string tipoEntidade)
         {
             List<IEntidade> retorno = null;
 
@@ -104,7 +104,7 @@ namespace Portaria.Business
         }
 
 
-        public string BuscaDescricao(string variavel)
+        public string BuscarDescricao(string variavel)
         {
             var id = int.Parse(variavel.Substring(5, variavel.IndexOf(';') - 5));
             var tipo = variavel.Remove(0, variavel.IndexOf(';') + 6).TrimEnd('#').TrimEnd('!');
@@ -147,7 +147,7 @@ namespace Portaria.Business
             return string.Empty;
         }
 
-        public List<Tuple<string, int, int>> BuscaVariaveis(string texto)
+        public List<Tuple<string, int, int>> BuscarVariaveis(string texto)
         {
             var variaveis = new List<Tuple<string, int, int>>();
 

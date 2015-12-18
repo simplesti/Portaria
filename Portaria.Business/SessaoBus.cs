@@ -32,7 +32,7 @@ namespace Portaria.Business
         {
             try
             {
-                var s = bd.Sessoes.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var s = bd.Sessoes.Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (s == null)
                 {
@@ -55,7 +55,7 @@ namespace Portaria.Business
             }
         }
 
-        public Sessao BuscaPorId(int id)
+        public Sessao BuscarPorId(int id)
         {
             return bd.Sessoes.Include(q => q.UsuarioLogado).FirstOrDefault(i => i.Id == id);
         }
@@ -106,7 +106,7 @@ namespace Portaria.Business
                     throw new Exception("Não existe sessão aberta.");
                 }
 
-                var s = BuscaPorId(sessao.Id);
+                var s = BuscarPorId(sessao.Id);
                 s.DataHoraFim = DateTime.Now;
                 bd.SaveChanges();
             }

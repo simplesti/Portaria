@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Net.Mail;
 
 namespace Portaria.Business
 {
@@ -25,7 +26,7 @@ namespace Portaria.Business
             this.bd = bd;
             this.sessao = sessao;
         }
-    public IEnumerable<RegistroLivroNegro> Todos()
+        public IEnumerable<RegistroLivroNegro> Todos()
         {
             return bd.RegistrosLivroNegro;
         }
@@ -36,16 +37,24 @@ namespace Portaria.Business
             {
                 ValidarRegistro(entidade);
 
-                var r = bd.RegistrosLivroNegro.AsNoTracking().FirstOrDefault(i => i.Id == entidade.Id);
+                var r = bd.RegistrosLivroNegro.FirstOrDefault(i => i.Id == entidade.Id);
 
                 if (r == null)
                 {
                     entidade.Data = DateTime.Now;
                     entidade.Sessao = bd.Sessoes.FirstOrDefault(i => i.Id == sessao.Id);
                     entidade.Pessoa = bd.Pessoas.FirstOrDefault(p => p.Id == entidade.Pessoa.Id);
+                    entidade.Categoria = bd.CategoriasLivroNegro.FirstOrDefault(c => c.Id == entidade.Categoria.Id);
                     bd.RegistrosLivroNegro.Add(entidade);
 
                     bd.SaveChanges();
+
+                    if (entidade.Categoria.EnviarEmailNotificacao)
+                    {
+                        var envio = new Task(() => { EnviarEmailNotificacao(entidade); });
+                        envio.Start();
+                    }
+
                     return;
                 }
 
@@ -53,6 +62,7 @@ namespace Portaria.Business
                 r.Pessoa = bd.Pessoas.FirstOrDefault(p => p.Id == entidade.Pessoa.Id);
                 r.Sessao = bd.Sessoes.FirstOrDefault(i => i.Id == sessao.Id);
                 r.Mensagem = entidade.Mensagem;
+                r.Categoria = bd.CategoriasLivroNegro.FirstOrDefault(c => c.Id == entidade.Id);
 
                 bd.SaveChanges();
             }
@@ -62,15 +72,58 @@ namespace Portaria.Business
             }
         }
 
+        private async void EnviarEmailNotificacao(RegistroLivroNegro registro)
+        {
+            try
+            {
+                var configuracaoBus = new ConfiguracaoBus(sessao, bd);
+
+                var mail = new MailMessage(configuracaoBus.BuscarValor(Core.TipoConfiguracao.UsuarioSMTP), configuracaoBus.BuscarValor(Core.TipoConfiguracao.EmailResponsavel));
+                var client = new SmtpClient();
+                client.Port = int.Parse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.PortaSMTP));
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.UseDefaultCredentials = false;
+                client.Host = configuracaoBus.BuscarValor(Core.TipoConfiguracao.ServidorSMTP);
+                client.EnableSsl = bool.Parse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.ConexaoSeguraSMTP));
+                client.Credentials = new System.Net.NetworkCredential(configuracaoBus.BuscarValor(Core.TipoConfiguracao.UsuarioSMTP), configuracaoBus.BuscarValor(Core.TipoConfiguracao.SenhaSMTP));
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                mail.Subject = string.Format("Portaria Digital - Notificação do Livro Negro Categoria {0}", registro.Categoria.Nome);
+
+                var msg = new StringBuilder();
+                msg.AppendLine("Notificação de registro novo no livro negro");
+                msg.AppendLine();
+                msg.AppendLine("Data do registro: " + registro.Data.ToString("dd/MM/yyyy HH:mm:ss"));
+                msg.AppendLine("Categoria: " + registro.Categoria.Nome);
+                msg.AppendLine("Reclamante: " + registro.Pessoa.Nome);
+                msg.AppendLine("Usuário recebedor: " + registro.Sessao.UsuarioLogado.Nome);
+                msg.AppendLine();
+                msg.AppendLine("Mensagem:");
+                msg.AppendLine(registro.Mensagem);
+
+                mail.Body = msg.ToString();
+
+                client.Send(mail);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao enviar e-mail de notificação ao responsável. Verifique as configurações do servidor de e-mail.");
+            }
+        }
+
         private void ValidarRegistro(RegistroLivroNegro entidade)
         {
             if (entidade.Pessoa == null)
             {
                 throw new Exception("Você precisa selecionar uma pessoa responsável.");
             }
+
+            if (entidade.Categoria == null)
+            {
+                throw new Exception("Você precisa selecionar uma categoria para a reclamação.");
+            }
         }
 
-        public RegistroLivroNegro BuscaPorId(int id)
+        public RegistroLivroNegro BuscarPorId(int id)
         {
             return bd.RegistrosLivroNegro.FirstOrDefault(i => i.Id == id);
         }

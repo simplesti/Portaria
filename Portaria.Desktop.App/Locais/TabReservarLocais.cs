@@ -1,6 +1,7 @@
 ﻿using Portaria.Business;
 using Portaria.Business.Cadastro;
 using Portaria.Core;
+using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.Forms;
 using Portaria.Desktop.Framework.Locais;
 using System.Collections.Generic;
@@ -14,7 +15,10 @@ namespace Portaria.Locais
         {
             InitializeComponent();
 
-            CarregarLocais();
+            if (!Util.IsInDesignMode())
+            {
+                CarregarLocais();
+            }
         }
 
         private void CarregarLocais()

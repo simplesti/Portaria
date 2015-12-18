@@ -22,6 +22,9 @@ namespace Portaria.Core.Model
         public string Mensagem { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]
+        public virtual CategoriaLivroNegro Categoria { get; set; }
+
+        [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<RegistroLivroNegroEntidade> Entidades { get; set; }
 
         public string TipoEntidade

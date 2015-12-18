@@ -37,7 +37,7 @@ namespace Portaria.Business.Cadastro
         {
             try
             {
-                var f = bd.Funcionarios.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var f = bd.Funcionarios.Where(i => i.Id == entidade.Id).FirstOrDefault();
 
                 if (f == null)
                 {
@@ -47,7 +47,8 @@ namespace Portaria.Business.Cadastro
                     return;
                 }
 
-                var entidadeOriginal = PortariaLog.SerializarEntidade(f);
+                var fo = bd.Funcionarios.AsNoTracking().Where(i => i.Id == entidade.Id).FirstOrDefault();
+                var entidadeOriginal = PortariaLog.SerializarEntidade(fo);
 
                 f.AutorizadaSemPresenca = entidade.AutorizadaSemPresenca;
                 f.Descricao = entidade.Descricao;
@@ -70,7 +71,7 @@ namespace Portaria.Business.Cadastro
             }
         }
 
-        public Funcionario BuscaPorId(int id)
+        public Funcionario BuscarPorId(int id)
         {
             return bd.Funcionarios.FirstOrDefault(i => i.Id == id);
         }

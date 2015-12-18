@@ -48,7 +48,7 @@ namespace Portaria.Desktop.Framework
             if (SessaoAtual.Sessao != null)
             {
                 var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
-                var u = usuarioBus.BuscaPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
+                var u = usuarioBus.BuscarPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
 
                 if (!string.IsNullOrEmpty(u.PosicaoAbas))
                 {
@@ -167,7 +167,7 @@ namespace Portaria.Desktop.Framework
             var txt = JsonConvert.SerializeObject(posicoes);
 
             var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
-            var u = usuarioBus.BuscaPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
+            var u = usuarioBus.BuscarPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
             u.PosicaoAbas = txt;
 
             usuarioBus.InserirOuAtualizar(u);

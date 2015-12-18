@@ -187,6 +187,7 @@
             this.dtInicio.Name = "dtInicio";
             this.dtInicio.Size = new System.Drawing.Size(207, 20);
             this.dtInicio.TabIndex = 22;
+            this.dtInicio.ValueChanged += new System.EventHandler(this.dtInicio_ValueChanged);
             // 
             // bsReserva
             // 

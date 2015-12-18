@@ -86,6 +86,18 @@
     <Compile Include="Migrations\201510041806286_CamposUsuarioNotNull.Designer.cs">
       <DependentUpon>201510041806286_CamposUsuarioNotNull.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512150648287_CategoriaLivroNegro.cs" />
+    <Compile Include="Migrations\201512150648287_CategoriaLivroNegro.Designer.cs">
+      <DependentUpon>201512150648287_CategoriaLivroNegro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512171236084_Configuracoes.cs" />
+    <Compile Include="Migrations\201512171236084_Configuracoes.Designer.cs">
+      <DependentUpon>201512171236084_Configuracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512172256581_EmailNotificacao.cs" />
+    <Compile Include="Migrations\201512172256581_EmailNotificacao.Designer.cs">
+      <DependentUpon>201512172256581_EmailNotificacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PortariaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,6 +124,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510041806286_CamposUsuarioNotNull.resx">
       <DependentUpon>201510041806286_CamposUsuarioNotNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512150648287_CategoriaLivroNegro.resx">
+      <DependentUpon>201512150648287_CategoriaLivroNegro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512171236084_Configuracoes.resx">
+      <DependentUpon>201512171236084_Configuracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512172256581_EmailNotificacao.resx">
+      <DependentUpon>201512172256581_EmailNotificacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
