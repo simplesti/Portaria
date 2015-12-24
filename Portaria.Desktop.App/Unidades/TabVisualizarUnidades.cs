@@ -12,6 +12,8 @@ namespace Portaria
 {
     public partial class TabVisualizarUnidades : PortariaTabBase
     {
+        private bool visDetalhada = false;
+
         public TabVisualizarUnidades()
         {
             InitializeComponent();
@@ -27,6 +29,8 @@ namespace Portaria
 
         private void PopulaUnidades(IEnumerable<Unidade> unidades)
         {
+            unidadeBindingSource.DataSource = unidades;
+
             flpUnidades.Controls.Clear();
             foreach (var unidade in unidades)
             {
@@ -133,6 +137,26 @@ namespace Portaria
             {
                 Pesquisar(txtPesquisar.Text);
                 e.Handled = true;
+            }
+        }
+
+        private void botaoMudarVisao_Click(object sender, EventArgs e)
+        {
+            visDetalhada = !visDetalhada;
+
+            flpUnidades.Visible = !visDetalhada;
+            dgvUnidadesDetalhadas.Visible = visDetalhada;
+        }
+
+        private void dgvUnidadesDetalhadas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = int.Parse(dgvUnidadesDetalhadas.SelectedRows[0].Cells[0].Value.ToString());
+            var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
+            var unidade = unidadeBus.BuscarPorId(id);
+
+            using (var frm = new CadUnidade(unidade))
+            {
+                frm.ShowDialog();
             }
         }
     }

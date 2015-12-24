@@ -74,7 +74,8 @@ namespace Portaria.Data
         public PortariaContext()
             : base("PortariaContext")
         {
-            Database.SetInitializer<PortariaContext>(new PortariaContextInitializer());
+            //Database.SetInitializer<PortariaContext>(new PortariaContextInitializer());
+            Database.SetInitializer<PortariaContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

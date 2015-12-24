@@ -3,6 +3,7 @@ using Portaria.Business.Cadastro;
 using Portaria.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework.CaixaMensagem;
+using Portaria.Unidades;
 using Portaria.UnidadesBlocos;
 using System;
 using System.Collections.Generic;
@@ -223,7 +224,10 @@ namespace Portaria
 
             var p = SelecionaPessoa.Selecionar();
 
-            unidadeBus.AdicionarAutorizado(p, Unidade);
+            if (p != null)
+            {
+                unidadeBus.AdicionarAutorizado(p, Unidade);
+            }
 
             CarregarAutorizados();
         }
@@ -441,6 +445,14 @@ namespace Portaria
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);
             var autorizados = unidadeBus.BuscarAutorizados(unidade.Id).ToList();
             dgvAutorizadas.DataSource = autorizados;
+        }
+
+        private void botaoEmailCorrespondencia_Click(object sender, EventArgs e)
+        {
+            using (var frm = new EnviarCorrespondencia(Unidade))
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

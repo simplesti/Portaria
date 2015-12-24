@@ -339,6 +339,7 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
+		<row><td>Portaria.ConfiguradorBD.Primary_output</td><td>{74B70B41-2356-4A19-8894-4036FB1A7999}</td><td>INSTALLDIR</td><td>2</td><td/><td>portaria.configuradorbd.prim</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Portaria.Desktop.App.Primary_output</td><td>{05199A7D-ACE7-4004-A118-20B61F66CDB2}</td><td>INSTALLDIR</td><td>2</td><td/><td>portaria.desktop.app.primary</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Portaria.Desktop.Framework.Content_Files</td><td>{428447A2-119E-495B-A1C0-8302177AEA9E}</td><td>INSTALLDIR</td><td>2</td><td/><td>portaria.desktop.framework.c</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
@@ -1009,9 +1010,11 @@
 		<row><td>SetupCompleteError</td><td>Finish</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>1</td></row>
 		<row><td>SetupCompleteError</td><td>Finish</td><td>DoAction</td><td>ShowMsiLog</td><td>MsiLogFileLocation And (ISSHOWMSILOG="1")</td><td>3</td></row>
 		<row><td>SetupCompleteError</td><td>Finish</td><td>EndDialog</td><td>Exit</td><td>1</td><td>2</td></row>
-		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>1</td></row>
-		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>ShowMsiLog</td><td>MsiLogFileLocation And (ISSHOWMSILOG="1") And NOT ISENABLEDWUSFINISHDIALOG</td><td>6</td></row>
-		<row><td>SetupCompleteSuccess</td><td>OK</td><td>EndDialog</td><td>Exit</td><td>1</td><td>2</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>CleanUp</td><td>ISSCRIPTRUNNING="1"</td><td>3</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>NewCustomAction1</td><td>Not Installed</td><td>1</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>DoAction</td><td>ShowMsiLog</td><td>MsiLogFileLocation And (ISSHOWMSILOG="1") And NOT ISENABLEDWUSFINISHDIALOG</td><td>8</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>EndDialog</td><td>Exit</td><td>1</td><td>4</td></row>
+		<row><td>SetupCompleteSuccess</td><td>OK</td><td>[NewCustomAction1]</td><td>NewCustomAction1</td><td>Not Installed</td><td>2</td></row>
 		<row><td>SetupError</td><td>A</td><td>EndDialog</td><td>ErrorAbort</td><td>1</td><td>0</td></row>
 		<row><td>SetupError</td><td>C</td><td>EndDialog</td><td>ErrorCancel</td><td>1</td><td>0</td></row>
 		<row><td>SetupError</td><td>I</td><td>EndDialog</td><td>ErrorIgnore</td><td>1</td><td>0</td></row>
@@ -1049,6 +1052,7 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>INSTALLDIR</td><td>Portaria.ConfiguradorBD.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>Portaria.Desktop.App.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>Portaria.Desktop.Framework.Content_Files</td></row>
 	</table>
@@ -1067,6 +1071,7 @@
 		<row><td>ISSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFiles</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
+		<row><td>NewCustomAction1</td><td>18</td><td>portaria.configuradorbd.prim</td><td/><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
 		<row><td>SetAllUsersProfileNT</td><td>51</td><td>ALLUSERSPROFILE</td><td>[%SystemRoot]\Profiles\All Users</td><td/><td/></row>
 		<row><td>ShowMsiLog</td><td>226</td><td>SystemFolder</td><td>[SystemFolder]notepad.exe "[MsiLogFileLocation]"</td><td/><td>Shows Property-driven MSI Log</td></row>
@@ -1863,6 +1868,7 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>AlwaysInstall</td><td>Portaria.ConfiguradorBD.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>Portaria.Desktop.App.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>Portaria.Desktop.Framework.Content_Files</td></row>
 	</table>
@@ -1879,6 +1885,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
+		<row><td>portaria.configuradorbd.prim</td><td>Portaria.ConfiguradorBD.Primary_output</td><td>Portaria.ConfiguradorBD.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Portaria.ConfiguradorBD&gt;|Built</td><td>3</td><td/></row>
 		<row><td>portaria.desktop.app.primary</td><td>Portaria.Desktop.App.Primary_output</td><td>Portaria.Desktop.App.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Portaria.Desktop.App&gt;|Built</td><td>3</td><td/></row>
 		<row><td>portaria.desktop.framework.c</td><td>Portaria.Desktop.Framework.Content_Files</td><td>Portaria.Desktop.Framework.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Portaria.Desktop.Framework&gt;|ContentFiles</td><td>3</td><td/></row>
 	</table>
@@ -2022,6 +2029,7 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
+		<row><td>Portaria.ConfiguradorBD.Primary_output</td><td/><td/><td>_82C4F330_1D3E_4863_B981_A83D85362547_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Portaria.Desktop.App.Primary_output</td><td/><td/><td>_296C68B2_3F5C_4197_B9BC_DB6F7E0CBD90_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Portaria.Desktop.Framework.Content_Files</td><td/><td/><td>_F75A4B69_6026_472D_B8F5_853E67C2E767_FILTER</td><td/><td/><td/><td/></row>
 	</table>
@@ -2306,6 +2314,7 @@
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
+		<row><td>Portaria.ConfiguradorBD</td><td>Portaria.ConfiguradorBD\Portaria.ConfiguradorBD.csproj</td><td/><td>2</td></row>
 		<row><td>Portaria.Desktop.App</td><td>Portaria.Desktop.App\Portaria.Desktop.App.csproj</td><td/><td>2</td></row>
 		<row><td>Portaria.Desktop.Framework</td><td>Portaria.Desktop.Framework\Portaria.Desktop.Framework.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
@@ -2613,7 +2622,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>Simples TI</td><td>0</td><td/><td>-1776042254</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>Simples TI</td><td>0</td><td/><td>-1239194772</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1776038318</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1776038318</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1776038318</td></row>
@@ -3715,8 +3724,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1776038318</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1776038318</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>-1776036270</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.SimplesTI.com</td><td>0</td><td/><td>-1776042254</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>Simples TI</td><td>0</td><td/><td>-1776042254</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.SimplesTI.com</td><td>0</td><td/><td>-1239194772</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>Simples TI</td><td>0</td><td/><td>-1239194772</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1776044398</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1776038318</td></row>
 	</table>
@@ -3964,7 +3973,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{398E60C7-E87D-41D0-B495-DD3990B20D47}</td></row>
 		<row><td>ISUSSignature</td><td>{27806D0A-8A1E-4096-84A3-015C8A12761A}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewCustomActions,viewProject</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4338,7 +4347,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{8ABC011F-FBE6-479F-B831-CBD3B9D2FD7C}</td><td/></row>
 		<row><td>ProductName</td><td>Portaria Digital</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0005</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.0006</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

@@ -50,3 +50,16 @@ C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Log\bin\Release\Newtonsoft.Js
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Log\obj\Release\Portaria.Log.csprojResolveAssemblyReference.cache
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Log\obj\Release\Portaria.Log.dll
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Log\obj\Release\Portaria.Log.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\Portaria.Log.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\Portaria.Log.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\EntityFramework.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\Newtonsoft.Json.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\Portaria.Core.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\Portaria.Core.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\EntityFramework.xml
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\bin\Release\Newtonsoft.Json.xml
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\obj\Release\Portaria.Log.csprojResolveAssemblyReference.cache
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\obj\Release\Portaria.Log.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Log\obj\Release\Portaria.Log.pdb

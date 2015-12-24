@@ -119,6 +119,17 @@ namespace Portaria.Business.Cadastro
                     u.Conjuge = pessoaBus.BuscarPorId(entidade.Conjuge.Id);
                 }
 
+                if (entidade.Veiculos != null)
+                {
+                    var veiculos = new List<Veiculo>();
+                    foreach(var veiculo in entidade.Veiculos)
+                    {
+                        veiculos.Add(bd.Veiculos.FirstOrDefault(q => q.Id == veiculo.Id));
+                    }
+                    entidade.Veiculos.Clear();
+                    entidade.Veiculos = veiculos;
+                }
+
                 u.Observacoes = entidade.Observacoes;
 
                 bd.SaveChanges();
@@ -149,18 +160,27 @@ namespace Portaria.Business.Cadastro
 
         public IEnumerable<Unidade> BuscarPorPessoa(string nome, bool somente30)
         {
-            var n = nome.ToUpper();
-            var query = bd.Unidades.Where(q => q.Autorizados.Any(x => x.Nome.ToUpper().Contains(n)) ||
-                                          q.Conjuge.Nome.ToUpper().Contains(n) ||
-                                          q.Funcionarios.Any(x => x.Nome.ToUpper().Contains(n)) ||
-                                          q.Locatario.Nome.ToUpper().Contains(n) ||
-                                          q.Proprietario.Nome.ToUpper().Contains(n)).AsQueryable();
-            if (somente30)
+            var n = nome.ToUpper().Split(' ');
+            var retorno = new List<Unidade>();
+
+            foreach (var termo in n)
             {
-                query = query.Take(30);
+                var query = bd.Unidades.Where(q => q.Autorizados.Any(x => x.Nome.ToUpper().Contains(termo)) ||
+                                          q.Conjuge.Nome.ToUpper().Contains(termo) ||
+                                          q.Funcionarios.Any(x => x.Nome.ToUpper().Contains(termo)) ||
+                                          q.Locatario.Nome.ToUpper().Contains(termo) ||
+                                          q.Proprietario.Nome.ToUpper().Contains(termo));
+                retorno.AddRange(query.ToList());
             }
 
-            return query;
+            retorno = retorno.Distinct().ToList();
+
+            if (somente30)
+            {
+                retorno = retorno.Take(30).ToList();
+            }
+
+            return retorno;
         }
 
         public void Remover(Unidade entidade)

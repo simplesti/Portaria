@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portaria.Core", "Portaria.Core\Portaria.Core.csproj", "{0AF0AC83-3FBA-4758-AF09-BC75E6CFC7A2}"
 EndProject
@@ -27,9 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portaria.Desktop.App", "Por
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Portaria.Instalador", "Portaria.Instalador\Portaria.Instalador.isproj", "{3F3EE80C-AFDB-46F3-9EE6-15B3F95E41D5}"
 	ProjectSection(ProjectDependencies) = postProject
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383} = {19F07554-A1F6-4E33-BCE3-59748AF0C383}
 		{CAF5BE63-755C-4C1C-AD33-2E4673329112} = {CAF5BE63-755C-4C1C-AD33-2E4673329112}
 		{76082DA7-86FE-4CA4-8EB8-9B2B91571D80} = {76082DA7-86FE-4CA4-8EB8-9B2B91571D80}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portaria.ConfiguradorBD", "Portaria.ConfiguradorBD\Portaria.ConfiguradorBD.csproj", "{19F07554-A1F6-4E33-BCE3-59748AF0C383}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -140,6 +143,16 @@ Global
 		{3F3EE80C-AFDB-46F3-9EE6-15B3F95E41D5}.Release|Any CPU.Build.0 = SingleImage
 		{3F3EE80C-AFDB-46F3-9EE6-15B3F95E41D5}.SingleImage|Any CPU.ActiveCfg = SingleImage
 		{3F3EE80C-AFDB-46F3-9EE6-15B3F95E41D5}.SingleImage|Any CPU.Build.0 = SingleImage
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,5 +164,6 @@ Global
 		{CAF5BE63-755C-4C1C-AD33-2E4673329112} = {E009D09F-74F2-4551-9685-7C668FF63972}
 		{76082DA7-86FE-4CA4-8EB8-9B2B91571D80} = {E009D09F-74F2-4551-9685-7C668FF63972}
 		{3F3EE80C-AFDB-46F3-9EE6-15B3F95E41D5} = {E009D09F-74F2-4551-9685-7C668FF63972}
+		{19F07554-A1F6-4E33-BCE3-59748AF0C383} = {E009D09F-74F2-4551-9685-7C668FF63972}
 	EndGlobalSection
 EndGlobal

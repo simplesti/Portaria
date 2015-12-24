@@ -1,0 +1,9 @@
+Alterações:
+
+- Configurador BD : Ao terminar de instalar, ou depois se quiser manualmente, existe um EXE separado para fazer a configuração e atualização de base automático.
+- Teste envio email : Colocado botão de teste de configurações de e-mail na tela de configurações.
+- Titulo do email parametrizável : Adicionado campo na tela de configurações.
+- Entidades relacionadas no email de livro negro : Agora as entidades relacionadas ao abrir uma reclamação no livro negro são listadas no e-mail também.
+- Like na pesquisa por nome : feito
+- Lista de unidades detalhada : feito (Colocado botão de binóculos na tela de pesquisa de unidades para alterar a visualização.)
+- Aviso de correspondência : feito (Colocado botão na tela do cadastro da unidade para enviar aviso.)

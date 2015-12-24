@@ -87,7 +87,7 @@ namespace Portaria.Business
                 client.EnableSsl = bool.Parse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.ConexaoSeguraSMTP));
                 client.Credentials = new System.Net.NetworkCredential(configuracaoBus.BuscarValor(Core.TipoConfiguracao.UsuarioSMTP), configuracaoBus.BuscarValor(Core.TipoConfiguracao.SenhaSMTP));
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                mail.Subject = string.Format("Portaria Digital - Notificação do Livro Negro Categoria {0}", registro.Categoria.Nome);
+                mail.Subject = configuracaoBus.BuscarValor(Core.TipoConfiguracao.TituloEMail);
 
                 var msg = new StringBuilder();
                 msg.AppendLine("Notificação de registro novo no livro negro");
@@ -96,6 +96,17 @@ namespace Portaria.Business
                 msg.AppendLine("Categoria: " + registro.Categoria.Nome);
                 msg.AppendLine("Reclamante: " + registro.Pessoa.Nome);
                 msg.AppendLine("Usuário recebedor: " + registro.Sessao.UsuarioLogado.Nome);
+                msg.AppendLine("Entidades envolvidas:");
+
+
+                var entidadeHelper = new EntidadeHelper();
+                var entidades = entidadeHelper.BuscarEntidades(registro.Entidades).ToList();
+
+                foreach (var entidade in entidades)
+                {
+                    msg.AppendLine(entidade.DescricaoEntidade);
+                }
+
                 msg.AppendLine();
                 msg.AppendLine("Mensagem:");
                 msg.AppendLine(registro.Mensagem);

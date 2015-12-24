@@ -34,3 +34,12 @@ C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\obj\Release\Portaria.Cor
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\obj\Release\Portaria.Core.csproj.GenerateResource.Cache
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\obj\Release\Portaria.Core.dll
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Core\obj\Release\Portaria.Core.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Core\bin\Release\Portaria.Core.dll.config
+C:\Users\Max\Source\Repos\Portaria\Portaria.Core\bin\Release\Portaria.Core.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Core\bin\Release\Portaria.Core.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\Max\Source\Repos\Portaria\Portaria.Core\obj\Release\Portaria.Core.Properties.Resources.resources
+C:\Users\Max\Source\Repos\Portaria\Portaria.Core\obj\Release\Portaria.Core.csproj.GenerateResource.Cache
+C:\Users\Max\Source\Repos\Portaria\Portaria.Core\obj\Release\Portaria.Core.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Core\obj\Release\Portaria.Core.pdb

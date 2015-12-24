@@ -36,15 +36,15 @@
             this.mtbPrazoAntecedenciaReserva = new System.Windows.Forms.MaskedTextBox();
             this.lblDuracao = new System.Windows.Forms.Label();
             this.lblPrazoMaximoReserva = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDias = new System.Windows.Forms.Label();
             this.lblHoras = new System.Windows.Forms.Label();
             this.mtbDiasDuracao = new System.Windows.Forms.MaskedTextBox();
             this.mtbHorasDuracao = new System.Windows.Forms.MaskedTextBox();
             this.chkEscolherFimReserva = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
+            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblSMTP = new System.Windows.Forms.Label();
             this.lblEMailRemetente = new System.Windows.Forms.Label();
@@ -52,21 +52,24 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.botaoPesquisarSMTP = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
             this.lblPesquisarDados = new System.Windows.Forms.Label();
-            this.lblEmailResponsavel = new System.Windows.Forms.Label();
-            this.txtEMailResponsavel = new System.Windows.Forms.TextBox();
             this.txtSenhaRemetente = new System.Windows.Forms.TextBox();
             this.lblSenhaRemetente = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblEmailResponsavel = new System.Windows.Forms.Label();
+            this.txtEMailResponsavel = new System.Windows.Forms.TextBox();
             this.lblServidorSMTP = new System.Windows.Forms.Label();
             this.lblPortaSMTP = new System.Windows.Forms.Label();
             this.txtServidorSMTP = new System.Windows.Forms.TextBox();
             this.txtPortaSMTP = new System.Windows.Forms.TextBox();
             this.chkConexaoSegura = new System.Windows.Forms.CheckBox();
+            this.botaoTestarEmail = new Portaria.Desktop.Framework.Botoes.BotaoTestarEmail();
+            this.lblTituloEMail = new System.Windows.Forms.Label();
+            this.txtTituloEmail = new System.Windows.Forms.TextBox();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -75,7 +78,7 @@
             // pnlConteudo
             // 
             this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(554, 315);
+            this.pnlConteudo.Size = new System.Drawing.Size(554, 352);
             // 
             // tlpCampos
             // 
@@ -105,11 +108,11 @@
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 218F));
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCampos.Size = new System.Drawing.Size(554, 315);
+            this.tlpCampos.Size = new System.Drawing.Size(554, 352);
             this.tlpCampos.TabIndex = 2;
             // 
             // chkSemRestricaoAntecedencia
@@ -179,55 +182,6 @@
             this.lblPrazoMaximoReserva.Tag = "";
             this.lblPrazoMaximoReserva.Text = "Prazo máximo de antecedência para reserva";
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.botaoCancelar);
-            this.panel1.Controls.Add(this.botaoSalvar);
-            this.panel1.Location = new System.Drawing.Point(268, 242);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 65);
-            this.panel1.TabIndex = 29;
-            // 
-            // botaoCancelar
-            // 
-            this.botaoCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(183, 24);
-            this.botaoCancelar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.TabIndex = 3;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
-            // 
-            // botaoSalvar
-            // 
-            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoSalvar.BackColor = System.Drawing.Color.White;
-            this.botaoSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSalvar.Image = ((System.Drawing.Image)(resources.GetObject("botaoSalvar.Image")));
-            this.botaoSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoSalvar.Location = new System.Drawing.Point(77, 24);
-            this.botaoSalvar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.Name = "botaoSalvar";
-            this.botaoSalvar.Size = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.TabIndex = 2;
-            this.botaoSalvar.Text = "Salvar";
-            this.botaoSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoSalvar.UseVisualStyleBackColor = false;
-            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSize = true;
@@ -295,6 +249,53 @@
             this.chkEscolherFimReserva.UseVisualStyleBackColor = true;
             this.chkEscolherFimReserva.CheckedChanged += new System.EventHandler(this.chkEscolherFimReserva_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.botaoCancelar);
+            this.panel1.Controls.Add(this.botaoSalvar);
+            this.panel1.Location = new System.Drawing.Point(268, 289);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(283, 61);
+            this.panel1.TabIndex = 29;
+            // 
+            // botaoCancelar
+            // 
+            this.botaoCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoCancelar.BackColor = System.Drawing.Color.White;
+            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
+            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoCancelar.Location = new System.Drawing.Point(180, 15);
+            this.botaoCancelar.MaximumSize = new System.Drawing.Size(100, 37);
+            this.botaoCancelar.MinimumSize = new System.Drawing.Size(100, 37);
+            this.botaoCancelar.Name = "botaoCancelar";
+            this.botaoCancelar.Size = new System.Drawing.Size(100, 37);
+            this.botaoCancelar.TabIndex = 3;
+            this.botaoCancelar.Text = "Cancelar";
+            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.botaoCancelar.UseVisualStyleBackColor = false;
+            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            // 
+            // botaoSalvar
+            // 
+            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoSalvar.BackColor = System.Drawing.Color.White;
+            this.botaoSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoSalvar.Image = ((System.Drawing.Image)(resources.GetObject("botaoSalvar.Image")));
+            this.botaoSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoSalvar.Location = new System.Drawing.Point(74, 15);
+            this.botaoSalvar.MaximumSize = new System.Drawing.Size(100, 37);
+            this.botaoSalvar.MinimumSize = new System.Drawing.Size(100, 37);
+            this.botaoSalvar.Name = "botaoSalvar";
+            this.botaoSalvar.Size = new System.Drawing.Size(100, 37);
+            this.botaoSalvar.TabIndex = 2;
+            this.botaoSalvar.Text = "Salvar";
+            this.botaoSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.botaoSalvar.UseVisualStyleBackColor = false;
+            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -312,11 +313,14 @@
             this.tableLayoutPanel3.Controls.Add(this.lblPortaSMTP, 1, 6);
             this.tableLayoutPanel3.Controls.Add(this.txtServidorSMTP, 0, 7);
             this.tableLayoutPanel3.Controls.Add(this.txtPortaSMTP, 1, 7);
-            this.tableLayoutPanel3.Controls.Add(this.chkConexaoSegura, 0, 10);
+            this.tableLayoutPanel3.Controls.Add(this.botaoTestarEmail, 1, 11);
+            this.tableLayoutPanel3.Controls.Add(this.chkConexaoSegura, 1, 10);
+            this.tableLayoutPanel3.Controls.Add(this.lblTituloEMail, 0, 10);
+            this.tableLayoutPanel3.Controls.Add(this.txtTituloEmail, 0, 11);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 71);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 12;
+            this.tableLayoutPanel3.RowCount = 13;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -328,8 +332,9 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(548, 165);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(548, 212);
             this.tableLayoutPanel3.TabIndex = 36;
             // 
             // lblSMTP
@@ -399,24 +404,6 @@
             this.lblPesquisarDados.TabIndex = 5;
             this.lblPesquisarDados.Text = "Buscar configurações de SMTP automáticamente";
             // 
-            // lblEmailResponsavel
-            // 
-            this.lblEmailResponsavel.AutoSize = true;
-            this.lblEmailResponsavel.Location = new System.Drawing.Point(3, 0);
-            this.lblEmailResponsavel.Name = "lblEmailResponsavel";
-            this.lblEmailResponsavel.Size = new System.Drawing.Size(110, 13);
-            this.lblEmailResponsavel.TabIndex = 4;
-            this.lblEmailResponsavel.Text = "E-mail do responsável";
-            // 
-            // txtEMailResponsavel
-            // 
-            this.txtEMailResponsavel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEMailResponsavel.Location = new System.Drawing.Point(3, 16);
-            this.txtEMailResponsavel.Name = "txtEMailResponsavel";
-            this.txtEMailResponsavel.Size = new System.Drawing.Size(273, 20);
-            this.txtEMailResponsavel.TabIndex = 5;
-            // 
             // txtSenhaRemetente
             // 
             this.txtSenhaRemetente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -451,6 +438,24 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.Size = new System.Drawing.Size(279, 39);
             this.tableLayoutPanel5.TabIndex = 8;
+            // 
+            // lblEmailResponsavel
+            // 
+            this.lblEmailResponsavel.AutoSize = true;
+            this.lblEmailResponsavel.Location = new System.Drawing.Point(3, 0);
+            this.lblEmailResponsavel.Name = "lblEmailResponsavel";
+            this.lblEmailResponsavel.Size = new System.Drawing.Size(110, 13);
+            this.lblEmailResponsavel.TabIndex = 4;
+            this.lblEmailResponsavel.Text = "E-mail do responsável";
+            // 
+            // txtEMailResponsavel
+            // 
+            this.txtEMailResponsavel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEMailResponsavel.Location = new System.Drawing.Point(3, 16);
+            this.txtEMailResponsavel.Name = "txtEMailResponsavel";
+            this.txtEMailResponsavel.Size = new System.Drawing.Size(273, 20);
+            this.txtEMailResponsavel.TabIndex = 5;
             // 
             // lblServidorSMTP
             // 
@@ -491,18 +496,52 @@
             // chkConexaoSegura
             // 
             this.chkConexaoSegura.AutoSize = true;
-            this.chkConexaoSegura.Location = new System.Drawing.Point(3, 139);
+            this.chkConexaoSegura.Location = new System.Drawing.Point(266, 139);
             this.chkConexaoSegura.Name = "chkConexaoSegura";
             this.chkConexaoSegura.Size = new System.Drawing.Size(127, 17);
             this.chkConexaoSegura.TabIndex = 15;
             this.chkConexaoSegura.Text = "Usar conexão segura";
             this.chkConexaoSegura.UseVisualStyleBackColor = true;
             // 
+            // botaoTestarEmail
+            // 
+            this.botaoTestarEmail.BackColor = System.Drawing.Color.White;
+            this.botaoTestarEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoTestarEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoTestarEmail.Image = ((System.Drawing.Image)(resources.GetObject("botaoTestarEmail.Image")));
+            this.botaoTestarEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botaoTestarEmail.Location = new System.Drawing.Point(266, 162);
+            this.botaoTestarEmail.Name = "botaoTestarEmail";
+            this.botaoTestarEmail.Size = new System.Drawing.Size(172, 35);
+            this.botaoTestarEmail.TabIndex = 16;
+            this.botaoTestarEmail.Text = "Testar envio de e-mail";
+            this.botaoTestarEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.botaoTestarEmail.UseVisualStyleBackColor = false;
+            this.botaoTestarEmail.Click += new System.EventHandler(this.botaoTestarEmail_Click);
+            // 
+            // lblTituloEMail
+            // 
+            this.lblTituloEMail.AutoSize = true;
+            this.lblTituloEMail.Location = new System.Drawing.Point(3, 136);
+            this.lblTituloEMail.Name = "lblTituloEMail";
+            this.lblTituloEMail.Size = new System.Drawing.Size(78, 13);
+            this.lblTituloEMail.TabIndex = 17;
+            this.lblTituloEMail.Text = "Titulo do e-mail";
+            // 
+            // txtTituloEmail
+            // 
+            this.txtTituloEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTituloEmail.Location = new System.Drawing.Point(3, 162);
+            this.txtTituloEmail.Name = "txtTituloEmail";
+            this.txtTituloEmail.Size = new System.Drawing.Size(257, 20);
+            this.txtTituloEmail.TabIndex = 18;
+            // 
             // Configuracoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 378);
+            this.ClientSize = new System.Drawing.Size(560, 415);
             this.ConfiguracoesUsuarioVisivel = true;
             this.Name = "Configuracoes";
             this.Text = "Configuracoes";
@@ -512,9 +551,9 @@
             this.tlpCampos.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -560,5 +599,8 @@
         private System.Windows.Forms.TextBox txtServidorSMTP;
         private System.Windows.Forms.TextBox txtPortaSMTP;
         private System.Windows.Forms.CheckBox chkConexaoSegura;
+        private Desktop.Framework.Botoes.BotaoTestarEmail botaoTestarEmail;
+        private System.Windows.Forms.Label lblTituloEMail;
+        private System.Windows.Forms.TextBox txtTituloEmail;
     }
 }

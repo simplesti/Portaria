@@ -133,6 +133,26 @@ namespace Portaria.Desktop.Framework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap email {
+            get {
+                object obj = ResourceManager.GetObject("email", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enviaremail {
+            get {
+                object obj = ResourceManager.GetObject("enviaremail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fingerprint {
             get {
                 object obj = ResourceManager.GetObject("fingerprint", resourceCulture);
@@ -146,6 +166,26 @@ namespace Portaria.Desktop.Framework.Properties {
         internal static System.Drawing.Bitmap group_edit {
             get {
                 object obj = ResourceManager.GetObject("group_edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Internet_Connection {
+            get {
+                object obj = ResourceManager.GetObject("Internet_Connection", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jumelles {
+            get {
+                object obj = ResourceManager.GetObject("Jumelles", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

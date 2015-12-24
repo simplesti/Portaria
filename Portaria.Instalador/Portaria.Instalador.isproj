@@ -29,6 +29,10 @@
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
 	<ItemGroup>
+		<ProjectReference Include="..\Portaria.ConfiguradorBD\Portaria.ConfiguradorBD.csproj">
+			<Name>Portaria.ConfiguradorBD</Name>
+			<Project>{19F07554-A1F6-4E33-BCE3-59748AF0C383}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\Portaria.Desktop.App\Portaria.Desktop.App.csproj">
 			<Name>Portaria.Desktop.App</Name>
 			<Project>{76082DA7-86FE-4CA4-8EB8-9B2B91571D80}</Project>

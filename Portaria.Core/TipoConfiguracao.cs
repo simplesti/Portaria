@@ -18,6 +18,7 @@ namespace Portaria.Core
         PortaSMTP = 8,
         ConexaoSeguraSMTP = 9,
         UsuarioSMTP = 10,
-        SenhaSMTP = 11
+        SenhaSMTP = 11,
+        TituloEMail = 12
     }
 }

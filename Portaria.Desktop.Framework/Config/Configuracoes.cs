@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -46,6 +47,7 @@ namespace Portaria
                 txtPortaSMTP.Text = configuracaoBus.BuscarValor(Core.TipoConfiguracao.PortaSMTP);
                 txtSenhaRemetente.Text = configuracaoBus.BuscarValor(Core.TipoConfiguracao.SenhaSMTP);
                 txtServidorSMTP.Text = configuracaoBus.BuscarValor(Core.TipoConfiguracao.ServidorSMTP);
+                txtTituloEmail.Text = configuracaoBus.BuscarValor(Core.TipoConfiguracao.TituloEMail);
 
                 var segura = false;
                 bool.TryParse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.ConexaoSeguraSMTP), out segura);
@@ -90,8 +92,9 @@ namespace Portaria
             configuracaoBus.SetarValor(Core.TipoConfiguracao.EmailResponsavel, txtEMailResponsavel.Text);
             configuracaoBus.SetarValor(Core.TipoConfiguracao.PortaSMTP, txtPortaSMTP.Text);
             configuracaoBus.SetarValor(Core.TipoConfiguracao.SenhaSMTP, txtSenhaRemetente.Text);
-            configuracaoBus.SetarValor(Core.TipoConfiguracao.ServidorSMTP, txtServidorSMTP.Text);            
+            configuracaoBus.SetarValor(Core.TipoConfiguracao.ServidorSMTP, txtServidorSMTP.Text);
             configuracaoBus.SetarValor(Core.TipoConfiguracao.ConexaoSeguraSMTP, chkConexaoSegura.Checked.ToString());
+            configuracaoBus.SetarValor(Core.TipoConfiguracao.TituloEMail, txtTituloEmail.Text);
         }
 
         private void botaoPesquisarSMTP_Click(object sender, EventArgs e)
@@ -117,6 +120,35 @@ namespace Portaria
                     chkConexaoSegura.Checked = bool.Parse(reader.GetAttribute("segura"));
                 }
             }
+        }
+
+        private void botaoTestarEmail_Click(object sender, EventArgs e)
+        {
+            TesteEMail();
+        }
+
+        private void TesteEMail()
+        {
+            Cursor = Cursors.WaitCursor;
+
+            var mail = new MailMessage(txtEMailRemetente.Text, txtEMailResponsavel.Text);
+            var client = new SmtpClient();
+            client.Port = int.Parse(txtPortaSMTP.Text);
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Host = txtServidorSMTP.Text;
+            client.EnableSsl = chkConexaoSegura.Checked;
+            client.Credentials = new System.Net.NetworkCredential(txtEMailRemetente.Text, txtSenhaRemetente.Text);
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            mail.Subject = "Teste de e-mail do Portaria Digital";
+
+            mail.Body = "Teste OK";
+
+            client.Send(mail);
+
+            Cursor = Cursors.Default;
+
+            CaixaMensagem.Mostrar("E-mail de teste enviado.", TipoCaixaMensagem.SomenteOK);
         }
     }
 }
