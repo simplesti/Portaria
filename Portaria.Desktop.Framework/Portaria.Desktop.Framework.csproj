@@ -154,6 +154,19 @@
     <Compile Include="Config\ConfiguracoesUsuario.Designer.cs">
       <DependentUpon>ConfiguracoesUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plugin\VisualizarPlugins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plugin\VisualizarPlugins.Designer.cs">
+      <DependentUpon>VisualizarPlugins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarefas\GerenciadorTarefas.cs" />
+    <Compile Include="Tarefas\VisualizarTarefas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarefas\VisualizarTarefas.Designer.cs">
+      <DependentUpon>VisualizarTarefas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +179,8 @@
     <Compile Include="Forms\FormBaseWindow.Designer.cs">
       <DependentUpon>FormBaseWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plugin\GerenciadorPlugins.cs" />
+    <Compile Include="Plugin\PortariaPlugin.cs" />
     <Compile Include="PortariaTabControls\IPortariaTab.cs" />
     <Compile Include="PortariaTabControls\PortariaTabBase.cs">
       <SubType>UserControl</SubType>
@@ -189,6 +204,7 @@
     <Compile Include="Locais\LocalItem.Designer.cs">
       <DependentUpon>LocalItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarefas\PortariaTarefa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -224,6 +240,12 @@
     <EmbeddedResource Include="Config\ConfiguracoesUsuario.resx">
       <DependentUpon>ConfiguracoesUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Plugin\VisualizarPlugins.resx">
+      <DependentUpon>VisualizarPlugins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarefas\VisualizarTarefas.resx">
+      <DependentUpon>VisualizarTarefas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +266,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Portaria.Desktop.Framework.Plugin.GerenciadorPlugins.datasource" />
+    <None Include="Properties\DataSources\Portaria.Plugins.PortariaPlugin.datasource" />
+    <None Include="Properties\DataSources\PortariaTarefa.datasource" />
     <None Include="Resources\Save.png" />
   </ItemGroup>
   <ItemGroup>
@@ -309,6 +334,8 @@
     <None Include="Resources\email.png" />
     <None Include="Resources\Jumelles.png" />
     <None Include="Resources\enviaremail.jpg" />
+    <None Include="Resources\Task_Manager.png" />
+    <None Include="Resources\Memoire.png" />
     <Content Include="ServidoresSMTP.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

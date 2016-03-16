@@ -36,6 +36,8 @@
             this.Maximizar = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.ConfiguracoesUsuario = new System.Windows.Forms.PictureBox();
+            this.GerenciadorTarefas = new System.Windows.Forms.PictureBox();
+            this.Plugins = new System.Windows.Forms.PictureBox();
             this.pnlFundo = new System.Windows.Forms.Panel();
             this.pnlConteudo = new System.Windows.Forms.Panel();
             this.tlpFundo.SuspendLayout();
@@ -45,6 +47,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Fechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfiguracoesUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GerenciadorTarefas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Plugins)).BeginInit();
             this.pnlFundo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,19 +72,23 @@
             // 
             this.tlpCabecalho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpCabecalho.AutoSize = true;
-            this.tlpCabecalho.ColumnCount = 6;
+            this.tlpCabecalho.ColumnCount = 8;
             this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpCabecalho.Controls.Add(this.Minimizar, 3, 0);
+            this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpCabecalho.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpCabecalho.Controls.Add(this.Minimizar, 5, 0);
             this.tlpCabecalho.Controls.Add(this.Icone, 0, 0);
-            this.tlpCabecalho.Controls.Add(this.Fechar, 5, 0);
-            this.tlpCabecalho.Controls.Add(this.Maximizar, 4, 0);
+            this.tlpCabecalho.Controls.Add(this.Fechar, 7, 0);
+            this.tlpCabecalho.Controls.Add(this.Maximizar, 6, 0);
             this.tlpCabecalho.Controls.Add(this.lblTitulo, 1, 0);
-            this.tlpCabecalho.Controls.Add(this.ConfiguracoesUsuario, 2, 0);
+            this.tlpCabecalho.Controls.Add(this.ConfiguracoesUsuario, 4, 0);
+            this.tlpCabecalho.Controls.Add(this.GerenciadorTarefas, 3, 0);
+            this.tlpCabecalho.Controls.Add(this.Plugins, 2, 0);
             this.tlpCabecalho.Location = new System.Drawing.Point(3, 3);
             this.tlpCabecalho.Name = "tlpCabecalho";
             this.tlpCabecalho.RowCount = 1;
@@ -167,6 +175,38 @@
             this.ConfiguracoesUsuario.TabStop = false;
             this.ConfiguracoesUsuario.Click += new System.EventHandler(this.botaoConfig_Click);
             // 
+            // GerenciadorTarefas
+            // 
+            this.GerenciadorTarefas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GerenciadorTarefas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GerenciadorTarefas.Image = global::Portaria.Desktop.Framework.Properties.Resources.Task_Manager;
+            this.GerenciadorTarefas.Location = new System.Drawing.Point(561, 19);
+            this.GerenciadorTarefas.Margin = new System.Windows.Forms.Padding(3, 3, 3, 8);
+            this.GerenciadorTarefas.MaximumSize = new System.Drawing.Size(24, 24);
+            this.GerenciadorTarefas.MinimumSize = new System.Drawing.Size(24, 24);
+            this.GerenciadorTarefas.Name = "GerenciadorTarefas";
+            this.GerenciadorTarefas.Size = new System.Drawing.Size(24, 24);
+            this.GerenciadorTarefas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GerenciadorTarefas.TabIndex = 7;
+            this.GerenciadorTarefas.TabStop = false;
+            this.GerenciadorTarefas.Click += new System.EventHandler(this.GerenciadorTarefas_Click);
+            // 
+            // Plugins
+            // 
+            this.Plugins.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Plugins.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Plugins.Image = global::Portaria.Desktop.Framework.Properties.Resources.Memoire;
+            this.Plugins.Location = new System.Drawing.Point(531, 19);
+            this.Plugins.Margin = new System.Windows.Forms.Padding(3, 3, 3, 8);
+            this.Plugins.MaximumSize = new System.Drawing.Size(24, 24);
+            this.Plugins.MinimumSize = new System.Drawing.Size(24, 24);
+            this.Plugins.Name = "Plugins";
+            this.Plugins.Size = new System.Drawing.Size(24, 24);
+            this.Plugins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Plugins.TabIndex = 8;
+            this.Plugins.TabStop = false;
+            this.Plugins.Click += new System.EventHandler(this.Plugins_Click);
+            // 
             // pnlFundo
             // 
             this.pnlFundo.Controls.Add(this.pnlConteudo);
@@ -204,6 +244,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Fechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfiguracoesUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GerenciadorTarefas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Plugins)).EndInit();
             this.pnlFundo.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -221,6 +263,7 @@
         private System.Windows.Forms.PictureBox Icone;
         private System.Windows.Forms.PictureBox Maximizar;
         private System.Windows.Forms.PictureBox ConfiguracoesUsuario;
-
+        private System.Windows.Forms.PictureBox GerenciadorTarefas;
+        private System.Windows.Forms.PictureBox Plugins;
     }
 }

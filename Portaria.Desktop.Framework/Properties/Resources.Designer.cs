@@ -203,6 +203,16 @@ namespace Portaria.Desktop.Framework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Memoire {
+            get {
+                object obj = ResourceManager.GetObject("Memoire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap min_blue {
             get {
                 object obj = ResourceManager.GetObject("min_blue", resourceCulture);
@@ -256,6 +266,16 @@ namespace Portaria.Desktop.Framework.Properties {
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Task_Manager {
+            get {
+                object obj = ResourceManager.GetObject("Task_Manager", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -77,6 +77,7 @@ namespace Portaria.Business
 
                 u.Login = entidade.Login;
                 u.Biometria = entidade.Biometria;
+                u.PesquisaDetalhadaPadrao = entidade.PesquisaDetalhadaPadrao;
                 u.CPF = entidade.CPF;
                 u.RG = entidade.RG;
                 u.Nome = entidade.Nome;

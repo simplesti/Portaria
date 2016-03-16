@@ -33,7 +33,7 @@ namespace Portaria.Desktop.Framework.Botoes
         {
             get
             {
-                return "Testar envio de e-mail";
+                return "Testar Conexão";
             }
             set
             {

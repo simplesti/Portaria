@@ -1,0 +1,5 @@
+C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Base\bin\Release\Portaria.Plugin.Base.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Base\bin\Release\Portaria.Plugin.Base.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Base\obj\Release\Portaria.Plugin.Base.csprojResolveAssemblyReference.cache
+C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Base\obj\Release\Portaria.Plugin.Base.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Base\obj\Release\Portaria.Plugin.Base.pdb

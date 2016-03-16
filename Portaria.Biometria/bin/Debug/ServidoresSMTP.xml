@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<servidores>
+  <servidor dominio="gmail.com" servidor="smtp.gmail.com" porta="587" segura="true"/>
+  <servidor dominio="yahoo.com.br" servidor="smtp.mail.yahoo.com" porta="587" segura="true"/>
+  <servidor dominio="yahoo.com" servidor="smtp.mail.yahoo.com" porta="587" segura="true"/>
+</servidores>

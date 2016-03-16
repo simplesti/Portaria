@@ -27,7 +27,6 @@ C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Desktop.Framework\obj\Release
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Desktop.Framework\obj\Release\Portaria.Desktop.Framework.csproj.GenerateResource.Cache
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Desktop.Framework\obj\Release\Portaria.Desktop.Framework.dll
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Desktop.Framework\obj\Release\Portaria.Desktop.Framework.pdb
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.Framework\bin\Release\App.config
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.Framework\bin\Release\ServidoresSMTP.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.Framework\bin\Release\Portaria.Desktop.Framework.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.Framework\bin\Release\Portaria.Desktop.Framework.pdb
@@ -58,3 +57,4 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.Framework\obj\Release\Portar
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.Framework\obj\Release\Portaria.Desktop.Framework.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.Framework\obj\Release\Portaria.Desktop.Framework.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.Framework\obj\Release\Portaria.Desktop.Framework.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.Framework\obj\Release\Portaria.Desktop.Framework.Config.GerenciadorTarefas.resources

@@ -14,6 +14,11 @@ namespace Portaria.Config
             InitializeComponent();
 
             PopulaComboCores();
+
+            if (SessaoAtual.Sessao != null)
+            {
+                chkPesquisaDetalhaada.Checked = SessaoAtual.Sessao.UsuarioLogado.PesquisaDetalhadaPadrao;
+            }
         }
 
         private void PopulaComboCores()
@@ -52,6 +57,7 @@ namespace Portaria.Config
             var u = usuarioBus.BuscarPorId(SessaoAtual.Sessao.UsuarioLogado.Id);
 
             u.CorTema = (Int32)cboCor.SelectedValue;
+            u.PesquisaDetalhadaPadrao = chkPesquisaDetalhaada.Checked;
 
             usuarioBus.InserirOuAtualizar(u);
 

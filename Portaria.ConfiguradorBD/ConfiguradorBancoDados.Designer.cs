@@ -234,7 +234,7 @@
             this.botaoTestarConexao.Name = "botaoTestarConexao";
             this.botaoTestarConexao.Size = new System.Drawing.Size(135, 35);
             this.botaoTestarConexao.TabIndex = 8;
-            this.botaoTestarConexao.Text = "Testar Conexão";
+            this.botaoTestarConexao.Text = "Testar envio de e-mail";
             this.botaoTestarConexao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.botaoTestarConexao.UseVisualStyleBackColor = false;
             this.botaoTestarConexao.Click += new System.EventHandler(this.botaoTestarConexao_Click);
@@ -313,7 +313,6 @@
         private System.Windows.Forms.TextBox txtEnderecoServidor;
         private System.Windows.Forms.TextBox txtUsuarioServidor;
         private System.Windows.Forms.TextBox txtSenhaServidor;
-        private Desktop.Framework.Botoes.BotaoTestarConexao botaoTestarConexao;
         private System.Windows.Forms.TableLayoutPanel tlpBase;
         private System.Windows.Forms.Label lblBase;
         private System.Windows.Forms.ComboBox cboBaseDados;
@@ -321,6 +320,7 @@
         private System.Windows.Forms.Panel panel1;
         private Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
         private Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
+        private Desktop.Framework.Botoes.BotaoTestarConexao botaoTestarConexao;
     }
 }
 

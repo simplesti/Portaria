@@ -1,6 +1,8 @@
 ﻿
 using Portaria.Business;
 using Portaria.Config;
+using Portaria.Desktop.Framework.Config;
+using Portaria.Desktop.Framework.Plugin;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -97,6 +99,28 @@ namespace Portaria.Desktop.Framework.Forms
                     frm.ShowDialog();
                 }
             }
+        }
+
+        private void GerenciadorTarefas_Click(object sender, EventArgs e)
+        {
+            if (SessaoAtual.Sessao != null && SessaoAtual.Sessao.UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
+            {
+                using (var frm = new VisualizarTarefas())
+                {
+                    frm.ShowDialog();
+                }
+            }
+        }
+
+        private void Plugins_Click(object sender, EventArgs e)
+        {
+            if (SessaoAtual.Sessao != null && SessaoAtual.Sessao.UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
+            {
+                using (var frm = new VisualizarPlugins())
+                {
+                    frm.ShowDialog();
+                }
+            }   
         }
     }
 }

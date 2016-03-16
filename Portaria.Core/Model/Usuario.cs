@@ -34,6 +34,8 @@ namespace Portaria.Core.Model
 
         public int CorTema { get; set; }
 
+        public bool PesquisaDetalhadaPadrao { get; set; }
+
         public string PosicaoAbas { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]

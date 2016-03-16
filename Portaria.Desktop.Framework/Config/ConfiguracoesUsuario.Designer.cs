@@ -34,6 +34,7 @@
             this.lblCor = new System.Windows.Forms.Label();
             this.cboCor = new System.Windows.Forms.ComboBox();
             this.lblAjustesUsuario = new System.Windows.Forms.Label();
+            this.chkPesquisaDetalhaada = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // botaoSalvar
@@ -96,12 +97,23 @@
             this.lblAjustesUsuario.TabIndex = 4;
             this.lblAjustesUsuario.Text = "Ajustes do usuário";
             // 
+            // chkPesquisaDetalhaada
+            // 
+            this.chkPesquisaDetalhaada.AutoSize = true;
+            this.chkPesquisaDetalhaada.Location = new System.Drawing.Point(13, 94);
+            this.chkPesquisaDetalhaada.Name = "chkPesquisaDetalhaada";
+            this.chkPesquisaDetalhaada.Size = new System.Drawing.Size(197, 17);
+            this.chkPesquisaDetalhaada.TabIndex = 5;
+            this.chkPesquisaDetalhaada.Text = "Usar pesquisa detalhada por padrão";
+            this.chkPesquisaDetalhaada.UseVisualStyleBackColor = true;
+            // 
             // ConfiguracoesUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(296, 276);
+            this.Controls.Add(this.chkPesquisaDetalhaada);
             this.Controls.Add(this.lblAjustesUsuario);
             this.Controls.Add(this.cboCor);
             this.Controls.Add(this.lblCor);
@@ -123,5 +135,6 @@
         private System.Windows.Forms.Label lblCor;
         private System.Windows.Forms.ComboBox cboCor;
         private System.Windows.Forms.Label lblAjustesUsuario;
+        private System.Windows.Forms.CheckBox chkPesquisaDetalhaada;
     }
 }

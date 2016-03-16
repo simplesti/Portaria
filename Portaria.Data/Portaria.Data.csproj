@@ -100,6 +100,10 @@
     <Compile Include="Migrations\201512172256581_EmailNotificacao.Designer.cs">
       <DependentUpon>201512172256581_EmailNotificacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512300306297_PesquisaDetalhadaPadrao.cs" />
+    <Compile Include="Migrations\201512300306297_PesquisaDetalhadaPadrao.Designer.cs">
+      <DependentUpon>201512300306297_PesquisaDetalhadaPadrao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PortariaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512172256581_EmailNotificacao.resx">
       <DependentUpon>201512172256581_EmailNotificacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512300306297_PesquisaDetalhadaPadrao.resx">
+      <DependentUpon>201512300306297_PesquisaDetalhadaPadrao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

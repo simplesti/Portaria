@@ -30,5 +30,16 @@ namespace Portaria.Desktop.Framework.Botoes
             BackColor = Color.White;
         }
 
+        public override string Text
+        {
+            get
+            {
+                return "Testar envio de e-mail";
+            }
+            set
+            {
+
+            }
+        }
     }
 }

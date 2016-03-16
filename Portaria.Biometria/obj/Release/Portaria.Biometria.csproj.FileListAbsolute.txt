@@ -102,7 +102,6 @@ C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Biometria\obj\Release\Portari
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.csproj.GenerateResource.Cache
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.dll
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.pdb
-C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Release\App.config
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Release\ServidoresSMTP.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Release\Portaria.Biometria.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Release\Portaria.Biometria.pdb

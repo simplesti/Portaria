@@ -12,7 +12,22 @@ namespace Portaria
 {
     public partial class TabVisualizarUnidades : PortariaTabBase
     {
-        private bool visDetalhada = false;
+        private bool pesquisaDetalhada;
+        public bool PesquisaDetalhada
+        {
+            get
+            {
+                return this.pesquisaDetalhada;
+            }
+
+            set
+            {
+                pesquisaDetalhada = value;
+
+                flpUnidades.Visible = !pesquisaDetalhada;
+                dgvUnidadesDetalhadas.Visible = pesquisaDetalhada;
+            }
+        }
 
         public TabVisualizarUnidades()
         {
@@ -63,6 +78,11 @@ namespace Portaria
         public override void Carregar(params Core.Model.IEntidade[] entidades)
         {
             base.Carregar();
+
+            if (SessaoAtual.Sessao != null)
+            {
+                PesquisaDetalhada = SessaoAtual.Sessao.UsuarioLogado.PesquisaDetalhadaPadrao;
+            }
 
             if (entidades.Any())
             {
@@ -142,10 +162,7 @@ namespace Portaria
 
         private void botaoMudarVisao_Click(object sender, EventArgs e)
         {
-            visDetalhada = !visDetalhada;
-
-            flpUnidades.Visible = !visDetalhada;
-            dgvUnidadesDetalhadas.Visible = visDetalhada;
+            PesquisaDetalhada = !PesquisaDetalhada;
         }
 
         private void dgvUnidadesDetalhadas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
