@@ -87,6 +87,7 @@ C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Webcam\obj\Release\Portaria.W
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Webcam\obj\Release\Portaria.Webcam.csproj.GenerateResource.Cache
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Webcam\obj\Release\Portaria.Webcam.dll
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria.Webcam\obj\Release\Portaria.Webcam.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Release\App.config
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Release\ServidoresSMTP.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Release\Portaria.Webcam.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Release\Portaria.Webcam.pdb

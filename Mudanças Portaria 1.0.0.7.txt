@@ -1,0 +1,6 @@
+
+1.07
+- Sistema de plugins : feito
+- Botão teste email icone errado : feito
+- Usar pesquisa detalhada como padrão ( Criado parametro na tela de configuração do usuário, no mesmo lugar onde fica a configuração de cores ) : feito
+- Plugin Etika

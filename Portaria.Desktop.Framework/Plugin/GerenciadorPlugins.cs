@@ -22,7 +22,7 @@ namespace Portaria.Desktop.Framework.Plugin
 
         public static void CarregarPlugins()
         {
-            var pluginsDir = Application.StartupPath + @"\Plugins\";
+            var pluginsDir = Application.StartupPath;
 
             var dlls = Directory.EnumerateFiles(pluginsDir, "Portaria.Plugin.*.dll");
             foreach (var dll in dlls)

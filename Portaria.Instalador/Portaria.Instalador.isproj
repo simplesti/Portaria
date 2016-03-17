@@ -41,5 +41,9 @@
 			<Name>Portaria.Desktop.Framework</Name>
 			<Project>{CAF5BE63-755C-4C1C-AD33-2E4673329112}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\Portaria.Plugin.Etika\Portaria.Plugin.Etika.csproj">
+			<Name>Portaria.Plugin.Etika</Name>
+			<Project>{B7DFCA1C-BA00-4C5A-A4DE-839229C2281A}</Project>
+		</ProjectReference>
 	</ItemGroup>
 </Project>

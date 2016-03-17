@@ -16,14 +16,3 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\bin\Debug\Newtonsoft.
 C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\bin\Debug\Portaria.Data.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\bin\Debug\EntityFramework.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\bin\Debug\Portaria.Log.pdb
-C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Debug\Portaria.ConfiguradorBD.csprojResolveAssemblyReference.cache
-C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Debug\Portaria.ConfiguradorBD.ConfiguradorBancoDados.resources
-C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Debug\Portaria.ConfiguradorBD.Properties.Resources.resources
-C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Debug\Portaria.ConfiguradorBD.csproj.GenerateResource.Cache
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Debug\App.config
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Debug\ServidoresSMTP.xml
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.ConfiguradorBD.exe.config
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.ConfiguradorBD.exe
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.ConfiguradorBD.pdb
-C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Debug\Portaria.ConfiguradorBD.exe
-C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Debug\Portaria.ConfiguradorBD.pdb
