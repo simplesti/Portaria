@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBiometria.cs" />
+    <Compile Include="IPortariaBus.cs" />
     <Compile Include="Model\Cadastro\Bloco.cs" />
     <Compile Include="Model\Cadastro\Funcionario.cs" />
     <Compile Include="Model\Cadastro\Local.cs" />

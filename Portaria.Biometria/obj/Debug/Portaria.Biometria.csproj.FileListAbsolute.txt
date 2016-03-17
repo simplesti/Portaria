@@ -1,4 +1,8 @@
-C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Debug\App.config
+C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.csprojResolveAssemblyReference.cache
+C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.PortariaBiometriaCapturar.resources
+C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.PortariaBiometriaVerificar.resources
+C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.Properties.Resources.resources
+C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Debug\ServidoresSMTP.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Debug\Portaria.Biometria.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Debug\Portaria.Biometria.pdb
@@ -22,10 +26,5 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Debug\Portaria.Busines
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Debug\Portaria.Data.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Debug\EntityFramework.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\bin\Debug\Portaria.Log.pdb
-C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.csprojResolveAssemblyReference.cache
-C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.PortariaBiometriaCapturar.resources
-C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.PortariaBiometriaVerificar.resources
-C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.Properties.Resources.resources
-C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Biometria\obj\Debug\Portaria.Biometria.pdb

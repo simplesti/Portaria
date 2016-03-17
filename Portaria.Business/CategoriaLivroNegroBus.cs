@@ -1,4 +1,5 @@
-﻿using Portaria.Core.Model;
+﻿using Portaria.Core;
+using Portaria.Core.Model;
 using Portaria.Data;
 using Portaria.Log;
 using System;

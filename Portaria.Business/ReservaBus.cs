@@ -7,6 +7,7 @@ using System.Data.Entity;
 using Portaria.Log;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Business.Cadastro;
+using Portaria.Core;
 
 namespace Portaria.Business
 {

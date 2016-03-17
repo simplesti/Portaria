@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvPlugins = new System.Windows.Forms.DataGridView();
-            this.portariaPluginBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.portariaPluginBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlugins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portariaPluginBindingSource)).BeginInit();
@@ -61,10 +61,7 @@
             this.dgvPlugins.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPlugins.Size = new System.Drawing.Size(757, 377);
             this.dgvPlugins.TabIndex = 1;
-            // 
-            // portariaPluginBindingSource
-            // 
-            this.portariaPluginBindingSource.DataSource = typeof(Portaria.Plugins.PortariaPlugin);
+            this.dgvPlugins.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPlugins_CellMouseDoubleClick);
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -73,6 +70,10 @@
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // portariaPluginBindingSource
+            // 
+            this.portariaPluginBindingSource.DataSource = typeof(Portaria.Plugins.PortariaPlugin);
             // 
             // VisualizarPlugins
             // 

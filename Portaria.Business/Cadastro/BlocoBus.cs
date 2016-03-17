@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
 using Portaria.Core.Model;
+using Portaria.Core;
 
 namespace Portaria.Business.Cadastro
 {

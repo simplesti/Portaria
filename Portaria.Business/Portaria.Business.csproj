@@ -58,7 +58,7 @@
     <Compile Include="CategoriaLivroNegroBus.cs" />
     <Compile Include="ConfiguracaoBus.cs" />
     <Compile Include="EntidadeHelper.cs" />
-    <Compile Include="IPortariaBus.cs" />
+    <Compile Include="PortariaBusFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistroLivroNegroBus.cs" />
     <Compile Include="RegistroLivroNegroEntidadeBus.cs" />

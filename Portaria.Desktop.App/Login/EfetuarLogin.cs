@@ -1,6 +1,7 @@
 ﻿using Portaria.Business;
 using Portaria.Business.Cadastro;
 using Portaria.Desktop.Framework.Forms;
+using Portaria.Desktop.Framework.Plugin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,8 @@ namespace Portaria.Login
             var usuarioBus = new UsuarioBus(SessaoAtual.Sessao);
 
             SessaoAtual.Sessao = usuarioBus.EfetuarLogin(txtUsuario.Text, txtSenha.Text);
+
+            GerenciadorPlugins.LoginRealizado(txtUsuario.Text, new EventArgs());
 
             Close();
         }

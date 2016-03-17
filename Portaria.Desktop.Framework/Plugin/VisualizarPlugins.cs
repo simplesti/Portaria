@@ -1,4 +1,5 @@
 ﻿using Portaria.Desktop.Framework.Forms;
+using Portaria.Plugins;
 
 namespace Portaria.Desktop.Framework.Plugin
 {
@@ -8,6 +9,15 @@ namespace Portaria.Desktop.Framework.Plugin
         {
             InitializeComponent();
             portariaPluginBindingSource.DataSource = GerenciadorPlugins.Plugins;
+        }
+
+        private void dgvPlugins_CellMouseDoubleClick(object sender, System.Windows.Forms.DataGridViewCellMouseEventArgs e)
+        {
+            var plugin = dgvPlugins.Rows[e.RowIndex].DataBoundItem as PortariaPlugin;
+            if (plugin != null)
+            {
+                plugin.Ajustar();
+            }
         }
     }
 }

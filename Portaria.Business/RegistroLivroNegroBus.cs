@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Net.Mail;
+using Portaria.Core;
 
 namespace Portaria.Business
 {

@@ -1,4 +1,5 @@
-C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Debug\App.config
+C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.PortariaWebCam.resources
+C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Debug\ServidoresSMTP.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Debug\Portaria.Webcam.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Debug\Portaria.Webcam.pdb
@@ -18,7 +19,5 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Debug\Portaria.Data.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Debug\EntityFramework.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\bin\Debug\Portaria.Log.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.csprojResolveAssemblyReference.cache
-C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.PortariaWebCam.resources
-C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.pdb

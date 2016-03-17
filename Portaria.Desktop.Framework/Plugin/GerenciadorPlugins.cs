@@ -1,5 +1,9 @@
-﻿using Portaria.Desktop.Framework.Tarefas;
+﻿using Portaria.Business;
+using Portaria.Core;
+using Portaria.Core.Model;
+using Portaria.Desktop.Framework.Tarefas;
 using Portaria.Plugins;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -10,6 +14,8 @@ namespace Portaria.Desktop.Framework.Plugin
 {
     public static class GerenciadorPlugins
     {
+        public static event EventHandler UsuarioLogou;
+
         private static List<PortariaPlugin> plugins = new List<PortariaPlugin>();
 
         public static List<PortariaPlugin> Plugins { get { return plugins; } }
@@ -25,12 +31,23 @@ namespace Portaria.Desktop.Framework.Plugin
                 var types = assembly.GetTypes();
                 foreach (var t in types)
                 {
-                    var plugin = assembly.CreateInstance(t.FullName) as PortariaPlugin;
-                    if (plugin != null)
+                    if (t.IsSubclassOf(typeof(PortariaPlugin)))
                     {
-                        Plugins.Add(plugin);
+                        var plugin = assembly.CreateInstance(t.FullName) as PortariaPlugin;
+                        if (plugin != null)
+                        {
+                            Plugins.Add(plugin);
+                        }
                     }
                 }
+            }
+        }
+
+        public static void LoginRealizado(object sender, EventArgs eventArgs)
+        {
+            if (UsuarioLogou != null)
+            {
+                UsuarioLogou(sender, eventArgs);
             }
         }
 
@@ -48,6 +65,11 @@ namespace Portaria.Desktop.Framework.Plugin
             {
                 plugin.Parar();
             }
+        }
+
+        public static IPortariaBus<T> Buscar<T>() where T : IEntidade
+        {
+            return PortariaBusFactory.Buscar<T>(SessaoAtual.Sessao);
         }
     }
 }

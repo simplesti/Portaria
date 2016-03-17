@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using Portaria.Log;
 using Portaria.Core.Model;
+using Portaria.Core;
 
 namespace Portaria.Business.Cadastro
 {

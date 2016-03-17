@@ -1,0 +1,6 @@
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Debug\Plugins\ServidoresSMTP.xml
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Debug\Plugins\Portaria.Plugin.Teste.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Debug\Plugins\Portaria.Plugin.Teste.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Teste\obj\Debug\Portaria.Plugin.Teste.csprojResolveAssemblyReference.cache
+C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Teste\obj\Debug\Portaria.Plugin.Teste.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Teste\obj\Debug\Portaria.Plugin.Teste.pdb
