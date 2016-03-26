@@ -107,6 +107,7 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migra
 C:\Users\Max\Source\Repos\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.Configuracoes.resources
 C:\Users\Max\Source\Repos\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.EmailNotificacao.resources
 C:\Users\Max\Source\Repos\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.PesquisaDetalhadaPadrao.resources
+C:\Users\Max\Source\Repos\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.BiometriaString.resources
 C:\Users\Max\Source\Repos\Portaria\Portaria.Data\obj\Release\Portaria.Data.Properties.Resources.resources
 C:\Users\Max\Source\Repos\Portaria\Portaria.Data\obj\Release\Portaria.Data.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Data\obj\Release\Portaria.Data.dll

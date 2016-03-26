@@ -1,13 +1,9 @@
 ﻿using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Portaria.Biometria
@@ -17,6 +13,8 @@ namespace Portaria.Biometria
         private DPFP.Processing.Enrollment Enroller;
         
         private DPFP.Capture.Capture Capturer;
+
+        private Bitmap bitmap = null;
 
         private byte[] bArray = null;
 
@@ -38,7 +36,7 @@ namespace Portaria.Biometria
                 else
                     SetPrompt("Não foi possível inicializar a operação de captura!");
             }
-            catch
+            catch(Exception ex)
             {
                 CaixaMensagem.Mostrar("Não foi possível inicializar a operação de captura!", TipoCaixaMensagem.SomenteOK);
             }
@@ -46,7 +44,8 @@ namespace Portaria.Biometria
 
         protected virtual void Process(DPFP.Sample Sample)
         {
-            DrawPicture(ConvertSampleToBitmap(Sample));
+            bitmap = ConvertSampleToBitmap(Sample);
+            DrawPicture(bitmap);
 
             DPFP.FeatureSet features = ExtractFeatures(Sample, DPFP.Processing.DataPurpose.Enrollment);
 
@@ -225,7 +224,16 @@ namespace Portaria.Biometria
             {
                 frm.ShowDialog();
 
-                return frm.bArray;
+                return ToByteArray(frm.bitmap, ImageFormat.Bmp);
+            }
+        }
+
+        public static byte[] ToByteArray(Image image, ImageFormat format)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, format);
+                return ms.ToArray();
             }
         }
     }
