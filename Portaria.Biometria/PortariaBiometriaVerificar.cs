@@ -2,7 +2,6 @@
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.CaixaMensagem;
-using SourceAFIS.Simple;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -35,6 +34,8 @@ namespace Portaria.Biometria
         {
             this.entidade = entidade;
 
+            GerarTemplate(entidade.Biometria);
+
             lblVerificarBiometria.Text = lblVerificarBiometria.Text.Replace("<pessoa>", this.entidade.Nome);
         }
 
@@ -48,10 +49,10 @@ namespace Portaria.Biometria
 
         public static bool Verificar(IBiometria entidade)
         {
-            /*if (Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 return true;
-            }*/
+            }
 
             if (entidade == null)
             {
@@ -99,35 +100,16 @@ namespace Portaria.Biometria
 
         protected virtual void Process(DPFP.Sample Sample)
         {
-            var bmp = ConvertSampleToBitmap(Sample);
-
-            DrawPicture(bmp);
+            DrawPicture(ConvertSampleToBitmap(Sample));
 
             DPFP.FeatureSet features = ExtractFeatures(Sample, DPFP.Processing.DataPurpose.Verification);
 
             if (features != null)
             {
-                AfisEngine Afis = new AfisEngine();
-                Afis.Threshold = 25;
+                DPFP.Verification.Verification.Result result = new DPFP.Verification.Verification.Result();
+                Verificator.Verify(features, Template, ref result);
 
-                Person person1 = new Person();
-                var fp1 = new Fingerprint();
-                fp1.AsBitmap = bmp;
-                person1.Fingerprints.Add(fp1);
-
-                Afis.Extract(person1);
-
-                var person2 = new Person();
-                var fp2 = new Fingerprint();
-                fp2.AsBitmap = new Bitmap(new MemoryStream(entidade.Biometria));
-                person2.Fingerprints.Add(fp2);
-
-                Afis.Extract(person2);
-                
-                float score = Afis.Verify(person1, person2);
-                bool match = (score > 0);
-                
-                Verficou(match);
+                Verficou(result.Verified);
             }
         }
 

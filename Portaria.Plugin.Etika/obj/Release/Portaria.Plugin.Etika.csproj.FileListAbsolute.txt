@@ -1,9 +1,9 @@
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\App.config
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\ServidoresSMTP.xml
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Plugin.Etika.dll
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Plugin.Etika.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Etika\obj\Release\Portaria.Plugin.Etika.ConfiguradorEtika.resources
 C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Etika\obj\Release\Portaria.Plugin.Etika.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Etika\obj\Release\Portaria.Plugin.Etika.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Etika\obj\Release\Portaria.Plugin.Etika.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\App.config
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\ServidoresSMTP.xml
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Plugin.Etika.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Plugin.Etika.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Etika\obj\Release\Portaria.Plugin.Etika.csprojResolveAssemblyReference.cache

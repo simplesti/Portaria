@@ -76,10 +76,9 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Bus
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Core.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Desktop.Framework.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Webcam.dll
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\SourceAFIS.dll
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Newtonsoft.Json.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Data.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Log.dll
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Newtonsoft.Json.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\DirectShowLib-2005.dll
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Biometria.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Business.pdb
@@ -88,10 +87,9 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Des
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Webcam.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\EntityFramework.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\EntityFramework.SqlServer.xml
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\SourceAFIS.xml
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Newtonsoft.Json.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Data.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Log.pdb
+C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\Newtonsoft.Json.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Desktop.App.csprojResolveAssemblyReference.cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Blocos.CadBloco.resources
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Blocos.TabCadastrarBlocos.resources
@@ -122,4 +120,3 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Usu
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Desktop.App.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.exe
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.pdb
-C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Release\dpHFtrEx.dll

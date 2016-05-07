@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 namespace Portaria.Core.Model.CadastroMorador
 {
     public class Pessoa : IEntidade, IBiometria
