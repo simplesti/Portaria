@@ -6,3 +6,12 @@ D:\Projetos\PortariaDigital\Portaria\Portaria.Core\obj\Debug\Portaria.Core.cspro
 D:\Projetos\PortariaDigital\Portaria\Portaria.Core\obj\Debug\Portaria.Core.dll
 D:\Projetos\PortariaDigital\Portaria\Portaria.Core\obj\Debug\Portaria.Core.pdb
 D:\Projetos\PortariaDigital\Portaria\Portaria.Core\obj\Debug\Portaria.Core.csprojResolveAssemblyReference.cache
+C:\Source\Portaria\Portaria.Core\bin\Debug\Portaria.Core.dll.config
+C:\Source\Portaria\Portaria.Core\bin\Debug\Portaria.Core.dll
+C:\Source\Portaria\Portaria.Core\bin\Debug\Portaria.Core.pdb
+C:\Source\Portaria\Portaria.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Source\Portaria\Portaria.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Source\Portaria\Portaria.Core\obj\Debug\Portaria.Core.Properties.Resources.resources
+C:\Source\Portaria\Portaria.Core\obj\Debug\Portaria.Core.csproj.GenerateResource.Cache
+C:\Source\Portaria\Portaria.Core\obj\Debug\Portaria.Core.dll
+C:\Source\Portaria\Portaria.Core\obj\Debug\Portaria.Core.pdb

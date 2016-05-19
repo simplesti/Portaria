@@ -33,3 +33,14 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.
 C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.ConfiguradorBD.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.ConfiguradorBD.exe
 C:\Users\Max\Source\Repos\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.ConfiguradorBD.pdb
+C:\Source\Portaria\Portaria.Desktop.App\bin\Release\App.config
+C:\Source\Portaria\Portaria.Desktop.App\bin\Release\ServidoresSMTP.xml
+C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.ConfiguradorBD.exe.config
+C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.ConfiguradorBD.exe
+C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.ConfiguradorBD.pdb
+C:\Source\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.ConfiguradorBD.csprojResolveAssemblyReference.cache
+C:\Source\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.ConfiguradorBD.ConfiguradorBancoDados.resources
+C:\Source\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.ConfiguradorBD.Properties.Resources.resources
+C:\Source\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.ConfiguradorBD.csproj.GenerateResource.Cache
+C:\Source\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.ConfiguradorBD.exe
+C:\Source\Portaria\Portaria.ConfiguradorBD\obj\Release\Portaria.ConfiguradorBD.pdb

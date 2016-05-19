@@ -10,3 +10,16 @@ C:\Users\Max\Documents\GitHub\Portaria\Portaria.Log\bin\Debug\EntityFramework.Sq
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Log\obj\Debug\Portaria.Log.csprojResolveAssemblyReference.cache
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Log\obj\Debug\Portaria.Log.dll
 C:\Users\Max\Documents\GitHub\Portaria\Portaria.Log\obj\Debug\Portaria.Log.pdb
+C:\Source\Portaria\Portaria.Log\bin\Debug\Portaria.Log.dll
+C:\Source\Portaria\Portaria.Log\bin\Debug\Portaria.Log.pdb
+C:\Source\Portaria\Portaria.Log\bin\Debug\EntityFramework.dll
+C:\Source\Portaria\Portaria.Log\bin\Debug\EntityFramework.SqlServer.dll
+C:\Source\Portaria\Portaria.Log\bin\Debug\Newtonsoft.Json.dll
+C:\Source\Portaria\Portaria.Log\bin\Debug\Portaria.Core.dll
+C:\Source\Portaria\Portaria.Log\bin\Debug\Portaria.Core.pdb
+C:\Source\Portaria\Portaria.Log\bin\Debug\EntityFramework.xml
+C:\Source\Portaria\Portaria.Log\bin\Debug\EntityFramework.SqlServer.xml
+C:\Source\Portaria\Portaria.Log\bin\Debug\Newtonsoft.Json.xml
+C:\Source\Portaria\Portaria.Log\obj\Debug\Portaria.Log.csprojResolveAssemblyReference.cache
+C:\Source\Portaria\Portaria.Log\obj\Debug\Portaria.Log.dll
+C:\Source\Portaria\Portaria.Log\obj\Debug\Portaria.Log.pdb
