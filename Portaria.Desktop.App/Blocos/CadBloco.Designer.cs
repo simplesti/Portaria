@@ -43,10 +43,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bsBloco)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnlConteudo
             // 
             this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(378, 102);
+            this.pnlConteudo.Size = new System.Drawing.Size(467, 93);
             // 
             // tlpCampos
             // 
@@ -70,7 +70,7 @@
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tlpCampos.Size = new System.Drawing.Size(378, 102);
+            this.tlpCampos.Size = new System.Drawing.Size(467, 93);
             this.tlpCampos.TabIndex = 2;
             // 
             // tlpBotoes
@@ -83,7 +83,7 @@
             this.tlpBotoes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpBotoes.Controls.Add(this.botaoCancelar, 1, 0);
             this.tlpBotoes.Controls.Add(this.botaoSalvar, 0, 0);
-            this.tlpBotoes.Location = new System.Drawing.Point(163, 56);
+            this.tlpBotoes.Location = new System.Drawing.Point(252, 47);
             this.tlpBotoes.Name = "tlpBotoes";
             this.tlpBotoes.RowCount = 1;
             this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -143,7 +143,7 @@
             this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsBloco, "Nome", true));
             this.txtNome.Location = new System.Drawing.Point(3, 16);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(196, 20);
+            this.txtNome.Size = new System.Drawing.Size(461, 20);
             this.txtNome.TabIndex = 0;
             // 
             // bsBloco
@@ -154,9 +154,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 165);
-            this.MaximumSize = new System.Drawing.Size(384, 165);
-            this.MinimumSize = new System.Drawing.Size(384, 165);
+            this.ClientSize = new System.Drawing.Size(473, 165);
+            this.ConfiguracoesUsuarioVisivel = true;
+            this.MaximumSize = new System.Drawing.Size(473, 165);
+            this.MinimumSize = new System.Drawing.Size(473, 165);
             this.Name = "CadBloco";
             this.Text = "CadBloco";
             this.Titulo = "Cadastro de bloco";

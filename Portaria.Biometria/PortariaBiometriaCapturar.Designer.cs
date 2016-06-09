@@ -92,6 +92,7 @@
             this.Picture.Location = new System.Drawing.Point(36, 45);
             this.Picture.Name = "Picture";
             this.Picture.Size = new System.Drawing.Size(248, 217);
+            this.Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture.TabIndex = 12;
             this.Picture.TabStop = false;
             // 
@@ -146,8 +147,7 @@
             this.MinimumSize = new System.Drawing.Size(550, 350);
             this.Name = "PortariaBiometriaCapturar";
             this.Text = "PortariaBiometriaCadastrar";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CaptureForm_FormClosed);
-            this.Load += new System.EventHandler(this.CaptureForm_Load);
+            this.Load += new System.EventHandler(this.PortariaBiometriaCapturar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

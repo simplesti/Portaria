@@ -49,7 +49,7 @@ namespace Portaria
         public CadPessoa()
         {
             InitializeComponent();
-            Pessoa = new Pessoa();
+            Pessoa = new Pessoa() { ControleAcessoAutorizado = true };
 
             AplicarPermissoes();
         }

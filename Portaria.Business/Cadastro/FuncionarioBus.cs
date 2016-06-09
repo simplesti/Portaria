@@ -57,6 +57,7 @@ namespace Portaria.Business.Cadastro
                 f.Documento = entidade.Documento;
                 f.Foto = entidade.Foto;
                 f.Frequencia = entidade.Frequencia;
+                f.ControleAcessoAutorizado = entidade.ControleAcessoAutorizado;
                 f.Nome = entidade.Nome;
                 f.HorarioEntrada = entidade.HorarioEntrada;
                 f.HorarioSaida = entidade.HorarioSaida;

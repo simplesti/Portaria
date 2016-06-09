@@ -44,7 +44,7 @@ namespace Portaria.Usuarios
         {
             InitializeComponent();
             PopulaComboTipo();
-            Usuario = new Usuario() { Tipo = TipoUsuario.Administrador, CorTema = -1 };
+            Usuario = new Usuario() { Tipo = TipoUsuario.Administrador, CorTema = -1, ControleAcessoAutorizado = true };
         }
 
         public CadUsuario(Usuario usuario)

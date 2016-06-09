@@ -55,6 +55,7 @@
             this.lblStatusBiometria = new System.Windows.Forms.Label();
             this.botaoVerificarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria();
             this.botaoCapturarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria();
+            this.chkAutorizarControleAcesso = new System.Windows.Forms.CheckBox();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsFuncionario)).BeginInit();
@@ -91,6 +92,7 @@
             this.tlpCampos.Controls.Add(this.dtSaida, 1, 10);
             this.tlpCampos.Controls.Add(this.panel1, 1, 11);
             this.tlpCampos.Controls.Add(this.pnlBiometria, 0, 11);
+            this.tlpCampos.Controls.Add(this.chkAutorizarControleAcesso, 1, 0);
             this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCampos.Location = new System.Drawing.Point(0, 0);
             this.tlpCampos.Name = "tlpCampos";
@@ -247,9 +249,9 @@
             this.chkAutorizadoSemPresenca.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bsFuncionario, "AutorizadaSemPresenca", true));
             this.chkAutorizadoSemPresenca.Location = new System.Drawing.Point(393, 172);
             this.chkAutorizadoSemPresenca.Name = "chkAutorizadoSemPresenca";
-            this.chkAutorizadoSemPresenca.Size = new System.Drawing.Size(264, 17);
+            this.chkAutorizadoSemPresenca.Size = new System.Drawing.Size(258, 17);
             this.chkAutorizadoSemPresenca.TabIndex = 1;
-            this.chkAutorizadoSemPresenca.Text = "Autorizada a entrada sem a presença do morador?";
+            this.chkAutorizadoSemPresenca.Text = "Autorizada a entrada sem a presença do morador";
             this.chkAutorizadoSemPresenca.UseVisualStyleBackColor = true;
             // 
             // dtEntrada
@@ -372,6 +374,18 @@
             this.botaoCapturarBiometria.UseVisualStyleBackColor = false;
             this.botaoCapturarBiometria.Click += new System.EventHandler(this.botaoCapturarBiometria_Click);
             // 
+            // chkAutorizarControleAcesso
+            // 
+            this.chkAutorizarControleAcesso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.chkAutorizarControleAcesso.AutoSize = true;
+            this.chkAutorizarControleAcesso.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bsFuncionario, "ControleAcessoAutorizado", true));
+            this.chkAutorizarControleAcesso.Location = new System.Drawing.Point(393, 136);
+            this.chkAutorizarControleAcesso.Name = "chkAutorizarControleAcesso";
+            this.chkAutorizarControleAcesso.Size = new System.Drawing.Size(172, 17);
+            this.chkAutorizarControleAcesso.TabIndex = 29;
+            this.chkAutorizarControleAcesso.Text = "Autorizar acesso com biometria";
+            this.chkAutorizarControleAcesso.UseVisualStyleBackColor = true;
+            // 
             // CadFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,6 +436,6 @@
         private System.Windows.Forms.Label lblStatusBiometria;
         private Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria botaoVerificarBiometria;
         private Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria botaoCapturarBiometria;
-
+        private System.Windows.Forms.CheckBox chkAutorizarControleAcesso;
     }
 }

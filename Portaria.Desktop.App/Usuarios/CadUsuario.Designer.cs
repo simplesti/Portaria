@@ -51,6 +51,7 @@
             this.lblStatusBiometria = new System.Windows.Forms.Label();
             this.botaoVerificarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria();
             this.botaoCapturarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria();
+            this.chkAutorizarControleAcesso = new System.Windows.Forms.CheckBox();
             this.pnlConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsUsuario)).BeginInit();
             this.tlpCampos.SuspendLayout();
@@ -61,7 +62,7 @@
             // pnlConteudo
             // 
             this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(532, 189);
+            this.pnlConteudo.Size = new System.Drawing.Size(532, 214);
             // 
             // lblSenha
             // 
@@ -126,14 +127,16 @@
             this.tlpCampos.Controls.Add(this.lblTipo, 1, 2);
             this.tlpCampos.Controls.Add(this.lblRG, 1, 9);
             this.tlpCampos.Controls.Add(this.lblCPF, 0, 9);
-            this.tlpCampos.Controls.Add(this.panel1, 1, 11);
+            this.tlpCampos.Controls.Add(this.panel1, 1, 12);
             this.tlpCampos.Controls.Add(this.txtRG, 1, 10);
             this.tlpCampos.Controls.Add(this.txtCPF, 0, 10);
-            this.tlpCampos.Controls.Add(this.pnlBiometria, 0, 11);
+            this.tlpCampos.Controls.Add(this.pnlBiometria, 0, 12);
+            this.tlpCampos.Controls.Add(this.chkAutorizarControleAcesso, 1, 11);
             this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCampos.Location = new System.Drawing.Point(0, 0);
             this.tlpCampos.Name = "tlpCampos";
-            this.tlpCampos.RowCount = 12;
+            this.tlpCampos.RowCount = 13;
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -148,7 +151,7 @@
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCampos.Size = new System.Drawing.Size(532, 189);
+            this.tlpCampos.Size = new System.Drawing.Size(532, 214);
             this.tlpCampos.TabIndex = 1;
             // 
             // txtSenha
@@ -204,7 +207,7 @@
             // 
             this.panel1.Controls.Add(this.botaoCancelar);
             this.panel1.Controls.Add(this.botaoSalvar);
-            this.panel1.Location = new System.Drawing.Point(288, 121);
+            this.panel1.Location = new System.Drawing.Point(288, 144);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 65);
             this.panel1.TabIndex = 29;
@@ -272,7 +275,7 @@
             this.pnlBiometria.Controls.Add(this.lblStatusBiometria);
             this.pnlBiometria.Controls.Add(this.botaoVerificarBiometria);
             this.pnlBiometria.Controls.Add(this.botaoCapturarBiometria);
-            this.pnlBiometria.Location = new System.Drawing.Point(3, 121);
+            this.pnlBiometria.Location = new System.Drawing.Point(3, 144);
             this.pnlBiometria.Name = "pnlBiometria";
             this.pnlBiometria.Size = new System.Drawing.Size(279, 65);
             this.pnlBiometria.TabIndex = 32;
@@ -320,14 +323,25 @@
             this.botaoCapturarBiometria.UseVisualStyleBackColor = false;
             this.botaoCapturarBiometria.Click += new System.EventHandler(this.botaoCapturarBiometria_Click);
             // 
+            // chkAutorizarControleAcesso
+            // 
+            this.chkAutorizarControleAcesso.AutoSize = true;
+            this.chkAutorizarControleAcesso.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bsUsuario, "ControleAcessoAutorizado", true));
+            this.chkAutorizarControleAcesso.Location = new System.Drawing.Point(288, 121);
+            this.chkAutorizarControleAcesso.Name = "chkAutorizarControleAcesso";
+            this.chkAutorizarControleAcesso.Size = new System.Drawing.Size(172, 17);
+            this.chkAutorizarControleAcesso.TabIndex = 33;
+            this.chkAutorizarControleAcesso.Text = "Autorizar acesso com biometria";
+            this.chkAutorizarControleAcesso.UseVisualStyleBackColor = true;
+            // 
             // CadUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 252);
+            this.ClientSize = new System.Drawing.Size(538, 277);
             this.ConfiguracoesUsuarioVisivel = true;
-            this.MaximumSize = new System.Drawing.Size(538, 252);
-            this.MinimumSize = new System.Drawing.Size(538, 252);
+            this.MaximumSize = new System.Drawing.Size(538, 277);
+            this.MinimumSize = new System.Drawing.Size(538, 277);
             this.Name = "CadUsuario";
             this.Text = "CadUsuario";
             this.Titulo = "Cadastro de usuário";
@@ -365,6 +379,6 @@
         private System.Windows.Forms.Label lblStatusBiometria;
         private Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria botaoVerificarBiometria;
         private Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria botaoCapturarBiometria;
-
+        private System.Windows.Forms.CheckBox chkAutorizarControleAcesso;
     }
 }

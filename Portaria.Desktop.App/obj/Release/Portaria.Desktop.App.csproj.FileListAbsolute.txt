@@ -120,19 +120,11 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Usu
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Desktop.App.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.exe
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\obj\Release\Portaria.pdb
-C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.exe.config
-C:\Source\Portaria\Portaria.Desktop.App\obj\Release\Portaria.exe
-C:\Source\Portaria\Portaria.Desktop.App\obj\Release\Portaria.pdb
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\App.config
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\ServidoresSMTP.xml
+C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.exe.config
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.exe
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.pdb
-C:\Source\Portaria\Portaria.Desktop.App\bin\Release\DPFPCtlXWrapperNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Release\DPFPDevNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Release\DPFPEngNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Release\DPFPGuiNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Release\DPFPShrNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Release\DPFPVerNET.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\EntityFramework.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\EntityFramework.SqlServer.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Biometria.dll
@@ -140,6 +132,7 @@ C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Business.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Core.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Desktop.Framework.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Webcam.dll
+C:\Source\Portaria\Portaria.Desktop.App\bin\Release\DPUruNet.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Data.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Log.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Newtonsoft.Json.dll
@@ -151,6 +144,7 @@ C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Desktop.Framework.p
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Webcam.pdb
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\EntityFramework.xml
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\EntityFramework.SqlServer.xml
+C:\Source\Portaria\Portaria.Desktop.App\bin\Release\DPUruNet.xml
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Data.pdb
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Portaria.Log.pdb
 C:\Source\Portaria\Portaria.Desktop.App\bin\Release\Newtonsoft.Json.xml
@@ -182,3 +176,5 @@ C:\Source\Portaria\Portaria.Desktop.App\obj\Release\Portaria.TabVisualizarUnidad
 C:\Source\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Usuarios.CadUsuario.resources
 C:\Source\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Usuarios.TabVisualizarUsuarios.resources
 C:\Source\Portaria\Portaria.Desktop.App\obj\Release\Portaria.Desktop.App.csproj.GenerateResource.Cache
+C:\Source\Portaria\Portaria.Desktop.App\obj\Release\Portaria.exe
+C:\Source\Portaria\Portaria.Desktop.App\obj\Release\Portaria.pdb

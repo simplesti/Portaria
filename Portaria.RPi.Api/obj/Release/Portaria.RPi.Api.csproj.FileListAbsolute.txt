@@ -1,0 +1,15 @@
+C:\Source\Portaria.ControleAcesso\Portaria.RPi.Api\bin\Release\Portaria.RPi.Api.dll.config
+C:\Source\Portaria.ControleAcesso\Portaria.RPi.Api\bin\Release\Portaria.RPi.Api.dll
+C:\Source\Portaria.ControleAcesso\Portaria.RPi.Api\bin\Release\Portaria.RPi.Api.pdb
+C:\Source\Portaria.ControleAcesso\Portaria.RPi.Api\bin\Release\Newtonsoft.Json.dll
+C:\Source\Portaria.ControleAcesso\Portaria.RPi.Api\bin\Release\Newtonsoft.Json.xml
+C:\Source\Portaria.ControleAcesso\Portaria.RPi.Api\obj\Release\Portaria.RPi.Api.dll
+C:\Source\Portaria.ControleAcesso\Portaria.RPi.Api\obj\Release\Portaria.RPi.Api.pdb
+C:\Source\Portaria\Portaria.RPi.Api\bin\Release\Portaria.RPi.Api.dll.config
+C:\Source\Portaria\Portaria.RPi.Api\bin\Release\Portaria.RPi.Api.dll
+C:\Source\Portaria\Portaria.RPi.Api\bin\Release\Portaria.RPi.Api.pdb
+C:\Source\Portaria\Portaria.RPi.Api\bin\Release\Newtonsoft.Json.dll
+C:\Source\Portaria\Portaria.RPi.Api\bin\Release\Newtonsoft.Json.xml
+C:\Source\Portaria\Portaria.RPi.Api\obj\Release\Portaria.RPi.Api.csprojResolveAssemblyReference.cache
+C:\Source\Portaria\Portaria.RPi.Api\obj\Release\Portaria.RPi.Api.dll
+C:\Source\Portaria\Portaria.RPi.Api\obj\Release\Portaria.RPi.Api.pdb

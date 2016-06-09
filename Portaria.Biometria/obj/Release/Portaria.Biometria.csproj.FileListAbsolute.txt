@@ -137,12 +137,10 @@ C:\Source\Portaria\Portaria.Biometria\bin\Release\App.config
 C:\Source\Portaria\Portaria.Biometria\bin\Release\ServidoresSMTP.xml
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Portaria.Biometria.dll
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Portaria.Biometria.pdb
-C:\Source\Portaria\Portaria.Biometria\bin\Release\DPFPCtlXWrapperNET.dll
-C:\Source\Portaria\Portaria.Biometria\bin\Release\DPFPDevNET.dll
-C:\Source\Portaria\Portaria.Biometria\bin\Release\DPFPEngNET.dll
-C:\Source\Portaria\Portaria.Biometria\bin\Release\DPFPGuiNET.dll
-C:\Source\Portaria\Portaria.Biometria\bin\Release\DPFPShrNET.dll
-C:\Source\Portaria\Portaria.Biometria\bin\Release\DPFPVerNET.dll
+C:\Source\Portaria\Portaria.Biometria\bin\Release\DPCtlUruNet.dll
+C:\Source\Portaria\Portaria.Biometria\bin\Release\DPCtlXUru.dll
+C:\Source\Portaria\Portaria.Biometria\bin\Release\DPUruNet.dll
+C:\Source\Portaria\Portaria.Biometria\bin\Release\DPXUru.dll
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Portaria.Core.dll
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Portaria.Desktop.Framework.dll
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Newtonsoft.Json.dll
@@ -152,6 +150,10 @@ C:\Source\Portaria\Portaria.Biometria\bin\Release\EntityFramework.dll
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Portaria.Log.dll
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Portaria.Core.pdb
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Portaria.Desktop.Framework.pdb
+C:\Source\Portaria\Portaria.Biometria\bin\Release\DPCtlUruNet.xml
+C:\Source\Portaria\Portaria.Biometria\bin\Release\DPCtlXUru.xml
+C:\Source\Portaria\Portaria.Biometria\bin\Release\DPUruNet.xml
+C:\Source\Portaria\Portaria.Biometria\bin\Release\DPXUru.xml
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Newtonsoft.Json.xml
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Portaria.Business.pdb
 C:\Source\Portaria\Portaria.Biometria\bin\Release\Portaria.Data.pdb

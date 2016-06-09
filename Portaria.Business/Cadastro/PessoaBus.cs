@@ -77,6 +77,7 @@ namespace Portaria.Business.Cadastro
                 p.FoneCelular = entidade.FoneCelular;
                 p.FoneComercial = entidade.FoneComercial;
                 p.FoneResidencial = entidade.FoneResidencial;
+                p.ControleAcessoAutorizado = entidade.ControleAcessoAutorizado;
                 p.Foto = entidade.Foto;
                 p.GrauParentesco = entidade.GrauParentesco;
                 p.Nome = entidade.Nome;

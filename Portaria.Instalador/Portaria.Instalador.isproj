@@ -33,6 +33,10 @@
 			<Name>Portaria.ConfiguradorBD</Name>
 			<Project>{19F07554-A1F6-4E33-BCE3-59748AF0C383}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\Portaria.ControleAcessoBiometrico\Portaria.ControleAcessoBiometrico.csproj">
+			<Name>Portaria.ControleAcessoBiometrico</Name>
+			<Project>{B1429EA1-96BA-408C-8B1F-DB5CB92C7668}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\Portaria.Desktop.App\Portaria.Desktop.App.csproj">
 			<Name>Portaria.Desktop.App</Name>
 			<Project>{76082DA7-86FE-4CA4-8EB8-9B2B91571D80}</Project>
@@ -44,6 +48,10 @@
 		<ProjectReference Include="..\Portaria.Plugin.Etika\Portaria.Plugin.Etika.csproj">
 			<Name>Portaria.Plugin.Etika</Name>
 			<Project>{B7DFCA1C-BA00-4C5A-A4DE-839229C2281A}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Portaria.RPi.Api\Portaria.RPi.Api.csproj">
+			<Name>Portaria.RPi.Api</Name>
+			<Project>{04F1FE71-4A5D-4C78-9CBB-13465B381107}</Project>
 		</ProjectReference>
 	</ItemGroup>
 </Project>

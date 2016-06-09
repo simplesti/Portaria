@@ -22,9 +22,11 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public string GrauParentesco { get; set; }
 
-        public byte[] Biometria { get; set; }
+        public string Biometria { get; set; }
 
         public byte[] Foto { get; set; }
+
+        public bool ControleAcessoAutorizado { get; set; }
 
         [Newtonsoft.Json.JsonIgnore]
         public virtual ICollection<Veiculo> Veiculos { get; set; }

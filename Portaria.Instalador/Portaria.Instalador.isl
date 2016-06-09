@@ -340,9 +340,11 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>Portaria.ConfiguradorBD.Primary_output</td><td>{74B70B41-2356-4A19-8894-4036FB1A7999}</td><td>INSTALLDIR</td><td>2</td><td/><td>portaria.configuradorbd.prim</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Portaria.ControleAcessoBiometrico.Primary_output</td><td>{787D1C67-942B-40A7-8151-F7A1332A3F3E}</td><td>INSTALLDIR</td><td>2</td><td/><td>portaria.controleacessobiome</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Portaria.Desktop.App.Primary_output</td><td>{05199A7D-ACE7-4004-A118-20B61F66CDB2}</td><td>INSTALLDIR</td><td>2</td><td/><td>portaria.desktop.app.primary</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Portaria.Desktop.Framework.Content_Files</td><td>{428447A2-119E-495B-A1C0-8302177AEA9E}</td><td>INSTALLDIR</td><td>2</td><td/><td>portaria.desktop.framework.c</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Portaria.Plugin.Etika.Primary_output</td><td>{5B2EC7F6-284F-4501-90ED-FE06E92E8B9B}</td><td>INSTALLDIR</td><td>2</td><td/><td>portaria.plugin.etika.primar</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Portaria.RPi.Api.Primary_output</td><td>{C4A67F77-492C-4A56-8F77-7DACB4533333}</td><td>INSTALLDIR</td><td>2</td><td/><td>portaria.rpi.api.primary_out</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1054,9 +1056,11 @@
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>INSTALLDIR</td><td>Portaria.ConfiguradorBD.Primary_output</td></row>
+		<row><td>INSTALLDIR</td><td>Portaria.ControleAcessoBiometrico.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>Portaria.Desktop.App.Primary_output</td></row>
 		<row><td>INSTALLDIR</td><td>Portaria.Desktop.Framework.Content_Files</td></row>
 		<row><td>INSTALLDIR</td><td>Portaria.Plugin.Etika.Primary_output</td></row>
+		<row><td>INSTALLDIR</td><td>Portaria.RPi.Api.Primary_output</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1871,9 +1875,11 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>Portaria.ConfiguradorBD.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>Portaria.ControleAcessoBiometrico.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>Portaria.Desktop.App.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>Portaria.Desktop.Framework.Content_Files</td></row>
 		<row><td>AlwaysInstall</td><td>Portaria.Plugin.Etika.Primary_output</td></row>
+		<row><td>AlwaysInstall</td><td>Portaria.RPi.Api.Primary_output</td></row>
 	</table>
 
 	<table name="File">
@@ -1889,9 +1895,11 @@
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>portaria.configuradorbd.prim</td><td>Portaria.ConfiguradorBD.Primary_output</td><td>Portaria.ConfiguradorBD.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Portaria.ConfiguradorBD&gt;|Built</td><td>3</td><td/></row>
+		<row><td>portaria.controleacessobiome</td><td>Portaria.ControleAcessoBiometrico.Primary_output</td><td>Portaria.ControleAcessoBiometrico.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Portaria.ControleAcessoBiometrico&gt;|Built</td><td>3</td><td/></row>
 		<row><td>portaria.desktop.app.primary</td><td>Portaria.Desktop.App.Primary_output</td><td>Portaria.Desktop.App.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Portaria.Desktop.App&gt;|Built</td><td>3</td><td/></row>
 		<row><td>portaria.desktop.framework.c</td><td>Portaria.Desktop.Framework.Content_Files</td><td>Portaria.Desktop.Framework.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Portaria.Desktop.Framework&gt;|ContentFiles</td><td>3</td><td/></row>
 		<row><td>portaria.plugin.etika.primar</td><td>Portaria.Plugin.Etika.Primary_output</td><td>Portaria.Plugin.Etika.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Portaria.Plugin.Etika&gt;|Built</td><td>3</td><td/></row>
+		<row><td>portaria.rpi.api.primary_out</td><td>Portaria.RPi.Api.Primary_output</td><td>Portaria.RPi.Api.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Portaria.RPi.Api&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2034,9 +2042,11 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>Portaria.ConfiguradorBD.Primary_output</td><td/><td/><td>_82C4F330_1D3E_4863_B981_A83D85362547_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Portaria.ControleAcessoBiometrico.Primary_output</td><td/><td/><td>_F63A1DC0_B1BB_4648_94C2_F1D02C2358DF_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Portaria.Desktop.App.Primary_output</td><td/><td/><td>_296C68B2_3F5C_4197_B9BC_DB6F7E0CBD90_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Portaria.Desktop.Framework.Content_Files</td><td/><td/><td>_F75A4B69_6026_472D_B8F5_853E67C2E767_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Portaria.Plugin.Etika.Primary_output</td><td/><td/><td>_2F4F33F7_D9B1_4750_8047_23CE821535F1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Portaria.RPi.Api.Primary_output</td><td/><td/><td>_81997058_643C_4BD5_AEB9_E3156B35EFD3_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2320,9 +2330,11 @@
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
 		<row><td>Portaria.ConfiguradorBD</td><td>Portaria.ConfiguradorBD\Portaria.ConfiguradorBD.csproj</td><td/><td>2</td></row>
+		<row><td>Portaria.ControleAcessoBiometrico</td><td>Portaria.ControleAcessoBiometrico\Portaria.ControleAcessoBiometrico.csproj</td><td/><td>2</td></row>
 		<row><td>Portaria.Desktop.App</td><td>Portaria.Desktop.App\Portaria.Desktop.App.csproj</td><td/><td>2</td></row>
 		<row><td>Portaria.Desktop.Framework</td><td>Portaria.Desktop.Framework\Portaria.Desktop.Framework.csproj</td><td/><td>2</td></row>
 		<row><td>Portaria.Plugin.Etika</td><td>Portaria.Plugin.Etika\Portaria.Plugin.Etika.csproj</td><td/><td>2</td></row>
+		<row><td>Portaria.RPi.Api</td><td>Portaria.RPi.Api\Portaria.RPi.Api.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>SystemFolder</td><td/><td/><td>1</td></row>
 		<row><td>WindowsFolder</td><td/><td/><td>1</td></row>
@@ -3441,6 +3453,8 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>-1776038318</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>-1776038318</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>Portaria Digital</td><td>0</td><td/><td>-1776060654</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>Controle Acesso Biometrico</td><td>0</td><td/><td>1126458517</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Configurador BD</td><td>0</td><td/><td>1126478997</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>-1776038318</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>-1776038318</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-1776038318</td></row>
@@ -4353,7 +4367,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{8ABC011F-FBE6-479F-B831-CBD3B9D2FD7C}</td><td/></row>
 		<row><td>ProductName</td><td>Portaria Digital</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0007</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.0008</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4432,6 +4446,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>FileKey1</td><td>Portaria.Desktop.App.Primary_output</td><td/><td>simple_1_simples_ti</td><td>2</td></row>
 		<row><td>FileKey2</td><td>Portaria.Desktop.App.Primary_output</td><td/><td>portar_1_portaria_digital</td><td>2</td></row>
 		<row><td>_Built</td><td>Portaria.Desktop.App.Primary_output</td><td/><td>portar_1_portaria_digital</td><td>2</td></row>
+		<row><td>_Built2</td><td>Portaria.ControleAcessoBiometrico.Primary_output</td><td/><td>portar_1_portaria_digital</td><td>2</td></row>
+		<row><td>_Built3</td><td>Portaria.ConfiguradorBD.Primary_output</td><td/><td>portar_1_portaria_digital</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4519,6 +4535,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="I4">ISAttributes</col>
 		<row><td>_Built</td><td>portar_1_portaria_digital</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>Portaria.Desktop.App.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>_Built1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>Portaria.Desktop.App.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built2</td><td>portar_1_portaria_digital</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>Portaria.ControleAcessoBiometrico.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built3</td><td>portar_1_portaria_digital</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>Portaria.ConfiguradorBD.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

@@ -28,28 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label StatusLabel;
             System.Windows.Forms.Label PromptLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortariaBiometriaVerificar));
+            System.Windows.Forms.Label StatusLabel;
             this.lblVerificarBiometria = new System.Windows.Forms.Label();
-            this.StatusText = new System.Windows.Forms.TextBox();
             this.Prompt = new System.Windows.Forms.TextBox();
             this.Picture = new System.Windows.Forms.PictureBox();
             this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
             this.botaoOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
-            StatusLabel = new System.Windows.Forms.Label();
+            this.StatusText = new System.Windows.Forms.TextBox();
             PromptLabel = new System.Windows.Forms.Label();
+            StatusLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // StatusLabel
-            // 
-            StatusLabel.AutoSize = true;
-            StatusLabel.Location = new System.Drawing.Point(279, 95);
-            StatusLabel.Name = "StatusLabel";
-            StatusLabel.Size = new System.Drawing.Size(37, 13);
-            StatusLabel.TabIndex = 15;
-            StatusLabel.Text = "Status";
             // 
             // PromptLabel
             // 
@@ -70,20 +61,6 @@
             this.lblVerificarBiometria.Text = "Verificar biometría de <pessoa>";
             this.lblVerificarBiometria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // StatusText
-            // 
-            this.StatusText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.StatusText.BackColor = System.Drawing.SystemColors.Window;
-            this.StatusText.Location = new System.Drawing.Point(282, 111);
-            this.StatusText.Multiline = true;
-            this.StatusText.Name = "StatusText";
-            this.StatusText.ReadOnly = true;
-            this.StatusText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.StatusText.Size = new System.Drawing.Size(296, 219);
-            this.StatusText.TabIndex = 16;
-            // 
             // Prompt
             // 
             this.Prompt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -103,6 +80,7 @@
             this.Picture.Location = new System.Drawing.Point(13, 42);
             this.Picture.Name = "Picture";
             this.Picture.Size = new System.Drawing.Size(248, 288);
+            this.Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture.TabIndex = 12;
             this.Picture.TabStop = false;
             // 
@@ -139,6 +117,29 @@
             this.botaoOK.UseVisualStyleBackColor = false;
             this.botaoOK.Click += new System.EventHandler(this.botaoOK_Click);
             // 
+            // StatusLabel
+            // 
+            StatusLabel.AutoSize = true;
+            StatusLabel.Location = new System.Drawing.Point(279, 95);
+            StatusLabel.Name = "StatusLabel";
+            StatusLabel.Size = new System.Drawing.Size(37, 13);
+            StatusLabel.TabIndex = 15;
+            StatusLabel.Text = "Status";
+            // 
+            // StatusText
+            // 
+            this.StatusText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StatusText.BackColor = System.Drawing.SystemColors.Window;
+            this.StatusText.Location = new System.Drawing.Point(282, 111);
+            this.StatusText.Multiline = true;
+            this.StatusText.Name = "StatusText";
+            this.StatusText.ReadOnly = true;
+            this.StatusText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.StatusText.Size = new System.Drawing.Size(296, 219);
+            this.StatusText.TabIndex = 16;
+            // 
             // PortariaBiometriaVerificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,8 +156,7 @@
             this.MinimumSize = new System.Drawing.Size(284, 261);
             this.Name = "PortariaBiometriaVerificar";
             this.Text = "PortariaBiometria";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CaptureForm_FormClosed);
-            this.Load += new System.EventHandler(this.CaptureForm_Load);
+            this.Load += new System.EventHandler(this.PortariaBiometriaVerificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,10 +166,10 @@
         #endregion
 
         private System.Windows.Forms.Label lblVerificarBiometria;
-        private System.Windows.Forms.TextBox StatusText;
         private System.Windows.Forms.TextBox Prompt;
         private System.Windows.Forms.PictureBox Picture;
         private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
         private Portaria.Desktop.Framework.Botoes.BotaoOK botaoOK;
+        private System.Windows.Forms.TextBox StatusText;
     }
 }

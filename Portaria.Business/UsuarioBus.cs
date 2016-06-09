@@ -79,6 +79,7 @@ namespace Portaria.Business
                 u.Biometria = entidade.Biometria;
                 u.PesquisaDetalhadaPadrao = entidade.PesquisaDetalhadaPadrao;
                 u.CPF = entidade.CPF;
+                u.ControleAcessoAutorizado = entidade.ControleAcessoAutorizado;
                 u.RG = entidade.RG;
                 u.Nome = entidade.Nome;
                 if (entidade.Senha != string.Empty && u.Senha != entidade.Senha)

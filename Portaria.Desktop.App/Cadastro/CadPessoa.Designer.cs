@@ -56,6 +56,7 @@
             this.lblStatusBiometria = new System.Windows.Forms.Label();
             this.botaoVerificarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria();
             this.botaoCapturarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria();
+            this.chkAutorizadoControleAcesso = new System.Windows.Forms.CheckBox();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsPessoa)).BeginInit();
@@ -93,6 +94,7 @@
             this.tlpCampos.Controls.Add(this.txtCPF, 0, 4);
             this.tlpCampos.Controls.Add(this.pnlBotoes, 1, 10);
             this.tlpCampos.Controls.Add(this.pnlBiometria, 0, 10);
+            this.tlpCampos.Controls.Add(this.chkAutorizadoControleAcesso, 1, 0);
             this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCampos.Location = new System.Drawing.Point(0, 0);
             this.tlpCampos.Name = "tlpCampos";
@@ -370,6 +372,18 @@
             this.botaoCapturarBiometria.UseVisualStyleBackColor = false;
             this.botaoCapturarBiometria.Click += new System.EventHandler(this.botaoCapturarBiometria_Click);
             // 
+            // chkAutorizadoControleAcesso
+            // 
+            this.chkAutorizadoControleAcesso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.chkAutorizadoControleAcesso.AutoSize = true;
+            this.chkAutorizadoControleAcesso.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bsPessoa, "ControleAcessoAutorizado", true));
+            this.chkAutorizadoControleAcesso.Location = new System.Drawing.Point(343, 136);
+            this.chkAutorizadoControleAcesso.Name = "chkAutorizadoControleAcesso";
+            this.chkAutorizadoControleAcesso.Size = new System.Drawing.Size(172, 17);
+            this.chkAutorizadoControleAcesso.TabIndex = 26;
+            this.chkAutorizadoControleAcesso.Text = "Autorizar acesso com biometria";
+            this.chkAutorizadoControleAcesso.UseVisualStyleBackColor = true;
+            // 
             // CadPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,5 +435,6 @@
         private System.Windows.Forms.Label lblStatusBiometria;
         private Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria botaoVerificarBiometria;
         private Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria botaoCapturarBiometria;
+        private System.Windows.Forms.CheckBox chkAutorizadoControleAcesso;
     }
 }

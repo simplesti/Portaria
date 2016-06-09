@@ -117,8 +117,8 @@ C:\Source\Portaria\Portaria.Data\bin\Release\Portaria.Data.dll
 C:\Source\Portaria\Portaria.Data\bin\Release\Portaria.Data.pdb
 C:\Source\Portaria\Portaria.Data\bin\Release\EntityFramework.dll
 C:\Source\Portaria\Portaria.Data\bin\Release\EntityFramework.SqlServer.dll
-C:\Source\Portaria\Portaria.Data\bin\Release\Portaria.Core.dll
 C:\Source\Portaria\Portaria.Data\bin\Release\Newtonsoft.Json.dll
+C:\Source\Portaria\Portaria.Data\bin\Release\Portaria.Core.dll
 C:\Source\Portaria\Portaria.Data\bin\Release\Portaria.Core.pdb
 C:\Source\Portaria\Portaria.Data\bin\Release\EntityFramework.xml
 C:\Source\Portaria\Portaria.Data\bin\Release\EntityFramework.SqlServer.xml
@@ -136,6 +136,8 @@ C:\Source\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.CategoriaL
 C:\Source\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.Configuracoes.resources
 C:\Source\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.EmailNotificacao.resources
 C:\Source\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.PesquisaDetalhadaPadrao.resources
+C:\Source\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.AlteradoFormatoBiometria.resources
+C:\Source\Portaria\Portaria.Data\obj\Release\Portaria.Data.Migrations.NovoCampoControleAcesso.resources
 C:\Source\Portaria\Portaria.Data\obj\Release\Portaria.Data.Properties.Resources.resources
 C:\Source\Portaria\Portaria.Data\obj\Release\Portaria.Data.csproj.GenerateResource.Cache
 C:\Source\Portaria\Portaria.Data\obj\Release\Portaria.Data.dll

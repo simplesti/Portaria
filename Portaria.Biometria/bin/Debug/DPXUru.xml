@@ -1,0 +1,873 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DPXUru</name>
+    </assembly>
+    <members>
+        <member name="T:DPXUru.XFmd">
+            <summary>
+            ActiveX Fmd data structure.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XFmd.#ctor(DPUruNet.Fmd)">
+            <summary>
+            Constructor for ActiveX Fmd.
+            </summary>
+            <param name="fmd"></param>
+        </member>
+        <member name="M:DPXUru.XFmd.SerializeXml">
+            <summary>
+            Serialize XFmd to XML string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DPXUru.XFmd.DeserializeXml(System.String)">
+            <summary>
+            Deserialize XML string to XFmd.
+            </summary>
+            <param name="xml">XML string to deserialize</param>
+            <returns></returns>
+        </member>
+        <member name="P:DPXUru.XFmd.Fmd">
+            <summary>
+            Underlying Fmd object.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.Bytes">
+            <summary>
+            Byte array as ArrayList.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.Format">
+            <summary>
+            Format (i.e., ANSI, ISO, ...)
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.Version">
+            <summary>
+            .NET Wrapper version the fingerprint data originated from.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.Width">
+            <summary>
+            Width.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.ViewCount">
+            <summary>
+            View count.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.Height">
+            <summary>
+            Height.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.CaptureEquipmentIds">
+            <summary>
+            Capture equipment ids.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.CaptureEquipmentComp">
+            <summary>
+            Capture equipment comp.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XFmd.XFmv">
+            <summary>
+            ActiveX Fmv object.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XFmd.XFmv.#ctor(DPUruNet.Fmd.Fmv)">
+            <summary>
+            Constructor for ActiveX Fmv.
+            </summary>
+            <param name="fmv"></param>
+        </member>
+        <member name="P:DPXUru.XFmd.XFmv.Fmv">
+            <summary>
+            Underlying Fmv object.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.XFmv.Bytes">
+            <summary>
+            Byte array as ArrayList.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.XFmv.FingerPosition">
+            <summary>
+            Finger position.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.XFmv.MinutiaeCount">
+            <summary>
+            Minutiae count.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmd.XFmv.Quality">
+            <summary>
+            Quality.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XFid">
+            <summary>
+            ActiveX Fid data structure.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XFid.#ctor(DPUruNet.Fid)">
+            <summary>
+            Constructor for ActiveX Fid object.
+            </summary>
+            <param name="fid"></param>
+        </member>
+        <member name="M:DPXUru.XFid.SerializeXml">
+            <summary>
+            Serialize XFid to XML string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DPXUru.XFid.DeserializeXml(System.String)">
+            <summary>
+            Deserialize XML string to XFmd.
+            </summary>
+            <param name="xml">XML string to deserialize</param>
+            <returns></returns>
+        </member>
+        <member name="P:DPXUru.XFid.Fivs">
+            <summary>
+            Fiv view list as ArrayList.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.Fid">
+            <summary>
+            Underlying Fid object.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.Bytes">
+            <summary>
+            Byte array as ArrayList.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.Format">
+            <summary>
+            Format (i.e., ANSI, ISO, ...)
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.Version">
+            <summary>
+            .NET Wrapper version the fingerprint data originated from.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.CbeffId">
+            <summary>
+            CBEFF Id.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.Resolution">
+            <summary>
+            Resolution.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.AquisitionLevel">
+            <summary>
+            Acquisition level.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.Bpp">
+            <summary>
+            Bits per pixel.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.CaptureDeviceId">
+            <summary>
+            Capture device id.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.Compression">
+            <summary>
+            Compression.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.FingerCount">
+            <summary>
+            Finger count.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.ImageResolution">
+            <summary>
+            Image resolution.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.ScaleUnits">
+            <summary>
+            Scale units.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.ScanResolution">
+            <summary>
+            Scan resolution.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XFid.XFiv">
+            <summary>
+            ActiveX Fiv object.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XFid.XFiv.#ctor(DPUruNet.Fid.Fiv)">
+            <summary>
+            Constructor for ActiveX Fiv object.
+            </summary>
+            <param name="fiv">FIV</param>
+        </member>
+        <member name="M:DPXUru.XFid.XFiv.Bitmap(System.Double)">
+            <summary>
+            Convert Bitmap to Base-64 string.
+            </summary>
+            <param name="sizeRatio">Requested size of image.  greater or equal to 1 = original size, less than 1 = the image will be shrunken by this percentage</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DPXUru.XFid.XFiv.CreateBitmap(System.Byte[],System.Int32,System.Int32,System.Double)" -->
+        <member name="P:DPXUru.XFid.XFiv.Fiv">
+            <summary>
+            Underlying Fiv object.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.XFiv.Bytes">
+            <summary>
+            Byte array as ArrayList.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.XFiv.Height">
+            <summary>
+            Height.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.XFiv.Width">
+            <summary>
+            Width.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.XFiv.Depth">
+            <summary>
+            Depth.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.XFiv.FingerPosition">
+            <summary>
+            Finger position.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.XFiv.ImpressionType">
+            <summary>
+            Impression type.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.XFiv.ViewCount">
+            <summary>
+            View count.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFid.XFiv.ViewNumber">
+            <summary>
+            View number.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XFmdResult">
+            <summary>
+            ActiveX result and Fmd.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XFmdResult.#ctor(DPUruNet.DataResult{DPUruNet.Fmd})">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fmdResult">Non-Com object to wrap</param>
+        </member>
+        <member name="P:DPXUru.XFmdResult.Fmd">
+            <summary>
+            FMD result.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFmdResult.ResultCode">
+            <summary>
+            Result code.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XFidResult">
+            <summary>
+            ActiveX result and Fid.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XFidResult.#ctor(DPUruNet.DataResult{DPUruNet.Fid})">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="fidResult"></param>
+        </member>
+        <member name="P:DPXUru.XFidResult.Fid">
+            <summary>
+            FID.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XFidResult.ResultCode">
+            <summary>
+            Result code.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XImporter">
+            <summary>
+            ActiveX conversion object.  
+            </summary>
+        </member>
+        <member name="M:DPXUru.XImporter.ImportFmd(System.Collections.ArrayList,System.String,System.String)">
+            <summary>
+            Converts an Fmd from any supported format to any other supported format.
+            </summary>
+            <param name="fmdIn">input Fmd</param>
+            <param name="formatIn">input format</param>
+            <param name="formatOut">output Fmd</param>
+            <returns>
+             \return DP_SUCCESS: Fmd was converted;
+             \return DP_INVALID_PARAMETER: One or more parameters passed are invalid;
+             \return DP_FAILURE: Failed to convert Fmd.
+            </returns>
+        </member>
+        <member name="M:DPXUru.XImporter.ImportDpFid(System.Collections.ArrayList,System.String,System.Int32,System.Int32)">
+            <summary>
+            Converts legacy DigitalPersona image to the image in ANSI or ISO format.
+            </summary>
+            <param name="fid1">Fid to convert</param>
+            <param name="resolutionIn">input resolution</param>
+            <param name="formatOut">output format</param>
+            <param name="rotate">rotate the image</param>
+            <returns>
+             \return DP_SUCCESS: Fid was created
+             \return DP_FAILURE: Failed to create Fid
+            </returns>
+        </member>
+        <member name="M:DPXUru.XImporter.ImportFid(System.Collections.ArrayList,System.String)">
+            <summary>
+            Converts an Fid from any supported format to any other supported format.
+            </summary>
+            <param name="fmdIn">input Fmd</param>
+            <param name="formatIn">input format</param>
+            <param name="formatOut">output Fmd</param>
+            <returns>
+             \return DP_SUCCESS: Fid was converted;
+             \return DP_INVALID_PARAMETER: One or more parameters passed are invalid;
+             \return DP_FAILURE: Failed to convert Fid.
+            </returns>
+        </member>
+        <member name="T:DPXUru.XFeatureExtraction">
+            <summary>
+            ActiveX feature extraction object.  
+            </summary>
+        </member>
+        <member name="M:DPXUru.XFeatureExtraction.CreateFmdFromFid(DPXUru.XFid,System.String)">
+            <summary>
+            <para>Extracts features and creates an Fmd from an ANSI or ISO image. </para>
+            <para>This function works with Fids that have:</para>
+             <para>- 8 bits per pixel</para>
+             <para>- no padding</para>
+             <para>- square pixels (dpi is the same for horizontal and vertical)</para>     
+            </summary>
+            <param name="fid">FID to extract features</param>
+            <param name="formatOut">Format of the FMD</param>
+            <returns>
+             \return DP_SUCCESS: Fmd was created;
+             \return DP_INVALID_PARAMETER: One or more parameters passed are invalid.
+             \return DP_FAILURE: Failed to create Fmd.
+            </returns>
+        </member>
+        <member name="M:DPXUru.XFeatureExtraction.CreateFmdFromRaw(DPXUru.XFid,System.String)">
+            <summary>
+            Extracts features and creates an FMD from a raw image.
+            <para>When you do a fingerprint capture, you can receive a raw image or a Fid. If you specify a raw image, you can then extract features into an Fmd using this function.</para>
+            <para>The raw image is just a buffer of pixels. This function works with raw images that have:</para>
+             <para>- 8 bits per pixel</para>
+             <para>- no padding</para>
+             <para>- square pixels (dpi is the same for horizontal and vertical)</para>     
+            </summary>
+            <param name="fid">FID to extract features</param>
+            <param name="formatOut">Format of the FMD</param>
+            <returns>
+             \return DP_SUCCESS: Fmd was created;
+             \return DP_INVALID_PARAMETER: One or more parameters passed are invalid.
+             \return DP_FAILURE: Failed to create Fmd.
+            </returns>
+        </member>
+        <member name="T:DPXUru.XEnrollment">
+            <summary>
+            ActiveX enrollment object.  
+            </summary>
+        </member>
+        <member name="M:DPXUru.XEnrollment.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XEnrollment.LoadFmdsXml(System.String)">
+            <summary>
+            Loads a set of FMDs in XML format.
+            </summary>
+            <param name="fmds">FMDs</param>
+        </member>
+        <member name="M:DPXUru.XEnrollment.LoadFmd(DPXUru.XFmd)">
+            <summary>
+            Load an FMD object.
+            </summary>
+            <param name="fmd">FMD</param>
+        </member>
+        <member name="M:DPXUru.XEnrollment.ClearFmds">
+            <summary>
+            Clear all loaded FMDs.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XEnrollment.CreateEnrollmentFmd(System.String)">
+            <summary>
+            <para>Creates and returns enrollment FMD.</para>        
+            <para>Create an Fmd for an enrolled finger. The output Fmd is suitable for storing in a database of enrolled users.   </para>
+            <para>Some applications like voting, banking and law enforcement require that you check for duplicate fingerprints before storing a new fingerprint in the database. 	</para>
+            <para>For ANSI/ISO formats, the enrollment Fmd is a standard Fmd (the same as an Fmd generated by the extraction function). </para>
+            </summary>
+            <param name="gallery">Enrollment FMDs</param>
+            <returns>        
+             DP_SUCCESS:  Fmd created;
+             DP_MORE_DATA: Fmd created, but allocated memory is not sufficient. The required memory size is in the fmd_size;
+             DP_INVALID_PARAMETER: One or more parameters passed are invalid;
+             DP_FAILURE: Unknown error.
+            </returns>
+        </member>
+        <member name="T:DPXUru.XCompareResult">
+            <summary>
+            ActiveX result and score.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XCompareResult.#ctor(DPUruNet.CompareResult)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="compareResult"></param>
+        </member>
+        <member name="P:DPXUru.XCompareResult.Score">
+            <summary>
+            Dissimilarity score.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XCompareResult.ResultCode">
+            <summary>
+            Result code.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XIdentifyResult">
+            <summary>
+            ActiveX result and indexes of matches.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XIdentifyResult.#ctor(DPUruNet.IdentifyResult)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="identifyResult"></param>
+        </member>
+        <member name="P:DPXUru.XIdentifyResult.Indexes">
+            <summary>
+            Array of integer-pairs describing FMD and view of where matches exist.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XIdentifyResult.ResultCode">
+            <summary>
+            Result code.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XComparison">
+            <summary>
+            ActiveX comparison object.  
+            </summary>
+        </member>
+        <member name="M:DPXUru.XComparison.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XComparison.LoadFmdsXml(System.String)">
+            <summary>
+            Loads a set of FMDs in XML format.
+            </summary>
+            <param name="fmds">FMDs</param>
+        </member>
+        <member name="M:DPXUru.XComparison.LoadFmd(DPXUru.XFmd)">
+            <summary>
+            Loads an FMD.
+            </summary>
+            <param name="fmd">FMD</param>
+        </member>
+        <member name="M:DPXUru.XComparison.ClearFmds">
+            <summary>
+            Clear all loaded FMDs.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XComparison.Compare(DPXUru.XFmd,System.Int32,DPXUru.XFmd,System.Int32)">
+            <summary>
+            Compares two fingerprints.
+            
+            <para>Given two single views from two Fmds, this function returns a <b>dissimilarity score</b> indicating the quality of the match.  </para>
+            <para>The dissimilarity scores returned values are between:  </para>
+            <para>0 (match), </para>
+            <para>Max Integer Value (no match).  </para>
+            <para>Values close to 0 indicate very close matches, values closer to maxint indicate very poor matches.  </para>
+            <para>For a discussion of  how to evaluate dissimilarity scores, as well as the statistical validity of the dissimilarity score and error rates, consult the Developer Guide.  </para>        /// 
+            <para>The Compare function returns DP_SUCCESS if it is able to compare the fingerprints successfully (i.e., the Fmds are valid and correctly formed).  However that does not mean that the fingerprints matched. To check whether they matched, you must look at the dissimilarity score.</para>
+            </summary>
+            <param name="fmd1">First FMD</param>
+            <param name="index1">Index of the view in the first FMD</param>
+            <param name="fmd2">Second FMD</param>
+            <param name="index2">Index of the view in the second FMD</param>
+            <returns>
+             \return DP_SUCCESS: Comparison finished;
+             \return DP_INVALID_PARAMETER: One or more parameters passed are invalid;
+             \return DP_FAILURE: Unknown error.
+            </returns>
+        </member>
+        <member name="M:DPXUru.XComparison.Identify(DPXUru.XFmd,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            <para>Compares a single fingerprint to an array of fingerprints.  This function takes as inputs:</para>
+            	<para>- a single view in an Fmd</para>
+            	<para>- an array of Fmds (each Fmd can contain up to 16 views) to compare, all of the same format</para>
+            	<para>- the desired number of matches to return </para>
+            	<para>- the threshold for False Positive Identification Rate that is permitted</para>
+            <para>This function compares a single view against an array of Fmds.  Each time view has a score lower than the threshold, that view is marked as a possible candidate.  </para>
+            <para>Then when all possible candidates are identified (i.e., they meet the threshold), they are ranked by their score.  Finally, the function returns as many candidates as requested, based on the candidates with the lowest dissimilarity score.</para>
+            <para>For a discussion of setting the threshold as well as the statistical validity of the dissimilarity score and error rates, consult the Developer Guide.  </para>
+            </summary>
+            <param name="fmd">First FMD</param>
+            <param name="index">Index of the view in the first FMD</param>
+            <param name="thresholdScore">Target threshold on degree of dissimilarity</param>
+            <param name="maxResult">How many candidates to return</param>
+            <returns>
+             \return DPFJ_SUCESS: Identification finished
+             \return DP_INVALID_PARAMETER: One or more parameters passed are invalid;
+             \return DP_FAILURE: Unknown error
+            </returns>
+        </member>
+        <member name="T:DPXUru.XReader">
+            <summary>
+            ActiveX reader object.  
+            </summary>
+        </member>
+        <member name="M:DPXUru.XReader.#ctor">
+            <summary>
+            Constructor that should only be used by ActiveX browser controls which require an empty constructor
+            </summary>
+        </member>
+        <member name="M:DPXUru.XReader.Open(System.String)">
+            <summary>
+            Opens a reader and populates ReaderCapabilities sub-class.  
+            </summary>
+            <returns>
+             \return DPFPDD_SUCCESS: Reader was successfullly opened;
+             \return DPFPDD_E_FAILURE: Unexpected failure;
+             \return DPFPDD_E_INVALID_DEVICE: No reader with this name found;
+             \return DPFPDD_E_DEVICE_BUSY: Reader is already opened by the same or another process;
+             \return DPFPDD_E_DEVICE_FAILURE: Failed to open the reader.
+            </returns>
+        </member>
+        <member name="M:DPXUru.XReader.Dispose">
+            <summary>
+            Releases the reader.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XReader.Calibrate">
+            <summary>
+            Calibrates the reader.
+            
+            This function calibrates a reader and blocks until the calibration is complete.  It can take several seconds to calibrate for some devices. 
+            </summary>
+            <returns>
+             \return DPFPDD_SUCCESS: Calibration succeeded;
+             \return DPFPDD_E_FAILURE: Unexpected failure;
+             \return DPFPDD_E_INVALID_DEVICE: Invalid reader;
+             \return DPFPDD_E_DEVICE_BUSY: Another operation is in progress;
+             \return DPFPDD_E_DEVICE_FAILURE: Failed to calibrate, reader is not functioning properly.
+            </returns>
+        </member>
+        <member name="M:DPXUru.XReader.GetStatus">
+            <summary>
+            Populates the ReaderStatus sub-class.
+            </summary>
+            <returns>
+             \return DPFPDD_SUCCESS: Reader status obtained;
+             \return DPFPDD_E_FAILURE: Unexpected failure;
+             \return DPFPDD_E_INVALID_DEVICE: Invalid reader;
+            </returns>
+        </member>
+        <member name="M:DPXUru.XReader.Reset">
+            <summary>
+            Resets the reader.
+            
+            This function performs a hardware reset on the reader.  Hardware resets are typically needed only 
+            after a hardware problem (e.g., the reader is unplugged or receives an electrostatic shock). 
+            This function blocks until the reset is complete.
+            </summary>
+            <returns>
+             \return DPFPDD_SUCCESS: Reset succeeded;
+             \return DPFPDD_E_FAILURE: Unexpected failure;
+             \return DPFPDD_E_INVALID_DEVICE: Invalid reader;
+             \return DPFPDD_E_DEVICE_BUSY: Another operation is in progress;
+             \return DPFPDD_E_DEVICE_FAILURE: Failed to reset, reader is not functioning properly.
+            </returns>
+        </member>
+        <member name="M:DPXUru.XReader.Capture(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            This function captures a fingerprint image from the opened reader device.  This function signals the device that a fingerprint is expected and waits until a fingerprint is received.  This function blocks until an image is captured, capture fails or timeout is expired. This function cannot be called in streaming mode. If memory is not sufficient for the image, then DP_E_MORE_DATA will be returned. 
+            </summary>
+            <param name="format">Format of the image</param>
+            <param name="processing">Processing of the image</param>
+            <param name="timeout">Timeout in milliseconds; -1 means no timeout (function will block until a fingerprint is captured or a cancel is caused)</param>
+            <param name="resolution">Resolution of the image</param>
+        </member>
+        <member name="M:DPXUru.XReader.CancelCapture">
+            <summary>
+            Cancels pending capture.
+            </summary>
+            <returns>
+             \return DPFPDD_SUCCESS: Capture canceled;
+             \return DPFPDD_E_FAILURE: Unexpected failure;
+             \return DPFPDD_E_INVALID_DEVICE: Invalid reader;
+             \return DPFPDD_E_DEVICE_FAILURE: Failed to cancel capture, reader is not functioning properly.
+            </returns>
+        </member>
+        <member name="M:DPXUru.XReader.GetStreamImage(System.String,System.Int32,System.Int32)">
+            <summary>
+            Takes an image from the stream.
+            	
+            After the reader is put into streaming mode this function takes an image from the stream. After this function returns, the  
+            reader stays in the streaming mode. Frame selection, scoring or other image processing is not performed.
+            	
+            If the memory is not sufficient for the image, then 
+             \return DPFPDD_E_MORE_DATA will be returned. 
+            For every image from the stream, the driver provides a score (in capture_result.score) and quality feedback (in capture_result.quailty). 
+            </summary>
+            <param name="format">Format of the image</param>
+            <param name="processing">Processing of the image</param>
+            <param name="resolution">Resolution of the image</param>
+            <returns>         
+             \return DPFPDD_SUCCESS: Image acquired from the stream. Extended result is in capture_result;
+             \return DPFPDD_E_FAILURE: Unexpected failure;
+             \return DPFPDD_E_INVALID_DEVICE: Invalid reader;
+             \return DPFPDD_E_DEVICE_BUSY: Another operation is in progress;
+             \return DPFPDD_E_MORE_DATA: Insufficient  memory is allocated for the image_data, the required size is in the image_size;
+             \return DPFPDD_E_INVALID_PARAMETER: Wrong data type or image format in the capture_parm;
+             \return DPFPDD_E_DEVICE_FAILURE: Failed to acquire image from the stream, reader is not functioning properly.
+            </returns>  
+        </member>
+        <member name="M:DPXUru.XReader.StartStreaming">
+            <summary>
+            Puts reader into streaming mode.
+            
+            Not all readers support this mode. When the reader is in streaming mode, the application can only call 
+            GetStreamImage() to acquire images from the stream.
+            </summary>
+            <returns>
+             \return DPFPDD_SUCCESS: Reader put into streaming mode;
+             \return DPFPDD_E_FAILURE: Unexpected failure;
+             \return DPFPDD_E_INVALID_DEVICE: Invalid reader;
+             \return DPFPDD_E_INVALID_PARAMETER: Wrong data type or image format in the capture_parm;
+             \return DPFPDD_E_DEVICE_BUSY: Another operation is in progress;
+             \return DPFPDD_E_DEVICE_FAILURE: Failed to start streaming, reader is not functioning properly.
+            </returns>
+        </member>
+        <member name="M:DPXUru.XReader.StopStreaming">
+            <summary>
+            Stops streaming mode
+            </summary>
+            <returns>
+             \return DPFPDD_SUCCESS: Streaming was stopped;
+             \return DPFPDD_E_FAILURE: Unexpected failure;
+             \return DPFPDD_E_INVALID_DEVICE: Invalid reader;
+             \return DPFPDD_E_DEVICE_FAILURE: Failed to stop streaming, reader is not functioning properly.
+            </returns>
+        </member>
+        <member name="P:DPXUru.XReader.ReaderX">
+            <summary>
+            Only use for ActiveX in the browser. See samples for usage. ReaderX object whose capture you event this ReaderX objects should handle.  For the purpose of allowing ReaderX objects instantiated in javascript to handle On_Captured events. 
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.Reader">
+            <summary>
+            Underlying Reader object.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.Status">
+            <summary>
+            Reader status.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.Name">
+            <summary>
+            Unique name of the reader.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.SerialNumber">
+            <summary>
+            The reader's GUID.  Can be used to uniquely identify the reader externally.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.Modality">
+            <summary>
+            Reader modality.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.Technology">
+            <summary>
+            Reader technology.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.VendorName">
+            <summary>
+            Vendor name.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.VendorId">
+            <summary>
+            Vendor id.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.ProductName">
+            <summary>
+            Product name.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.ProductId">
+            <summary>
+            Product id.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.FirmwareVersion">
+            <summary>
+            Firmware version, including major, minor, and revision numbers.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.HardwareVersion">
+            <summary>
+            Hardware version, including major, minor, and revision numbers.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.FingerDetected">
+            <summary>
+            Flag to show if reader detects a finger.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.VendorData">
+            <summary>
+            Additional vendor-specific data which may be passed by the driver.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.CanCapture">
+            <summary>
+            Flag: reader can capture images.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.CanStream">
+            <summary>
+            Flag: reader can stream images.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.ExtractFeatures">
+            <summary>
+            Flag: reader can extract features from captured image and return fingerprint features data.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.CanMatch">
+            <summary>
+            Flag: reader can perform match one-to-one.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.CanIdentify">
+            <summary>
+            Flag: reader can perform match one-to-many.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.HasFingerprintStorage">
+            <summary>
+            Flag: reader has storage for fingerprint features data.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.HasPowerManagement">
+            <summary>
+            Flag: power mode of the reader can be controlled.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.HasCalibration">
+            <summary>
+            Flag: reader can be calibrated.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.PIVCompliant">
+            <summary>
+            Flag: can produce PIV compliant images.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.Resolutions">
+            <summary>
+            Available resolutions.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XReader.IndicatorType">
+            <summary>
+            Indicator Type.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XReaderCollection">
+            <summary>
+            ActiveX ReaderCollection object.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XReaderCollection.#ctor">
+            <summary>
+            Constructor to create the list of reader objects and initalize reader context.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XReaderCollection.GetReaders">
+            <summary>
+            This method searches available readers and refreshes information about them.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XReaderCollection.Dispose">
+            <summary>
+            This method destroys reader collection and releases resources associated with the readers.
+            </summary>
+        </member>
+        <member name="T:DPXUru.XCaptureResult">
+            <summary>
+            ActiveX result, quality and FID.
+            </summary>
+        </member>
+        <member name="M:DPXUru.XCaptureResult.#ctor(DPUruNet.CaptureResult)">
+            <summary>
+            Constructor to create a container class for the result of a capture or streaming operation.
+            </summary>
+            <param name="captureResult">Underyling CaptureResult object</param>
+        </member>
+        <member name="P:DPXUru.XCaptureResult.Quality">
+            <summary>
+            Image quality.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XCaptureResult.Score">
+            <summary>
+            Image score.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XCaptureResult.Fid">
+            <summary>
+            Captured FID.
+            </summary>
+        </member>
+        <member name="P:DPXUru.XCaptureResult.ResultCode">
+            <summary>
+            Result code.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -54,7 +54,7 @@ namespace Portaria.UnidadesBlocos
         public CadFuncionario()
         {
             InitializeComponent();
-            Funcionario = new Funcionario();
+            Funcionario = new Funcionario() { ControleAcessoAutorizado = true };
 
             AplicarPermissoes();
         }

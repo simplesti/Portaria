@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DPCtlUruNet</name>
+    </assembly>
+    <members>
+        <member name="T:DPCtlUruNet.EnrollmentControl">
+            <summary>
+            Enrollment GUI control wraps functionality to capture and enroll a user's fingerprints.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.#ctor(DPUruNet.Reader,DPUruNet.Constants.CapturePriority)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="reader">Reader to use for capture</param>
+            <param name="priority">Priority, i.e., DP_PRIORITY_COOPERATIVE, DP_PRIORITY_EXCLUSIVE</param>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.pbHands_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event handler for when a finger is clicked.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.Enroll">
+            <summary>
+            Enroll a finger.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.EnrollThread">
+            <summary>
+            Main enrollment thread.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.CaptureExtract">
+            <summary>
+            Capture and extract the Fmd.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.Delete">
+            <summary>
+            Delete an enrolled finger.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.Cancel">
+            <summary>
+            Cancels the capture process.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.Dispose(System.Boolean)">
+            <summary>
+            Cancels an enrollment in progress.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.InitializeHands">
+            <summary>
+            Creates polygons for highlighting and capturing clicks on each finger.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.pbHands_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Uses hands to check whether to show mouseover or mouseoff finger images.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.DrawSmallHands">
+            <summary>
+            Draws a smaller set of hands for enrollment mode.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.RedrawHands">
+            <summary>
+            Redraws hands using current finger image states.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.PointInPolygon(System.Drawing.Point,System.Drawing.Point[])">
+            <summary>
+            Determine whether a point is within a polygon. 
+            </summary>
+            <param name="point"></param>
+            <param name="polygon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.UpdateView(DPUruNet.Constants.ResultCode,DPCtlUruNet.EnrollmentControl.MessageType,System.String)">
+            <summary>
+            Updates the view.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.SwitchFingerHighlight(System.Boolean)">
+            <summary>
+            Change highlight of a finger and redraw.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.InitializeEnrollmentView">
+            <summary>
+            Initiliazes the enrollment view.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.UninitializeEnrollmentView">
+            <summary>
+            Uninitializes the enrollment view.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.UpdateEnrollmentStep">
+            <summary>
+            Update the enrollment step
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="F:DPCtlUruNet.EnrollmentControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.EnrollmentControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.EnrollmentControl.CultureInfo">
+            <summary>
+            Supports different cultures.  Set the culture by sending in the culture's string value, i.e., "en-US".
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.EnrollmentControl.FormatEnrollmentFmd">
+            <summary>
+            Minutiae format.
+            
+            When enrollment of a finger is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.EnrollmentControl.FormatCaptureFid">
+            <summary>
+            Image format.
+            
+            When enrollment of a finger is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.EnrollmentControl.Reader">
+            <summary>
+            Current reader.        
+            
+            When enrollment of a finger is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.EnrollmentControl.EnrolledFingerMask">
+            <summary>
+            Represents the set of fingers that have been enrolled.  The right-most digit is the least-significant bit (representing 1), up to the left-most digit is the most-significant bit (representing 1024)
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.EnrollmentControl.DisabledFingerMask">
+            <summary>
+            Represents the set of fingers that cannot be enrolled.  The right-most digit is the least-significant bit (representing 1), up to the left-most digit is the most-significant bit (representing 1024)
+            
+            When enrollment of a finger is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.EnrollmentControl.MaxEnrollFingerCount">
+            <summary>
+            The maximum number of fingers that can be enrolled.
+            
+            When enrollment of a finger is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.EnrollmentControl.CapturePriority">
+            <summary>
+            Set of Fmds to identify against.
+            
+            When enrollment of a finger is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="T:DPCtlUruNet.EnrollmentControl.StartEnrollment">
+            <summary>
+            Event that is fired when an enrollment has begun.
+            </summary>
+            <param name="enrollmentControl">Enrollment control</param>
+            <param name="result">Result code</param>
+            <param name="fingerPosition">Finger to be enrolled</param>
+        </member>
+        <member name="T:DPCtlUruNet.EnrollmentControl.FinishEnrollment">
+            <summary>
+            Event that is fired when an enrollment has completed successfully.
+            </summary>
+            <param name="enrollmentControl">Enrollment control</param>
+            <param name="enrollmentResult">Result code</param>
+            <param name="fingerPosition">Finger enrolled</param>
+        </member>
+        <member name="T:DPCtlUruNet.EnrollmentControl.FingerprintCaptured">
+            <summary>
+            Event that is fired when a capture has completed successfully.
+            </summary>
+            <param name="enrollmentControl">Enrollment control</param>
+            <param name="captureResult">Result code</param>
+            <param name="fingerPosition">Finger captured</param>
+        </member>
+        <member name="T:DPCtlUruNet.EnrollmentControl.CancelEnrollment">
+            <summary>
+            Event that is fired when an enrollment has been canceled.
+            </summary>
+            <param name="enrollmentControl">Enrollment control</param>
+            <param name="result">Result code</param>
+            <param name="fingerPosition">Finger to be enrolled</param>
+        </member>
+        <member name="T:DPCtlUruNet.EnrollmentControl.DeleteEnrollment">
+            <summary>
+            Event that is fired when an enrollment has been deleted.
+            </summary>
+            <param name="enrollmentControl">Enrollment control</param>
+            <param name="result">Result code</param>
+            <param name="fingerPosition">Finger deleted</param>
+        </member>
+        <member name="T:DPCtlUruNet.EnrollmentControl.MessageType">
+            <summary>
+            Message types sent to the view.
+            </summary>
+        </member>
+        <member name="T:DPCtlUruNet.EnrollmentControl.UpdateViewCallback">
+            <summary>
+            Delegate to capture calls from a different thread.
+            </summary>
+        </member>
+        <member name="T:DPCtlUruNet.IdentificationControl">
+            <summary>
+            Identification GUI control wraps functionality to capture and identify a user's fingerprint with a set of Fmds.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.IdentificationControl.#ctor(DPUruNet.Reader,System.Collections.Generic.IEnumerable{DPUruNet.Fmd},System.Int32,System.Int32,DPUruNet.Constants.CapturePriority)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="reader">Reader the GUI control should use</param>
+            <param name="fmds">FMDs to search</param>
+            <param name="thresholdScore">Target threshold score</param>
+            <param name="maximumResult">Maximum number of results</param>
+            <param name="priority">priority the reader should be opened with</param>
+        </member>
+        <member name="M:DPCtlUruNet.IdentificationControl.StartIdentification">
+            <summary>
+            Starts the identification workflow using the first available reader, or a reader passed in with the .Reader property.
+            </summary>
+            <returns>True = success, False = failure</returns>
+        </member>
+        <member name="M:DPCtlUruNet.IdentificationControl.StopIdentification">
+            <summary>
+            Stops the identification process.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.IdentificationControl.CaptureExtract">
+            <summary>
+            Capture and extract the Fmd.
+            </summary>
+            <returns>Captured FMD</returns>
+        </member>
+        <member name="M:DPCtlUruNet.IdentificationControl.Dispose(System.Boolean)">
+            <summary>
+            Dispose of the Identification control and all child objects.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.IdentificationControl.UpdateView(DPUruNet.Constants.ResultCode,DPCtlUruNet.IdentificationControl.MessageType,System.String)">
+            <summary>
+            Updates the view.
+            </summary>
+        </member>
+        <member name="F:DPCtlUruNet.IdentificationControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DPCtlUruNet.IdentificationControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.IdentificationControl.CultureInfo">
+            <summary>
+            Supports different cultures.  Set the culture by sending in the culture's string value, i.e., "en-US".
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.IdentificationControl.Reader">
+            <summary>
+            Reader object to use for capture.
+            
+            When identification is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.IdentificationControl.MaximumResult">
+            <summary>
+             Maximum number of matches to find.
+             
+            When identification is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.IdentificationControl.ThresholdScore">
+            <summary>
+             Dissimilarity score to use.  Identification returns matches with dissimilarity score under this value.
+             
+            When identification is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.IdentificationControl.Fmds">
+            <summary>
+            Set of Fmds to identify against.
+            
+            When identification is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.IdentificationControl.CapturePriority">
+            <summary>
+            Set of Fmds to identify against.
+            
+            When identification is running, setting this property is ignored.
+            </summary>
+        </member>
+        <member name="T:DPCtlUruNet.IdentificationControl.FinishIdentification">
+            <summary>
+            Event that is fired when an Identification has completed successfully.
+            </summary>
+            <param name="IdentificationControl">Identification control</param>
+            <param name="IdentificationResult">Result code</param>
+        </member>
+        <member name="T:DPCtlUruNet.IdentificationControl.MessageType">
+            <summary>
+            Message types sent to the view.
+            </summary>
+        </member>
+        <member name="T:DPCtlUruNet.IdentificationControl.UpdateViewCallback">
+            <summary>
+            Delegate to capture calls from a different thread.
+            </summary>
+        </member>
+        <member name="T:DPCtlUruNet.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:DPCtlUruNet.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.ConnectReader">
+             <summary>
+               Looks up a localized string similar to The fingerprint reader is not connected.  
+            Connect the reader..
+             </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.Delete">
+            <summary>
+              Looks up a localized string similar to Are you sure you want to delete this enrolled fingerprint?.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.DeleteTitle">
+            <summary>
+              Looks up a localized string similar to Are You Sure?.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.Enrollment">
+            <summary>
+              Looks up a localized string similar to To begin, scan your finger and wait until success is confirmed.  Repeat for each of the remaining scans..
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.EnrollmentCanceled">
+            <summary>
+              Looks up a localized string similar to Enrollment Canceled..
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.Introduction">
+            <summary>
+              Looks up a localized string similar to To enroll a fingerprint, click a finger on the hands below.  It is recommended that you enroll your index finger.  Enrolled fingers are highlighted. You may also delete an enrolled fingerprint by clicking a highlighted finger..
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.Introduction2">
+            <summary>
+              Looks up a localized string similar to Scan your finger four times..
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.SubTitle">
+            <summary>
+              Looks up a localized string similar to You may enroll your fingerprints.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.Title">
+            <summary>
+              Looks up a localized string similar to Enroll a Fingerprint.
+            </summary>
+        </member>
+        <member name="P:DPCtlUruNet.Strings.Verification">
+            <summary>
+              Looks up a localized string similar to To verify your identity, touch fingerprint reader with any enrolled finger..
+            </summary>
+        </member>
+    </members>
+</doc>

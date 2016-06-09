@@ -17,13 +17,15 @@ namespace Portaria.Core.Model.CadastroMorador
 
         public bool AutorizadaSemPresenca { get; set; }
 
+        public bool ControleAcessoAutorizado { get; set; }
+
         public string Frequencia { get; set; }
 
         public DateTime? HorarioEntrada { get; set; }
 
         public DateTime? HorarioSaida { get; set; }
 
-        public byte[] Biometria { get; set; }
+        public string Biometria { get; set; }
 
         public byte[] Foto { get; set; }
 

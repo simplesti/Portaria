@@ -24,17 +24,11 @@ C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Usuarios.C
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Usuarios.TabVisualizarUsuarios.resources
 C:\Users\Maxwel\Documents\GitHub\Portaria\Portaria\obj\Debug\Portaria.Desktop.App.csproj.GenerateResource.Cache
 C:\Users\Max\Source\Repos\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.exe.config
-C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.exe.config
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\App.config
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\ServidoresSMTP.xml
+C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.exe.config
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.exe
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.pdb
-C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\DPFPCtlXWrapperNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\DPFPDevNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\DPFPEngNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\DPFPGuiNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\DPFPShrNET.dll
-C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\DPFPVerNET.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\EntityFramework.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\EntityFramework.SqlServer.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Biometria.dll
@@ -42,6 +36,7 @@ C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Business.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Core.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Desktop.Framework.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Webcam.dll
+C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\DPUruNet.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Data.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Log.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Newtonsoft.Json.dll
@@ -53,6 +48,7 @@ C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Desktop.Framework.pdb
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Webcam.pdb
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\EntityFramework.xml
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\EntityFramework.SqlServer.xml
+C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\DPUruNet.xml
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Data.pdb
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Log.pdb
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Newtonsoft.Json.xml
