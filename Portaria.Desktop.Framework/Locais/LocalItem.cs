@@ -1,12 +1,15 @@
 ﻿using Portaria.Core.Model.Cadastro;
 using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace Portaria.Desktop.Framework.Locais
 {
     public partial class LocalItem : UserControl
     {
+        private Color color = MaterialSkin.MaterialSkinManager.Instance.ColorScheme.DarkPrimaryColor;
+
         private Local local;
 
         public Local Local
@@ -24,6 +27,20 @@ namespace Portaria.Desktop.Framework.Locais
 
         public event EventHandler<LocalEventArgs> VisualizarLocalClick;
 
+        private void lblNome_MouseEnter(object sender, EventArgs e)
+        {
+            color = MaterialSkin.MaterialSkinManager.Instance.ColorScheme.PrimaryColor;
+            Cursor = Cursors.Hand;
+            Refresh();
+        }
+
+        private void lblNome_MouseLeave(object sender, EventArgs e)
+        {
+            color = MaterialSkin.MaterialSkinManager.Instance.ColorScheme.DarkPrimaryColor;
+            Cursor = Cursors.Default;
+            Refresh();
+        }
+
         public LocalItem()
         {
             InitializeComponent();
@@ -37,15 +54,15 @@ namespace Portaria.Desktop.Framework.Locais
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnPaint(e);
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+
+            lblNome.BackColor = color;
 
             e.Graphics.DrawRectangle(Pens.Black,
                 new Rectangle(this.DisplayRectangle.Location,
                     new Size(this.Width - 1, this.Height - 1)));
-        }
-
-        private void lblNome_Paint(object sender, PaintEventArgs e)
-        {
+            
+            lblNome.ForeColor = Color.White;
             base.OnPaint(e);
         }
 

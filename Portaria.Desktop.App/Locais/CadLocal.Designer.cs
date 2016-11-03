@@ -29,151 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadLocal));
-            this.tlpCampos = new System.Windows.Forms.TableLayoutPanel();
-            this.tlpBotoes = new System.Windows.Forms.TableLayoutPanel();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.bsLocal = new System.Windows.Forms.BindingSource(this.components);
-            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.txtDescricao = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtNome = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.pnlConteudo.SuspendLayout();
-            this.tlpCampos.SuspendLayout();
-            this.tlpBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsLocal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(634, 249);
-            // 
-            // tlpCampos
-            // 
-            this.tlpCampos.ColumnCount = 2;
-            this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.62776F));
-            this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.37224F));
-            this.tlpCampos.Controls.Add(this.tlpBotoes, 0, 9);
-            this.tlpCampos.Controls.Add(this.lblNome, 0, 1);
-            this.tlpCampos.Controls.Add(this.lblDescricao, 1, 1);
-            this.tlpCampos.Controls.Add(this.txtNome, 0, 2);
-            this.tlpCampos.Controls.Add(this.txtDescricao, 1, 2);
-            this.tlpCampos.Controls.Add(this.pbFoto, 0, 0);
-            this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCampos.Location = new System.Drawing.Point(0, 0);
-            this.tlpCampos.Name = "tlpCampos";
-            this.tlpCampos.RowCount = 10;
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCampos.Size = new System.Drawing.Size(634, 249);
-            this.tlpCampos.TabIndex = 1;
-            // 
-            // tlpBotoes
-            // 
-            this.tlpBotoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpBotoes.AutoSize = true;
-            this.tlpBotoes.ColumnCount = 2;
-            this.tlpCampos.SetColumnSpan(this.tlpBotoes, 2);
-            this.tlpBotoes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpBotoes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpBotoes.Controls.Add(this.botaoCancelar, 1, 0);
-            this.tlpBotoes.Controls.Add(this.botaoSalvar, 0, 0);
-            this.tlpBotoes.Location = new System.Drawing.Point(419, 203);
-            this.tlpBotoes.Name = "tlpBotoes";
-            this.tlpBotoes.RowCount = 1;
-            this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tlpBotoes.Size = new System.Drawing.Size(212, 43);
-            this.tlpBotoes.TabIndex = 21;
-            // 
-            // botaoCancelar
-            // 
-            this.botaoCancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(109, 3);
-            this.botaoCancelar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.TabIndex = 1;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
-            // 
-            // botaoSalvar
-            // 
-            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoSalvar.BackColor = System.Drawing.Color.White;
-            this.botaoSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSalvar.Image = ((System.Drawing.Image)(resources.GetObject("botaoSalvar.Image")));
-            this.botaoSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoSalvar.Location = new System.Drawing.Point(3, 3);
-            this.botaoSalvar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.Name = "botaoSalvar";
-            this.botaoSalvar.Size = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.TabIndex = 0;
-            this.botaoSalvar.Text = "Salvar";
-            this.botaoSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoSalvar.UseVisualStyleBackColor = false;
-            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(3, 156);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome";
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(343, 156);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(55, 13);
-            this.lblDescricao.TabIndex = 1;
-            this.lblDescricao.Tag = "";
-            this.lblDescricao.Text = "Descrição";
-            // 
-            // txtNome
-            // 
-            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsLocal, "Nome", true));
-            this.txtNome.Location = new System.Drawing.Point(3, 172);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(334, 20);
-            this.txtNome.TabIndex = 0;
+            this.pnlConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlConteudo.BackColor = System.Drawing.Color.White;
+            this.pnlConteudo.Controls.Add(this.materialLabel2);
+            this.pnlConteudo.Controls.Add(this.materialLabel1);
+            this.pnlConteudo.Controls.Add(this.pbFoto);
+            this.pnlConteudo.Controls.Add(this.txtDescricao);
+            this.pnlConteudo.Controls.Add(this.txtNome);
+            this.pnlConteudo.Controls.Add(this.txtCancelar);
+            this.pnlConteudo.Controls.Add(this.btnSalvar);
+            this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlConteudo.Location = new System.Drawing.Point(0, 65);
+            this.pnlConteudo.Size = new System.Drawing.Size(644, 274);
             // 
             // bsLocal
             // 
             this.bsLocal.DataSource = typeof(Portaria.Core.Model.Cadastro.Local);
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsLocal, "Descricao", true));
-            this.txtDescricao.Location = new System.Drawing.Point(343, 172);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(288, 20);
-            this.txtDescricao.TabIndex = 1;
             // 
             // pbFoto
             // 
@@ -184,26 +70,128 @@
             this.pbFoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbFoto.Location = new System.Drawing.Point(3, 3);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(334, 150);
+            this.pbFoto.Size = new System.Drawing.Size(339, 150);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto.TabIndex = 12;
+            this.pbFoto.TabIndex = 26;
             this.pbFoto.TabStop = false;
             this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescricao.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsLocal, "Descricao", true));
+            this.txtDescricao.Depth = 0;
+            this.txtDescricao.Hint = "";
+            this.txtDescricao.Location = new System.Drawing.Point(348, 178);
+            this.txtDescricao.MaxLength = 32767;
+            this.txtDescricao.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.PasswordChar = '\0';
+            this.txtDescricao.SelectedText = "";
+            this.txtDescricao.SelectionLength = 0;
+            this.txtDescricao.SelectionStart = 0;
+            this.txtDescricao.Size = new System.Drawing.Size(293, 23);
+            this.txtDescricao.TabIndex = 27;
+            this.txtDescricao.TabStop = false;
+            this.txtDescricao.UseSystemPasswordChar = false;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsLocal, "Nome", true));
+            this.txtNome.Depth = 0;
+            this.txtNome.Hint = "";
+            this.txtNome.Location = new System.Drawing.Point(7, 178);
+            this.txtNome.MaxLength = 32767;
+            this.txtNome.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.PasswordChar = '\0';
+            this.txtNome.SelectedText = "";
+            this.txtNome.SelectionLength = 0;
+            this.txtNome.SelectionStart = 0;
+            this.txtNome.Size = new System.Drawing.Size(335, 23);
+            this.txtNome.TabIndex = 28;
+            this.txtNome.TabStop = false;
+            this.txtNome.UseSystemPasswordChar = false;
+            // 
+            // txtCancelar
+            // 
+            this.txtCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCancelar.AutoSize = true;
+            this.txtCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.txtCancelar.Depth = 0;
+            this.txtCancelar.Icon = null;
+            this.txtCancelar.Location = new System.Drawing.Point(469, 232);
+            this.txtCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtCancelar.Name = "txtCancelar";
+            this.txtCancelar.Primary = false;
+            this.txtCancelar.Size = new System.Drawing.Size(91, 36);
+            this.txtCancelar.TabIndex = 25;
+            this.txtCancelar.Text = "Cancelar";
+            this.txtCancelar.UseVisualStyleBackColor = true;
+            this.txtCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalvar.AutoSize = true;
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.Icon = null;
+            this.btnSalvar.Location = new System.Drawing.Point(568, 232);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Primary = true;
+            this.btnSalvar.Size = new System.Drawing.Size(72, 36);
+            this.btnSalvar.TabIndex = 24;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(3, 156);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(50, 19);
+            this.materialLabel1.TabIndex = 29;
+            this.materialLabel1.Text = "Nome";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(344, 156);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(77, 19);
+            this.materialLabel2.TabIndex = 30;
+            this.materialLabel2.Text = "Descrição";
             // 
             // CadLocal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 312);
-            this.MaximumSize = new System.Drawing.Size(640, 312);
-            this.MinimumSize = new System.Drawing.Size(640, 312);
+            this.ClientSize = new System.Drawing.Size(644, 339);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(644, 339);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(644, 339);
             this.Name = "CadLocal";
-            this.Text = "CadLocal";
-            this.Titulo = "Cadastro de Local";
+            this.ShowInTaskbar = false;
+            this.Sizable = false;
+            this.Text = "Cadastro de Local";
             this.pnlConteudo.ResumeLayout(false);
-            this.tlpCampos.ResumeLayout(false);
-            this.tlpCampos.PerformLayout();
-            this.tlpBotoes.ResumeLayout(false);
+            this.pnlConteudo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsLocal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
@@ -211,16 +199,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tlpCampos;
-        private System.Windows.Forms.TableLayoutPanel tlpBotoes;
-        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Portaria.Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.BindingSource bsLocal;
+        private System.Windows.Forms.PictureBox pbFoto;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtDescricao;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNome;
+        private MaterialSkin.Controls.MaterialFlatButton txtCancelar;
+        private MaterialSkin.Controls.MaterialFlatButton btnSalvar;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

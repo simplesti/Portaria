@@ -28,76 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaixaMensagem));
-            this.lblMensagem = new System.Windows.Forms.Label();
-            this.btnOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
-            this.btnCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
+            this.lblMensagem = new MaterialSkin.Controls.MaterialLabel();
+            this.btnOk = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // lblMensagem
             // 
-            this.lblMensagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMensagem.Location = new System.Drawing.Point(12, 9);
+            this.lblMensagem.Depth = 0;
+            this.lblMensagem.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblMensagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblMensagem.Location = new System.Drawing.Point(12, 69);
+            this.lblMensagem.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(576, 141);
-            this.lblMensagem.TabIndex = 0;
+            this.lblMensagem.Size = new System.Drawing.Size(578, 142);
+            this.lblMensagem.TabIndex = 3;
             this.lblMensagem.Text = "Mensagem";
             this.lblMensagem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnOK
+            // btnOk
             // 
-            this.btnOK.BackColor = System.Drawing.Color.White;
-            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Image = ((System.Drawing.Image)(resources.GetObject("btnOK.Image")));
-            this.btnOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOK.Location = new System.Drawing.Point(197, 153);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(100, 35);
-            this.btnOK.TabIndex = 1;
-            this.btnOK.Text = "OK";
-            this.btnOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOK.UseVisualStyleBackColor = false;
-            this.btnOK.Visible = false;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOk.AutoSize = true;
+            this.btnOk.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOk.Depth = 0;
+            this.btnOk.Icon = null;
+            this.btnOk.Location = new System.Drawing.Point(550, 217);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOk.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Primary = true;
+            this.btnOk.Size = new System.Drawing.Size(39, 36);
+            this.btnOk.TabIndex = 4;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Visible = false;
+            this.btnOk.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(303, 153);
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(451, 217);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 35);
-            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(91, 36);
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Visible = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // CaixaMensagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 200);
+            this.ClientSize = new System.Drawing.Size(602, 268);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.btnOk);
             this.Controls.Add(this.lblMensagem);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(602, 268);
+            this.MinimumSize = new System.Drawing.Size(602, 268);
             this.Name = "CaixaMensagem";
             this.ShowInTaskbar = false;
+            this.Sizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "CaixaMensagem";
+            this.Text = "";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblMensagem;
-        private Botoes.BotaoOK btnOK;
-        private Botoes.BotaoCancelar btnCancelar;
+        private MaterialSkin.Controls.MaterialLabel lblMensagem;
+        private MaterialSkin.Controls.MaterialFlatButton btnOk;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
     }
 }

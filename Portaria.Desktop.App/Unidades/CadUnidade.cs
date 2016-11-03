@@ -1,8 +1,8 @@
-﻿using Portaria.Business;
-using Portaria.Business.Cadastro;
+﻿using Portaria.Business.Cadastro;
 using Portaria.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework.Forms;
 using Portaria.Unidades;
 using Portaria.UnidadesBlocos;
 using System;
@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace Portaria
 {
-    public partial class CadUnidade : Portaria.Desktop.Framework.Forms.FormBaseWindow
+    public partial class CadUnidade : MaterialPortariaFormWindow
     {
         private Unidade unidade;
 
@@ -80,31 +80,10 @@ namespace Portaria
             InitializeComponent();
             PopulaCombos();
 
-            txtNumero.ReadOnly = false;
+            txtNumero.Enabled = false;
             cboBloco.Enabled = true;
 
             Unidade = new Unidade();
-
-            AplicarPermissoes();
-        }
-
-        private void AplicarPermissoes()
-        {
-            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
-            {
-                botaoSalvar.Visible = false;
-
-                btnAddAutorizada.Visible = false;
-                btnRemAutorizada.Visible = false;
-
-                btnAddFuncionario.Visible = false;
-                btnRemFuncionario.Visible = false;
-
-                btnAddVeiculo.Visible = false;
-                btnRemVeiculo.Visible = false;
-
-                chkInadimplente.Enabled = false;
-            }
         }
 
         public CadUnidade(Unidade unidade)
@@ -113,8 +92,6 @@ namespace Portaria
             PopulaCombos();
 
             Unidade = unidade;
-
-            AplicarPermissoes();
         }
 
         private void botaoSalvar_Click(object sender, EventArgs e)
@@ -439,7 +416,7 @@ namespace Portaria
             var funcionarios = unidadeBus.BuscarFuncionarios(unidade.Id).ToList();
             dgvFuncionarios.DataSource = funcionarios;
         }
-        
+
         private void CarregarAutorizados()
         {
             var unidadeBus = new UnidadeBus(SessaoAtual.Sessao);

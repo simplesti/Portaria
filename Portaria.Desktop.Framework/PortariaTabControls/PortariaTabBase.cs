@@ -22,15 +22,12 @@ namespace Portaria.Desktop.Framework.Forms
 
         public virtual void Carregar(params IEntidade[] entidades) 
         {
-            if (SessaoAtual.Sessao != null && SessaoAtual.Sessao.UsuarioLogado.CorTema != 0)
-            {
-                this.BackColor = Color.FromArgb(SessaoAtual.Sessao.UsuarioLogado.CorTema);
-            }
+         
         }
 
         public virtual ICollection<Core.TipoUsuario> TiposUsuariosPermitidos
         {
-            get { return new[] { TipoUsuario.SomenteLeitura }; }
+            get { return new[] { TipoUsuario.Porteiro }; }
         }
 
 

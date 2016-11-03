@@ -53,10 +53,11 @@ C:\Source\Portaria\Portaria.ControleAcessoBiometrico\bin\Debug\EntityFramework.x
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\bin\Debug\EntityFramework.SqlServer.xml
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\bin\Debug\Newtonsoft.Json.xml
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.csprojResolveAssemblyReference.cache
+C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.csproj.Portaria.ControleAcessoBiometrico.exe.config
+C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.ConfigurarClientRPi.resources
+C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.ConfigurarTimerCache.resources
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.Properties.Resources.resources
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.SelecionarLeitor.resources
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.csproj.GenerateResource.Cache
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.exe
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.pdb
-C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.ConfigurarClientRPi.resources
-C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Debug\Portaria.ControleAcessoBiometrico.ConfigurarTimerCache.resources

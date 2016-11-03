@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNome = new System.Windows.Forms.Label();
+            this.lblNome = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // lblNome
             // 
-            this.lblNome.BackColor = System.Drawing.Color.Transparent;
             this.lblNome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblNome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(0, 0);
+            this.lblNome.Depth = 0;
+            this.lblNome.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(1, 1);
+            this.lblNome.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(200, 100);
-            this.lblNome.TabIndex = 1;
+            this.lblNome.Size = new System.Drawing.Size(198, 98);
+            this.lblNome.TabIndex = 0;
             this.lblNome.Text = "?";
             this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblNome.Click += new System.EventHandler(this.lblNome_Click);
-            this.lblNome.Paint += new System.Windows.Forms.PaintEventHandler(this.lblNome_Paint);
+            this.lblNome.MouseEnter += new System.EventHandler(this.lblNome_MouseEnter);
+            this.lblNome.MouseLeave += new System.EventHandler(this.lblNome_MouseLeave);
             // 
             // LocalItem
             // 
@@ -60,7 +62,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblNome;
-
+        private MaterialSkin.Controls.MaterialLabel lblNome;
     }
 }

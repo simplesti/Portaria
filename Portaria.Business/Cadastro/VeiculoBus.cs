@@ -61,9 +61,9 @@ namespace Portaria.Business.Cadastro
                 v.Foto = entidade.Foto;
                 v.Nome = entidade.Nome;
                 v.Placa = entidade.Placa;
-                if (v.Proprietario != null)
+                if (entidade.Proprietario != null)
                 {
-                    v.Proprietario = bd.Pessoas.FirstOrDefault(q => q.Id == v.Proprietario.Id);
+                    v.Proprietario = bd.Pessoas.FirstOrDefault(q => q.Id == entidade.Proprietario.Id);
                 }
 
                 bd.SaveChanges();

@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -52,6 +52,24 @@
     <Compile Include="Blocos\BlocoItem.Designer.cs">
       <DependentUpon>BlocoItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Botoes\BotaoSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoSearch.Designer.cs">
+      <DependentUpon>BotaoSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoRemove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoRemove.Designer.cs">
+      <DependentUpon>BotaoRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoPessoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoPessoa.Designer.cs">
+      <DependentUpon>BotaoPessoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Botoes\BotaoAdicionar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -63,6 +81,30 @@
     </Compile>
     <Compile Include="Botoes\BotaoCapturarBiometria.Designer.cs">
       <DependentUpon>BotaoCapturarBiometria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoAdd.Designer.cs">
+      <DependentUpon>BotaoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoGerenciadorTarefas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoGerenciadorTarefas.Designer.cs">
+      <DependentUpon>BotaoGerenciadorTarefas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoPlugins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoPlugins.Designer.cs">
+      <DependentUpon>BotaoPlugins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Botoes\BotaoConfigurar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoConfigurar.Designer.cs">
+      <DependentUpon>BotaoConfigurar.cs</DependentUpon>
     </Compile>
     <Compile Include="Botoes\BotaoEmailCorrespondencia.cs">
       <SubType>Component</SubType>
@@ -130,6 +172,12 @@
     <Compile Include="Botoes\BotaoSalvar.Designer.cs">
       <DependentUpon>BotaoSalvar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Botoes\BotaoViewMode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botoes\BotaoViewMode.Designer.cs">
+      <DependentUpon>BotaoViewMode.cs</DependentUpon>
+    </Compile>
     <Compile Include="CaixasDeMensagem\CaixaEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,12 +196,70 @@
     <Compile Include="Config\Configuracoes.Designer.cs">
       <DependentUpon>Configuracoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Config\ConfiguracoesUsuario.cs">
+    <Compile Include="Forms\MaterialPortariaFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Config\ConfiguracoesUsuario.Designer.cs">
-      <DependentUpon>ConfiguracoesUsuario.cs</DependentUpon>
+    <Compile Include="Forms\MaterialPortariaFormBase.Designer.cs">
+      <DependentUpon>MaterialPortariaFormBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MaterialPortariaFormWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MaterialPortariaFormWindow.Designer.cs">
+      <DependentUpon>MaterialPortariaFormWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\BolhaInicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inicio\BolhaInicio.Designer.cs">
+      <DependentUpon>BolhaInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialSkin\Animations\AnimationDirection.cs" />
+    <Compile Include="MaterialSkin\Animations\AnimationManager.cs" />
+    <Compile Include="MaterialSkin\Animations\Animations.cs" />
+    <Compile Include="MaterialSkin\ColorScheme.cs" />
+    <Compile Include="MaterialSkin\Controls\MaterialCheckbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialDivider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialFlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialRaisedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialSingleLineTextField.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\Controls\MaterialTabSelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaterialSkin\DrawHelper.cs" />
+    <Compile Include="MaterialSkin\IMaterialControl.cs" />
+    <Compile Include="MaterialSkin\MaterialSkinManager.cs" />
     <Compile Include="Plugin\VisualizarPlugins.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,18 +272,6 @@
     </Compile>
     <Compile Include="Tarefas\VisualizarTarefas.Designer.cs">
       <DependentUpon>VisualizarTarefas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormBase.Designer.cs">
-      <DependentUpon>FormBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormBaseWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormBaseWindow.Designer.cs">
-      <DependentUpon>FormBaseWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Plugin\GerenciadorPlugins.cs" />
     <Compile Include="Plugin\PortariaPlugin.cs" />
@@ -225,8 +319,32 @@
     <EmbeddedResource Include="Blocos\BlocoItem.resx">
       <DependentUpon>BlocoItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Botoes\BotaoSearch.resx">
+      <DependentUpon>BotaoSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botoes\BotaoRemove.resx">
+      <DependentUpon>BotaoRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botoes\BotaoPessoa.resx">
+      <DependentUpon>BotaoPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botoes\BotaoAdd.resx">
+      <DependentUpon>BotaoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botoes\BotaoGerenciadorTarefas.resx">
+      <DependentUpon>BotaoGerenciadorTarefas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botoes\BotaoPlugins.resx">
+      <DependentUpon>BotaoPlugins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botoes\BotaoConfigurar.resx">
+      <DependentUpon>BotaoConfigurar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Botoes\BotaoEditar.resx">
       <DependentUpon>BotaoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Botoes\BotaoViewMode.resx">
+      <DependentUpon>BotaoViewMode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CaixasDeMensagem\CaixaEntrada.resx">
       <DependentUpon>CaixaEntrada.cs</DependentUpon>
@@ -237,20 +355,17 @@
     <EmbeddedResource Include="Config\Configuracoes.resx">
       <DependentUpon>Configuracoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Config\ConfiguracoesUsuario.resx">
-      <DependentUpon>ConfiguracoesUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MaterialPortariaFormWindow.resx">
+      <DependentUpon>MaterialPortariaFormWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\BolhaInicio.resx">
+      <DependentUpon>BolhaInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Plugin\VisualizarPlugins.resx">
       <DependentUpon>VisualizarPlugins.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tarefas\VisualizarTarefas.resx">
       <DependentUpon>VisualizarTarefas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormBase.resx">
-      <DependentUpon>FormBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormBaseWindow.resx">
-      <DependentUpon>FormBaseWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Locais\LocalItem.resx">
       <DependentUpon>LocalItem.cs</DependentUpon>
@@ -265,6 +380,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MaterialSkin\Resources\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="MaterialSkin\Resources\Roboto-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Portaria.Desktop.Framework.Plugin.GerenciadorPlugins.datasource" />
     <None Include="Properties\DataSources\Portaria.Plugins.PortariaPlugin.datasource" />
@@ -336,6 +453,30 @@
     <None Include="Resources\enviaremail.jpg" />
     <None Include="Resources\Task_Manager.png" />
     <None Include="Resources\Memoire.png" />
+    <None Include="Resources\ic_settings_black_18dp_1x.png" />
+    <None Include="Resources\ic_settings_white_24dp_2x.png" />
+    <None Include="Resources\ic_settings_white_24dp_1x.png" />
+    <None Include="Resources\ic_settings_black_24dp_1x.png" />
+    <None Include="Resources\ic_assignment_black_24dp_1x.png" />
+    <None Include="Resources\ic_assignment_white_24dp_1x.png" />
+    <None Include="Resources\ic_settings_input_component_black_24dp_1x.png" />
+    <None Include="Resources\ic_settings_input_component_white_24dp_1x.png" />
+    <None Include="Resources\ic_add_circle_black_24dp_1x.png" />
+    <None Include="Resources\ic_add_circle_white_24dp_1x.png" />
+    <None Include="Resources\ic_person_black_24dp_1x.png" />
+    <None Include="Resources\ic_person_white_24dp_1x.png" />
+    <None Include="Resources\backCircle.png" />
+    <None Include="Resources\ic_person_grey_24dp_1x.png" />
+    <None Include="Resources\ic_add_circle_grey_24dp_1x.png" />
+    <None Include="Resources\ic_settings_input_component_grey_24dp_1x.png" />
+    <None Include="Resources\ic_settings_grey_24dp_1x.png" />
+    <None Include="Resources\ic_assignment_grey_24dp_1x.png" />
+    <None Include="Resources\ic_delete_forever_black_24dp_1x.png" />
+    <None Include="Resources\ic_delete_forever_grey_24dp_1x.png" />
+    <None Include="Resources\ic_search_black_24dp_1x.png" />
+    <None Include="Resources\ic_search_grey_24dp_1x.png" />
+    <None Include="Resources\ic_view_list_grey_24dp_1x.png" />
+    <None Include="Resources\ic_view_module_grey_24dp_1x.png" />
     <Content Include="ServidoresSMTP.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

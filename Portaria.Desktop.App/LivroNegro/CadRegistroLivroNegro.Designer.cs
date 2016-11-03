@@ -29,75 +29,76 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadRegistroLivroNegro));
             this.tlpCampos = new System.Windows.Forms.TableLayoutPanel();
-            this.lblMensagem = new System.Windows.Forms.Label();
             this.rtbMensagem = new System.Windows.Forms.RichTextBox();
-            this.tlpBotoes = new System.Windows.Forms.TableLayoutPanel();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
-            this.lblData = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblPessoa = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtData = new System.Windows.Forms.TextBox();
-            this.txtNomePessoa = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.botaoAdicionar = new Portaria.Desktop.Framework.Botoes.BotaoAdicionar();
-            this.botaoRemover = new Portaria.Desktop.Framework.Botoes.BotaoRemover();
             this.dgvEntidades = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoEntidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoEntidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsEntidades = new System.Windows.Forms.BindingSource(this.components);
-            this.botaoEditarPessoa = new Portaria.Desktop.Framework.Botoes.BotaoEditar();
-            this.lblCategoria = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.lblData = new MaterialSkin.Controls.MaterialLabel();
+            this.lblUsuario = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPessoa = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCategoria = new MaterialSkin.Controls.MaterialLabel();
+            this.lblEntidades = new MaterialSkin.Controls.MaterialLabel();
+            this.lblMensagem = new MaterialSkin.Controls.MaterialLabel();
+            this.botaoEditarPessoa = new Portaria.Desktop.Framework.Botoes.BotaoPessoa();
+            this.txtData = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtNomePessoa = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.botaoAdicionar = new Portaria.Desktop.Framework.Botoes.BotaoAdd();
+            this.botaoRemover = new Portaria.Desktop.Framework.Botoes.BotaoRemove();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
-            this.tlpBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsEntidades)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlConteudo
             // 
             this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(738, 382);
             // 
             // tlpCampos
             // 
+            this.tlpCampos.BackColor = System.Drawing.Color.White;
             this.tlpCampos.ColumnCount = 5;
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.71287F));
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.23904F));
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.04809F));
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpCampos.Controls.Add(this.lblMensagem, 0, 5);
             this.tlpCampos.Controls.Add(this.rtbMensagem, 0, 6);
-            this.tlpCampos.Controls.Add(this.tlpBotoes, 3, 13);
+            this.tlpCampos.Controls.Add(this.dgvEntidades, 3, 2);
+            this.tlpCampos.Controls.Add(this.cboCategoria, 2, 4);
             this.tlpCampos.Controls.Add(this.lblData, 0, 1);
             this.tlpCampos.Controls.Add(this.lblUsuario, 2, 1);
             this.tlpCampos.Controls.Add(this.lblPessoa, 0, 3);
-            this.tlpCampos.Controls.Add(this.txtUsuario, 2, 2);
-            this.tlpCampos.Controls.Add(this.txtData, 0, 2);
-            this.tlpCampos.Controls.Add(this.txtNomePessoa, 0, 4);
-            this.tlpCampos.Controls.Add(this.label1, 3, 1);
-            this.tlpCampos.Controls.Add(this.botaoAdicionar, 4, 2);
-            this.tlpCampos.Controls.Add(this.botaoRemover, 4, 4);
-            this.tlpCampos.Controls.Add(this.dgvEntidades, 3, 2);
-            this.tlpCampos.Controls.Add(this.botaoEditarPessoa, 1, 4);
             this.tlpCampos.Controls.Add(this.lblCategoria, 2, 3);
-            this.tlpCampos.Controls.Add(this.cboCategoria, 2, 4);
+            this.tlpCampos.Controls.Add(this.lblEntidades, 3, 1);
+            this.tlpCampos.Controls.Add(this.lblMensagem, 0, 5);
+            this.tlpCampos.Controls.Add(this.botaoEditarPessoa, 1, 4);
+            this.tlpCampos.Controls.Add(this.txtData, 0, 2);
+            this.tlpCampos.Controls.Add(this.txtUsuario, 2, 2);
+            this.tlpCampos.Controls.Add(this.txtNomePessoa, 0, 4);
+            this.tlpCampos.Controls.Add(this.botaoAdicionar, 4, 2);
+            this.tlpCampos.Controls.Add(this.botaoRemover, 4, 3);
+            this.tlpCampos.Controls.Add(this.panel1, 3, 13);
             this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCampos.Location = new System.Drawing.Point(0, 0);
             this.tlpCampos.Name = "tlpCampos";
             this.tlpCampos.RowCount = 14;
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -107,17 +108,8 @@
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.Size = new System.Drawing.Size(738, 382);
+            this.tlpCampos.Size = new System.Drawing.Size(838, 430);
             this.tlpCampos.TabIndex = 2;
-            // 
-            // lblMensagem
-            // 
-            this.lblMensagem.AutoSize = true;
-            this.lblMensagem.Location = new System.Drawing.Point(3, 86);
-            this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(59, 13);
-            this.lblMensagem.TabIndex = 0;
-            this.lblMensagem.Text = "Mensagem";
             // 
             // rtbMensagem
             // 
@@ -126,164 +118,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbMensagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tlpCampos.SetColumnSpan(this.rtbMensagem, 4);
-            this.rtbMensagem.Location = new System.Drawing.Point(3, 102);
+            this.rtbMensagem.Location = new System.Drawing.Point(3, 131);
             this.rtbMensagem.Name = "rtbMensagem";
-            this.rtbMensagem.Size = new System.Drawing.Size(700, 228);
+            this.rtbMensagem.Size = new System.Drawing.Size(801, 251);
             this.rtbMensagem.TabIndex = 22;
             this.rtbMensagem.Text = "";
-            // 
-            // tlpBotoes
-            // 
-            this.tlpBotoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpBotoes.AutoSize = true;
-            this.tlpBotoes.ColumnCount = 2;
-            this.tlpBotoes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpBotoes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpBotoes.Controls.Add(this.botaoCancelar, 1, 0);
-            this.tlpBotoes.Controls.Add(this.botaoSalvar, 0, 0);
-            this.tlpBotoes.Location = new System.Drawing.Point(491, 336);
-            this.tlpBotoes.Name = "tlpBotoes";
-            this.tlpBotoes.RowCount = 1;
-            this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tlpBotoes.Size = new System.Drawing.Size(212, 43);
-            this.tlpBotoes.TabIndex = 23;
-            // 
-            // botaoCancelar
-            // 
-            this.botaoCancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(109, 3);
-            this.botaoCancelar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.TabIndex = 1;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
-            // 
-            // botaoSalvar
-            // 
-            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoSalvar.BackColor = System.Drawing.Color.White;
-            this.botaoSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSalvar.Image = ((System.Drawing.Image)(resources.GetObject("botaoSalvar.Image")));
-            this.botaoSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoSalvar.Location = new System.Drawing.Point(3, 3);
-            this.botaoSalvar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.Name = "botaoSalvar";
-            this.botaoSalvar.Size = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.TabIndex = 0;
-            this.botaoSalvar.Text = "Salvar";
-            this.botaoSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoSalvar.UseVisualStyleBackColor = false;
-            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
-            // 
-            // lblData
-            // 
-            this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(3, 0);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(30, 13);
-            this.lblData.TabIndex = 25;
-            this.lblData.Text = "Data";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(227, 0);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
-            this.lblUsuario.TabIndex = 26;
-            this.lblUsuario.Text = "Usuário";
-            // 
-            // lblPessoa
-            // 
-            this.lblPessoa.AutoSize = true;
-            this.lblPessoa.Location = new System.Drawing.Point(3, 43);
-            this.lblPessoa.Name = "lblPessoa";
-            this.lblPessoa.Size = new System.Drawing.Size(118, 13);
-            this.lblPessoa.TabIndex = 27;
-            this.lblPessoa.Text = "Solicitante/Reclamante";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsuario.Location = new System.Drawing.Point(227, 16);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.ReadOnly = true;
-            this.txtUsuario.Size = new System.Drawing.Size(219, 20);
-            this.txtUsuario.TabIndex = 28;
-            // 
-            // txtData
-            // 
-            this.txtData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtData.Location = new System.Drawing.Point(3, 16);
-            this.txtData.Name = "txtData";
-            this.txtData.ReadOnly = true;
-            this.txtData.Size = new System.Drawing.Size(188, 20);
-            this.txtData.TabIndex = 29;
-            // 
-            // txtNomePessoa
-            // 
-            this.txtNomePessoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomePessoa.Location = new System.Drawing.Point(3, 59);
-            this.txtNomePessoa.Name = "txtNomePessoa";
-            this.txtNomePessoa.ReadOnly = true;
-            this.txtNomePessoa.Size = new System.Drawing.Size(188, 20);
-            this.txtNomePessoa.TabIndex = 30;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(452, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 13);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Entidades envolvidas";
-            // 
-            // botaoAdicionar
-            // 
-            this.botaoAdicionar.AutoSize = true;
-            this.botaoAdicionar.BackColor = System.Drawing.Color.White;
-            this.botaoAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("botaoAdicionar.Image")));
-            this.botaoAdicionar.Location = new System.Drawing.Point(709, 16);
-            this.botaoAdicionar.MaximumSize = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.MinimumSize = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.Name = "botaoAdicionar";
-            this.botaoAdicionar.Size = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.TabIndex = 24;
-            this.botaoAdicionar.UseVisualStyleBackColor = true;
-            this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
-            // 
-            // botaoRemover
-            // 
-            this.botaoRemover.AutoSize = true;
-            this.botaoRemover.BackColor = System.Drawing.Color.White;
-            this.botaoRemover.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoRemover.Image = ((System.Drawing.Image)(resources.GetObject("botaoRemover.Image")));
-            this.botaoRemover.Location = new System.Drawing.Point(709, 59);
-            this.botaoRemover.MaximumSize = new System.Drawing.Size(24, 24);
-            this.botaoRemover.MinimumSize = new System.Drawing.Size(24, 24);
-            this.botaoRemover.Name = "botaoRemover";
-            this.botaoRemover.Size = new System.Drawing.Size(24, 24);
-            this.botaoRemover.TabIndex = 34;
-            this.botaoRemover.UseVisualStyleBackColor = true;
-            this.botaoRemover.Click += new System.EventHandler(this.botaoRemover_Click);
             // 
             // dgvEntidades
             // 
@@ -293,19 +132,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEntidades.AutoGenerateColumns = false;
             this.dgvEntidades.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEntidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEntidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEntidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.tipoEntidadeDataGridViewTextBoxColumn,
             this.descricaoEntidadeDataGridViewTextBoxColumn});
             this.dgvEntidades.DataSource = this.bsEntidades;
-            this.dgvEntidades.Location = new System.Drawing.Point(452, 16);
+            this.dgvEntidades.Location = new System.Drawing.Point(514, 22);
             this.dgvEntidades.Name = "dgvEntidades";
             this.dgvEntidades.ReadOnly = true;
             this.dgvEntidades.RowHeadersVisible = false;
             this.tlpCampos.SetRowSpan(this.dgvEntidades, 3);
             this.dgvEntidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEntidades.Size = new System.Drawing.Size(251, 67);
+            this.dgvEntidades.Size = new System.Drawing.Size(290, 84);
             this.dgvEntidades.TabIndex = 35;
             this.dgvEntidades.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEntidades_CellDoubleClick);
             // 
@@ -337,59 +184,263 @@
             // 
             this.bsEntidades.DataSource = typeof(Portaria.Core.Model.IEntidade);
             // 
-            // botaoEditarPessoa
-            // 
-            this.botaoEditarPessoa.AutoSize = true;
-            this.botaoEditarPessoa.BackColor = System.Drawing.Color.White;
-            this.botaoEditarPessoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoEditarPessoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoEditarPessoa.Image = ((System.Drawing.Image)(resources.GetObject("botaoEditarPessoa.Image")));
-            this.botaoEditarPessoa.Location = new System.Drawing.Point(197, 59);
-            this.botaoEditarPessoa.MaximumSize = new System.Drawing.Size(24, 24);
-            this.botaoEditarPessoa.MinimumSize = new System.Drawing.Size(24, 24);
-            this.botaoEditarPessoa.Name = "botaoEditarPessoa";
-            this.botaoEditarPessoa.Size = new System.Drawing.Size(24, 24);
-            this.botaoEditarPessoa.TabIndex = 31;
-            this.botaoEditarPessoa.UseVisualStyleBackColor = true;
-            this.botaoEditarPessoa.Click += new System.EventHandler(this.botaoEditarPessoa_Click);
-            // 
-            // lblCategoria
-            // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(227, 43);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
-            this.lblCategoria.TabIndex = 36;
-            this.lblCategoria.Text = "Categoria";
-            // 
             // cboCategoria
             // 
             this.cboCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboCategoria.BackColor = System.Drawing.SystemColors.Window;
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCategoria.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(227, 59);
+            this.cboCategoria.Location = new System.Drawing.Point(256, 82);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(219, 21);
+            this.cboCategoria.Size = new System.Drawing.Size(252, 27);
             this.cboCategoria.TabIndex = 37;
+            // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Depth = 0;
+            this.lblData.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblData.Location = new System.Drawing.Point(3, 0);
+            this.lblData.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(40, 19);
+            this.lblData.TabIndex = 38;
+            this.lblData.Text = "Data";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Depth = 0;
+            this.lblUsuario.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUsuario.Location = new System.Drawing.Point(256, 0);
+            this.lblUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(61, 19);
+            this.lblUsuario.TabIndex = 39;
+            this.lblUsuario.Text = "Usuário";
+            // 
+            // lblPessoa
+            // 
+            this.lblPessoa.AutoSize = true;
+            this.lblPessoa.Depth = 0;
+            this.lblPessoa.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPessoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPessoa.Location = new System.Drawing.Point(3, 49);
+            this.lblPessoa.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPessoa.Name = "lblPessoa";
+            this.lblPessoa.Size = new System.Drawing.Size(166, 19);
+            this.lblPessoa.TabIndex = 40;
+            this.lblPessoa.Text = "Solicitante/Reclamante";
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Depth = 0;
+            this.lblCategoria.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCategoria.Location = new System.Drawing.Point(256, 49);
+            this.lblCategoria.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(74, 19);
+            this.lblCategoria.TabIndex = 41;
+            this.lblCategoria.Text = "Categoria";
+            // 
+            // lblEntidades
+            // 
+            this.lblEntidades.AutoSize = true;
+            this.lblEntidades.Depth = 0;
+            this.lblEntidades.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblEntidades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblEntidades.Location = new System.Drawing.Point(514, 0);
+            this.lblEntidades.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblEntidades.Name = "lblEntidades";
+            this.lblEntidades.Size = new System.Drawing.Size(151, 19);
+            this.lblEntidades.TabIndex = 42;
+            this.lblEntidades.Text = "Entidades Envolvidas";
+            // 
+            // lblMensagem
+            // 
+            this.lblMensagem.AutoSize = true;
+            this.lblMensagem.Depth = 0;
+            this.lblMensagem.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblMensagem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblMensagem.Location = new System.Drawing.Point(3, 109);
+            this.lblMensagem.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblMensagem.Name = "lblMensagem";
+            this.lblMensagem.Size = new System.Drawing.Size(83, 19);
+            this.lblMensagem.TabIndex = 43;
+            this.lblMensagem.Text = "Mensagem";
+            // 
+            // botaoEditarPessoa
+            // 
+            this.botaoEditarPessoa.BackColor = System.Drawing.Color.Transparent;
+            this.botaoEditarPessoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoEditarPessoa.BackgroundImage")));
+            this.botaoEditarPessoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoEditarPessoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoEditarPessoa.Location = new System.Drawing.Point(226, 82);
+            this.botaoEditarPessoa.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoEditarPessoa.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoEditarPessoa.Name = "botaoEditarPessoa";
+            this.botaoEditarPessoa.Size = new System.Drawing.Size(24, 24);
+            this.botaoEditarPessoa.TabIndex = 44;
+            this.botaoEditarPessoa.Click += new System.EventHandler(this.botaoEditarPessoa_Click);
+            // 
+            // txtData
+            // 
+            this.txtData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtData.Depth = 0;
+            this.txtData.Enabled = false;
+            this.txtData.Hint = "";
+            this.txtData.Location = new System.Drawing.Point(3, 22);
+            this.txtData.MaxLength = 32767;
+            this.txtData.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtData.Name = "txtData";
+            this.txtData.PasswordChar = '\0';
+            this.txtData.SelectedText = "";
+            this.txtData.SelectionLength = 0;
+            this.txtData.SelectionStart = 0;
+            this.txtData.Size = new System.Drawing.Size(217, 23);
+            this.txtData.TabIndex = 45;
+            this.txtData.TabStop = false;
+            this.txtData.UseSystemPasswordChar = false;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsuario.Depth = 0;
+            this.txtUsuario.Enabled = false;
+            this.txtUsuario.Hint = "";
+            this.txtUsuario.Location = new System.Drawing.Point(256, 22);
+            this.txtUsuario.MaxLength = 32767;
+            this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '\0';
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.SelectionLength = 0;
+            this.txtUsuario.SelectionStart = 0;
+            this.txtUsuario.Size = new System.Drawing.Size(252, 23);
+            this.txtUsuario.TabIndex = 46;
+            this.txtUsuario.TabStop = false;
+            this.txtUsuario.UseSystemPasswordChar = false;
+            // 
+            // txtNomePessoa
+            // 
+            this.txtNomePessoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomePessoa.Depth = 0;
+            this.txtNomePessoa.Enabled = false;
+            this.txtNomePessoa.Hint = "";
+            this.txtNomePessoa.Location = new System.Drawing.Point(3, 82);
+            this.txtNomePessoa.MaxLength = 32767;
+            this.txtNomePessoa.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNomePessoa.Name = "txtNomePessoa";
+            this.txtNomePessoa.PasswordChar = '\0';
+            this.txtNomePessoa.SelectedText = "";
+            this.txtNomePessoa.SelectionLength = 0;
+            this.txtNomePessoa.SelectionStart = 0;
+            this.txtNomePessoa.Size = new System.Drawing.Size(217, 23);
+            this.txtNomePessoa.TabIndex = 47;
+            this.txtNomePessoa.TabStop = false;
+            this.txtNomePessoa.UseSystemPasswordChar = false;
+            // 
+            // botaoAdicionar
+            // 
+            this.botaoAdicionar.BackColor = System.Drawing.Color.Transparent;
+            this.botaoAdicionar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoAdicionar.BackgroundImage")));
+            this.botaoAdicionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoAdicionar.Location = new System.Drawing.Point(810, 22);
+            this.botaoAdicionar.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoAdicionar.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoAdicionar.Name = "botaoAdicionar";
+            this.botaoAdicionar.Size = new System.Drawing.Size(24, 24);
+            this.botaoAdicionar.TabIndex = 48;
+            this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
+            // 
+            // botaoRemover
+            // 
+            this.botaoRemover.BackColor = System.Drawing.Color.Transparent;
+            this.botaoRemover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoRemover.BackgroundImage")));
+            this.botaoRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoRemover.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoRemover.Location = new System.Drawing.Point(810, 52);
+            this.botaoRemover.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoRemover.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoRemover.Name = "botaoRemover";
+            this.botaoRemover.Size = new System.Drawing.Size(24, 24);
+            this.botaoRemover.TabIndex = 49;
+            this.botaoRemover.Click += new System.EventHandler(this.botaoRemover_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(119, 0);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(91, 36);
+            this.btnCancelar.TabIndex = 50;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSalvar);
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(514, 388);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(290, 39);
+            this.panel1.TabIndex = 51;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalvar.AutoSize = true;
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.Icon = null;
+            this.btnSalvar.Location = new System.Drawing.Point(218, 0);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Primary = true;
+            this.btnSalvar.Size = new System.Drawing.Size(72, 36);
+            this.btnSalvar.TabIndex = 51;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
             // 
             // CadRegistroLivroNegro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 445);
-            this.ConfiguracoesUsuarioVisivel = true;
-            this.MinimumSize = new System.Drawing.Size(744, 396);
+            this.ClientSize = new System.Drawing.Size(849, 515);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(849, 515);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(849, 515);
             this.Name = "CadRegistroLivroNegro";
-            this.Text = "CadRegistroLivroNegro";
-            this.Titulo = "Registrar no livro negro";
+            this.Sizable = false;
+            this.Text = "Registrar no livro negro";
             this.pnlConteudo.ResumeLayout(false);
             this.tlpCampos.ResumeLayout(false);
             this.tlpCampos.PerformLayout();
-            this.tlpBotoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsEntidades)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -397,27 +448,27 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tlpCampos;
-        private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.RichTextBox rtbMensagem;
-        private System.Windows.Forms.TableLayoutPanel tlpBotoes;
-        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Portaria.Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
-        private Portaria.Desktop.Framework.Botoes.BotaoAdicionar botaoAdicionar;
-        private System.Windows.Forms.Label lblData;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblPessoa;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtData;
-        private System.Windows.Forms.TextBox txtNomePessoa;
-        private Portaria.Desktop.Framework.Botoes.BotaoEditar botaoEditarPessoa;
-        private System.Windows.Forms.Label label1;
-        private Portaria.Desktop.Framework.Botoes.BotaoRemover botaoRemover;
         private System.Windows.Forms.DataGridView dgvEntidades;
         private System.Windows.Forms.BindingSource bsEntidades;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoEntidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoEntidadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.ComboBox cboCategoria;
+        private MaterialSkin.Controls.MaterialLabel lblData;
+        private MaterialSkin.Controls.MaterialLabel lblUsuario;
+        private MaterialSkin.Controls.MaterialLabel lblPessoa;
+        private MaterialSkin.Controls.MaterialLabel lblCategoria;
+        private MaterialSkin.Controls.MaterialLabel lblEntidades;
+        private MaterialSkin.Controls.MaterialLabel lblMensagem;
+        private Desktop.Framework.Botoes.BotaoPessoa botaoEditarPessoa;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtData;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNomePessoa;
+        private Desktop.Framework.Botoes.BotaoAdd botaoAdicionar;
+        private Desktop.Framework.Botoes.BotaoRemove botaoRemover;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialFlatButton btnSalvar;
     }
 }

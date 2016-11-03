@@ -1,28 +1,46 @@
 ﻿using Portaria.Business;
 using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.CaixaMensagem;
+using Portaria.Desktop.Framework.Config;
 using Portaria.Desktop.Framework.Forms;
+using Portaria.Desktop.Framework.Plugin;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
 namespace Portaria
 {
-    public partial class Configuracoes : FormBaseWindow
+    public partial class Configuracoes : MaterialPortariaFormWindow
     {
         public Configuracoes()
         {
             InitializeComponent();
 
             CarregarValores();
+        }
+
+        private void GerenciadorTarefas_Click(object sender, EventArgs e)
+        {
+            if (SessaoAtual.Sessao != null && SessaoAtual.Sessao.UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
+            {
+                using (var frm = new VisualizarTarefas())
+                {
+                    frm.ShowDialog();
+                }
+            }
+        }
+
+        private void Plugins_Click(object sender, EventArgs e)
+        {
+            if (SessaoAtual.Sessao != null && SessaoAtual.Sessao.UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
+            {
+                using (var frm = new VisualizarPlugins())
+                {
+                    frm.ShowDialog();
+                }
+            }
         }
 
         private void CarregarValores()
@@ -51,7 +69,7 @@ namespace Portaria
 
                 var segura = false;
                 bool.TryParse(configuracaoBus.BuscarValor(Core.TipoConfiguracao.ConexaoSeguraSMTP), out segura);
-                chkConexaoSegura.Checked = segura;
+                chkConexaoSegura2.Checked = segura;
             }
         }
 
@@ -93,7 +111,7 @@ namespace Portaria
             configuracaoBus.SetarValor(Core.TipoConfiguracao.PortaSMTP, txtPortaSMTP.Text);
             configuracaoBus.SetarValor(Core.TipoConfiguracao.SenhaSMTP, txtSenhaRemetente.Text);
             configuracaoBus.SetarValor(Core.TipoConfiguracao.ServidorSMTP, txtServidorSMTP.Text);
-            configuracaoBus.SetarValor(Core.TipoConfiguracao.ConexaoSeguraSMTP, chkConexaoSegura.Checked.ToString());
+            configuracaoBus.SetarValor(Core.TipoConfiguracao.ConexaoSeguraSMTP, chkConexaoSegura2.Checked.ToString());
             configuracaoBus.SetarValor(Core.TipoConfiguracao.TituloEMail, txtTituloEmail.Text);
         }
 
@@ -117,7 +135,7 @@ namespace Portaria
                 {
                     txtServidorSMTP.Text = reader.GetAttribute("servidor");
                     txtPortaSMTP.Text = reader.GetAttribute("porta");
-                    chkConexaoSegura.Checked = bool.Parse(reader.GetAttribute("segura"));
+                    chkConexaoSegura2.Checked = bool.Parse(reader.GetAttribute("segura"));
                 }
             }
         }
@@ -131,22 +149,31 @@ namespace Portaria
         {
             Cursor = Cursors.WaitCursor;
 
-            var mail = new MailMessage(txtEMailRemetente.Text, txtEMailResponsavel.Text);
-            var client = new SmtpClient();
-            client.Port = int.Parse(txtPortaSMTP.Text);
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
-            client.Host = txtServidorSMTP.Text;
-            client.EnableSsl = chkConexaoSegura.Checked;
-            client.Credentials = new System.Net.NetworkCredential(txtEMailRemetente.Text, txtSenhaRemetente.Text);
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            mail.Subject = "Teste de e-mail do Portaria Digital";
+            try
+            {
+                var mail = new MailMessage(txtEMailRemetente.Text, txtEMailResponsavel.Text);
+                var client = new SmtpClient();
+                client.Port = int.Parse(txtPortaSMTP.Text);
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.UseDefaultCredentials = false;
+                client.Host = txtServidorSMTP.Text;
+                client.EnableSsl = chkConexaoSegura2.Checked;
+                client.Credentials = new System.Net.NetworkCredential(txtEMailRemetente.Text, txtSenhaRemetente.Text);
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                mail.Subject = "Teste de e-mail do Portaria Digital";
 
-            mail.Body = "Teste OK";
+                mail.Body = "Teste OK";
 
-            client.Send(mail);
-
-            Cursor = Cursors.Default;
+                client.Send(mail);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao enviar e-mail. Verifique as configurações.", ex);
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
 
             CaixaMensagem.Mostrar("E-mail de teste enviado.", TipoCaixaMensagem.SomenteOK);
         }

@@ -16,7 +16,6 @@ C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Etika\bin\Debug\Portaria.Data
 C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Etika\bin\Debug\EntityFramework.xml
 C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Etika\bin\Debug\Portaria.Log.pdb
 C:\Users\Max\Source\Repos\Portaria\Portaria.Plugin.Etika\bin\Debug\App.config
-C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\App.config
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\ServidoresSMTP.xml
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Plugin.Etika.dll
 C:\Source\Portaria\Portaria.Desktop.App\bin\Debug\Portaria.Plugin.Etika.pdb

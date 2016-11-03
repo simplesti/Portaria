@@ -29,165 +29,142 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadCategoriaLivroNegro));
-            this.tlpCampos = new System.Windows.Forms.TableLayoutPanel();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.bsCategoria = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
-            this.chkEnviarEmail = new System.Windows.Forms.CheckBox();
+            this.txtNome = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.chkEnviarEmail = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
             this.pnlConteudo.SuspendLayout();
-            this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsCategoria)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(464, 112);
-            // 
-            // tlpCampos
-            // 
-            this.tlpCampos.ColumnCount = 2;
-            this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.62776F));
-            this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.37224F));
-            this.tlpCampos.Controls.Add(this.lblNome, 0, 0);
-            this.tlpCampos.Controls.Add(this.txtNome, 0, 1);
-            this.tlpCampos.Controls.Add(this.panel1, 1, 11);
-            this.tlpCampos.Controls.Add(this.chkEnviarEmail, 1, 1);
-            this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCampos.Location = new System.Drawing.Point(0, 0);
-            this.tlpCampos.Name = "tlpCampos";
-            this.tlpCampos.RowCount = 12;
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCampos.Size = new System.Drawing.Size(464, 112);
-            this.tlpCampos.TabIndex = 2;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(3, 0);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome";
-            // 
-            // txtNome
-            // 
-            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCategoria, "Nome", true));
-            this.txtNome.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtNome.Location = new System.Drawing.Point(3, 16);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(242, 20);
-            this.txtNome.TabIndex = 0;
+            this.pnlConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlConteudo.BackColor = System.Drawing.Color.White;
+            this.pnlConteudo.Controls.Add(this.btnCancelar);
+            this.pnlConteudo.Controls.Add(this.btnSalvar);
+            this.pnlConteudo.Controls.Add(this.materialLabel1);
+            this.pnlConteudo.Controls.Add(this.txtNome);
+            this.pnlConteudo.Controls.Add(this.chkEnviarEmail);
+            this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlConteudo.Location = new System.Drawing.Point(0, 71);
+            this.pnlConteudo.Size = new System.Drawing.Size(482, 117);
             // 
             // bsCategoria
             // 
             this.bsCategoria.DataSource = typeof(Portaria.Core.Model.CategoriaLivroNegro);
             // 
-            // panel1
+            // txtNome
             // 
-            this.panel1.Controls.Add(this.botaoCancelar);
-            this.panel1.Controls.Add(this.botaoSalvar);
-            this.panel1.Location = new System.Drawing.Point(251, 42);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 65);
-            this.panel1.TabIndex = 29;
-            // 
-            // botaoCancelar
-            // 
-            this.botaoCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(110, 24);
-            this.botaoCancelar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.TabIndex = 3;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
-            // 
-            // botaoSalvar
-            // 
-            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoSalvar.BackColor = System.Drawing.Color.White;
-            this.botaoSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSalvar.Image = ((System.Drawing.Image)(resources.GetObject("botaoSalvar.Image")));
-            this.botaoSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoSalvar.Location = new System.Drawing.Point(4, 24);
-            this.botaoSalvar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.Name = "botaoSalvar";
-            this.botaoSalvar.Size = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.TabIndex = 2;
-            this.botaoSalvar.Text = "Salvar";
-            this.botaoSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoSalvar.UseVisualStyleBackColor = false;
-            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCategoria, "Nome", true));
+            this.txtNome.Depth = 0;
+            this.txtNome.Hint = "";
+            this.txtNome.Location = new System.Drawing.Point(7, 22);
+            this.txtNome.MaxLength = 32767;
+            this.txtNome.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.PasswordChar = '\0';
+            this.txtNome.SelectedText = "";
+            this.txtNome.SelectionLength = 0;
+            this.txtNome.SelectionStart = 0;
+            this.txtNome.Size = new System.Drawing.Size(472, 23);
+            this.txtNome.TabIndex = 33;
+            this.txtNome.TabStop = false;
+            this.txtNome.UseSystemPasswordChar = false;
             // 
             // chkEnviarEmail
             // 
             this.chkEnviarEmail.AutoSize = true;
             this.chkEnviarEmail.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bsCategoria, "EnviarEmailNotificacao", true));
-            this.chkEnviarEmail.Location = new System.Drawing.Point(251, 16);
+            this.chkEnviarEmail.Depth = 0;
+            this.chkEnviarEmail.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkEnviarEmail.Location = new System.Drawing.Point(2, 48);
+            this.chkEnviarEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.chkEnviarEmail.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkEnviarEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.chkEnviarEmail.Name = "chkEnviarEmail";
-            this.chkEnviarEmail.Size = new System.Drawing.Size(156, 17);
-            this.chkEnviarEmail.TabIndex = 30;
+            this.chkEnviarEmail.Ripple = true;
+            this.chkEnviarEmail.Size = new System.Drawing.Size(201, 30);
+            this.chkEnviarEmail.TabIndex = 34;
             this.chkEnviarEmail.Text = "Enviar e-mail de notificação";
             this.chkEnviarEmail.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(3, 0);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(50, 19);
+            this.materialLabel1.TabIndex = 35;
+            this.materialLabel1.Text = "Nome";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.AutoSize = true;
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.Icon = null;
+            this.btnSalvar.Location = new System.Drawing.Point(407, 77);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Primary = true;
+            this.btnSalvar.Size = new System.Drawing.Size(72, 36);
+            this.btnSalvar.TabIndex = 36;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(308, 77);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(91, 36);
+            this.btnCancelar.TabIndex = 37;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
             // 
             // CadCategoriaLivroNegro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 175);
-            this.ConfiguracoesUsuarioVisivel = true;
-            this.MaximumSize = new System.Drawing.Size(470, 175);
-            this.MinimumSize = new System.Drawing.Size(470, 175);
+            this.ClientSize = new System.Drawing.Size(482, 188);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(482, 188);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(482, 188);
             this.Name = "CadCategoriaLivroNegro";
-            this.Text = "Cadastro de categoria";
-            this.Titulo = "Cadastro de categoria";
+            this.ShowInTaskbar = false;
+            this.Sizable = false;
+            this.Text = "Cadastro de Categoria";
             this.pnlConteudo.ResumeLayout(false);
-            this.tlpCampos.ResumeLayout(false);
-            this.tlpCampos.PerformLayout();
+            this.pnlConteudo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsCategoria)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tlpCampos;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Panel panel1;
-        private Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
         private System.Windows.Forms.BindingSource bsCategoria;
-        private System.Windows.Forms.CheckBox chkEnviarEmail;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNome;
+        private MaterialSkin.Controls.MaterialCheckBox chkEnviarEmail;
+        private MaterialSkin.Controls.MaterialFlatButton btnSalvar;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
     }
 }

@@ -10,5 +10,6 @@ C:\Source\Portaria\Portaria.RPi.Api\bin\Debug\Portaria.RPi.Api.dll
 C:\Source\Portaria\Portaria.RPi.Api\bin\Debug\Portaria.RPi.Api.pdb
 C:\Source\Portaria\Portaria.RPi.Api\bin\Debug\Newtonsoft.Json.dll
 C:\Source\Portaria\Portaria.RPi.Api\bin\Debug\Newtonsoft.Json.xml
+C:\Source\Portaria\Portaria.RPi.Api\obj\Debug\Portaria.RPi.Api.csprojResolveAssemblyReference.cache
 C:\Source\Portaria\Portaria.RPi.Api\obj\Debug\Portaria.RPi.Api.dll
 C:\Source\Portaria\Portaria.RPi.Api\obj\Debug\Portaria.RPi.Api.pdb

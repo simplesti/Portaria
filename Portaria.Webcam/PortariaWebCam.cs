@@ -1,11 +1,11 @@
-﻿using Portaria.Desktop.Framework;
+﻿using Portaria.Desktop.Framework.Forms;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace Portaria.Webcam
 {
-    public partial class PortariaWebCam : FormBase
+    public partial class PortariaWebCam : MaterialPortariaFormBase
     {
         private DirectShowLib.Capture _camera;
 
@@ -32,7 +32,7 @@ namespace Portaria.Webcam
             }
             catch
             {
-                botaoOK.Visible = false;
+                btnOK.Visible = false;
             }
 
         }

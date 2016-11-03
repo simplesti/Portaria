@@ -11,6 +11,7 @@ namespace Portaria.Core.Model.CadastroMorador
             Funcionarios = new List<Funcionario>();
             Veiculos = new List<Veiculo>();
         }
+
         public int Id { get; set; }
 
         public int Numero { get; set; }

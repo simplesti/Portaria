@@ -1,12 +1,6 @@
 ﻿using Portaria.Desktop.Framework.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Portaria.Desktop.Framework.CaixaMensagem
@@ -17,7 +11,7 @@ namespace Portaria.Desktop.Framework.CaixaMensagem
         SomenteCancelar = 2,
         OKCancelar = 3
     }
-    public partial class CaixaMensagem : FormBase
+    public partial class CaixaMensagem : MaterialPortariaFormBase
     {
         private DialogResult resultado = DialogResult.None;
         public CaixaMensagem()
@@ -36,19 +30,19 @@ namespace Portaria.Desktop.Framework.CaixaMensagem
                     case TipoCaixaMensagem.OKCancelar:
                         {
                             frm.btnCancelar.Visible = true;
-                            frm.btnOK.Visible = true;
+                            frm.btnOk.Visible = true;
                             break;
                         }
                     case TipoCaixaMensagem.SomenteCancelar:
                         {
-                            frm.btnCancelar.Location = new Point(250, 153);
+                            frm.btnCancelar.Location = new Point(451, 217);
                             frm.btnCancelar.Visible = true;
                             break;
                         }
                     case TipoCaixaMensagem.SomenteOK:
                         {
-                            frm.btnOK.Location = new Point(250, 153);
-                            frm.btnOK.Visible = true;
+                            frm.btnOk.Location = new Point(550, 217);
+                            frm.btnOk.Visible = true;
                             break;
                         }
                 }

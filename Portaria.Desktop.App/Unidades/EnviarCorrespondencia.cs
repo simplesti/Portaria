@@ -3,19 +3,12 @@ using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Desktop.Framework.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Portaria.Unidades
 {
-    public partial class EnviarCorrespondencia : FormBaseWindow
+    public partial class EnviarCorrespondencia : MaterialPortariaFormWindow
     {
         private Unidade unidade = null;
         public EnviarCorrespondencia(Unidade unidade)

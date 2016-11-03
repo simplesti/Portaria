@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabVisualizarLivroNegro));
-            this.chkSomente30 = new System.Windows.Forms.CheckBox();
             this.dgvRegistros = new System.Windows.Forms.DataGridView();
-            this.bsRegistros = new System.Windows.Forms.BindingSource(this.components);
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.lblPesquisar = new System.Windows.Forms.Label();
-            this.botaoPesquisar = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
-            this.botaoAdicionar = new Portaria.Desktop.Framework.Botoes.BotaoAdicionar();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sessaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,30 +41,35 @@
             this.tipoEntidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoEntidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsRegistros = new System.Windows.Forms.BindingSource(this.components);
+            this.botaoAdd = new Portaria.Desktop.Framework.Botoes.BotaoAdd();
+            this.txtPesquisar = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.chkSomente30 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.botaoSearch = new Portaria.Desktop.Framework.Botoes.BotaoSearch();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRegistros)).BeginInit();
             this.SuspendLayout();
             // 
-            // chkSomente30
-            // 
-            this.chkSomente30.AutoSize = true;
-            this.chkSomente30.Checked = true;
-            this.chkSomente30.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSomente30.Location = new System.Drawing.Point(25, 74);
-            this.chkSomente30.Name = "chkSomente30";
-            this.chkSomente30.Size = new System.Drawing.Size(167, 17);
-            this.chkSomente30.TabIndex = 1;
-            this.chkSomente30.Text = "Exibir somente os 30 primeiros";
-            this.chkSomente30.UseVisualStyleBackColor = true;
-            // 
             // dgvRegistros
             // 
+            this.dgvRegistros.AllowUserToAddRows = false;
             this.dgvRegistros.AllowUserToResizeRows = false;
             this.dgvRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRegistros.AutoGenerateColumns = false;
             this.dgvRegistros.BackgroundColor = System.Drawing.Color.White;
+            this.dgvRegistros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRegistros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvRegistros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRegistros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -80,71 +81,22 @@
             this.descricaoEntidadeDataGridViewTextBoxColumn,
             this.Categoria});
             this.dgvRegistros.DataSource = this.bsRegistros;
-            this.dgvRegistros.Location = new System.Drawing.Point(25, 97);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRegistros.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRegistros.Location = new System.Drawing.Point(25, 100);
             this.dgvRegistros.Name = "dgvRegistros";
             this.dgvRegistros.ReadOnly = true;
             this.dgvRegistros.RowHeadersVisible = false;
             this.dgvRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRegistros.Size = new System.Drawing.Size(563, 293);
+            this.dgvRegistros.Size = new System.Drawing.Size(580, 290);
             this.dgvRegistros.TabIndex = 3;
             this.dgvRegistros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistros_CellDoubleClick);
-            // 
-            // bsRegistros
-            // 
-            this.bsRegistros.DataSource = typeof(Portaria.Core.Model.RegistroLivroNegro);
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPesquisar.Location = new System.Drawing.Point(25, 48);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(563, 20);
-            this.txtPesquisar.TabIndex = 0;
-            this.txtPesquisar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
-            // 
-            // lblPesquisar
-            // 
-            this.lblPesquisar.AutoSize = true;
-            this.lblPesquisar.Location = new System.Drawing.Point(22, 32);
-            this.lblPesquisar.Name = "lblPesquisar";
-            this.lblPesquisar.Size = new System.Drawing.Size(53, 13);
-            this.lblPesquisar.TabIndex = 10;
-            this.lblPesquisar.Text = "Pesquisar";
-            // 
-            // botaoPesquisar
-            // 
-            this.botaoPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoPesquisar.AutoSize = true;
-            this.botaoPesquisar.BackColor = System.Drawing.Color.White;
-            this.botaoPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("botaoPesquisar.Image")));
-            this.botaoPesquisar.Location = new System.Drawing.Point(594, 41);
-            this.botaoPesquisar.MaximumSize = new System.Drawing.Size(32, 32);
-            this.botaoPesquisar.MinimumSize = new System.Drawing.Size(32, 32);
-            this.botaoPesquisar.Name = "botaoPesquisar";
-            this.botaoPesquisar.Size = new System.Drawing.Size(32, 32);
-            this.botaoPesquisar.TabIndex = 2;
-            this.botaoPesquisar.UseVisualStyleBackColor = true;
-            this.botaoPesquisar.Click += new System.EventHandler(this.botaoPesquisar_Click);
-            // 
-            // botaoAdicionar
-            // 
-            this.botaoAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoAdicionar.AutoSize = true;
-            this.botaoAdicionar.BackColor = System.Drawing.Color.White;
-            this.botaoAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("botaoAdicionar.Image")));
-            this.botaoAdicionar.Location = new System.Drawing.Point(594, 97);
-            this.botaoAdicionar.MaximumSize = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.MinimumSize = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.Name = "botaoAdicionar";
-            this.botaoAdicionar.Size = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.TabIndex = 4;
-            this.botaoAdicionar.UseVisualStyleBackColor = true;
-            this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -208,17 +160,87 @@
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
             // 
+            // bsRegistros
+            // 
+            this.bsRegistros.DataSource = typeof(Portaria.Core.Model.RegistroLivroNegro);
+            // 
+            // botaoAdd
+            // 
+            this.botaoAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoAdd.BackColor = System.Drawing.Color.Transparent;
+            this.botaoAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoAdd.BackgroundImage")));
+            this.botaoAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoAdd.Location = new System.Drawing.Point(611, 100);
+            this.botaoAdd.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoAdd.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoAdd.Name = "botaoAdd";
+            this.botaoAdd.Size = new System.Drawing.Size(24, 24);
+            this.botaoAdd.TabIndex = 11;
+            this.botaoAdd.Click += new System.EventHandler(this.botaoAdicionar_Click);
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPesquisar.Depth = 0;
+            this.txtPesquisar.Hint = "Entre com uma informação para pesquisar";
+            this.txtPesquisar.Location = new System.Drawing.Point(25, 41);
+            this.txtPesquisar.Mask = "";
+            this.txtPesquisar.MaxLength = 32767;
+            this.txtPesquisar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.PasswordChar = '\0';
+            this.txtPesquisar.SelectedText = "";
+            this.txtPesquisar.SelectionLength = 0;
+            this.txtPesquisar.SelectionStart = 0;
+            this.txtPesquisar.Size = new System.Drawing.Size(580, 23);
+            this.txtPesquisar.TabIndex = 13;
+            this.txtPesquisar.TabStop = false;
+            this.txtPesquisar.UseSystemPasswordChar = false;
+            this.txtPesquisar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
+            // 
+            // chkSomente30
+            // 
+            this.chkSomente30.AutoSize = true;
+            this.chkSomente30.Depth = 0;
+            this.chkSomente30.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkSomente30.Location = new System.Drawing.Point(20, 67);
+            this.chkSomente30.Margin = new System.Windows.Forms.Padding(0);
+            this.chkSomente30.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkSomente30.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkSomente30.Name = "chkSomente30";
+            this.chkSomente30.Ripple = true;
+            this.chkSomente30.Size = new System.Drawing.Size(214, 30);
+            this.chkSomente30.TabIndex = 14;
+            this.chkSomente30.Text = "Exibir somente os 30 primeiro";
+            this.chkSomente30.UseVisualStyleBackColor = true;
+            // 
+            // botaoSearch
+            // 
+            this.botaoSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoSearch.BackColor = System.Drawing.Color.Transparent;
+            this.botaoSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoSearch.BackgroundImage")));
+            this.botaoSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoSearch.Location = new System.Drawing.Point(611, 40);
+            this.botaoSearch.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoSearch.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoSearch.Name = "botaoSearch";
+            this.botaoSearch.Size = new System.Drawing.Size(24, 24);
+            this.botaoSearch.TabIndex = 15;
+            this.botaoSearch.Click += new System.EventHandler(this.botaoPesquisar_Click);
+            // 
             // TabVisualizarLivroNegro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.botaoAdicionar);
+            this.Controls.Add(this.botaoSearch);
             this.Controls.Add(this.chkSomente30);
-            this.Controls.Add(this.dgvRegistros);
             this.Controls.Add(this.txtPesquisar);
-            this.Controls.Add(this.lblPesquisar);
-            this.Controls.Add(this.botaoPesquisar);
+            this.Controls.Add(this.botaoAdd);
+            this.Controls.Add(this.dgvRegistros);
             this.Name = "TabVisualizarLivroNegro";
             this.Size = new System.Drawing.Size(641, 417);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistros)).EndInit();
@@ -229,14 +251,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox chkSomente30;
         private System.Windows.Forms.DataGridView dgvRegistros;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Label lblPesquisar;
-        private Portaria.Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisar;
         private System.Windows.Forms.BindingSource bsRegistros;
-        private Portaria.Desktop.Framework.Botoes.BotaoAdicionar botaoAdicionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sessaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
@@ -245,5 +261,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoEntidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoEntidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
+        private Desktop.Framework.Botoes.BotaoAdd botaoAdd;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPesquisar;
+        private MaterialSkin.Controls.MaterialCheckBox chkSomente30;
+        private Desktop.Framework.Botoes.BotaoSearch botaoSearch;
     }
 }

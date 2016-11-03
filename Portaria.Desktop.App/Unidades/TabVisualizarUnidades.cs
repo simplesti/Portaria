@@ -116,7 +116,7 @@ namespace Portaria
         {
             get
             {
-                return new List<TipoUsuario> { TipoUsuario.Administrador, TipoUsuario.SomenteLeitura };
+                return new List<TipoUsuario> { TipoUsuario.Porteiro };
             }
         }
 

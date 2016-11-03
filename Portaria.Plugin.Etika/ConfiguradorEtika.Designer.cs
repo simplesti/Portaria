@@ -28,151 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguradorEtika));
-            this.tlpConteudo = new System.Windows.Forms.TableLayoutPanel();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pnlBotoes = new System.Windows.Forms.Panel();
-            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
-            this.tlpConteudo.SuspendLayout();
-            this.pnlBotoes.SuspendLayout();
+            this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.txtSenha = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
-            // tlpConteudo
+            // btnSalvar
             // 
-            this.tlpConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpConteudo.ColumnCount = 1;
-            this.tlpConteudo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpConteudo.Controls.Add(this.txtUsuario, 0, 3);
-            this.tlpConteudo.Controls.Add(this.txtSenha, 0, 5);
-            this.tlpConteudo.Controls.Add(this.label2, 0, 2);
-            this.tlpConteudo.Controls.Add(this.label3, 0, 4);
-            this.tlpConteudo.Controls.Add(this.pnlBotoes, 0, 6);
-            this.tlpConteudo.Location = new System.Drawing.Point(12, 12);
-            this.tlpConteudo.Name = "tlpConteudo";
-            this.tlpConteudo.RowCount = 7;
-            this.tlpConteudo.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpConteudo.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpConteudo.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpConteudo.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpConteudo.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpConteudo.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpConteudo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpConteudo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tlpConteudo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpConteudo.Size = new System.Drawing.Size(418, 171);
-            this.tlpConteudo.TabIndex = 0;
+            this.btnSalvar.AutoSize = true;
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.Icon = null;
+            this.btnSalvar.Location = new System.Drawing.Point(415, 204);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Primary = true;
+            this.btnSalvar.Size = new System.Drawing.Size(72, 36);
+            this.btnSalvar.TabIndex = 12;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
             // 
-            // txtUsuario
+            // btnCancelar
             // 
-            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsuario.Location = new System.Drawing.Point(3, 16);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(412, 20);
-            this.txtUsuario.TabIndex = 1;
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(316, 204);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(91, 36);
+            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
             // 
             // txtSenha
             // 
-            this.txtSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSenha.Location = new System.Drawing.Point(3, 55);
+            this.txtSenha.Depth = 0;
+            this.txtSenha.Hint = "";
+            this.txtSenha.Location = new System.Drawing.Point(12, 141);
+            this.txtSenha.MaxLength = 32767;
+            this.txtSenha.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(412, 20);
-            this.txtSenha.TabIndex = 2;
+            this.txtSenha.PasswordChar = '\0';
+            this.txtSenha.SelectedText = "";
+            this.txtSenha.SelectionLength = 0;
+            this.txtSenha.SelectionStart = 0;
+            this.txtSenha.Size = new System.Drawing.Size(475, 23);
+            this.txtSenha.TabIndex = 14;
+            this.txtSenha.TabStop = false;
+            this.txtSenha.UseSystemPasswordChar = false;
             // 
-            // label2
+            // materialLabel1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Usuário";
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(8, 119);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(50, 19);
+            this.materialLabel1.TabIndex = 15;
+            this.materialLabel1.Text = "Senha";
             // 
-            // label3
+            // txtUsuario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Senha";
+            this.txtUsuario.Depth = 0;
+            this.txtUsuario.Hint = "";
+            this.txtUsuario.Location = new System.Drawing.Point(12, 93);
+            this.txtUsuario.MaxLength = 32767;
+            this.txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '\0';
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.SelectionLength = 0;
+            this.txtUsuario.SelectionStart = 0;
+            this.txtUsuario.Size = new System.Drawing.Size(475, 23);
+            this.txtUsuario.TabIndex = 16;
+            this.txtUsuario.TabStop = false;
+            this.txtUsuario.UseSystemPasswordChar = false;
             // 
-            // pnlBotoes
+            // materialLabel2
             // 
-            this.pnlBotoes.Controls.Add(this.botaoSalvar);
-            this.pnlBotoes.Controls.Add(this.botaoCancelar);
-            this.pnlBotoes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBotoes.Location = new System.Drawing.Point(3, 81);
-            this.pnlBotoes.Name = "pnlBotoes";
-            this.pnlBotoes.Size = new System.Drawing.Size(412, 87);
-            this.pnlBotoes.TabIndex = 6;
-            // 
-            // botaoSalvar
-            // 
-            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoSalvar.BackColor = System.Drawing.Color.White;
-            this.botaoSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSalvar.Image = ((System.Drawing.Image)(resources.GetObject("botaoSalvar.Image")));
-            this.botaoSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoSalvar.Location = new System.Drawing.Point(203, 49);
-            this.botaoSalvar.Name = "botaoSalvar";
-            this.botaoSalvar.Size = new System.Drawing.Size(100, 35);
-            this.botaoSalvar.TabIndex = 1;
-            this.botaoSalvar.Text = "Salvar";
-            this.botaoSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoSalvar.UseVisualStyleBackColor = false;
-            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
-            // 
-            // botaoCancelar
-            // 
-            this.botaoCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(309, 49);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 35);
-            this.botaoCancelar.TabIndex = 0;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(8, 71);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(61, 19);
+            this.materialLabel2.TabIndex = 17;
+            this.materialLabel2.Text = "Usuário";
             // 
             // ConfiguradorEtika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 195);
-            this.Controls.Add(this.tlpConteudo);
+            this.ClientSize = new System.Drawing.Size(499, 255);
+            this.Controls.Add(this.materialLabel2);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalvar);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(499, 255);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(499, 255);
             this.Name = "ConfiguradorEtika";
-            this.Text = "ConfiguradorEtika";
-            this.tlpConteudo.ResumeLayout(false);
-            this.tlpConteudo.PerformLayout();
-            this.pnlBotoes.ResumeLayout(false);
+            this.Sizable = false;
+            this.Text = "Configurador Etika";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tlpConteudo;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel pnlBotoes;
-        private Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
+        private MaterialSkin.Controls.MaterialFlatButton btnSalvar;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtSenha;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }

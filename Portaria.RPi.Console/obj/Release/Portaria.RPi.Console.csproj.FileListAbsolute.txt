@@ -1,0 +1,1 @@
+C:\Source\Portaria\Portaria.RPi.Console\bin\Release\Portaria.RPi.Console.exe.config

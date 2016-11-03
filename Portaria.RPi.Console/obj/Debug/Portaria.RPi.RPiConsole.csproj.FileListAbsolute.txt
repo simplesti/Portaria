@@ -1,0 +1,10 @@
+C:\Source\Portaria\Portaria.RPi.Console\bin\Debug\Portaria.RPi.RPiConsole.exe.config
+C:\Source\Portaria\Portaria.RPi.Console\bin\Debug\Portaria.RPi.RPiConsole.exe
+C:\Source\Portaria\Portaria.RPi.Console\bin\Debug\Portaria.RPi.RPiConsole.pdb
+C:\Source\Portaria\Portaria.RPi.Console\bin\Debug\Portaria.RPi.Api.dll
+C:\Source\Portaria\Portaria.RPi.Console\bin\Debug\Newtonsoft.Json.dll
+C:\Source\Portaria\Portaria.RPi.Console\bin\Debug\Portaria.RPi.Api.pdb
+C:\Source\Portaria\Portaria.RPi.Console\bin\Debug\Newtonsoft.Json.xml
+C:\Source\Portaria\Portaria.RPi.Console\obj\Debug\Portaria.RPi.RPiConsole.csprojResolveAssemblyReference.cache
+C:\Source\Portaria\Portaria.RPi.Console\obj\Debug\Portaria.RPi.RPiConsole.exe
+C:\Source\Portaria\Portaria.RPi.Console\obj\Debug\Portaria.RPi.RPiConsole.pdb

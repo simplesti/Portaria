@@ -5,7 +5,7 @@ using System;
 
 namespace Portaria.LivroNegro
 {
-    public partial class CadCategoriaLivroNegro : FormBaseWindow
+    public partial class CadCategoriaLivroNegro : MaterialPortariaFormWindow
     {
         private CategoriaLivroNegro categoriaLivroNegro;
 

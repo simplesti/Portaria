@@ -163,6 +163,7 @@ C:\Source\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.csprojResol
 C:\Source\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.PortariaBiometriaCapturar.resources
 C:\Source\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.PortariaBiometriaVerificar.resources
 C:\Source\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.Properties.Resources.resources
+C:\Source\Portaria\Portaria.Biometria\obj\Release\Portaria.ControleAcessoBiometrico.SelecionarLeitor.resources
 C:\Source\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.csproj.GenerateResource.Cache
 C:\Source\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.dll
 C:\Source\Portaria\Portaria.Biometria\obj\Release\Portaria.Biometria.pdb

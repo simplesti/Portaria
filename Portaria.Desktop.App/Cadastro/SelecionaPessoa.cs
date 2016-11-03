@@ -1,30 +1,19 @@
 ﻿using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
-using Portaria.Desktop.Framework.Forms;
-using System.Windows.Forms;
-using System.Linq;
 using Portaria.Desktop.Framework.CaixaMensagem;
-using Portaria.Business;
+using Portaria.Desktop.Framework.Forms;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Portaria.Cadastro
 {
-    public partial class SelecionaPessoa : FormBaseWindow
+    public partial class SelecionaPessoa : MaterialPortariaFormWindow
     {
         private Pessoa pessoaSelecionada = null;
+
         public SelecionaPessoa()
         {
             InitializeComponent();
-            AplicarPermissoes();
-        }
-
-        private void AplicarPermissoes()
-        {
-            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
-            {
-                botaoAdicionar.Visible = false;
-                botaoCancelar.Visible = false;
-                botaoOK.Visible = false;
-            }
         }
 
         public static Pessoa Selecionar(Pessoa pessoa = null)

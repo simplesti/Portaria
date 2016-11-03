@@ -4367,7 +4367,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{8ABC011F-FBE6-479F-B831-CBD3B9D2FD7C}</td><td/></row>
 		<row><td>ProductName</td><td>Portaria Digital</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0008</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.0009</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

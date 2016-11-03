@@ -1,5 +1,4 @@
 ﻿using Portaria.Biometria;
-using Portaria.Business;
 using Portaria.Business.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework;
@@ -7,11 +6,10 @@ using Portaria.Desktop.Framework.Forms;
 using Portaria.Webcam;
 using System;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace Portaria
 {
-    public partial class CadPessoa : FormBaseWindow
+    public partial class CadPessoa : MaterialPortariaFormWindow
     {
         private Pessoa pessoa;
 
@@ -35,13 +33,13 @@ namespace Portaria
                 {
                     lblStatusBiometria.Text = "BIOMETRIA CAPTURADA";
                     lblStatusBiometria.ForeColor = Color.DarkGreen;
-                    botaoVerificarBiometria.Enabled = true;
+                    btnVerificarBio.Enabled = true;
                 }
                 else
                 {
                     lblStatusBiometria.Text = "BIOMETRIA NÃO CAPTURADA";
                     lblStatusBiometria.ForeColor = Color.DarkRed;
-                    botaoVerificarBiometria.Enabled = false;
+                    btnVerificarBio.Enabled = false;
                 }
             }
         }
@@ -50,46 +48,21 @@ namespace Portaria
         {
             InitializeComponent();
             Pessoa = new Pessoa() { ControleAcessoAutorizado = true };
-
-            AplicarPermissoes();
-        }
-
-        private void AplicarPermissoes()
-        {
-            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
-            {
-                txtCPF.ReadOnly = true;
-                txtEmail.ReadOnly = true;
-                txtFoneCel.ReadOnly = true;
-                txtFoneComercial.ReadOnly = true;
-                txtFoneResidencial.ReadOnly = true;
-                txtGrauParentesco.ReadOnly = true;
-                txtNome.ReadOnly = true;
-                txtRG.ReadOnly = true;
-
-                botaoCapturarBiometria.Visible = false;
-                botaoSalvar.Visible = false;
-            }
         }
 
         public CadPessoa(Pessoa pessoa)
         {
             InitializeComponent();
             Pessoa = pessoa;
-
-            AplicarPermissoes();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (SessaoAtual.Sessao.UsuarioLogado.Tipo == Core.TipoUsuario.Administrador)
+            var foto = PortariaWebCam.ObterImagem();
+            if (foto != null)
             {
-                var foto = PortariaWebCam.ObterImagem();
-                if (foto != null)
-                {
-                    pbFoto.Image = foto;
-                    pessoa.Foto = Util.imageToByteArray(foto);
-                }
+                pbFoto.Image = foto;
+                pessoa.Foto = Util.imageToByteArray(foto);
             }
         }
 
@@ -121,7 +94,7 @@ namespace Portaria
                 lblStatusBiometria.Text = "BIOMETRIA CAPTURADA";
                 lblStatusBiometria.ForeColor = Color.DarkGreen;
 
-                botaoVerificarBiometria.Enabled = true;
+                btnVerificarBio.Enabled = true;
             }
         }
 

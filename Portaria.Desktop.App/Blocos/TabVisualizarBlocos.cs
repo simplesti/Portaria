@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Portaria.Desktop.Framework.Forms;
+﻿using Portaria.Business.Cadastro;
 using Portaria.Core;
+using Portaria.Core.Model;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework.Blocos;
-using Portaria.Business.Cadastro;
-using Portaria.Core.Model;
+using Portaria.Desktop.Framework.Forms;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace Portaria
 {
@@ -69,7 +63,7 @@ namespace Portaria
         {
             get
             {
-                return new List<TipoUsuario> { TipoUsuario.Administrador, TipoUsuario.SomenteLeitura };
+                return new List<TipoUsuario> { TipoUsuario.Porteiro };
             }
         }
     }

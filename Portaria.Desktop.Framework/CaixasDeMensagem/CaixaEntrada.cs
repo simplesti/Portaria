@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Portaria.Desktop.Framework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Portaria.Desktop.Framework.CaixasDeMensagem
 {
-    public partial class CaixaEntrada : FormBase
+    public partial class CaixaEntrada : MaterialPortariaFormBase
     {
         public static string Mostrar(string mensagem)
         {

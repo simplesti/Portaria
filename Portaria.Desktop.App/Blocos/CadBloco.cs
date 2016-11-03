@@ -5,7 +5,7 @@ using System;
 
 namespace Portaria.Blocos
 {
-    public partial class CadBloco : FormBaseWindow
+    public partial class CadBloco : MaterialPortariaFormWindow
     {
         private Bloco bloco;
 

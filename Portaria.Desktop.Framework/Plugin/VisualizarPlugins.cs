@@ -3,7 +3,7 @@ using Portaria.Plugins;
 
 namespace Portaria.Desktop.Framework.Plugin
 {
-    public partial class VisualizarPlugins : FormBaseWindow
+    public partial class VisualizarPlugins : MaterialPortariaFormWindow
     {
         public VisualizarPlugins()
         {

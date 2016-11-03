@@ -30,20 +30,18 @@ namespace Portaria.ControleAcessoBiometrico
                 if (cboLeitores.Items.Count > 0)
                 {
                     cboLeitores.SelectedIndex = 0;
-                    btnSelecionar.Enabled = true;
+                    btnOK.Enabled = true;
                 }
                 else
                 {
-                    btnSelecionar.Enabled = false;
+                    btnOK.Enabled = false;
                 }
             }
             catch (Exception ex)
             {
-                //message box:
                 String text = ex.Message;
-                text += "\r\n\r\nPlease check if DigitalPersona service has been started";
-                String caption = "Cannot access readers";
-                MessageBox.Show(text, caption);
+                text += "\r\n\r\nVerifique se o serviço do Digital Persona foi inicializado.";
+                throw new Exception(text, ex);
             }
         }
 

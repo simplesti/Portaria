@@ -1,6 +1,5 @@
 ﻿using Portaria.Business.Cadastro;
 using Portaria.Core;
-using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Desktop.Framework.Forms;

@@ -1,19 +1,18 @@
 ﻿using Portaria.Business;
-using Portaria.Business.Cadastro;
 using Portaria.Core.Model;
 using Portaria.Core.Model.Cadastro;
 using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Desktop.Framework.Forms;
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Portaria
 {
-    public partial class SelecionaEntidade : FormBaseWindow
+    public partial class SelecionaEntidade : MaterialPortariaFormWindow
     {
         private IEntidade entidadeSelecionada = null;
+
         public SelecionaEntidade()
         {
             InitializeComponent();

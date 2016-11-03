@@ -28,85 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortariaWebCam));
-            this.botaoOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
             this.pbWebcam = new System.Windows.Forms.PictureBox();
-            this.botaoPesquisar = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
+            this.btnOK = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnEscolher = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbWebcam)).BeginInit();
             this.SuspendLayout();
             // 
-            // botaoOK
-            // 
-            this.botaoOK.BackColor = System.Drawing.Color.White;
-            this.botaoOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoOK.Image = ((System.Drawing.Image)(resources.GetObject("botaoOK.Image")));
-            this.botaoOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoOK.Location = new System.Drawing.Point(126, 258);
-            this.botaoOK.Name = "botaoOK";
-            this.botaoOK.Size = new System.Drawing.Size(100, 35);
-            this.botaoOK.TabIndex = 0;
-            this.botaoOK.Text = "OK";
-            this.botaoOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoOK.UseVisualStyleBackColor = false;
-            this.botaoOK.Click += new System.EventHandler(this.botaoOK_Click);
-            // 
-            // botaoCancelar
-            // 
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(232, 258);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 35);
-            this.botaoCancelar.TabIndex = 1;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
-            // 
             // pbWebcam
             // 
-            this.pbWebcam.Location = new System.Drawing.Point(12, 12);
+            this.pbWebcam.Location = new System.Drawing.Point(12, 80);
             this.pbWebcam.Name = "pbWebcam";
             this.pbWebcam.Size = new System.Drawing.Size(320, 240);
             this.pbWebcam.TabIndex = 2;
             this.pbWebcam.TabStop = false;
             // 
-            // botaoPesquisar
+            // btnOK
             // 
-            this.botaoPesquisar.AutoSize = true;
-            this.botaoPesquisar.BackColor = System.Drawing.Color.White;
-            this.botaoPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("botaoPesquisar.Image")));
-            this.botaoPesquisar.Location = new System.Drawing.Point(12, 259);
-            this.botaoPesquisar.MaximumSize = new System.Drawing.Size(32, 32);
-            this.botaoPesquisar.MinimumSize = new System.Drawing.Size(32, 32);
-            this.botaoPesquisar.Name = "botaoPesquisar";
-            this.botaoPesquisar.Size = new System.Drawing.Size(32, 32);
-            this.botaoPesquisar.TabIndex = 3;
-            this.botaoPesquisar.UseVisualStyleBackColor = false;
-            this.botaoPesquisar.Click += new System.EventHandler(this.botaoPesquisar_Click);
+            this.btnOK.AutoSize = true;
+            this.btnOK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOK.Depth = 0;
+            this.btnOK.Icon = null;
+            this.btnOK.Location = new System.Drawing.Point(293, 329);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOK.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Primary = true;
+            this.btnOK.Size = new System.Drawing.Size(39, 36);
+            this.btnOK.TabIndex = 4;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.botaoOK_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(194, 329);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(91, 36);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            // 
+            // btnEscolher
+            // 
+            this.btnEscolher.AutoSize = true;
+            this.btnEscolher.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEscolher.Depth = 0;
+            this.btnEscolher.Icon = null;
+            this.btnEscolher.Location = new System.Drawing.Point(12, 329);
+            this.btnEscolher.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEscolher.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEscolher.Name = "btnEscolher";
+            this.btnEscolher.Primary = false;
+            this.btnEscolher.Size = new System.Drawing.Size(151, 36);
+            this.btnEscolher.TabIndex = 6;
+            this.btnEscolher.Text = "Escolher arquivo";
+            this.btnEscolher.UseVisualStyleBackColor = true;
+            this.btnEscolher.Click += new System.EventHandler(this.botaoPesquisar_Click);
             // 
             // PortariaWebCam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 306);
-            this.Controls.Add(this.botaoPesquisar);
+            this.ClientSize = new System.Drawing.Size(346, 377);
+            this.Controls.Add(this.btnEscolher);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.pbWebcam);
-            this.Controls.Add(this.botaoCancelar);
-            this.Controls.Add(this.botaoOK);
-            this.MaximumSize = new System.Drawing.Size(346, 306);
-            this.MinimumSize = new System.Drawing.Size(346, 306);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(346, 377);
+            this.MinimumSize = new System.Drawing.Size(346, 377);
             this.Name = "PortariaWebCam";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "PortariaWebCam";
+            this.Sizable = false;
+            this.Text = "";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PortariaWebCam_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pbWebcam)).EndInit();
             this.ResumeLayout(false);
@@ -115,10 +119,9 @@
         }
 
         #endregion
-
-        private Portaria.Desktop.Framework.Botoes.BotaoOK botaoOK;
-        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
         private System.Windows.Forms.PictureBox pbWebcam;
-        private Portaria.Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisar;
+        private MaterialSkin.Controls.MaterialFlatButton btnOK;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        private MaterialSkin.Controls.MaterialFlatButton btnEscolher;
     }
 }

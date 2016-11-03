@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnidadeItem));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblBloco = new System.Windows.Forms.Label();
-            this.lblNumero = new System.Windows.Forms.Label();
-            this.botaoEditar1 = new Portaria.Desktop.Framework.Botoes.BotaoEditar();
+            this.lblBloco = new MaterialSkin.Controls.MaterialLabel();
+            this.lblNumero = new MaterialSkin.Controls.MaterialLabel();
+            this.botaoEditar = new Portaria.Desktop.Framework.Botoes.BotaoPessoa();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +43,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.lblBloco, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblNumero, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.botaoEditar1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.botaoEditar, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -57,42 +56,48 @@
             // lblBloco
             // 
             this.lblBloco.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblBloco.AutoSize = true;
             this.lblBloco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBloco.Location = new System.Drawing.Point(3, 20);
+            this.lblBloco.Depth = 0;
+            this.lblBloco.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblBloco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblBloco.Location = new System.Drawing.Point(3, 25);
+            this.lblBloco.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblBloco.Name = "lblBloco";
-            this.lblBloco.Size = new System.Drawing.Size(40, 29);
+            this.lblBloco.Size = new System.Drawing.Size(19, 19);
             this.lblBloco.TabIndex = 3;
-            this.lblBloco.Text = "20";
+            this.lblBloco.Text = "A";
             // 
             // lblNumero
             // 
             this.lblNumero.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblNumero.AutoSize = true;
             this.lblNumero.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(49, 20);
+            this.lblNumero.Depth = 0;
+            this.lblNumero.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblNumero.Location = new System.Drawing.Point(49, 25);
+            this.lblNumero.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(25, 29);
-            this.lblNumero.TabIndex = 0;
-            this.lblNumero.Text = "?";
+            this.lblNumero.Size = new System.Drawing.Size(25, 19);
+            this.lblNumero.TabIndex = 4;
+            this.lblNumero.Text = "20";
             this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
             // 
-            // botaoEditar1
+            // botaoEditar
             // 
-            this.botaoEditar1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.botaoEditar1.AutoSize = true;
-            this.botaoEditar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoEditar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoEditar1.Image = ((System.Drawing.Image)(resources.GetObject("botaoEditar1.Image")));
-            this.botaoEditar1.Location = new System.Drawing.Point(122, 23);
-            this.botaoEditar1.MaximumSize = new System.Drawing.Size(24, 24);
-            this.botaoEditar1.MinimumSize = new System.Drawing.Size(24, 24);
-            this.botaoEditar1.Name = "botaoEditar1";
-            this.botaoEditar1.Size = new System.Drawing.Size(24, 24);
-            this.botaoEditar1.TabIndex = 2;
-            this.botaoEditar1.UseVisualStyleBackColor = true;
-            this.botaoEditar1.Click += new System.EventHandler(this.botaoEditar1_Click);
+            this.botaoEditar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.botaoEditar.BackColor = System.Drawing.Color.Transparent;
+            this.botaoEditar.BackgroundImage = global::Portaria.Desktop.Framework.Properties.Resources.ic_person_grey_24dp_1x;
+            this.botaoEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoEditar.Location = new System.Drawing.Point(122, 23);
+            this.botaoEditar.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoEditar.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoEditar.Name = "botaoEditar";
+            this.botaoEditar.Size = new System.Drawing.Size(24, 24);
+            this.botaoEditar.TabIndex = 5;
+            this.botaoEditar.Click += new System.EventHandler(this.botaoEditar_Click);
             // 
             // UnidadeItem
             // 
@@ -113,8 +118,8 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblNumero;
-        private Botoes.BotaoEditar botaoEditar1;
-        private System.Windows.Forms.Label lblBloco;
+        private MaterialSkin.Controls.MaterialLabel lblBloco;
+        private MaterialSkin.Controls.MaterialLabel lblNumero;
+        private Botoes.BotaoPessoa botaoEditar;
     }
 }

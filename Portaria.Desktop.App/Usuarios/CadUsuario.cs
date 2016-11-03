@@ -9,7 +9,7 @@ using System.Drawing;
 
 namespace Portaria.Usuarios
 {
-    public partial class CadUsuario : FormBaseWindow
+    public partial class CadUsuario : MaterialPortariaFormWindow
     {
         private Usuario usuario;
 
@@ -29,13 +29,13 @@ namespace Portaria.Usuarios
                 {
                     lblStatusBiometria.Text = "BIOMETRIA CAPTURADA";
                     lblStatusBiometria.ForeColor = Color.DarkGreen;
-                    botaoVerificarBiometria.Enabled = true;
+                    btnVerificarBio.Enabled = true;
                 }
                 else
                 {
                     lblStatusBiometria.Text = "BIOMETRIA NÃO CAPTURADA";
                     lblStatusBiometria.ForeColor = Color.DarkRed;
-                    botaoVerificarBiometria.Enabled = false;
+                    btnVerificarBio.Enabled = false;
                 }
             }
         }
@@ -56,7 +56,7 @@ namespace Portaria.Usuarios
 
         private void PopulaComboTipo()
         {
-            cboTipo.DataSource = new List<TipoUsuario>() { TipoUsuario.Administrador, TipoUsuario.SomenteLeitura };
+            cboTipo.DataSource = new List<TipoUsuario>() { TipoUsuario.Administrador, TipoUsuario.Porteiro };
         }
 
         private void botaoCancelar_Click(object sender, System.EventArgs e)
@@ -87,7 +87,7 @@ namespace Portaria.Usuarios
                 lblStatusBiometria.Text = "BIOMETRIA CAPTURADA";
                 lblStatusBiometria.ForeColor = Color.DarkGreen;
 
-                botaoVerificarBiometria.Enabled = true;
+                btnVerificarBio.Enabled = true;
             }
         }
 

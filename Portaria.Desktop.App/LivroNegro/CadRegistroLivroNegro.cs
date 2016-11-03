@@ -17,7 +17,7 @@ using System.Windows.Forms;
 
 namespace Portaria.LivroNegro
 {
-    public partial class CadRegistroLivroNegro : FormBaseWindow
+    public partial class CadRegistroLivroNegro : MaterialPortariaFormWindow
     {
         private RegistroLivroNegro registro;
 
@@ -66,7 +66,7 @@ namespace Portaria.LivroNegro
             rtbMensagem.ReadOnly = true;
             botaoAdicionar.Enabled = false;
             botaoRemover.Enabled = false;
-            botaoSalvar.Enabled = false;
+            btnSalvar.Enabled = false;
             botaoEditarPessoa.Enabled = false;
         }
 

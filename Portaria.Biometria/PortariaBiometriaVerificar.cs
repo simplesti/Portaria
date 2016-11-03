@@ -2,6 +2,7 @@
 using Portaria.Core;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using System;
+using System.Diagnostics;
 
 namespace Portaria.Biometria
 {
@@ -27,10 +28,10 @@ namespace Portaria.Biometria
 
         public static bool Verificar(IBiometria entidade)
         {
-            /*if (Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 return true;
-            }*/
+            }
 
             if (entidade == null)
             {
@@ -130,7 +131,7 @@ namespace Portaria.Biometria
         {
             Invoke(new Function(delegate ()
             {
-                botaoOK.Enabled = true;
+                btnOK.Enabled = true;
             }));
         }
 

@@ -1,15 +1,12 @@
-﻿using Portaria.Business;
-using Portaria.Business.Cadastro;
+﻿using Portaria.Business.Cadastro;
 using Portaria.Core.Model.Cadastro;
 using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.Forms;
 using Portaria.Webcam;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace Portaria.Locais
 {
-    public partial class CadLocal : FormBaseWindow
+    public partial class CadLocal : MaterialPortariaFormWindow
     {
         private Local local;
 
@@ -29,6 +26,7 @@ namespace Portaria.Locais
                 }
             }
         }
+
         public CadLocal()
         {
             InitializeComponent();
@@ -71,6 +69,5 @@ namespace Portaria.Locais
                 }
             }
         }
-
     }
 }

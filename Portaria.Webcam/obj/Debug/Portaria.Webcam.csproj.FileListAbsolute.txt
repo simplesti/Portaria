@@ -1,4 +1,3 @@
-C:\Source\Portaria\Portaria.Webcam\bin\Debug\App.config
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\ServidoresSMTP.xml
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Webcam.dll
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Webcam.pdb
@@ -6,17 +5,17 @@ C:\Source\Portaria\Portaria.Webcam\bin\Debug\DirectShowLib-2005.dll
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Desktop.Framework.dll
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Business.dll
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Core.dll
-C:\Source\Portaria\Portaria.Webcam\bin\Debug\Newtonsoft.Json.dll
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Data.dll
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\EntityFramework.dll
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Log.dll
+C:\Source\Portaria\Portaria.Webcam\bin\Debug\Newtonsoft.Json.dll
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Desktop.Framework.pdb
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Business.pdb
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Core.pdb
-C:\Source\Portaria\Portaria.Webcam\bin\Debug\Newtonsoft.Json.xml
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Data.pdb
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\EntityFramework.xml
 C:\Source\Portaria\Portaria.Webcam\bin\Debug\Portaria.Log.pdb
+C:\Source\Portaria\Portaria.Webcam\bin\Debug\Newtonsoft.Json.xml
 C:\Source\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.csprojResolveAssemblyReference.cache
 C:\Source\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.PortariaWebCam.resources
 C:\Source\Portaria\Portaria.Webcam\obj\Debug\Portaria.Webcam.csproj.GenerateResource.Cache

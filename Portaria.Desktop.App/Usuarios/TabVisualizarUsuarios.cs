@@ -1,12 +1,11 @@
 ﻿using Portaria.Business;
 using Portaria.Core;
+using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Desktop.Framework.Forms;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using System.Linq;
-using Portaria.Desktop.Framework.CaixaMensagem;
-using Portaria.Core.Model;
-using Portaria.Desktop.Framework;
+using System.Windows.Forms;
 
 namespace Portaria.Usuarios
 {

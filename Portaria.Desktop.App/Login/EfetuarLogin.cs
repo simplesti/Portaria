@@ -1,26 +1,17 @@
 ﻿using Portaria.Business;
-using Portaria.Business.Cadastro;
 using Portaria.Desktop.Framework.Forms;
 using Portaria.Desktop.Framework.Plugin;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Portaria.Login
 {
-    public partial class EfetuarLogin : FormBaseWindow
+    public partial class EfetuarLogin : MaterialPortariaFormWindow
     {
         public EfetuarLogin()
         {
             InitializeComponent();
             BusUtils.Aquecer();
-            ConfiguracoesUsuarioVisivel = false;
         }
 
         private void botaoCancelar_Click(object sender, EventArgs e)

@@ -29,155 +29,124 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadBloco));
-            this.tlpCampos = new System.Windows.Forms.TableLayoutPanel();
-            this.tlpBotoes = new System.Windows.Forms.TableLayoutPanel();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.bsBloco = new System.Windows.Forms.BindingSource(this.components);
+            this.txtNome = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pnlConteudo.SuspendLayout();
-            this.tlpCampos.SuspendLayout();
-            this.tlpBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsBloco)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(467, 93);
-            // 
-            // tlpCampos
-            // 
-            this.tlpCampos.ColumnCount = 1;
-            this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.62776F));
-            this.tlpCampos.Controls.Add(this.tlpBotoes, 0, 9);
-            this.tlpCampos.Controls.Add(this.lblNome, 0, 0);
-            this.tlpCampos.Controls.Add(this.txtNome, 0, 1);
-            this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCampos.Location = new System.Drawing.Point(0, 0);
-            this.tlpCampos.Name = "tlpCampos";
-            this.tlpCampos.RowCount = 10;
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tlpCampos.Size = new System.Drawing.Size(467, 93);
-            this.tlpCampos.TabIndex = 2;
-            // 
-            // tlpBotoes
-            // 
-            this.tlpBotoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpBotoes.AutoSize = true;
-            this.tlpBotoes.ColumnCount = 2;
-            this.tlpCampos.SetColumnSpan(this.tlpBotoes, 2);
-            this.tlpBotoes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpBotoes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpBotoes.Controls.Add(this.botaoCancelar, 1, 0);
-            this.tlpBotoes.Controls.Add(this.botaoSalvar, 0, 0);
-            this.tlpBotoes.Location = new System.Drawing.Point(252, 47);
-            this.tlpBotoes.Name = "tlpBotoes";
-            this.tlpBotoes.RowCount = 1;
-            this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tlpBotoes.Size = new System.Drawing.Size(212, 43);
-            this.tlpBotoes.TabIndex = 22;
-            // 
-            // botaoCancelar
-            // 
-            this.botaoCancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(109, 3);
-            this.botaoCancelar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.TabIndex = 1;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
-            // 
-            // botaoSalvar
-            // 
-            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoSalvar.BackColor = System.Drawing.Color.White;
-            this.botaoSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSalvar.Image = ((System.Drawing.Image)(resources.GetObject("botaoSalvar.Image")));
-            this.botaoSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoSalvar.Location = new System.Drawing.Point(3, 3);
-            this.botaoSalvar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.Name = "botaoSalvar";
-            this.botaoSalvar.Size = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.TabIndex = 0;
-            this.botaoSalvar.Text = "Salvar";
-            this.botaoSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoSalvar.UseVisualStyleBackColor = false;
-            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(3, 0);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome";
-            // 
-            // txtNome
-            // 
-            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsBloco, "Nome", true));
-            this.txtNome.Location = new System.Drawing.Point(3, 16);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(461, 20);
-            this.txtNome.TabIndex = 0;
+            this.pnlConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlConteudo.BackColor = System.Drawing.Color.White;
+            this.pnlConteudo.Controls.Add(this.materialLabel1);
+            this.pnlConteudo.Controls.Add(this.btnCancelar);
+            this.pnlConteudo.Controls.Add(this.btnSalvar);
+            this.pnlConteudo.Controls.Add(this.txtNome);
+            this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlConteudo.Location = new System.Drawing.Point(0, 66);
+            this.pnlConteudo.Size = new System.Drawing.Size(491, 114);
             // 
             // bsBloco
             // 
             this.bsBloco.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Bloco);
             // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsBloco, "Nome", true));
+            this.txtNome.Depth = 0;
+            this.txtNome.Hint = "";
+            this.txtNome.Location = new System.Drawing.Point(5, 22);
+            this.txtNome.MaxLength = 32767;
+            this.txtNome.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.PasswordChar = '\0';
+            this.txtNome.SelectedText = "";
+            this.txtNome.SelectionLength = 0;
+            this.txtNome.SelectionStart = 0;
+            this.txtNome.Size = new System.Drawing.Size(483, 23);
+            this.txtNome.TabIndex = 25;
+            this.txtNome.TabStop = false;
+            this.txtNome.UseSystemPasswordChar = false;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalvar.AutoSize = true;
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.Icon = null;
+            this.btnSalvar.Location = new System.Drawing.Point(406, 72);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Primary = true;
+            this.btnSalvar.Size = new System.Drawing.Size(72, 36);
+            this.btnSalvar.TabIndex = 26;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(307, 72);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(91, 36);
+            this.btnCancelar.TabIndex = 27;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(3, 0);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(50, 19);
+            this.materialLabel1.TabIndex = 28;
+            this.materialLabel1.Text = "Nome";
+            // 
             // CadBloco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 165);
-            this.ConfiguracoesUsuarioVisivel = true;
-            this.MaximumSize = new System.Drawing.Size(473, 165);
-            this.MinimumSize = new System.Drawing.Size(473, 165);
+            this.ClientSize = new System.Drawing.Size(491, 180);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(491, 180);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(491, 180);
             this.Name = "CadBloco";
-            this.Text = "CadBloco";
-            this.Titulo = "Cadastro de bloco";
+            this.ShowInTaskbar = false;
+            this.Sizable = false;
+            this.Text = "Cadastro de Bloco";
             this.pnlConteudo.ResumeLayout(false);
-            this.tlpCampos.ResumeLayout(false);
-            this.tlpCampos.PerformLayout();
-            this.tlpBotoes.ResumeLayout(false);
+            this.pnlConteudo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsBloco)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tlpCampos;
-        private System.Windows.Forms.TableLayoutPanel tlpBotoes;
-        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Portaria.Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.BindingSource bsBloco;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        private MaterialSkin.Controls.MaterialFlatButton btnSalvar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNome;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

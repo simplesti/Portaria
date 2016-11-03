@@ -1,21 +1,14 @@
 ﻿using Portaria.Data;
-using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.CaixaMensagem;
 using Portaria.Desktop.Framework.CaixasDeMensagem;
+using Portaria.Desktop.Framework.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity.Migrations;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Portaria.ConfiguradorBD
 {
-    public partial class ConfiguradorBancoDados : FormBase
+    public partial class ConfiguradorBancoDados : MaterialPortariaFormBase
     {
         private UtilBD utilBD = new UtilBD();
 
@@ -27,8 +20,8 @@ namespace Portaria.ConfiguradorBD
 
         private void PopulaCombo()
         {
-            cboTIpoServidor.Items.Add(TipoBD.SQLServer);
-            cboTIpoServidor.Items.Add(TipoBD.MySQL);
+            cboTipoServidor.Items.Add(TipoBD.SQLServer);
+            cboTipoServidor.Items.Add(TipoBD.MySQL);
         }
 
         private void Testar()
@@ -38,14 +31,12 @@ namespace Portaria.ConfiguradorBD
             {
                 CaixaMensagem.Mostrar("Conexão bem sucedida!", TipoCaixaMensagem.SomenteOK);
                 cboBaseDados.DataSource = utilBD.ListarBases(str);
-                tlpBase.Visible = true;
-                botaoSalvar.Visible = true;
+                btnSalvar.Visible = true;
             }
             else
             {
                 CaixaMensagem.Mostrar("Erro ao conectar ao servidor. Verifique as configurações.", TipoCaixaMensagem.SomenteOK);
-                tlpBase.Visible = false;
-                botaoSalvar.Visible = false;
+                btnSalvar.Visible = false;
             }
         }
 

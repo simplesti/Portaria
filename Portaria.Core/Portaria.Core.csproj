@@ -35,8 +35,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -68,11 +68,15 @@
     <Compile Include="Model\Log\TipoAlteracao.cs" />
     <Compile Include="Model\RegistroLivroNegro.cs" />
     <Compile Include="Model\RegistroLivroNegroEntidade.cs" />
+    <Compile Include="Model\RegistroMural.cs" />
     <Compile Include="Model\Reserva.cs" />
     <Compile Include="Model\Sessao.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Model\ContatoServico.cs" />
+    <Compile Include="Model\Visitante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoConfiguracao.cs" />
+    <Compile Include="TipoContatoServico.cs" />
     <Compile Include="TipoUsuario.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

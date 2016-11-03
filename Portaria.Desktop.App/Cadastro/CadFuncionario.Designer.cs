@@ -29,413 +29,441 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadFuncionario));
-            this.tlpCampos = new System.Windows.Forms.TableLayoutPanel();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.bsFuncionario = new System.Windows.Forms.BindingSource(this.components);
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.lblFone = new System.Windows.Forms.Label();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.txtFone = new System.Windows.Forms.TextBox();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.lblDocumento = new System.Windows.Forms.Label();
-            this.txtDocumento = new System.Windows.Forms.TextBox();
-            this.lblHorarioSaida = new System.Windows.Forms.Label();
-            this.lblHorarioEntrada = new System.Windows.Forms.Label();
-            this.lblFrequencia = new System.Windows.Forms.Label();
-            this.txtFrequencia = new System.Windows.Forms.TextBox();
-            this.chkAutorizadoSemPresenca = new System.Windows.Forms.CheckBox();
-            this.dtEntrada = new System.Windows.Forms.DateTimePicker();
-            this.dtSaida = new System.Windows.Forms.DateTimePicker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
-            this.pnlBiometria = new System.Windows.Forms.Panel();
             this.lblStatusBiometria = new System.Windows.Forms.Label();
-            this.botaoVerificarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria();
-            this.botaoCapturarBiometria = new Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria();
-            this.chkAutorizarControleAcesso = new System.Windows.Forms.CheckBox();
+            this.dtEntrada = new System.Windows.Forms.DateTimePicker();
+            this.bsFuncionario = new System.Windows.Forms.BindingSource(this.components);
+            this.dtSaida = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtNome = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtDocumento = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtDescricao = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.chkAutorizadoSemPresenca = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtFrequencia = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtFone = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.chkAutorizarControleAcesso = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCapturarBio = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnVerificarBio = new MaterialSkin.Controls.MaterialFlatButton();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.pnlConteudo.SuspendLayout();
-            this.tlpCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.pnlBiometria.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(729, 387);
-            // 
-            // tlpCampos
-            // 
-            this.tlpCampos.ColumnCount = 2;
-            this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.62776F));
-            this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.37224F));
-            this.tlpCampos.Controls.Add(this.lblNome, 0, 1);
-            this.tlpCampos.Controls.Add(this.txtNome, 0, 2);
-            this.tlpCampos.Controls.Add(this.lblDescricao, 0, 5);
-            this.tlpCampos.Controls.Add(this.lblFone, 1, 5);
-            this.tlpCampos.Controls.Add(this.txtDescricao, 0, 6);
-            this.tlpCampos.Controls.Add(this.txtFone, 1, 6);
-            this.tlpCampos.Controls.Add(this.pbFoto, 0, 0);
-            this.tlpCampos.Controls.Add(this.lblDocumento, 0, 3);
-            this.tlpCampos.Controls.Add(this.txtDocumento, 0, 4);
-            this.tlpCampos.Controls.Add(this.lblHorarioSaida, 1, 9);
-            this.tlpCampos.Controls.Add(this.lblHorarioEntrada, 0, 9);
-            this.tlpCampos.Controls.Add(this.lblFrequencia, 1, 3);
-            this.tlpCampos.Controls.Add(this.txtFrequencia, 1, 4);
-            this.tlpCampos.Controls.Add(this.chkAutorizadoSemPresenca, 1, 2);
-            this.tlpCampos.Controls.Add(this.dtEntrada, 0, 10);
-            this.tlpCampos.Controls.Add(this.dtSaida, 1, 10);
-            this.tlpCampos.Controls.Add(this.panel1, 1, 11);
-            this.tlpCampos.Controls.Add(this.pnlBiometria, 0, 11);
-            this.tlpCampos.Controls.Add(this.chkAutorizarControleAcesso, 1, 0);
-            this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpCampos.Location = new System.Drawing.Point(0, 0);
-            this.tlpCampos.Name = "tlpCampos";
-            this.tlpCampos.RowCount = 12;
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tlpCampos.Size = new System.Drawing.Size(729, 387);
-            this.tlpCampos.TabIndex = 0;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(3, 156);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Nome", true));
-            this.txtNome.Location = new System.Drawing.Point(3, 172);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(384, 20);
-            this.txtNome.TabIndex = 0;
-            // 
-            // bsFuncionario
-            // 
-            this.bsFuncionario.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Funcionario);
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(3, 234);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(55, 13);
-            this.lblDescricao.TabIndex = 4;
-            this.lblDescricao.Text = "Descrição";
-            // 
-            // lblFone
-            // 
-            this.lblFone.AutoSize = true;
-            this.lblFone.Location = new System.Drawing.Point(393, 234);
-            this.lblFone.Name = "lblFone";
-            this.lblFone.Size = new System.Drawing.Size(31, 13);
-            this.lblFone.TabIndex = 5;
-            this.lblFone.Text = "Fone";
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescricao.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Descricao", true));
-            this.txtDescricao.Location = new System.Drawing.Point(3, 250);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(384, 20);
-            this.txtDescricao.TabIndex = 4;
-            // 
-            // txtFone
-            // 
-            this.txtFone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Fone", true));
-            this.txtFone.Location = new System.Drawing.Point(393, 250);
-            this.txtFone.Name = "txtFone";
-            this.txtFone.Size = new System.Drawing.Size(333, 20);
-            this.txtFone.TabIndex = 5;
-            // 
-            // pbFoto
-            // 
-            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbFoto.Location = new System.Drawing.Point(3, 3);
-            this.pbFoto.MaximumSize = new System.Drawing.Size(150, 150);
-            this.pbFoto.MinimumSize = new System.Drawing.Size(150, 150);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(150, 150);
-            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto.TabIndex = 12;
-            this.pbFoto.TabStop = false;
-            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
-            // 
-            // lblDocumento
-            // 
-            this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(3, 195);
-            this.lblDocumento.Name = "lblDocumento";
-            this.lblDocumento.Size = new System.Drawing.Size(62, 13);
-            this.lblDocumento.TabIndex = 23;
-            this.lblDocumento.Text = "Documento";
-            // 
-            // txtDocumento
-            // 
-            this.txtDocumento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDocumento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Documento", true));
-            this.txtDocumento.Location = new System.Drawing.Point(3, 211);
-            this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(384, 20);
-            this.txtDocumento.TabIndex = 2;
-            // 
-            // lblHorarioSaida
-            // 
-            this.lblHorarioSaida.AutoSize = true;
-            this.lblHorarioSaida.Location = new System.Drawing.Point(393, 273);
-            this.lblHorarioSaida.Name = "lblHorarioSaida";
-            this.lblHorarioSaida.Size = new System.Drawing.Size(86, 13);
-            this.lblHorarioSaida.TabIndex = 26;
-            this.lblHorarioSaida.Text = "Horário de saída";
-            // 
-            // lblHorarioEntrada
-            // 
-            this.lblHorarioEntrada.AutoSize = true;
-            this.lblHorarioEntrada.Location = new System.Drawing.Point(3, 273);
-            this.lblHorarioEntrada.Name = "lblHorarioEntrada";
-            this.lblHorarioEntrada.Size = new System.Drawing.Size(95, 13);
-            this.lblHorarioEntrada.TabIndex = 9;
-            this.lblHorarioEntrada.Text = "Horário de entrada";
-            // 
-            // lblFrequencia
-            // 
-            this.lblFrequencia.AutoSize = true;
-            this.lblFrequencia.Location = new System.Drawing.Point(393, 195);
-            this.lblFrequencia.Name = "lblFrequencia";
-            this.lblFrequencia.Size = new System.Drawing.Size(60, 13);
-            this.lblFrequencia.TabIndex = 8;
-            this.lblFrequencia.Text = "Frequência";
-            // 
-            // txtFrequencia
-            // 
-            this.txtFrequencia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFrequencia.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Frequencia", true));
-            this.txtFrequencia.Location = new System.Drawing.Point(393, 211);
-            this.txtFrequencia.Name = "txtFrequencia";
-            this.txtFrequencia.Size = new System.Drawing.Size(333, 20);
-            this.txtFrequencia.TabIndex = 3;
-            // 
-            // chkAutorizadoSemPresenca
-            // 
-            this.chkAutorizadoSemPresenca.AutoSize = true;
-            this.chkAutorizadoSemPresenca.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bsFuncionario, "AutorizadaSemPresenca", true));
-            this.chkAutorizadoSemPresenca.Location = new System.Drawing.Point(393, 172);
-            this.chkAutorizadoSemPresenca.Name = "chkAutorizadoSemPresenca";
-            this.chkAutorizadoSemPresenca.Size = new System.Drawing.Size(258, 17);
-            this.chkAutorizadoSemPresenca.TabIndex = 1;
-            this.chkAutorizadoSemPresenca.Text = "Autorizada a entrada sem a presença do morador";
-            this.chkAutorizadoSemPresenca.UseVisualStyleBackColor = true;
-            // 
-            // dtEntrada
-            // 
-            this.dtEntrada.CustomFormat = "HH:mm";
-            this.dtEntrada.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsFuncionario, "HorarioEntrada", true));
-            this.dtEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEntrada.Location = new System.Drawing.Point(3, 289);
-            this.dtEntrada.Name = "dtEntrada";
-            this.dtEntrada.Size = new System.Drawing.Size(200, 20);
-            this.dtEntrada.TabIndex = 6;
-            // 
-            // dtSaida
-            // 
-            this.dtSaida.CustomFormat = "HH:mm";
-            this.dtSaida.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsFuncionario, "HorarioSaida", true));
-            this.dtSaida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSaida.Location = new System.Drawing.Point(393, 289);
-            this.dtSaida.Name = "dtSaida";
-            this.dtSaida.Size = new System.Drawing.Size(200, 20);
-            this.dtSaida.TabIndex = 7;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.botaoCancelar);
-            this.panel1.Controls.Add(this.botaoSalvar);
-            this.panel1.Location = new System.Drawing.Point(393, 315);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 69);
-            this.panel1.TabIndex = 27;
-            // 
-            // botaoCancelar
-            // 
-            this.botaoCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(230, 26);
-            this.botaoCancelar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.TabIndex = 3;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
-            // 
-            // botaoSalvar
-            // 
-            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoSalvar.BackColor = System.Drawing.Color.White;
-            this.botaoSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSalvar.Image = ((System.Drawing.Image)(resources.GetObject("botaoSalvar.Image")));
-            this.botaoSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoSalvar.Location = new System.Drawing.Point(124, 26);
-            this.botaoSalvar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.Name = "botaoSalvar";
-            this.botaoSalvar.Size = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.TabIndex = 2;
-            this.botaoSalvar.Text = "Salvar";
-            this.botaoSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoSalvar.UseVisualStyleBackColor = false;
-            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
-            // 
-            // pnlBiometria
-            // 
-            this.pnlBiometria.Controls.Add(this.lblStatusBiometria);
-            this.pnlBiometria.Controls.Add(this.botaoVerificarBiometria);
-            this.pnlBiometria.Controls.Add(this.botaoCapturarBiometria);
-            this.pnlBiometria.Location = new System.Drawing.Point(3, 315);
-            this.pnlBiometria.Name = "pnlBiometria";
-            this.pnlBiometria.Size = new System.Drawing.Size(384, 67);
-            this.pnlBiometria.TabIndex = 28;
+            this.pnlConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlConteudo.BackColor = System.Drawing.Color.White;
+            this.pnlConteudo.Controls.Add(this.btnCapturarBio);
+            this.pnlConteudo.Controls.Add(this.btnVerificarBio);
+            this.pnlConteudo.Controls.Add(this.btnCancelar);
+            this.pnlConteudo.Controls.Add(this.btnSalvar);
+            this.pnlConteudo.Controls.Add(this.materialLabel7);
+            this.pnlConteudo.Controls.Add(this.chkAutorizarControleAcesso);
+            this.pnlConteudo.Controls.Add(this.txtFone);
+            this.pnlConteudo.Controls.Add(this.materialLabel6);
+            this.pnlConteudo.Controls.Add(this.txtFrequencia);
+            this.pnlConteudo.Controls.Add(this.materialLabel5);
+            this.pnlConteudo.Controls.Add(this.chkAutorizadoSemPresenca);
+            this.pnlConteudo.Controls.Add(this.materialLabel4);
+            this.pnlConteudo.Controls.Add(this.txtDescricao);
+            this.pnlConteudo.Controls.Add(this.materialLabel3);
+            this.pnlConteudo.Controls.Add(this.txtDocumento);
+            this.pnlConteudo.Controls.Add(this.materialLabel2);
+            this.pnlConteudo.Controls.Add(this.txtNome);
+            this.pnlConteudo.Controls.Add(this.materialLabel1);
+            this.pnlConteudo.Controls.Add(this.lblStatusBiometria);
+            this.pnlConteudo.Controls.Add(this.pbFoto);
+            this.pnlConteudo.Controls.Add(this.dtEntrada);
+            this.pnlConteudo.Controls.Add(this.dtSaida);
+            this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlConteudo.Location = new System.Drawing.Point(0, 66);
+            this.pnlConteudo.Size = new System.Drawing.Size(745, 469);
             // 
             // lblStatusBiometria
             // 
             this.lblStatusBiometria.AutoSize = true;
             this.lblStatusBiometria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatusBiometria.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblStatusBiometria.Location = new System.Drawing.Point(0, 5);
+            this.lblStatusBiometria.Location = new System.Drawing.Point(12, 391);
             this.lblStatusBiometria.Name = "lblStatusBiometria";
             this.lblStatusBiometria.Size = new System.Drawing.Size(241, 18);
-            this.lblStatusBiometria.TabIndex = 1;
+            this.lblStatusBiometria.TabIndex = 32;
             this.lblStatusBiometria.Text = "BIOMETRIA NÃO CAPTURADA";
             // 
-            // botaoVerificarBiometria
+            // dtEntrada
             // 
-            this.botaoVerificarBiometria.BackColor = System.Drawing.Color.White;
-            this.botaoVerificarBiometria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoVerificarBiometria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoVerificarBiometria.Image = ((System.Drawing.Image)(resources.GetObject("botaoVerificarBiometria.Image")));
-            this.botaoVerificarBiometria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoVerificarBiometria.Location = new System.Drawing.Point(144, 26);
-            this.botaoVerificarBiometria.Name = "botaoVerificarBiometria";
-            this.botaoVerificarBiometria.Size = new System.Drawing.Size(135, 35);
-            this.botaoVerificarBiometria.TabIndex = 1;
-            this.botaoVerificarBiometria.Text = "Verificar Biometria";
-            this.botaoVerificarBiometria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoVerificarBiometria.UseVisualStyleBackColor = false;
-            this.botaoVerificarBiometria.Click += new System.EventHandler(this.botaoVerificarBiometria_Click);
+            this.dtEntrada.CustomFormat = "HH:mm";
+            this.dtEntrada.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsFuncionario, "HorarioEntrada", true));
+            this.dtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEntrada.Location = new System.Drawing.Point(15, 322);
+            this.dtEntrada.Name = "dtEntrada";
+            this.dtEntrada.Size = new System.Drawing.Size(200, 24);
+            this.dtEntrada.TabIndex = 43;
             // 
-            // botaoCapturarBiometria
+            // bsFuncionario
             // 
-            this.botaoCapturarBiometria.BackColor = System.Drawing.Color.White;
-            this.botaoCapturarBiometria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCapturarBiometria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCapturarBiometria.Image = ((System.Drawing.Image)(resources.GetObject("botaoCapturarBiometria.Image")));
-            this.botaoCapturarBiometria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCapturarBiometria.Location = new System.Drawing.Point(3, 26);
-            this.botaoCapturarBiometria.Name = "botaoCapturarBiometria";
-            this.botaoCapturarBiometria.Size = new System.Drawing.Size(135, 35);
-            this.botaoCapturarBiometria.TabIndex = 0;
-            this.botaoCapturarBiometria.Text = "Capturar Biometria";
-            this.botaoCapturarBiometria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCapturarBiometria.UseVisualStyleBackColor = false;
-            this.botaoCapturarBiometria.Click += new System.EventHandler(this.botaoCapturarBiometria_Click);
+            this.bsFuncionario.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Funcionario);
+            // 
+            // dtSaida
+            // 
+            this.dtSaida.CustomFormat = "HH:mm";
+            this.dtSaida.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsFuncionario, "HorarioSaida", true));
+            this.dtSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtSaida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtSaida.Location = new System.Drawing.Point(405, 322);
+            this.dtSaida.Name = "dtSaida";
+            this.dtSaida.Size = new System.Drawing.Size(200, 24);
+            this.dtSaida.TabIndex = 44;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(11, 156);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(50, 19);
+            this.materialLabel1.TabIndex = 51;
+            this.materialLabel1.Text = "Nome";
+            // 
+            // txtNome
+            // 
+            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Nome", true));
+            this.txtNome.Depth = 0;
+            this.txtNome.Hint = "";
+            this.txtNome.Location = new System.Drawing.Point(15, 178);
+            this.txtNome.MaxLength = 32767;
+            this.txtNome.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.PasswordChar = '\0';
+            this.txtNome.SelectedText = "";
+            this.txtNome.SelectionLength = 0;
+            this.txtNome.SelectionStart = 0;
+            this.txtNome.Size = new System.Drawing.Size(368, 23);
+            this.txtNome.TabIndex = 52;
+            this.txtNome.TabStop = false;
+            this.txtNome.UseSystemPasswordChar = false;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(11, 204);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(87, 19);
+            this.materialLabel2.TabIndex = 53;
+            this.materialLabel2.Text = "Documento";
+            // 
+            // txtDocumento
+            // 
+            this.txtDocumento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Documento", true));
+            this.txtDocumento.Depth = 0;
+            this.txtDocumento.Hint = "";
+            this.txtDocumento.Location = new System.Drawing.Point(15, 226);
+            this.txtDocumento.MaxLength = 32767;
+            this.txtDocumento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.PasswordChar = '\0';
+            this.txtDocumento.SelectedText = "";
+            this.txtDocumento.SelectionLength = 0;
+            this.txtDocumento.SelectionStart = 0;
+            this.txtDocumento.Size = new System.Drawing.Size(368, 23);
+            this.txtDocumento.TabIndex = 54;
+            this.txtDocumento.TabStop = false;
+            this.txtDocumento.UseSystemPasswordChar = false;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(11, 252);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(151, 19);
+            this.materialLabel3.TabIndex = 55;
+            this.materialLabel3.Text = "Descrição do serviço";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Descricao", true));
+            this.txtDescricao.Depth = 0;
+            this.txtDescricao.Hint = "";
+            this.txtDescricao.Location = new System.Drawing.Point(15, 274);
+            this.txtDescricao.MaxLength = 32767;
+            this.txtDescricao.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.PasswordChar = '\0';
+            this.txtDescricao.SelectedText = "";
+            this.txtDescricao.SelectionLength = 0;
+            this.txtDescricao.SelectionStart = 0;
+            this.txtDescricao.Size = new System.Drawing.Size(368, 23);
+            this.txtDescricao.TabIndex = 56;
+            this.txtDescricao.TabStop = false;
+            this.txtDescricao.UseSystemPasswordChar = false;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(11, 300);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(134, 19);
+            this.materialLabel4.TabIndex = 57;
+            this.materialLabel4.Text = "Horário de entrada";
+            // 
+            // chkAutorizadoSemPresenca
+            // 
+            this.chkAutorizadoSemPresenca.AutoSize = true;
+            this.chkAutorizadoSemPresenca.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bsFuncionario, "AutorizadaSemPresenca", true));
+            this.chkAutorizadoSemPresenca.Depth = 0;
+            this.chkAutorizadoSemPresenca.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkAutorizadoSemPresenca.Location = new System.Drawing.Point(400, 253);
+            this.chkAutorizadoSemPresenca.Margin = new System.Windows.Forms.Padding(0);
+            this.chkAutorizadoSemPresenca.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkAutorizadoSemPresenca.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkAutorizadoSemPresenca.Name = "chkAutorizadoSemPresenca";
+            this.chkAutorizadoSemPresenca.Ripple = true;
+            this.chkAutorizadoSemPresenca.Size = new System.Drawing.Size(313, 30);
+            this.chkAutorizadoSemPresenca.TabIndex = 58;
+            this.chkAutorizadoSemPresenca.Text = "Autorizar entrada sem a presença do morador";
+            this.chkAutorizadoSemPresenca.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(401, 156);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(83, 19);
+            this.materialLabel5.TabIndex = 59;
+            this.materialLabel5.Text = "Frequência";
+            // 
+            // txtFrequencia
+            // 
+            this.txtFrequencia.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Frequencia", true));
+            this.txtFrequencia.Depth = 0;
+            this.txtFrequencia.Hint = "";
+            this.txtFrequencia.Location = new System.Drawing.Point(405, 178);
+            this.txtFrequencia.MaxLength = 32767;
+            this.txtFrequencia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtFrequencia.Name = "txtFrequencia";
+            this.txtFrequencia.PasswordChar = '\0';
+            this.txtFrequencia.SelectedText = "";
+            this.txtFrequencia.SelectionLength = 0;
+            this.txtFrequencia.SelectionStart = 0;
+            this.txtFrequencia.Size = new System.Drawing.Size(328, 23);
+            this.txtFrequencia.TabIndex = 60;
+            this.txtFrequencia.TabStop = false;
+            this.txtFrequencia.UseSystemPasswordChar = false;
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(401, 204);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(42, 19);
+            this.materialLabel6.TabIndex = 61;
+            this.materialLabel6.Text = "Fone";
+            // 
+            // txtFone
+            // 
+            this.txtFone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsFuncionario, "Fone", true));
+            this.txtFone.Depth = 0;
+            this.txtFone.Hint = "";
+            this.txtFone.Location = new System.Drawing.Point(405, 226);
+            this.txtFone.MaxLength = 32767;
+            this.txtFone.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtFone.Name = "txtFone";
+            this.txtFone.PasswordChar = '\0';
+            this.txtFone.SelectedText = "";
+            this.txtFone.SelectionLength = 0;
+            this.txtFone.SelectionStart = 0;
+            this.txtFone.Size = new System.Drawing.Size(328, 23);
+            this.txtFone.TabIndex = 62;
+            this.txtFone.TabStop = false;
+            this.txtFone.UseSystemPasswordChar = false;
             // 
             // chkAutorizarControleAcesso
             // 
-            this.chkAutorizarControleAcesso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkAutorizarControleAcesso.AutoSize = true;
             this.chkAutorizarControleAcesso.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bsFuncionario, "ControleAcessoAutorizado", true));
-            this.chkAutorizarControleAcesso.Location = new System.Drawing.Point(393, 136);
+            this.chkAutorizarControleAcesso.Depth = 0;
+            this.chkAutorizarControleAcesso.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkAutorizarControleAcesso.Location = new System.Drawing.Point(9, 361);
+            this.chkAutorizarControleAcesso.Margin = new System.Windows.Forms.Padding(0);
+            this.chkAutorizarControleAcesso.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkAutorizarControleAcesso.MouseState = MaterialSkin.MouseState.HOVER;
             this.chkAutorizarControleAcesso.Name = "chkAutorizarControleAcesso";
-            this.chkAutorizarControleAcesso.Size = new System.Drawing.Size(172, 17);
-            this.chkAutorizarControleAcesso.TabIndex = 29;
+            this.chkAutorizarControleAcesso.Ripple = true;
+            this.chkAutorizarControleAcesso.Size = new System.Drawing.Size(227, 30);
+            this.chkAutorizarControleAcesso.TabIndex = 63;
             this.chkAutorizarControleAcesso.Text = "Autorizar acesso com biometria";
             this.chkAutorizarControleAcesso.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel7.Location = new System.Drawing.Point(401, 300);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(120, 19);
+            this.materialLabel7.TabIndex = 64;
+            this.materialLabel7.Text = "Horário de saída";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.AutoSize = true;
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.Icon = null;
+            this.btnSalvar.Location = new System.Drawing.Point(661, 427);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Primary = true;
+            this.btnSalvar.Size = new System.Drawing.Size(72, 36);
+            this.btnSalvar.TabIndex = 65;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(562, 427);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(91, 36);
+            this.btnCancelar.TabIndex = 66;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            // 
+            // btnCapturarBio
+            // 
+            this.btnCapturarBio.AutoSize = true;
+            this.btnCapturarBio.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCapturarBio.Depth = 0;
+            this.btnCapturarBio.Icon = global::Portaria.Properties.Resources.fingerprint;
+            this.btnCapturarBio.Location = new System.Drawing.Point(214, 427);
+            this.btnCapturarBio.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCapturarBio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCapturarBio.Name = "btnCapturarBio";
+            this.btnCapturarBio.Primary = false;
+            this.btnCapturarBio.Size = new System.Drawing.Size(195, 36);
+            this.btnCapturarBio.TabIndex = 68;
+            this.btnCapturarBio.Text = "Capturar Biometria";
+            this.btnCapturarBio.UseVisualStyleBackColor = true;
+            this.btnCapturarBio.Click += new System.EventHandler(this.botaoCapturarBiometria_Click);
+            // 
+            // btnVerificarBio
+            // 
+            this.btnVerificarBio.AutoSize = true;
+            this.btnVerificarBio.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnVerificarBio.Depth = 0;
+            this.btnVerificarBio.Icon = global::Portaria.Properties.Resources.verifiedfingerprint;
+            this.btnVerificarBio.Location = new System.Drawing.Point(15, 427);
+            this.btnVerificarBio.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnVerificarBio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnVerificarBio.Name = "btnVerificarBio";
+            this.btnVerificarBio.Primary = false;
+            this.btnVerificarBio.Size = new System.Drawing.Size(191, 36);
+            this.btnVerificarBio.TabIndex = 67;
+            this.btnVerificarBio.Text = "Verificar Biometria";
+            this.btnVerificarBio.UseVisualStyleBackColor = true;
+            this.btnVerificarBio.Click += new System.EventHandler(this.botaoVerificarBiometria_Click);
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbFoto.Location = new System.Drawing.Point(12, 3);
+            this.pbFoto.MaximumSize = new System.Drawing.Size(150, 150);
+            this.pbFoto.MinimumSize = new System.Drawing.Size(150, 150);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(150, 150);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto.TabIndex = 47;
+            this.pbFoto.TabStop = false;
+            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
             // 
             // CadFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 450);
-            this.ConfiguracoesUsuarioVisivel = true;
-            this.MaximumSize = new System.Drawing.Size(735, 450);
-            this.MinimumSize = new System.Drawing.Size(735, 450);
+            this.ClientSize = new System.Drawing.Size(745, 535);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(745, 535);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(745, 535);
             this.Name = "CadFuncionario";
-            this.Text = "CadFuncionario";
-            this.Titulo = "Cadastro de Funcionário";
+            this.Sizable = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "Cadastro de Funcionário";
             this.pnlConteudo.ResumeLayout(false);
-            this.tlpCampos.ResumeLayout(false);
-            this.tlpCampos.PerformLayout();
+            this.pnlConteudo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.pnlBiometria.ResumeLayout(false);
-            this.pnlBiometria.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tlpCampos;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.Label lblFone;
-        private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.TextBox txtFone;
-        private System.Windows.Forms.Label lblFrequencia;
-        private System.Windows.Forms.Label lblHorarioEntrada;
-        private System.Windows.Forms.TextBox txtFrequencia;
-        private System.Windows.Forms.PictureBox pbFoto;
-        private System.Windows.Forms.Label lblDocumento;
-        private System.Windows.Forms.TextBox txtDocumento;
-        private System.Windows.Forms.Label lblHorarioSaida;
-        private System.Windows.Forms.CheckBox chkAutorizadoSemPresenca;
         private System.Windows.Forms.BindingSource bsFuncionario;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtDocumento;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNome;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.Label lblStatusBiometria;
+        private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.DateTimePicker dtEntrada;
         private System.Windows.Forms.DateTimePicker dtSaida;
-        private System.Windows.Forms.Panel panel1;
-        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Portaria.Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
-        private System.Windows.Forms.Panel pnlBiometria;
-        private System.Windows.Forms.Label lblStatusBiometria;
-        private Portaria.Desktop.Framework.Botoes.BotaoVerificarBiometria botaoVerificarBiometria;
-        private Portaria.Desktop.Framework.Botoes.BotaoCapturarBiometria botaoCapturarBiometria;
-        private System.Windows.Forms.CheckBox chkAutorizarControleAcesso;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtDescricao;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialCheckBox chkAutorizadoSemPresenca;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtFone;
+        private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtFrequencia;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
+        private MaterialSkin.Controls.MaterialCheckBox chkAutorizarControleAcesso;
+        private MaterialSkin.Controls.MaterialFlatButton btnSalvar;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        private MaterialSkin.Controls.MaterialFlatButton btnCapturarBio;
+        private MaterialSkin.Controls.MaterialFlatButton btnVerificarBio;
     }
 }

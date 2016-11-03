@@ -28,36 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label StatusLabel;
-            System.Windows.Forms.Label PromptLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortariaBiometriaCapturar));
             this.StatusText = new System.Windows.Forms.TextBox();
-            this.Prompt = new System.Windows.Forms.TextBox();
             this.Picture = new System.Windows.Forms.PictureBox();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
-            this.botaoOK = new Portaria.Desktop.Framework.Botoes.BotaoOK();
-            StatusLabel = new System.Windows.Forms.Label();
-            PromptLabel = new System.Windows.Forms.Label();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.Prompt = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnOK = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // StatusLabel
-            // 
-            StatusLabel.AutoSize = true;
-            StatusLabel.Location = new System.Drawing.Point(290, 98);
-            StatusLabel.Name = "StatusLabel";
-            StatusLabel.Size = new System.Drawing.Size(37, 13);
-            StatusLabel.TabIndex = 15;
-            StatusLabel.Text = "Status";
-            // 
-            // PromptLabel
-            // 
-            PromptLabel.AutoSize = true;
-            PromptLabel.Location = new System.Drawing.Point(290, 45);
-            PromptLabel.Name = "PromptLabel";
-            PromptLabel.Size = new System.Drawing.Size(51, 13);
-            PromptLabel.TabIndex = 13;
-            PromptLabel.Text = "Instrução";
             // 
             // StatusText
             // 
@@ -65,88 +44,123 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StatusText.BackColor = System.Drawing.SystemColors.Window;
-            this.StatusText.Location = new System.Drawing.Point(293, 114);
+            this.StatusText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.StatusText.Location = new System.Drawing.Point(276, 149);
             this.StatusText.Multiline = true;
             this.StatusText.Name = "StatusText";
             this.StatusText.ReadOnly = true;
             this.StatusText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.StatusText.Size = new System.Drawing.Size(224, 148);
+            this.StatusText.Size = new System.Drawing.Size(262, 148);
             this.StatusText.TabIndex = 16;
-            // 
-            // Prompt
-            // 
-            this.Prompt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Prompt.Location = new System.Drawing.Point(293, 61);
-            this.Prompt.Name = "Prompt";
-            this.Prompt.ReadOnly = true;
-            this.Prompt.Size = new System.Drawing.Size(224, 20);
-            this.Prompt.TabIndex = 14;
             // 
             // Picture
             // 
             this.Picture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Picture.BackColor = System.Drawing.SystemColors.Window;
-            this.Picture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Picture.Location = new System.Drawing.Point(36, 45);
+            this.Picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Picture.Location = new System.Drawing.Point(12, 80);
             this.Picture.Name = "Picture";
             this.Picture.Size = new System.Drawing.Size(248, 217);
             this.Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture.TabIndex = 12;
             this.Picture.TabStop = false;
             // 
-            // botaoCancelar
+            // materialLabel1
             // 
-            this.botaoCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(438, 303);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 35);
-            this.botaoCancelar.TabIndex = 18;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(272, 74);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(80, 19);
+            this.materialLabel1.TabIndex = 20;
+            this.materialLabel1.Text = "Instruções";
             // 
-            // botaoOK
+            // Prompt
             // 
-            this.botaoOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoOK.BackColor = System.Drawing.Color.White;
-            this.botaoOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoOK.Enabled = false;
-            this.botaoOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoOK.Image = ((System.Drawing.Image)(resources.GetObject("botaoOK.Image")));
-            this.botaoOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoOK.Location = new System.Drawing.Point(332, 303);
-            this.botaoOK.Name = "botaoOK";
-            this.botaoOK.Size = new System.Drawing.Size(100, 35);
-            this.botaoOK.TabIndex = 19;
-            this.botaoOK.Text = "OK";
-            this.botaoOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoOK.UseVisualStyleBackColor = false;
-            this.botaoOK.Click += new System.EventHandler(this.botaoOK_Click);
+            this.Prompt.Depth = 0;
+            this.Prompt.Enabled = false;
+            this.Prompt.Hint = "";
+            this.Prompt.Location = new System.Drawing.Point(276, 97);
+            this.Prompt.MaxLength = 32767;
+            this.Prompt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Prompt.Name = "Prompt";
+            this.Prompt.PasswordChar = '\0';
+            this.Prompt.SelectedText = "";
+            this.Prompt.SelectionLength = 0;
+            this.Prompt.SelectionStart = 0;
+            this.Prompt.Size = new System.Drawing.Size(262, 23);
+            this.Prompt.TabIndex = 21;
+            this.Prompt.TabStop = false;
+            this.Prompt.UseSystemPasswordChar = false;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(272, 127);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(116, 19);
+            this.materialLabel2.TabIndex = 22;
+            this.materialLabel2.Text = "Estado do leitor";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(400, 306);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(91, 36);
+            this.btnCancelar.TabIndex = 28;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            // 
+            // btnOK
+            // 
+            this.btnOK.AutoSize = true;
+            this.btnOK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOK.Depth = 0;
+            this.btnOK.Icon = null;
+            this.btnOK.Location = new System.Drawing.Point(499, 306);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOK.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Primary = true;
+            this.btnOK.Size = new System.Drawing.Size(39, 36);
+            this.btnOK.TabIndex = 27;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.botaoOK_Click);
             // 
             // PortariaBiometriaCapturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 350);
-            this.Controls.Add(this.botaoOK);
-            this.Controls.Add(this.botaoCancelar);
-            this.Controls.Add(this.StatusText);
-            this.Controls.Add(StatusLabel);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.Prompt);
-            this.Controls.Add(PromptLabel);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.StatusText);
             this.Controls.Add(this.Picture);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(550, 350);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(550, 350);
             this.Name = "PortariaBiometriaCapturar";
-            this.Text = "PortariaBiometriaCadastrar";
+            this.Sizable = false;
             this.Load += new System.EventHandler(this.PortariaBiometriaCapturar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Picture)).EndInit();
             this.ResumeLayout(false);
@@ -157,10 +171,11 @@
         #endregion
 
         private System.Windows.Forms.TextBox StatusText;
-        private System.Windows.Forms.TextBox Prompt;
         private System.Windows.Forms.PictureBox Picture;
-        private Portaria.Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Portaria.Desktop.Framework.Botoes.BotaoOK botaoOK;
-
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField Prompt;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        private MaterialSkin.Controls.MaterialFlatButton btnOK;
     }
 }

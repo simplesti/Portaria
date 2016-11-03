@@ -29,76 +29,60 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabVisualizarCategorias));
-            this.botaoRemover = new Portaria.Desktop.Framework.Botoes.BotaoRemover();
-            this.botaoAdicionar = new Portaria.Desktop.Framework.Botoes.BotaoAdicionar();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.bsCategorias = new System.Windows.Forms.BindingSource(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsCategorias = new System.Windows.Forms.BindingSource(this.components);
+            this.botaoRemove = new Portaria.Desktop.Framework.Botoes.BotaoRemove();
+            this.botaoAdd = new Portaria.Desktop.Framework.Botoes.BotaoAdd();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsCategorias)).BeginInit();
             this.SuspendLayout();
             // 
-            // botaoRemover
-            // 
-            this.botaoRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoRemover.AutoSize = true;
-            this.botaoRemover.BackColor = System.Drawing.Color.White;
-            this.botaoRemover.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoRemover.Image = ((System.Drawing.Image)(resources.GetObject("botaoRemover.Image")));
-            this.botaoRemover.Location = new System.Drawing.Point(602, 54);
-            this.botaoRemover.MaximumSize = new System.Drawing.Size(24, 24);
-            this.botaoRemover.MinimumSize = new System.Drawing.Size(24, 24);
-            this.botaoRemover.Name = "botaoRemover";
-            this.botaoRemover.Size = new System.Drawing.Size(24, 24);
-            this.botaoRemover.TabIndex = 5;
-            this.botaoRemover.UseVisualStyleBackColor = true;
-            this.botaoRemover.Click += new System.EventHandler(this.botaoRemover_Click);
-            // 
-            // botaoAdicionar
-            // 
-            this.botaoAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoAdicionar.AutoSize = true;
-            this.botaoAdicionar.BackColor = System.Drawing.Color.White;
-            this.botaoAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("botaoAdicionar.Image")));
-            this.botaoAdicionar.Location = new System.Drawing.Point(602, 24);
-            this.botaoAdicionar.MaximumSize = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.MinimumSize = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.Name = "botaoAdicionar";
-            this.botaoAdicionar.Size = new System.Drawing.Size(24, 24);
-            this.botaoAdicionar.TabIndex = 4;
-            this.botaoAdicionar.UseVisualStyleBackColor = true;
-            this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
-            // 
             // dgvCategorias
             // 
+            this.dgvCategorias.AllowUserToAddRows = false;
             this.dgvCategorias.AllowUserToResizeRows = false;
             this.dgvCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCategorias.AutoGenerateColumns = false;
             this.dgvCategorias.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCategorias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCategorias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.nomeDataGridViewTextBoxColumn});
             this.dgvCategorias.DataSource = this.bsCategorias;
-            this.dgvCategorias.Location = new System.Drawing.Point(19, 24);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCategorias.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCategorias.Location = new System.Drawing.Point(25, 25);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.ReadOnly = true;
             this.dgvCategorias.RowHeadersVisible = false;
             this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategorias.Size = new System.Drawing.Size(577, 337);
+            this.dgvCategorias.Size = new System.Drawing.Size(580, 350);
             this.dgvCategorias.TabIndex = 3;
             this.dgvCategorias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellDoubleClick);
-            // 
-            // bsCategorias
-            // 
-            this.bsCategorias.DataSource = typeof(Portaria.Core.Model.CategoriaLivroNegro);
             // 
             // Column1
             // 
@@ -116,29 +100,62 @@
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // bsCategorias
+            // 
+            this.bsCategorias.DataSource = typeof(Portaria.Core.Model.CategoriaLivroNegro);
+            // 
+            // botaoRemove
+            // 
+            this.botaoRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoRemove.BackColor = System.Drawing.Color.Transparent;
+            this.botaoRemove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoRemove.BackgroundImage")));
+            this.botaoRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoRemove.Location = new System.Drawing.Point(611, 55);
+            this.botaoRemove.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoRemove.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoRemove.Name = "botaoRemove";
+            this.botaoRemove.Size = new System.Drawing.Size(24, 24);
+            this.botaoRemove.TabIndex = 4;
+            this.botaoRemove.Click += new System.EventHandler(this.botaoRemover_Click);
+            // 
+            // botaoAdd
+            // 
+            this.botaoAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoAdd.BackColor = System.Drawing.Color.Transparent;
+            this.botaoAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoAdd.BackgroundImage")));
+            this.botaoAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoAdd.Location = new System.Drawing.Point(611, 25);
+            this.botaoAdd.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoAdd.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoAdd.Name = "botaoAdd";
+            this.botaoAdd.Size = new System.Drawing.Size(24, 24);
+            this.botaoAdd.TabIndex = 5;
+            this.botaoAdd.Click += new System.EventHandler(this.botaoAdicionar_Click);
+            // 
             // TabVisualizarCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.botaoRemover);
-            this.Controls.Add(this.botaoAdicionar);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.botaoAdd);
+            this.Controls.Add(this.botaoRemove);
             this.Controls.Add(this.dgvCategorias);
             this.Name = "TabVisualizarCategorias";
             this.Size = new System.Drawing.Size(645, 385);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsCategorias)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Desktop.Framework.Botoes.BotaoRemover botaoRemover;
-        private Desktop.Framework.Botoes.BotaoAdicionar botaoAdicionar;
         private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.BindingSource bsCategorias;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private Desktop.Framework.Botoes.BotaoRemove botaoRemove;
+        private Desktop.Framework.Botoes.BotaoAdd botaoAdd;
     }
 }

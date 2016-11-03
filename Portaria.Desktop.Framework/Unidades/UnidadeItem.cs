@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Portaria.Core.Model.CadastroMorador;
+using System;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Portaria.Core.Model.CadastroMorador;
 
 namespace Portaria.Desktop.Framework.Unidades
 {
@@ -54,7 +48,7 @@ namespace Portaria.Desktop.Framework.Unidades
                     new Size(this.Width - 1, this.Height - 1)));
         }
 
-        private void botaoEditar1_Click(object sender, EventArgs e)
+        private void botaoEditar_Click(object sender, EventArgs e)
         {
             VisualizarProprietarioClick(sender, new UnidadeEventArgs(Unidade));
         }

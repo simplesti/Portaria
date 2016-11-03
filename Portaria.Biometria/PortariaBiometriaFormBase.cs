@@ -1,6 +1,7 @@
 ﻿using DPUruNet;
 using Portaria.ControleAcessoBiometrico;
 using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.Forms;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -10,7 +11,7 @@ using System.Threading;
 
 namespace Portaria.Biometria
 {
-    public partial class PortariaBiometriaFormBase : FormBase
+    public partial class PortariaBiometriaFormBase : MaterialPortariaFormBase
     {
         public Reader CurrentReader { get; set; }
 

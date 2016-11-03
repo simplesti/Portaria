@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace Portaria.Locais
 {
-    public partial class VisReservas : FormBaseWindow
+    public partial class VisReservas : MaterialPortariaFormWindow
     {
         private Local local;
 
@@ -34,15 +34,6 @@ namespace Portaria.Locais
         public VisReservas()
         {
             InitializeComponent();
-            AplicarPermissoes();
-        }
-
-        private void AplicarPermissoes()
-        {
-            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
-            {
-                botaoRemover.Visible = false;
-            }
         }
 
         public VisReservas(Local local)

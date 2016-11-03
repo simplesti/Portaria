@@ -28,75 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Configuracoes));
             this.tlpCampos = new System.Windows.Forms.TableLayoutPanel();
-            this.chkSemRestricaoAntecedencia = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDiasPrazo = new System.Windows.Forms.Label();
             this.mtbPrazoAntecedenciaReserva = new System.Windows.Forms.MaskedTextBox();
-            this.lblDuracao = new System.Windows.Forms.Label();
-            this.lblPrazoMaximoReserva = new System.Windows.Forms.Label();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDias = new System.Windows.Forms.Label();
-            this.lblHoras = new System.Windows.Forms.Label();
             this.mtbDiasDuracao = new System.Windows.Forms.MaskedTextBox();
             this.mtbHorasDuracao = new System.Windows.Forms.MaskedTextBox();
-            this.chkEscolherFimReserva = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.botaoCancelar = new Portaria.Desktop.Framework.Botoes.BotaoCancelar();
-            this.botaoSalvar = new Portaria.Desktop.Framework.Botoes.BotaoSalvar();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblSMTP = new System.Windows.Forms.Label();
-            this.lblEMailRemetente = new System.Windows.Forms.Label();
-            this.txtEMailRemetente = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.botaoPesquisarSMTP = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
-            this.lblPesquisarDados = new System.Windows.Forms.Label();
-            this.txtSenhaRemetente = new System.Windows.Forms.TextBox();
-            this.lblSenhaRemetente = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblEmailResponsavel = new System.Windows.Forms.Label();
-            this.txtEMailResponsavel = new System.Windows.Forms.TextBox();
-            this.lblServidorSMTP = new System.Windows.Forms.Label();
-            this.lblPortaSMTP = new System.Windows.Forms.Label();
-            this.txtServidorSMTP = new System.Windows.Forms.TextBox();
-            this.txtPortaSMTP = new System.Windows.Forms.TextBox();
-            this.chkConexaoSegura = new System.Windows.Forms.CheckBox();
-            this.botaoTestarEmail = new Portaria.Desktop.Framework.Botoes.BotaoTestarEmail();
-            this.lblTituloEMail = new System.Windows.Forms.Label();
-            this.txtTituloEmail = new System.Windows.Forms.TextBox();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.chkEscolherFimReserva = new MaterialSkin.Controls.MaterialCheckBox();
+            this.chkSemRestricaoAntecedencia = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnTestarEnvio = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnBuscarSMTP = new MaterialSkin.Controls.MaterialFlatButton();
+            this.botaoGerenciadorTarefas = new Portaria.Desktop.Framework.Botoes.BotaoGerenciadorTarefas();
+            this.botaoPlugins = new Portaria.Desktop.Framework.Botoes.BotaoPlugins();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtEMailResponsavel = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtEMailRemetente = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtSenhaRemetente = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtServidorSMTP = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtPortaSMTP = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.chkConexaoSegura2 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.txtTituloEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
             this.pnlConteudo.SuspendLayout();
             this.tlpCampos.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlConteudo
             // 
+            this.pnlConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlConteudo.Controls.Add(this.tlpCampos);
-            this.pnlConteudo.Size = new System.Drawing.Size(554, 352);
+            this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlConteudo.Location = new System.Drawing.Point(0, 66);
+            this.pnlConteudo.Size = new System.Drawing.Size(697, 421);
             // 
             // tlpCampos
             // 
+            this.tlpCampos.BackColor = System.Drawing.Color.White;
             this.tlpCampos.ColumnCount = 2;
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.87879F));
             this.tlpCampos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.12121F));
-            this.tlpCampos.Controls.Add(this.chkSemRestricaoAntecedencia, 1, 2);
             this.tlpCampos.Controls.Add(this.tableLayoutPanel2, 1, 1);
-            this.tlpCampos.Controls.Add(this.lblDuracao, 0, 0);
-            this.tlpCampos.Controls.Add(this.lblPrazoMaximoReserva, 1, 0);
             this.tlpCampos.Controls.Add(this.tableLayoutPanel1, 0, 1);
-            this.tlpCampos.Controls.Add(this.chkEscolherFimReserva, 0, 2);
-            this.tlpCampos.Controls.Add(this.panel1, 1, 12);
             this.tlpCampos.Controls.Add(this.tableLayoutPanel3, 0, 11);
+            this.tlpCampos.Controls.Add(this.materialLabel1, 0, 0);
+            this.tlpCampos.Controls.Add(this.materialLabel2, 1, 0);
+            this.tlpCampos.Controls.Add(this.chkEscolherFimReserva, 0, 2);
+            this.tlpCampos.Controls.Add(this.chkSemRestricaoAntecedencia, 1, 2);
+            this.tlpCampos.Controls.Add(this.materialDivider1, 0, 12);
+            this.tlpCampos.Controls.Add(this.panel1, 0, 13);
             this.tlpCampos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCampos.Location = new System.Drawing.Point(0, 0);
             this.tlpCampos.Name = "tlpCampos";
-            this.tlpCampos.RowCount = 13;
+            this.tlpCampos.RowCount = 14;
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -108,193 +113,117 @@
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 218F));
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCampos.Size = new System.Drawing.Size(554, 352);
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tlpCampos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tlpCampos.Size = new System.Drawing.Size(697, 421);
             this.tlpCampos.TabIndex = 2;
-            // 
-            // chkSemRestricaoAntecedencia
-            // 
-            this.chkSemRestricaoAntecedencia.AutoSize = true;
-            this.chkSemRestricaoAntecedencia.Location = new System.Drawing.Point(268, 48);
-            this.chkSemRestricaoAntecedencia.Name = "chkSemRestricaoAntecedencia";
-            this.chkSemRestricaoAntecedencia.Size = new System.Drawing.Size(173, 17);
-            this.chkSemRestricaoAntecedencia.TabIndex = 35;
-            this.chkSemRestricaoAntecedencia.Text = "Sem restrição de antecedência";
-            this.chkSemRestricaoAntecedencia.UseVisualStyleBackColor = true;
-            this.chkSemRestricaoAntecedencia.CheckedChanged += new System.EventHandler(this.chkSemRestricaoAntecedencia_CheckedChanged);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.lblDiasPrazo, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.mtbPrazoAntecedenciaReserva, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(268, 16);
+            this.tableLayoutPanel2.Controls.Add(this.materialLabel5, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(336, 22);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(62, 26);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(73, 30);
             this.tableLayoutPanel2.TabIndex = 34;
-            // 
-            // lblDiasPrazo
-            // 
-            this.lblDiasPrazo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblDiasPrazo.AutoSize = true;
-            this.lblDiasPrazo.Location = new System.Drawing.Point(33, 6);
-            this.lblDiasPrazo.Name = "lblDiasPrazo";
-            this.lblDiasPrazo.Size = new System.Drawing.Size(26, 13);
-            this.lblDiasPrazo.TabIndex = 2;
-            this.lblDiasPrazo.Text = "dias";
             // 
             // mtbPrazoAntecedenciaReserva
             // 
+            this.mtbPrazoAntecedenciaReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mtbPrazoAntecedenciaReserva.Location = new System.Drawing.Point(3, 3);
             this.mtbPrazoAntecedenciaReserva.Mask = "00";
             this.mtbPrazoAntecedenciaReserva.Name = "mtbPrazoAntecedenciaReserva";
-            this.mtbPrazoAntecedenciaReserva.Size = new System.Drawing.Size(24, 20);
+            this.mtbPrazoAntecedenciaReserva.Size = new System.Drawing.Size(24, 24);
             this.mtbPrazoAntecedenciaReserva.TabIndex = 4;
             // 
-            // lblDuracao
+            // materialLabel5
             // 
-            this.lblDuracao.AutoSize = true;
-            this.lblDuracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuracao.Location = new System.Drawing.Point(3, 0);
-            this.lblDuracao.Name = "lblDuracao";
-            this.lblDuracao.Size = new System.Drawing.Size(162, 13);
-            this.lblDuracao.TabIndex = 0;
-            this.lblDuracao.Text = "Duração padrão de reserva";
-            // 
-            // lblPrazoMaximoReserva
-            // 
-            this.lblPrazoMaximoReserva.AutoSize = true;
-            this.lblPrazoMaximoReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrazoMaximoReserva.Location = new System.Drawing.Point(268, 0);
-            this.lblPrazoMaximoReserva.Name = "lblPrazoMaximoReserva";
-            this.lblPrazoMaximoReserva.Size = new System.Drawing.Size(258, 13);
-            this.lblPrazoMaximoReserva.TabIndex = 1;
-            this.lblPrazoMaximoReserva.Tag = "";
-            this.lblPrazoMaximoReserva.Text = "Prazo máximo de antecedência para reserva";
+            this.materialLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(33, 5);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(37, 19);
+            this.materialLabel5.TabIndex = 5;
+            this.materialLabel5.Text = "dias";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.lblDias, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblHoras, 3, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Controls.Add(this.mtbDiasDuracao, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.mtbHorasDuracao, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel4, 3, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 22);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(184, 26);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(175, 30);
             this.tableLayoutPanel1.TabIndex = 32;
-            // 
-            // lblDias
-            // 
-            this.lblDias.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblDias.AutoSize = true;
-            this.lblDias.Location = new System.Drawing.Point(33, 6);
-            this.lblDias.Name = "lblDias";
-            this.lblDias.Size = new System.Drawing.Size(60, 13);
-            this.lblDias.TabIndex = 2;
-            this.lblDias.Text = "Dias até as";
-            // 
-            // lblHoras
-            // 
-            this.lblHoras.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblHoras.AutoSize = true;
-            this.lblHoras.Location = new System.Drawing.Point(148, 6);
-            this.lblHoras.Name = "lblHoras";
-            this.lblHoras.Size = new System.Drawing.Size(33, 13);
-            this.lblHoras.TabIndex = 3;
-            this.lblHoras.Text = "horas";
             // 
             // mtbDiasDuracao
             // 
+            this.mtbDiasDuracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.mtbDiasDuracao.Location = new System.Drawing.Point(3, 3);
             this.mtbDiasDuracao.Mask = "00";
             this.mtbDiasDuracao.Name = "mtbDiasDuracao";
-            this.mtbDiasDuracao.Size = new System.Drawing.Size(24, 20);
+            this.mtbDiasDuracao.Size = new System.Drawing.Size(24, 24);
             this.mtbDiasDuracao.TabIndex = 4;
             // 
             // mtbHorasDuracao
             // 
-            this.mtbHorasDuracao.Location = new System.Drawing.Point(99, 3);
+            this.mtbHorasDuracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.mtbHorasDuracao.Location = new System.Drawing.Point(76, 3);
             this.mtbHorasDuracao.Mask = "00:00";
             this.mtbHorasDuracao.Name = "mtbHorasDuracao";
-            this.mtbHorasDuracao.Size = new System.Drawing.Size(43, 20);
+            this.mtbHorasDuracao.Size = new System.Drawing.Size(43, 24);
             this.mtbHorasDuracao.TabIndex = 5;
             this.mtbHorasDuracao.ValidatingType = typeof(System.DateTime);
             // 
-            // chkEscolherFimReserva
+            // materialLabel3
             // 
-            this.chkEscolherFimReserva.AutoSize = true;
-            this.chkEscolherFimReserva.Location = new System.Drawing.Point(3, 48);
-            this.chkEscolherFimReserva.Name = "chkEscolherFimReserva";
-            this.chkEscolherFimReserva.Size = new System.Drawing.Size(208, 17);
-            this.chkEscolherFimReserva.TabIndex = 33;
-            this.chkEscolherFimReserva.Text = "Permitir escolher o final a cada reserva";
-            this.chkEscolherFimReserva.UseVisualStyleBackColor = true;
-            this.chkEscolherFimReserva.CheckedChanged += new System.EventHandler(this.chkEscolherFimReserva_CheckedChanged);
+            this.materialLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(33, 5);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(37, 19);
+            this.materialLabel3.TabIndex = 6;
+            this.materialLabel3.Text = "dias";
             // 
-            // panel1
+            // materialLabel4
             // 
-            this.panel1.Controls.Add(this.botaoCancelar);
-            this.panel1.Controls.Add(this.botaoSalvar);
-            this.panel1.Location = new System.Drawing.Point(268, 289);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 61);
-            this.panel1.TabIndex = 29;
-            // 
-            // botaoCancelar
-            // 
-            this.botaoCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoCancelar.BackColor = System.Drawing.Color.White;
-            this.botaoCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoCancelar.Image = ((System.Drawing.Image)(resources.GetObject("botaoCancelar.Image")));
-            this.botaoCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoCancelar.Location = new System.Drawing.Point(180, 15);
-            this.botaoCancelar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.Name = "botaoCancelar";
-            this.botaoCancelar.Size = new System.Drawing.Size(100, 37);
-            this.botaoCancelar.TabIndex = 3;
-            this.botaoCancelar.Text = "Cancelar";
-            this.botaoCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
-            // 
-            // botaoSalvar
-            // 
-            this.botaoSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoSalvar.BackColor = System.Drawing.Color.White;
-            this.botaoSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSalvar.Image = ((System.Drawing.Image)(resources.GetObject("botaoSalvar.Image")));
-            this.botaoSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoSalvar.Location = new System.Drawing.Point(74, 15);
-            this.botaoSalvar.MaximumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.MinimumSize = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.Name = "botaoSalvar";
-            this.botaoSalvar.Size = new System.Drawing.Size(100, 37);
-            this.botaoSalvar.TabIndex = 2;
-            this.botaoSalvar.Text = "Salvar";
-            this.botaoSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoSalvar.UseVisualStyleBackColor = false;
-            this.botaoSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            this.materialLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(125, 5);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(47, 19);
+            this.materialLabel4.TabIndex = 7;
+            this.materialLabel4.Text = "horas";
             // 
             // tableLayoutPanel3
             // 
@@ -302,250 +231,485 @@
             this.tlpCampos.SetColumnSpan(this.tableLayoutPanel3, 2);
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.05726F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.94274F));
-            this.tableLayoutPanel3.Controls.Add(this.lblSMTP, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblEMailRemetente, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txtEMailRemetente, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtSenhaRemetente, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lblSenhaRemetente, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.lblServidorSMTP, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.lblPortaSMTP, 1, 6);
-            this.tableLayoutPanel3.Controls.Add(this.txtServidorSMTP, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.txtPortaSMTP, 1, 7);
-            this.tableLayoutPanel3.Controls.Add(this.botaoTestarEmail, 1, 11);
-            this.tableLayoutPanel3.Controls.Add(this.chkConexaoSegura, 1, 10);
-            this.tableLayoutPanel3.Controls.Add(this.lblTituloEMail, 0, 10);
-            this.tableLayoutPanel3.Controls.Add(this.txtTituloEmail, 0, 11);
+            this.tableLayoutPanel3.Controls.Add(this.materialDivider2, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.materialLabel6, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panel2, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 71);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 88);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 13;
+            this.tableLayoutPanel3.RowCount = 4;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(548, 212);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(691, 263);
             this.tableLayoutPanel3.TabIndex = 36;
             // 
-            // lblSMTP
+            // materialDivider2
             // 
-            this.lblSMTP.AutoSize = true;
-            this.lblSMTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSMTP.Location = new System.Drawing.Point(3, 0);
-            this.lblSMTP.Name = "lblSMTP";
-            this.lblSMTP.Size = new System.Drawing.Size(196, 13);
-            this.lblSMTP.TabIndex = 0;
-            this.lblSMTP.Text = "Configurações de envio de e-mail";
+            this.materialDivider2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tableLayoutPanel3.SetColumnSpan(this.materialDivider2, 2);
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(3, 41);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(685, 1);
+            this.materialDivider2.TabIndex = 27;
+            this.materialDivider2.Text = "materialDivider2";
             // 
-            // lblEMailRemetente
+            // materialLabel6
             // 
-            this.lblEMailRemetente.AutoSize = true;
-            this.lblEMailRemetente.Location = new System.Drawing.Point(3, 13);
-            this.lblEMailRemetente.Name = "lblEMailRemetente";
-            this.lblEMailRemetente.Size = new System.Drawing.Size(85, 13);
-            this.lblEMailRemetente.TabIndex = 1;
-            this.lblEMailRemetente.Text = "E-mail remetente";
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(0, 19);
+            this.materialLabel6.Margin = new System.Windows.Forms.Padding(0);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(232, 19);
+            this.materialLabel6.TabIndex = 19;
+            this.materialLabel6.Text = "Configurações de envio de e-mail";
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(3, 0);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(188, 19);
+            this.materialLabel1.TabIndex = 37;
+            this.materialLabel1.Text = "Duração padrão de reserva";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(336, 0);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(358, 19);
+            this.materialLabel2.TabIndex = 38;
+            this.materialLabel2.Text = "Prazo máximo de antecedência para reserva";
+            // 
+            // chkEscolherFimReserva
+            // 
+            this.chkEscolherFimReserva.AutoSize = true;
+            this.chkEscolherFimReserva.Depth = 0;
+            this.chkEscolherFimReserva.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkEscolherFimReserva.Location = new System.Drawing.Point(0, 55);
+            this.chkEscolherFimReserva.Margin = new System.Windows.Forms.Padding(0);
+            this.chkEscolherFimReserva.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkEscolherFimReserva.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkEscolherFimReserva.Name = "chkEscolherFimReserva";
+            this.chkEscolherFimReserva.Ripple = true;
+            this.chkEscolherFimReserva.Size = new System.Drawing.Size(270, 30);
+            this.chkEscolherFimReserva.TabIndex = 41;
+            this.chkEscolherFimReserva.Text = "Permitir escolher o final a cada reserva";
+            this.chkEscolherFimReserva.UseVisualStyleBackColor = true;
+            // 
+            // chkSemRestricaoAntecedencia
+            // 
+            this.chkSemRestricaoAntecedencia.AutoSize = true;
+            this.chkSemRestricaoAntecedencia.Depth = 0;
+            this.chkSemRestricaoAntecedencia.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkSemRestricaoAntecedencia.Location = new System.Drawing.Point(333, 55);
+            this.chkSemRestricaoAntecedencia.Margin = new System.Windows.Forms.Padding(0);
+            this.chkSemRestricaoAntecedencia.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkSemRestricaoAntecedencia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkSemRestricaoAntecedencia.Name = "chkSemRestricaoAntecedencia";
+            this.chkSemRestricaoAntecedencia.Ripple = true;
+            this.chkSemRestricaoAntecedencia.Size = new System.Drawing.Size(220, 30);
+            this.chkSemRestricaoAntecedencia.TabIndex = 42;
+            this.chkSemRestricaoAntecedencia.Text = "Sem restrição de antecedência";
+            this.chkSemRestricaoAntecedencia.UseVisualStyleBackColor = true;
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tlpCampos.SetColumnSpan(this.materialDivider1, 2);
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(3, 357);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(691, 1);
+            this.materialDivider1.TabIndex = 43;
+            this.materialDivider1.Text = "materialDivider1";
+            // 
+            // panel1
+            // 
+            this.tlpCampos.SetColumnSpan(this.panel1, 2);
+            this.panel1.Controls.Add(this.btnSalvar);
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.btnTestarEnvio);
+            this.panel1.Controls.Add(this.btnBuscarSMTP);
+            this.panel1.Location = new System.Drawing.Point(3, 365);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(691, 50);
+            this.panel1.TabIndex = 29;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.AutoSize = true;
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.Icon = null;
+            this.btnSalvar.Location = new System.Drawing.Point(618, 6);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Primary = true;
+            this.btnSalvar.Size = new System.Drawing.Size(72, 36);
+            this.btnSalvar.TabIndex = 4;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.botaoSalvar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(519, 6);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Primary = false;
+            this.btnCancelar.Size = new System.Drawing.Size(91, 36);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.botaoCancelar_Click);
+            // 
+            // btnTestarEnvio
+            // 
+            this.btnTestarEnvio.AutoSize = true;
+            this.btnTestarEnvio.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTestarEnvio.Depth = 0;
+            this.btnTestarEnvio.Icon = null;
+            this.btnTestarEnvio.Location = new System.Drawing.Point(333, 6);
+            this.btnTestarEnvio.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnTestarEnvio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnTestarEnvio.Name = "btnTestarEnvio";
+            this.btnTestarEnvio.Primary = false;
+            this.btnTestarEnvio.Size = new System.Drawing.Size(183, 36);
+            this.btnTestarEnvio.TabIndex = 27;
+            this.btnTestarEnvio.Text = "Testar envio de e-mail";
+            this.btnTestarEnvio.UseVisualStyleBackColor = true;
+            this.btnTestarEnvio.Click += new System.EventHandler(this.botaoTestarEmail_Click);
+            // 
+            // btnBuscarSMTP
+            // 
+            this.btnBuscarSMTP.AutoSize = true;
+            this.btnBuscarSMTP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBuscarSMTP.Depth = 0;
+            this.btnBuscarSMTP.Icon = null;
+            this.btnBuscarSMTP.Location = new System.Drawing.Point(0, 6);
+            this.btnBuscarSMTP.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBuscarSMTP.MaximumSize = new System.Drawing.Size(257, 36);
+            this.btnBuscarSMTP.MinimumSize = new System.Drawing.Size(257, 36);
+            this.btnBuscarSMTP.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscarSMTP.Name = "btnBuscarSMTP";
+            this.btnBuscarSMTP.Primary = false;
+            this.btnBuscarSMTP.Size = new System.Drawing.Size(257, 36);
+            this.btnBuscarSMTP.TabIndex = 22;
+            this.btnBuscarSMTP.Text = "Buscar configurações de SMTP automáticamente";
+            this.btnBuscarSMTP.UseVisualStyleBackColor = true;
+            this.btnBuscarSMTP.Click += new System.EventHandler(this.botaoPesquisarSMTP_Click);
+            // 
+            // botaoGerenciadorTarefas
+            // 
+            this.botaoGerenciadorTarefas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoGerenciadorTarefas.BackColor = System.Drawing.Color.Transparent;
+            this.botaoGerenciadorTarefas.BackgroundImage = global::Portaria.Desktop.Framework.Properties.Resources.ic_assignment_grey_24dp_1x;
+            this.botaoGerenciadorTarefas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoGerenciadorTarefas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoGerenciadorTarefas.Location = new System.Drawing.Point(661, 36);
+            this.botaoGerenciadorTarefas.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoGerenciadorTarefas.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoGerenciadorTarefas.Name = "botaoGerenciadorTarefas";
+            this.botaoGerenciadorTarefas.Size = new System.Drawing.Size(24, 24);
+            this.botaoGerenciadorTarefas.TabIndex = 22;
+            this.botaoGerenciadorTarefas.Click += new System.EventHandler(this.GerenciadorTarefas_Click);
+            // 
+            // botaoPlugins
+            // 
+            this.botaoPlugins.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoPlugins.BackColor = System.Drawing.Color.Transparent;
+            this.botaoPlugins.BackgroundImage = global::Portaria.Desktop.Framework.Properties.Resources.ic_settings_input_component_grey_24dp_1x;
+            this.botaoPlugins.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoPlugins.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoPlugins.Location = new System.Drawing.Point(631, 36);
+            this.botaoPlugins.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoPlugins.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoPlugins.Name = "botaoPlugins";
+            this.botaoPlugins.Size = new System.Drawing.Size(24, 24);
+            this.botaoPlugins.TabIndex = 21;
+            this.botaoPlugins.Click += new System.EventHandler(this.Plugins_Click);
+            // 
+            // panel2
+            // 
+            this.tableLayoutPanel3.SetColumnSpan(this.panel2, 2);
+            this.panel2.Controls.Add(this.materialLabel12);
+            this.panel2.Controls.Add(this.materialLabel11);
+            this.panel2.Controls.Add(this.materialLabel10);
+            this.panel2.Controls.Add(this.materialLabel9);
+            this.panel2.Controls.Add(this.materialLabel8);
+            this.panel2.Controls.Add(this.materialLabel7);
+            this.panel2.Controls.Add(this.txtEMailResponsavel);
+            this.panel2.Controls.Add(this.txtEMailRemetente);
+            this.panel2.Controls.Add(this.txtSenhaRemetente);
+            this.panel2.Controls.Add(this.txtServidorSMTP);
+            this.panel2.Controls.Add(this.txtPortaSMTP);
+            this.panel2.Controls.Add(this.chkConexaoSegura2);
+            this.panel2.Controls.Add(this.txtTituloEmail);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 48);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(685, 212);
+            this.panel2.TabIndex = 28;
+            // 
+            // txtEMailResponsavel
+            // 
+            this.txtEMailResponsavel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEMailResponsavel.Depth = 0;
+            this.txtEMailResponsavel.Hint = "";
+            this.txtEMailResponsavel.Location = new System.Drawing.Point(7, 22);
+            this.txtEMailResponsavel.MaxLength = 32767;
+            this.txtEMailResponsavel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtEMailResponsavel.Name = "txtEMailResponsavel";
+            this.txtEMailResponsavel.PasswordChar = '\0';
+            this.txtEMailResponsavel.SelectedText = "";
+            this.txtEMailResponsavel.SelectionLength = 0;
+            this.txtEMailResponsavel.SelectionStart = 0;
+            this.txtEMailResponsavel.Size = new System.Drawing.Size(300, 23);
+            this.txtEMailResponsavel.TabIndex = 27;
+            this.txtEMailResponsavel.TabStop = false;
+            this.txtEMailResponsavel.UseSystemPasswordChar = false;
             // 
             // txtEMailRemetente
             // 
-            this.txtEMailRemetente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEMailRemetente.Location = new System.Drawing.Point(3, 29);
+            this.txtEMailRemetente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEMailRemetente.Depth = 0;
+            this.txtEMailRemetente.Hint = "";
+            this.txtEMailRemetente.Location = new System.Drawing.Point(330, 22);
+            this.txtEMailRemetente.MaxLength = 32767;
+            this.txtEMailRemetente.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtEMailRemetente.Name = "txtEMailRemetente";
-            this.txtEMailRemetente.Size = new System.Drawing.Size(257, 20);
-            this.txtEMailRemetente.TabIndex = 2;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.botaoPesquisarSMTP, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lblPesquisarDados, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 55);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(200, 39);
-            this.tableLayoutPanel4.TabIndex = 3;
-            // 
-            // botaoPesquisarSMTP
-            // 
-            this.botaoPesquisarSMTP.AutoSize = true;
-            this.botaoPesquisarSMTP.BackColor = System.Drawing.Color.White;
-            this.botaoPesquisarSMTP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoPesquisarSMTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoPesquisarSMTP.Image = ((System.Drawing.Image)(resources.GetObject("botaoPesquisarSMTP.Image")));
-            this.botaoPesquisarSMTP.Location = new System.Drawing.Point(3, 3);
-            this.botaoPesquisarSMTP.MaximumSize = new System.Drawing.Size(32, 32);
-            this.botaoPesquisarSMTP.MinimumSize = new System.Drawing.Size(32, 32);
-            this.botaoPesquisarSMTP.Name = "botaoPesquisarSMTP";
-            this.botaoPesquisarSMTP.Size = new System.Drawing.Size(32, 32);
-            this.botaoPesquisarSMTP.TabIndex = 4;
-            this.botaoPesquisarSMTP.UseVisualStyleBackColor = false;
-            this.botaoPesquisarSMTP.Click += new System.EventHandler(this.botaoPesquisarSMTP_Click);
-            // 
-            // lblPesquisarDados
-            // 
-            this.lblPesquisarDados.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblPesquisarDados.AutoSize = true;
-            this.lblPesquisarDados.Location = new System.Drawing.Point(41, 6);
-            this.lblPesquisarDados.Name = "lblPesquisarDados";
-            this.lblPesquisarDados.Size = new System.Drawing.Size(128, 26);
-            this.lblPesquisarDados.TabIndex = 5;
-            this.lblPesquisarDados.Text = "Buscar configurações de SMTP automáticamente";
+            this.txtEMailRemetente.PasswordChar = '\0';
+            this.txtEMailRemetente.SelectedText = "";
+            this.txtEMailRemetente.SelectionLength = 0;
+            this.txtEMailRemetente.SelectionStart = 0;
+            this.txtEMailRemetente.Size = new System.Drawing.Size(349, 23);
+            this.txtEMailRemetente.TabIndex = 28;
+            this.txtEMailRemetente.TabStop = false;
+            this.txtEMailRemetente.UseSystemPasswordChar = false;
             // 
             // txtSenhaRemetente
             // 
             this.txtSenhaRemetente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSenhaRemetente.Location = new System.Drawing.Point(266, 29);
+            this.txtSenhaRemetente.Depth = 0;
+            this.txtSenhaRemetente.Hint = "";
+            this.txtSenhaRemetente.Location = new System.Drawing.Point(330, 70);
+            this.txtSenhaRemetente.MaxLength = 32767;
+            this.txtSenhaRemetente.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtSenhaRemetente.Name = "txtSenhaRemetente";
-            this.txtSenhaRemetente.PasswordChar = '*';
-            this.txtSenhaRemetente.Size = new System.Drawing.Size(279, 20);
-            this.txtSenhaRemetente.TabIndex = 6;
-            // 
-            // lblSenhaRemetente
-            // 
-            this.lblSenhaRemetente.AutoSize = true;
-            this.lblSenhaRemetente.Location = new System.Drawing.Point(266, 13);
-            this.lblSenhaRemetente.Name = "lblSenhaRemetente";
-            this.lblSenhaRemetente.Size = new System.Drawing.Size(118, 13);
-            this.lblSenhaRemetente.TabIndex = 7;
-            this.lblSenhaRemetente.Text = "Senha e-mail remetente";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.lblEmailResponsavel, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.txtEMailResponsavel, 0, 1);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(266, 55);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(279, 39);
-            this.tableLayoutPanel5.TabIndex = 8;
-            // 
-            // lblEmailResponsavel
-            // 
-            this.lblEmailResponsavel.AutoSize = true;
-            this.lblEmailResponsavel.Location = new System.Drawing.Point(3, 0);
-            this.lblEmailResponsavel.Name = "lblEmailResponsavel";
-            this.lblEmailResponsavel.Size = new System.Drawing.Size(110, 13);
-            this.lblEmailResponsavel.TabIndex = 4;
-            this.lblEmailResponsavel.Text = "E-mail do responsável";
-            // 
-            // txtEMailResponsavel
-            // 
-            this.txtEMailResponsavel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEMailResponsavel.Location = new System.Drawing.Point(3, 16);
-            this.txtEMailResponsavel.Name = "txtEMailResponsavel";
-            this.txtEMailResponsavel.Size = new System.Drawing.Size(273, 20);
-            this.txtEMailResponsavel.TabIndex = 5;
-            // 
-            // lblServidorSMTP
-            // 
-            this.lblServidorSMTP.AutoSize = true;
-            this.lblServidorSMTP.Location = new System.Drawing.Point(3, 97);
-            this.lblServidorSMTP.Name = "lblServidorSMTP";
-            this.lblServidorSMTP.Size = new System.Drawing.Size(141, 13);
-            this.lblServidorSMTP.TabIndex = 9;
-            this.lblServidorSMTP.Text = "Endereço do servidor SMTP";
-            // 
-            // lblPortaSMTP
-            // 
-            this.lblPortaSMTP.AutoSize = true;
-            this.lblPortaSMTP.Location = new System.Drawing.Point(266, 97);
-            this.lblPortaSMTP.Name = "lblPortaSMTP";
-            this.lblPortaSMTP.Size = new System.Drawing.Size(120, 13);
-            this.lblPortaSMTP.TabIndex = 10;
-            this.lblPortaSMTP.Text = "Porta do servidor SMTP";
+            this.txtSenhaRemetente.PasswordChar = '\0';
+            this.txtSenhaRemetente.SelectedText = "";
+            this.txtSenhaRemetente.SelectionLength = 0;
+            this.txtSenhaRemetente.SelectionStart = 0;
+            this.txtSenhaRemetente.Size = new System.Drawing.Size(349, 23);
+            this.txtSenhaRemetente.TabIndex = 29;
+            this.txtSenhaRemetente.TabStop = false;
+            this.txtSenhaRemetente.UseSystemPasswordChar = false;
             // 
             // txtServidorSMTP
             // 
             this.txtServidorSMTP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtServidorSMTP.Location = new System.Drawing.Point(3, 113);
+            this.txtServidorSMTP.Depth = 0;
+            this.txtServidorSMTP.Hint = "";
+            this.txtServidorSMTP.Location = new System.Drawing.Point(7, 118);
+            this.txtServidorSMTP.MaxLength = 32767;
+            this.txtServidorSMTP.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtServidorSMTP.Name = "txtServidorSMTP";
-            this.txtServidorSMTP.Size = new System.Drawing.Size(257, 20);
-            this.txtServidorSMTP.TabIndex = 13;
+            this.txtServidorSMTP.PasswordChar = '\0';
+            this.txtServidorSMTP.SelectedText = "";
+            this.txtServidorSMTP.SelectionLength = 0;
+            this.txtServidorSMTP.SelectionStart = 0;
+            this.txtServidorSMTP.Size = new System.Drawing.Size(300, 23);
+            this.txtServidorSMTP.TabIndex = 30;
+            this.txtServidorSMTP.TabStop = false;
+            this.txtServidorSMTP.UseSystemPasswordChar = false;
             // 
             // txtPortaSMTP
             // 
             this.txtPortaSMTP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPortaSMTP.Location = new System.Drawing.Point(266, 113);
+            this.txtPortaSMTP.Depth = 0;
+            this.txtPortaSMTP.Hint = "";
+            this.txtPortaSMTP.Location = new System.Drawing.Point(330, 118);
+            this.txtPortaSMTP.MaxLength = 32767;
+            this.txtPortaSMTP.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtPortaSMTP.Name = "txtPortaSMTP";
-            this.txtPortaSMTP.Size = new System.Drawing.Size(279, 20);
-            this.txtPortaSMTP.TabIndex = 14;
+            this.txtPortaSMTP.PasswordChar = '\0';
+            this.txtPortaSMTP.SelectedText = "";
+            this.txtPortaSMTP.SelectionLength = 0;
+            this.txtPortaSMTP.SelectionStart = 0;
+            this.txtPortaSMTP.Size = new System.Drawing.Size(154, 23);
+            this.txtPortaSMTP.TabIndex = 31;
+            this.txtPortaSMTP.TabStop = false;
+            this.txtPortaSMTP.UseSystemPasswordChar = false;
             // 
-            // chkConexaoSegura
+            // chkConexaoSegura2
             // 
-            this.chkConexaoSegura.AutoSize = true;
-            this.chkConexaoSegura.Location = new System.Drawing.Point(266, 139);
-            this.chkConexaoSegura.Name = "chkConexaoSegura";
-            this.chkConexaoSegura.Size = new System.Drawing.Size(127, 17);
-            this.chkConexaoSegura.TabIndex = 15;
-            this.chkConexaoSegura.Text = "Usar conexão segura";
-            this.chkConexaoSegura.UseVisualStyleBackColor = true;
-            // 
-            // botaoTestarEmail
-            // 
-            this.botaoTestarEmail.BackColor = System.Drawing.Color.White;
-            this.botaoTestarEmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoTestarEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoTestarEmail.Image = ((System.Drawing.Image)(resources.GetObject("botaoTestarEmail.Image")));
-            this.botaoTestarEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoTestarEmail.Location = new System.Drawing.Point(266, 162);
-            this.botaoTestarEmail.Name = "botaoTestarEmail";
-            this.botaoTestarEmail.Size = new System.Drawing.Size(172, 35);
-            this.botaoTestarEmail.TabIndex = 16;
-            this.botaoTestarEmail.Text = "Testar envio de e-mail";
-            this.botaoTestarEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoTestarEmail.UseVisualStyleBackColor = false;
-            this.botaoTestarEmail.Click += new System.EventHandler(this.botaoTestarEmail_Click);
-            // 
-            // lblTituloEMail
-            // 
-            this.lblTituloEMail.AutoSize = true;
-            this.lblTituloEMail.Location = new System.Drawing.Point(3, 136);
-            this.lblTituloEMail.Name = "lblTituloEMail";
-            this.lblTituloEMail.Size = new System.Drawing.Size(78, 13);
-            this.lblTituloEMail.TabIndex = 17;
-            this.lblTituloEMail.Text = "Titulo do e-mail";
+            this.chkConexaoSegura2.AutoSize = true;
+            this.chkConexaoSegura2.Depth = 0;
+            this.chkConexaoSegura2.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkConexaoSegura2.Location = new System.Drawing.Point(325, 144);
+            this.chkConexaoSegura2.Margin = new System.Windows.Forms.Padding(0);
+            this.chkConexaoSegura2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkConexaoSegura2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkConexaoSegura2.Name = "chkConexaoSegura2";
+            this.chkConexaoSegura2.Ripple = true;
+            this.chkConexaoSegura2.Size = new System.Drawing.Size(159, 30);
+            this.chkConexaoSegura2.TabIndex = 33;
+            this.chkConexaoSegura2.Text = "Usar conexão segura";
+            this.chkConexaoSegura2.UseVisualStyleBackColor = true;
             // 
             // txtTituloEmail
             // 
             this.txtTituloEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTituloEmail.Location = new System.Drawing.Point(3, 162);
+            this.txtTituloEmail.Depth = 0;
+            this.txtTituloEmail.Hint = "";
+            this.txtTituloEmail.Location = new System.Drawing.Point(7, 70);
+            this.txtTituloEmail.MaxLength = 32767;
+            this.txtTituloEmail.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtTituloEmail.Name = "txtTituloEmail";
-            this.txtTituloEmail.Size = new System.Drawing.Size(257, 20);
-            this.txtTituloEmail.TabIndex = 18;
+            this.txtTituloEmail.PasswordChar = '\0';
+            this.txtTituloEmail.SelectedText = "";
+            this.txtTituloEmail.SelectionLength = 0;
+            this.txtTituloEmail.SelectionStart = 0;
+            this.txtTituloEmail.Size = new System.Drawing.Size(300, 23);
+            this.txtTituloEmail.TabIndex = 32;
+            this.txtTituloEmail.TabStop = false;
+            this.txtTituloEmail.UseSystemPasswordChar = false;
+            // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel7.Location = new System.Drawing.Point(3, 0);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(157, 19);
+            this.materialLabel7.TabIndex = 34;
+            this.materialLabel7.Text = "E-mail do responsável";
+            // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Depth = 0;
+            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel8.Location = new System.Drawing.Point(326, 0);
+            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(123, 19);
+            this.materialLabel8.TabIndex = 35;
+            this.materialLabel8.Text = "E-mail remetente";
+            // 
+            // materialLabel9
+            // 
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel9.Location = new System.Drawing.Point(326, 48);
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(188, 19);
+            this.materialLabel9.TabIndex = 36;
+            this.materialLabel9.Text = "Senha do e-mail remetente";
+            // 
+            // materialLabel10
+            // 
+            this.materialLabel10.AutoSize = true;
+            this.materialLabel10.Depth = 0;
+            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel10.Location = new System.Drawing.Point(326, 96);
+            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel10.Name = "materialLabel10";
+            this.materialLabel10.Size = new System.Drawing.Size(168, 19);
+            this.materialLabel10.TabIndex = 37;
+            this.materialLabel10.Text = "Porta do servidor SMTP";
+            // 
+            // materialLabel11
+            // 
+            this.materialLabel11.AutoSize = true;
+            this.materialLabel11.Depth = 0;
+            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel11.Location = new System.Drawing.Point(3, 48);
+            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel11.Name = "materialLabel11";
+            this.materialLabel11.Size = new System.Drawing.Size(114, 19);
+            this.materialLabel11.TabIndex = 38;
+            this.materialLabel11.Text = "Titulo do e-mail";
+            // 
+            // materialLabel12
+            // 
+            this.materialLabel12.AutoSize = true;
+            this.materialLabel12.Depth = 0;
+            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel12.Location = new System.Drawing.Point(3, 96);
+            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel12.Name = "materialLabel12";
+            this.materialLabel12.Size = new System.Drawing.Size(195, 19);
+            this.materialLabel12.TabIndex = 39;
+            this.materialLabel12.Text = "Endereço do servidor SMTP";
             // 
             // Configuracoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 415);
-            this.ConfiguracoesUsuarioVisivel = true;
+            this.ClientSize = new System.Drawing.Size(697, 487);
+            this.Controls.Add(this.botaoGerenciadorTarefas);
+            this.Controls.Add(this.botaoPlugins);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(697, 440);
             this.Name = "Configuracoes";
-            this.Text = "Configuracoes";
-            this.Titulo = "Configurações";
+            this.Sizable = false;
+            this.Text = "Configurações";
+            this.Controls.SetChildIndex(this.pnlConteudo, 0);
+            this.Controls.SetChildIndex(this.botaoPlugins, 0);
+            this.Controls.SetChildIndex(this.botaoGerenciadorTarefas, 0);
             this.pnlConteudo.ResumeLayout(false);
             this.tlpCampos.ResumeLayout(false);
             this.tlpCampos.PerformLayout();
@@ -553,13 +717,12 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -567,40 +730,42 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tlpCampos;
-        private System.Windows.Forms.Label lblDuracao;
-        private System.Windows.Forms.Label lblPrazoMaximoReserva;
         private System.Windows.Forms.Panel panel1;
-        private Desktop.Framework.Botoes.BotaoCancelar botaoCancelar;
-        private Desktop.Framework.Botoes.BotaoSalvar botaoSalvar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblDias;
-        private System.Windows.Forms.Label lblHoras;
-        private System.Windows.Forms.CheckBox chkEscolherFimReserva;
         private System.Windows.Forms.MaskedTextBox mtbDiasDuracao;
         private System.Windows.Forms.MaskedTextBox mtbHorasDuracao;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label lblDiasPrazo;
         private System.Windows.Forms.MaskedTextBox mtbPrazoAntecedenciaReserva;
-        private System.Windows.Forms.CheckBox chkSemRestricaoAntecedencia;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label lblSMTP;
-        private System.Windows.Forms.Label lblEMailRemetente;
-        private System.Windows.Forms.TextBox txtEMailRemetente;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisarSMTP;
-        private System.Windows.Forms.Label lblPesquisarDados;
-        private System.Windows.Forms.Label lblEmailResponsavel;
-        private System.Windows.Forms.TextBox txtEMailResponsavel;
-        private System.Windows.Forms.TextBox txtSenhaRemetente;
-        private System.Windows.Forms.Label lblSenhaRemetente;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Label lblServidorSMTP;
-        private System.Windows.Forms.Label lblPortaSMTP;
-        private System.Windows.Forms.TextBox txtServidorSMTP;
-        private System.Windows.Forms.TextBox txtPortaSMTP;
-        private System.Windows.Forms.CheckBox chkConexaoSegura;
-        private Desktop.Framework.Botoes.BotaoTestarEmail botaoTestarEmail;
-        private System.Windows.Forms.Label lblTituloEMail;
-        private System.Windows.Forms.TextBox txtTituloEmail;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialCheckBox chkEscolherFimReserva;
+        private MaterialSkin.Controls.MaterialCheckBox chkSemRestricaoAntecedencia;
+        private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private MaterialSkin.Controls.MaterialFlatButton btnBuscarSMTP;
+        private MaterialSkin.Controls.MaterialFlatButton btnTestarEnvio;
+        private MaterialSkin.Controls.MaterialFlatButton btnCancelar;
+        private MaterialSkin.Controls.MaterialFlatButton btnSalvar;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private Desktop.Framework.Botoes.BotaoGerenciadorTarefas botaoGerenciadorTarefas;
+        private Desktop.Framework.Botoes.BotaoPlugins botaoPlugins;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private System.Windows.Forms.Panel panel2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtEMailResponsavel;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtEMailRemetente;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtSenhaRemetente;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtServidorSMTP;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPortaSMTP;
+        private MaterialSkin.Controls.MaterialCheckBox chkConexaoSegura2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtTituloEmail;
+        private MaterialSkin.Controls.MaterialLabel materialLabel12;
+        private MaterialSkin.Controls.MaterialLabel materialLabel11;
+        private MaterialSkin.Controls.MaterialLabel materialLabel10;
+        private MaterialSkin.Controls.MaterialLabel materialLabel9;
+        private MaterialSkin.Controls.MaterialLabel materialLabel8;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
     }
 }

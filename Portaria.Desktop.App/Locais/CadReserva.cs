@@ -3,14 +3,13 @@ using Portaria.Business;
 using Portaria.Cadastro;
 using Portaria.Core.Model;
 using Portaria.Core.Model.Cadastro;
-using Portaria.Core.Model.CadastroMorador;
 using Portaria.Desktop.Framework;
 using Portaria.Desktop.Framework.Forms;
 using System;
 
 namespace Portaria.Locais
 {
-    public partial class CadReserva : FormBaseWindow
+    public partial class CadReserva : MaterialPortariaFormWindow
     {
         private bool permitirEscolherFimReserva = false;
         private int diasFimReserva = 0;
@@ -71,20 +70,6 @@ namespace Portaria.Locais
             CarregarConfigs();
 
             Reserva = reserva;
-
-            AplicarPermissoes();
-        }
-
-        private void AplicarPermissoes()
-        {
-            if (SessaoAtual.Sessao.UsuarioLogado.Tipo != Core.TipoUsuario.Administrador)
-            {
-                botaoEditarSolicitante.Visible = false;
-                dtFim.Enabled = false;
-                dtInicio.Enabled = false;
-
-                botaoSalvar.Visible = false;
-            }
         }
 
         private void botaoEditarSolicitante_Click(object sender, System.EventArgs e)

@@ -29,22 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabVisualizarUnidades));
             this.flpUnidades = new System.Windows.Forms.FlowLayoutPanel();
-            this.chkSomente30 = new System.Windows.Forms.CheckBox();
-            this.lblPesquisar = new System.Windows.Forms.Label();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.botaoPesquisar = new Portaria.Desktop.Framework.Botoes.BotaoPesquisar();
-            this.botaoMudarVisao = new Portaria.Desktop.Framework.Botoes.BotaoMudarVisao();
             this.pnlBase = new System.Windows.Forms.Panel();
             this.dgvUnidadesDetalhadas = new System.Windows.Forms.DataGridView();
-            this.unidadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proprietarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conjugeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locatarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.botaoSearch = new Portaria.Desktop.Framework.Botoes.BotaoSearch();
+            this.txtPesquisar = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.chkSomente30 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.botaoViewMode = new Portaria.Desktop.Framework.Botoes.BotaoViewMode();
             this.pnlBase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadesDetalhadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadeBindingSource)).BeginInit();
@@ -52,75 +53,11 @@
             // 
             // flpUnidades
             // 
-            this.flpUnidades.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpUnidades.Location = new System.Drawing.Point(0, 0);
+            this.flpUnidades.Location = new System.Drawing.Point(14, 0);
             this.flpUnidades.Name = "flpUnidades";
             this.flpUnidades.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.flpUnidades.Size = new System.Drawing.Size(675, 354);
+            this.flpUnidades.Size = new System.Drawing.Size(654, 339);
             this.flpUnidades.TabIndex = 3;
-            // 
-            // chkSomente30
-            // 
-            this.chkSomente30.AutoSize = true;
-            this.chkSomente30.Checked = true;
-            this.chkSomente30.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSomente30.Location = new System.Drawing.Point(55, 53);
-            this.chkSomente30.Name = "chkSomente30";
-            this.chkSomente30.Size = new System.Drawing.Size(167, 17);
-            this.chkSomente30.TabIndex = 1;
-            this.chkSomente30.Text = "Exibir somente os 30 primeiros";
-            this.chkSomente30.UseVisualStyleBackColor = true;
-            // 
-            // lblPesquisar
-            // 
-            this.lblPesquisar.AutoSize = true;
-            this.lblPesquisar.Location = new System.Drawing.Point(0, 1);
-            this.lblPesquisar.Name = "lblPesquisar";
-            this.lblPesquisar.Size = new System.Drawing.Size(53, 13);
-            this.lblPesquisar.TabIndex = 3;
-            this.lblPesquisar.Text = "Pesquisar";
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPesquisar.Location = new System.Drawing.Point(3, 17);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(637, 20);
-            this.txtPesquisar.TabIndex = 0;
-            this.txtPesquisar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
-            // 
-            // botaoPesquisar
-            // 
-            this.botaoPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.botaoPesquisar.AutoSize = true;
-            this.botaoPesquisar.BackColor = System.Drawing.Color.White;
-            this.botaoPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("botaoPesquisar.Image")));
-            this.botaoPesquisar.Location = new System.Drawing.Point(646, 10);
-            this.botaoPesquisar.MaximumSize = new System.Drawing.Size(32, 32);
-            this.botaoPesquisar.MinimumSize = new System.Drawing.Size(32, 32);
-            this.botaoPesquisar.Name = "botaoPesquisar";
-            this.botaoPesquisar.Size = new System.Drawing.Size(32, 32);
-            this.botaoPesquisar.TabIndex = 2;
-            this.botaoPesquisar.UseVisualStyleBackColor = true;
-            this.botaoPesquisar.Click += new System.EventHandler(this.botaoPesquisar_Click);
-            // 
-            // botaoMudarVisao
-            // 
-            this.botaoMudarVisao.BackColor = System.Drawing.Color.White;
-            this.botaoMudarVisao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.botaoMudarVisao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoMudarVisao.Image = ((System.Drawing.Image)(resources.GetObject("botaoMudarVisao.Image")));
-            this.botaoMudarVisao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botaoMudarVisao.Location = new System.Drawing.Point(3, 43);
-            this.botaoMudarVisao.Name = "botaoMudarVisao";
-            this.botaoMudarVisao.Size = new System.Drawing.Size(46, 35);
-            this.botaoMudarVisao.TabIndex = 4;
-            this.botaoMudarVisao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botaoMudarVisao.UseVisualStyleBackColor = false;
-            this.botaoMudarVisao.Click += new System.EventHandler(this.botaoMudarVisao_Click);
             // 
             // pnlBase
             // 
@@ -137,8 +74,22 @@
             // dgvUnidadesDetalhadas
             // 
             this.dgvUnidadesDetalhadas.AllowUserToAddRows = false;
+            this.dgvUnidadesDetalhadas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUnidadesDetalhadas.AutoGenerateColumns = false;
-            this.dgvUnidadesDetalhadas.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvUnidadesDetalhadas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvUnidadesDetalhadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvUnidadesDetalhadas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvUnidadesDetalhadas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUnidadesDetalhadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUnidadesDetalhadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUnidadesDetalhadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -148,26 +99,30 @@
             this.conjugeDataGridViewTextBoxColumn,
             this.locatarioDataGridViewTextBoxColumn});
             this.dgvUnidadesDetalhadas.DataSource = this.unidadeBindingSource;
-            this.dgvUnidadesDetalhadas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUnidadesDetalhadas.Location = new System.Drawing.Point(0, 0);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUnidadesDetalhadas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUnidadesDetalhadas.Location = new System.Drawing.Point(14, 0);
             this.dgvUnidadesDetalhadas.Name = "dgvUnidadesDetalhadas";
             this.dgvUnidadesDetalhadas.ReadOnly = true;
             this.dgvUnidadesDetalhadas.RowHeadersVisible = false;
             this.dgvUnidadesDetalhadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUnidadesDetalhadas.Size = new System.Drawing.Size(675, 354);
+            this.dgvUnidadesDetalhadas.Size = new System.Drawing.Size(654, 331);
             this.dgvUnidadesDetalhadas.TabIndex = 4;
             this.dgvUnidadesDetalhadas.Visible = false;
             this.dgvUnidadesDetalhadas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUnidadesDetalhadas_CellDoubleClick);
-            // 
-            // unidadeBindingSource
-            // 
-            this.unidadeBindingSource.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Unidade);
             // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // blocoDataGridViewTextBoxColumn
@@ -175,12 +130,14 @@
             this.blocoDataGridViewTextBoxColumn.DataPropertyName = "Bloco";
             this.blocoDataGridViewTextBoxColumn.HeaderText = "Bloco";
             this.blocoDataGridViewTextBoxColumn.Name = "blocoDataGridViewTextBoxColumn";
+            this.blocoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // numeroDataGridViewTextBoxColumn
             // 
             this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
             this.numeroDataGridViewTextBoxColumn.HeaderText = "Número";
             this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // proprietarioDataGridViewTextBoxColumn
             // 
@@ -188,30 +145,107 @@
             this.proprietarioDataGridViewTextBoxColumn.DataPropertyName = "Proprietario";
             this.proprietarioDataGridViewTextBoxColumn.HeaderText = "Proprietário";
             this.proprietarioDataGridViewTextBoxColumn.Name = "proprietarioDataGridViewTextBoxColumn";
+            this.proprietarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // conjugeDataGridViewTextBoxColumn
             // 
             this.conjugeDataGridViewTextBoxColumn.DataPropertyName = "Conjuge";
             this.conjugeDataGridViewTextBoxColumn.HeaderText = "Conjuge";
             this.conjugeDataGridViewTextBoxColumn.Name = "conjugeDataGridViewTextBoxColumn";
+            this.conjugeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // locatarioDataGridViewTextBoxColumn
             // 
             this.locatarioDataGridViewTextBoxColumn.DataPropertyName = "Locatario";
             this.locatarioDataGridViewTextBoxColumn.HeaderText = "Locatário";
             this.locatarioDataGridViewTextBoxColumn.Name = "locatarioDataGridViewTextBoxColumn";
+            this.locatarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // unidadeBindingSource
+            // 
+            this.unidadeBindingSource.DataSource = typeof(Portaria.Core.Model.CadastroMorador.Unidade);
+            // 
+            // botaoSearch
+            // 
+            this.botaoSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoSearch.BackColor = System.Drawing.Color.Transparent;
+            this.botaoSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoSearch.BackgroundImage")));
+            this.botaoSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botaoSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.botaoSearch.Location = new System.Drawing.Point(647, 7);
+            this.botaoSearch.MaximumSize = new System.Drawing.Size(24, 24);
+            this.botaoSearch.MinimumSize = new System.Drawing.Size(24, 24);
+            this.botaoSearch.Name = "botaoSearch";
+            this.botaoSearch.Size = new System.Drawing.Size(24, 24);
+            this.botaoSearch.TabIndex = 6;
+            this.botaoSearch.Click += new System.EventHandler(this.botaoPesquisar_Click);
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPesquisar.Depth = 0;
+            this.txtPesquisar.Hint = "Entre com uma informação para pesquisar";
+            this.txtPesquisar.Location = new System.Drawing.Point(17, 7);
+            this.txtPesquisar.Mask = "";
+            this.txtPesquisar.MaxLength = 32767;
+            this.txtPesquisar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.PasswordChar = '\0';
+            this.txtPesquisar.SelectedText = "";
+            this.txtPesquisar.SelectionLength = 0;
+            this.txtPesquisar.SelectionStart = 0;
+            this.txtPesquisar.Size = new System.Drawing.Size(624, 23);
+            this.txtPesquisar.TabIndex = 7;
+            this.txtPesquisar.TabStop = false;
+            this.txtPesquisar.UseSystemPasswordChar = false;
+            this.txtPesquisar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisar_KeyPress);
+            // 
+            // chkSomente30
+            // 
+            this.chkSomente30.AutoSize = true;
+            this.chkSomente30.Depth = 0;
+            this.chkSomente30.Font = new System.Drawing.Font("Roboto", 10F);
+            this.chkSomente30.Location = new System.Drawing.Point(17, 43);
+            this.chkSomente30.Margin = new System.Windows.Forms.Padding(0);
+            this.chkSomente30.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkSomente30.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkSomente30.Name = "chkSomente30";
+            this.chkSomente30.Ripple = true;
+            this.chkSomente30.Size = new System.Drawing.Size(221, 30);
+            this.chkSomente30.TabIndex = 8;
+            this.chkSomente30.Text = "Exibir somente os 30 primeiros";
+            this.chkSomente30.UseVisualStyleBackColor = true;
+            // 
+            // botaoViewMode
+            // 
+            this.botaoViewMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.botaoViewMode.AutoSize = true;
+            this.botaoViewMode.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.botaoViewMode.Depth = 0;
+            this.botaoViewMode.Icon = ((System.Drawing.Image)(resources.GetObject("botaoViewMode.Icon")));
+            this.botaoViewMode.Location = new System.Drawing.Point(510, 39);
+            this.botaoViewMode.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.botaoViewMode.MouseState = MaterialSkin.MouseState.OUT;
+            this.botaoViewMode.Name = "botaoViewMode";
+            this.botaoViewMode.Primary = false;
+            this.botaoViewMode.Size = new System.Drawing.Size(131, 36);
+            this.botaoViewMode.TabIndex = 9;
+            this.botaoViewMode.Text = "Exibir Lista";
+            this.botaoViewMode.UseVisualStyleBackColor = true;
+            this.botaoViewMode.ViewList = false;
+            this.botaoViewMode.Click += new System.EventHandler(this.botaoMudarVisao_Click);
             // 
             // TabVisualizarUnidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pnlBase);
-            this.Controls.Add(this.botaoMudarVisao);
-            this.Controls.Add(this.botaoPesquisar);
-            this.Controls.Add(this.txtPesquisar);
-            this.Controls.Add(this.lblPesquisar);
+            this.Controls.Add(this.botaoViewMode);
             this.Controls.Add(this.chkSomente30);
+            this.Controls.Add(this.txtPesquisar);
+            this.Controls.Add(this.botaoSearch);
+            this.Controls.Add(this.pnlBase);
             this.Name = "TabVisualizarUnidades";
             this.Size = new System.Drawing.Size(681, 441);
             this.pnlBase.ResumeLayout(false);
@@ -225,11 +259,6 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flpUnidades;
-        private System.Windows.Forms.CheckBox chkSomente30;
-        private System.Windows.Forms.Label lblPesquisar;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private Portaria.Desktop.Framework.Botoes.BotaoPesquisar botaoPesquisar;
-        private Desktop.Framework.Botoes.BotaoMudarVisao botaoMudarVisao;
         private System.Windows.Forms.Panel pnlBase;
         private System.Windows.Forms.DataGridView dgvUnidadesDetalhadas;
         private System.Windows.Forms.BindingSource unidadeBindingSource;
@@ -239,5 +268,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn proprietarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn conjugeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locatarioDataGridViewTextBoxColumn;
+        private Desktop.Framework.Botoes.BotaoSearch botaoSearch;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPesquisar;
+        private MaterialSkin.Controls.MaterialCheckBox chkSomente30;
+        private Desktop.Framework.Botoes.BotaoViewMode botaoViewMode;
     }
 }

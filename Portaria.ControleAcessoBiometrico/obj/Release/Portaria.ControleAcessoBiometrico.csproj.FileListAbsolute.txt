@@ -23,6 +23,7 @@ C:\Source\Portaria\Portaria.ControleAcessoBiometrico\bin\Release\EntityFramework
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\bin\Release\EntityFramework.SqlServer.xml
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\bin\Release\Newtonsoft.Json.xml
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Release\Portaria.ControleAcessoBiometrico.csprojResolveAssemblyReference.cache
+C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Release\Portaria.ControleAcessoBiometrico.csproj.Portaria.ControleAcessoBiometrico.exe.config
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Release\Portaria.ControleAcessoBiometrico.ConfigurarClientRPi.resources
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Release\Portaria.ControleAcessoBiometrico.ConfigurarTimerCache.resources
 C:\Source\Portaria\Portaria.ControleAcessoBiometrico\obj\Release\Portaria.ControleAcessoBiometrico.Properties.Resources.resources

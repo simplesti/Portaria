@@ -1,13 +1,12 @@
-﻿using Portaria.Core.Model;
+﻿using Portaria.Core;
+using Portaria.Core.Model;
 using Portaria.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
-using System.Net.Mail;
-using Portaria.Core;
 
 namespace Portaria.Business
 {
@@ -22,11 +21,12 @@ namespace Portaria.Business
             this.sessao = sessao;
         }
 
-        RegistroLivroNegroBus(Sessao sessao, PortariaContext bd)
+        public RegistroLivroNegroBus(Sessao sessao, PortariaContext bd)
         {
             this.bd = bd;
             this.sessao = sessao;
         }
+
         public IEnumerable<RegistroLivroNegro> Todos()
         {
             return bd.RegistrosLivroNegro;

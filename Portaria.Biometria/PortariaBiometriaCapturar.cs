@@ -55,7 +55,7 @@ namespace Portaria.Biometria
         {
             Invoke(new Function(delegate ()
             {
-                botaoOK.Enabled = true;
+                btnOK.Enabled = true;
             }));
         }
 

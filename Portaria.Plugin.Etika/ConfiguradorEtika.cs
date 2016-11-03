@@ -1,12 +1,13 @@
 ﻿using Portaria.Core.Model;
 using Portaria.Desktop.Framework;
+using Portaria.Desktop.Framework.Forms;
 using Portaria.Desktop.Framework.Plugin;
 using System;
 using System.Linq;
 
 namespace Portaria.Plugin.Etika
 {
-    public partial class ConfiguradorEtika : FormBase
+    public partial class ConfiguradorEtika : MaterialPortariaFormBase
     {
         public ConfiguradorEtika()
         {
